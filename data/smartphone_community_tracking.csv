@@ -1,84 +1,84 @@
-,text,hashtags
+,text,hashtags,urls
 0,"The #FederalGovernment is in talks with #Facebook, #Google, and other #tech companies about using #smartphone location #data to track the #coronavirus. The main purpose is to see how the #virus spreads and whether people are practicing #socialdistancing. 
-https://t.co/jHxPHjqsF4","['federalgovernment', 'facebook', 'google', 'tech', 'smartphone']"
-1,Trudeau leaves door open to using #smartphone data to track compliance with #COVID19 rules #coronavirus #health #nbpoli,"['smartphone', 'covid', 'coronavirus', 'health']"
+https://t.co/jHxPHjqsF4","['federalgovernment', 'facebook', 'google', 'tech', 'smartphone']","['https://twitter.com/i/web/status/1241665982986412032', 'https://thehill.com/policy/technology/488075-federal-government-in-talks-with-tech-groups-to-use-phone-location-data-to']"
+1,Trudeau leaves door open to using #smartphone data to track compliance with #COVID19 rules #coronavirus #health #nbpoli,"['smartphone', 'covid', 'coronavirus', 'health']",['https://twitter.com/i/web/status/1242576053001912322']
 2,"Trudeau leaves #door #open to using #smartphone #data to track #Canadians' compliance with #COViD19 pandemic rules https://t.co/cds3DzD3DQ
 
 #bigdata 
 #WHO #dATA
 #COViD19 #Linux #COViD19USA #Covid19iNDiA #COViD19UK #CANADA #COViD19france #COViD19italy
 
-#Italy #USA #china #iran #UK","['door', 'open', 'smartphone', 'data', 'canadians', 'covid']"
+#Italy #USA #china #iran #UK","['door', 'open', 'smartphone', 'data', 'canadians', 'covid']","['https://twitter.com/i/web/status/1242665267177504768', 'https://www.cbc.ca/news/politics/cellphone-tracking-trudeau-covid-1.5508236']"
 3,"Coronavirus Tracking App is ransomware; locks phones for ransom 
 
-https://t.co/X6ox5PVtmG #app #mobile #smartphone #ransonware #coronavirus #hacking #cybersecurity","['app', 'mobile', 'smartphone']"
-4,"#US government in talks with #Facebook, #Google to use #smartphone #location #data in #coronavirus #tracking https://t.co/TDKHUUCCJj","['us', 'facebook', 'google', 'smartphone', 'location', 'data', 'coronavirus', 'tracking']"
-5,"#Coronavirus Reality Check: Yes, U.S. And EU Will Track Our #Smartphone Location #Data—Get Used To It   https://t.co/8Jgu4i1kUO","['coronavirus', 'smartphone', 'data']"
-6,"#Coronavirus Reality Check: Yes, U.S. And EU Will Track Our #Smartphone Location #Data—Get Used To It  https://t.co/9sWVXvttRS","['coronavirus', 'smartphone', 'data']"
-7,"#Coronavirus Reality Check: Yes, U.S. And EU Will Track Our #Smartphone Location Data—Get Used To It  #tracking #data #privacy #trends https://t.co/A0PiuN2hSi","['coronavirus', 'smartphone', 'tracking']"
+https://t.co/X6ox5PVtmG #app #mobile #smartphone #ransonware #coronavirus #hacking #cybersecurity","['app', 'mobile', 'smartphone']","['https://www.hackread.com/coronavirus-tracking-app-ransomware-scam-locks-phones-ransom/', 'https://twitter.com/i/web/status/1238882602414637059', 'https://www.hackread.com/coronavirus-tracking-app-ransomware-scam-locks-phones-ransom/']"
+4,"#US government in talks with #Facebook, #Google to use #smartphone #location #data in #coronavirus #tracking https://t.co/TDKHUUCCJj","['us', 'facebook', 'google', 'smartphone', 'location', 'data', 'coronavirus', 'tracking']","['http://www.ucscreen.com/us-government-in-talks-with-facebook-google-to-use-smartphone-location-data-in-coronavirus-tracking/', 'http://www.ucscreen.com/us-government-in-talks-with-facebook-google-to-use-smartphone-location-data-in-coronavirus-tracking/']"
+5,"#Coronavirus Reality Check: Yes, U.S. And EU Will Track Our #Smartphone Location #Data—Get Used To It   https://t.co/8Jgu4i1kUO","['coronavirus', 'smartphone', 'data']","['https://www.forbes.com/sites/zakdoffman/2020/03/19/coronavirus-reality-check-yes-us-and-eu-governments-will-track-our-phones-get-used-to-it/', 'https://www.forbes.com/sites/zakdoffman/2020/03/19/coronavirus-reality-check-yes-us-and-eu-governments-will-track-our-phones-get-used-to-it/']"
+6,"#Coronavirus Reality Check: Yes, U.S. And EU Will Track Our #Smartphone Location #Data—Get Used To It  https://t.co/9sWVXvttRS","['coronavirus', 'smartphone', 'data']","['https://www.forbes.com/sites/zakdoffman/2020/03/19/coronavirus-reality-check-yes-us-and-eu-governments-will-track-our-phones-get-used-to-it/', 'https://www.forbes.com/sites/zakdoffman/2020/03/19/coronavirus-reality-check-yes-us-and-eu-governments-will-track-our-phones-get-used-to-it/']"
+7,"#Coronavirus Reality Check: Yes, U.S. And EU Will Track Our #Smartphone Location Data—Get Used To It  #tracking #data #privacy #trends https://t.co/A0PiuN2hSi","['coronavirus', 'smartphone', 'tracking']","['https://twitter.com/i/web/status/1241114795664912384', 'https://inhomelandsecurity.com/coronavirus-reality-check-yes-u-s-and-eu-will-track-our-smartphone-location-data-get-used-to-it/?_lrsc=10c7c6bf-4b7a-44a1-ab25-507816e8c043&utm_source=twitter&utm_medium=social&utm_content=sip-elevate-twitter&utm_campaign=General%20-%20ST%20-%20APUS']"
 8,"@Livnao, one of our #Batch9 startups based in #Vancouver, has #smartphone contact tracing technology to help track and control the spread of #COVID19. 
 
-Read more about their work in #Canada here: https://t.co/UBUgZUPW1M","['batch', 'vancouver', 'smartphone']"
-9,"New by me @Forbes: #Coronavirus Reality Check: Yes, U.S. And EU Will #Track Our #Smartphone #Location Data—Get Used To It https://t.co/rTvbZxhz8V","['coronavirus', 'track', 'smartphone', 'location']"
-10,Government Tracking How People Move Around in Coronavirus Pandemic https://t.co/Z8bsW30OzK #géolocalisation #smartphone #marketing #analyse,"['géolocalisation', 'smartphone', 'marketing', 'analyse']"
+Read more about their work in #Canada here: https://t.co/UBUgZUPW1M","['batch', 'vancouver', 'smartphone']","['https://twitter.com/i/web/status/1245813449818402817', 'https://bc.ctvnews.ca/mobile/will-canada-use-smartphones-to-track-and-trace-covid-19-cases-1.4878287']"
+9,"New by me @Forbes: #Coronavirus Reality Check: Yes, U.S. And EU Will #Track Our #Smartphone #Location Data—Get Used To It https://t.co/rTvbZxhz8V","['coronavirus', 'track', 'smartphone', 'location']","['https://twitter.com/i/web/status/1240546861175517184', 'https://www.forbes.com/sites/zakdoffman/2020/03/19/coronavirus-reality-check-yes-us-and-eu-governments-will-track-our-phones-get-used-to-it/?subId1=xid:fr1584604350646dei']"
+10,Government Tracking How People Move Around in Coronavirus Pandemic https://t.co/Z8bsW30OzK #géolocalisation #smartphone #marketing #analyse,"['géolocalisation', 'smartphone', 'marketing', 'analyse']","['https://www.msn.com/en-us/news/us/government-tracking-how-people-move-around-in-coronavirus-pandemic/ar-BB11PDb4?ocid=se2', 'https://www.msn.com/en-us/news/us/government-tracking-how-people-move-around-in-coronavirus-pandemic/ar-BB11PDb4?ocid=se2']"
 11,"The '#AarogyaSetu' tracking app, will track the #coronavirus #infection by using the #smartphone's GPS system and #bluetooth and will provide information if you have been near a COVID-19 infected person or not.
 
-Read the post to know about the new Aarogya Setu Coronavirus app. https://t.co/CIZ4lsi2bs","['aarogyasetu', 'coronavirus', 'infection', 'smartphone']"
+Read the post to know about the new Aarogya Setu Coronavirus app. https://t.co/CIZ4lsi2bs","['aarogyasetu', 'coronavirus', 'infection', 'smartphone']","['https://twitter.com/i/web/status/1246047882370662400', 'https://twitter.com/arihantpub/status/1246047882370662400/photo/1']"
 12,"Mobile phone #tracking should be used to stop virus... #Coronavirus #Smartphone #Gps #MobileSecurity 
 
-https://t.co/XgXQKfbKPj","['tracking', 'coronavirus', 'smartphone', 'gps', 'mobilesecurity']"
-13,#Future is noe! futureproofn #smartphone Estimote launches wearables for workplace-level contact tracing for COVID-19 https://t.co/h3BI9tNUqS,"['future', 'smartphone']"
-14,#Future is noe! futureproofn #smartphone An EU coalition of techies is backing a ‘privacy-preserving’ standard for COVID-19 contacts tracing https://t.co/A1XmF7ilPE,"['future', 'smartphone']"
+https://t.co/XgXQKfbKPj","['tracking', 'coronavirus', 'smartphone', 'gps', 'mobilesecurity']","['https://www.smh.com.au/national/nsw/mobile-phone-tracking-should-be-used-to-stop-virus-20200405-p54h9y.html', 'https://www.smh.com.au/national/nsw/mobile-phone-tracking-should-be-used-to-stop-virus-20200405-p54h9y.html']"
+13,#Future is noe! futureproofn #smartphone Estimote launches wearables for workplace-level contact tracing for COVID-19 https://t.co/h3BI9tNUqS,"['future', 'smartphone']","['https://twitter.com/i/web/status/1245764311991160835', 'https://techcrunch.com/2020/04/02/estimote-launches-wearables-for-workplace-level-contact-tracing-for-covid-19/']"
+14,#Future is noe! futureproofn #smartphone An EU coalition of techies is backing a ‘privacy-preserving’ standard for COVID-19 contacts tracing https://t.co/A1XmF7ilPE,"['future', 'smartphone']","['https://twitter.com/i/web/status/1245462296467582979', 'https://techcrunch.com/2020/04/01/an-eu-coalition-of-techies-is-backing-a-privacy-preserving-standard-for-covid-19-contacts-tracing/']"
 15,"#COVID19
 #JammuAndKashmir 
 #FightagainstCorona 
 #coronaupdate
-Four more cases detected positive in Kasmir. 2 each from Shopian and Srinagar. All contacts of previous positive cases. Contact tracing working on ground","['covid', 'jammuandkashmir', 'fightagainstcorona', 'coronaupdate']"
+Four more cases detected positive in Kasmir. 2 each from Shopian and Srinagar. All contacts of previous positive cases. Contact tracing working on ground","['covid', 'jammuandkashmir', 'fightagainstcorona', 'coronaupdate']",['https://twitter.com/i/web/status/1244560590250504199']
 16,"#COVID19: IIT-B Creates App To Track Those Flouting Quarantine
 
 Via. Pallavi Smart
 
 #CoronaUpdate #Lockdown21 #CononavirusPandemic 
 
-https://t.co/qoqtxxp0lR","['covid', 'coronaupdate', 'lockdown']"
-17,California #coronavirus cases: Tracking the outbreak #CoronaUpdate  #CoronavirusUSA  https://t.co/hANcz4tCW3,"['coronavirus', 'coronaupdate', 'coronavirususa']"
+https://t.co/qoqtxxp0lR","['covid', 'coronaupdate', 'lockdown']","['https://twitter.com/i/web/status/1244801597508653057', 'https://www.mid-day.com/articles/covid-19-iit-b-creates-app-to-track-those-flouting-quarantine/22702219']"
+17,California #coronavirus cases: Tracking the outbreak #CoronaUpdate  #CoronavirusUSA  https://t.co/hANcz4tCW3,"['coronavirus', 'coronaupdate', 'coronavirususa']","['https://www.latimes.com/projects/california-coronavirus-cases-tracking-outbreak/', 'https://www.latimes.com/projects/california-coronavirus-cases-tracking-outbreak/']"
 18,"#CoronaUpdate:
 Students of @iitdelhi have developed an app to help trace individuals who come in close contact with #COVID19 positive cases.
 
 Kudos to the young minds!!!
 
-https://t.co/ZF6lMrp7m1",['coronaupdate']
-19,#CoronaUpdate: #TN reports 8 new positive cases from Erode (contact of the Thai Nationals who are undergoing treatment at IRT Perundurai).The Pts were identified thru #TNHEALTH’s contact tracing. All patients are isolated for treatment. @MoHFW_INDIA @CMOTamilNadu #Vijayabaskar,"['coronaupdate', 'tn']"
+https://t.co/ZF6lMrp7m1",['coronaupdate'],"['https://twitter.com/i/web/status/1244508957030461441', 'https://www.theweek.in/news/sci-tech/2020/03/28/iit-d-team-develop-app-to-trace-those-exposed-to-covid-19-patients.html']"
+19,#CoronaUpdate: #TN reports 8 new positive cases from Erode (contact of the Thai Nationals who are undergoing treatment at IRT Perundurai).The Pts were identified thru #TNHEALTH’s contact tracing. All patients are isolated for treatment. @MoHFW_INDIA @CMOTamilNadu #Vijayabaskar,"['coronaupdate', 'tn']",['https://twitter.com/i/web/status/1244239453981257728']
 20,"#TNINewsUpdate #CoronaUpdate 
 
 #Odisha Govt asks Collectors &amp; Municipal Commissioners to intensify surveillance &amp; contact tracing of people who returned from abroad &amp; other #COVID19 affected States. 
 
-2,856 persons who returned from aborad in the last 14 days, yet to be traced. https://t.co/JtpWwhmj4Y","['tninewsupdate', 'coronaupdate', 'odisha']"
-21,"With new quick test, we can begin random sampling.  We need to start tracking to determine when virus is shed. #CoronaUpdate #coronavirus","['coronaupdate', 'coronavirus']"
-22,#CoronaUpdate for April 3: @caspiancenter is tracking the number of confirmed #COVID19 cases in the Greater #Caspian Region. Here are the latest numbers for today: https://t.co/VW6tkMqVUT,"['coronaupdate', 'covid']"
+2,856 persons who returned from aborad in the last 14 days, yet to be traced. https://t.co/JtpWwhmj4Y","['tninewsupdate', 'coronaupdate', 'odisha']","['https://twitter.com/i/web/status/1244213064699793408', 'https://twitter.com/TNITweet/status/1244213064699793408/photo/1']"
+21,"With new quick test, we can begin random sampling.  We need to start tracking to determine when virus is shed. #CoronaUpdate #coronavirus","['coronaupdate', 'coronavirus']",[]
+22,#CoronaUpdate for April 3: @caspiancenter is tracking the number of confirmed #COVID19 cases in the Greater #Caspian Region. Here are the latest numbers for today: https://t.co/VW6tkMqVUT,"['coronaupdate', 'covid']","['https://twitter.com/i/web/status/1246166737797746688', 'https://twitter.com/caspiancenter/status/1246166737797746688/photo/1']"
 23,"#PhoenixMall #CoronaUpdate 
-Although the @chennaicorp poster on contact tracing says three people who worked at Lifestyle tested positive for #COVID19, health department officials told @Sinduj11 that so far only two staff at the mall have tested positive!","['phoenixmall', 'coronaupdate']"
+Although the @chennaicorp poster on contact tracing says three people who worked at Lifestyle tested positive for #COVID19, health department officials told @Sinduj11 that so far only two staff at the mall have tested positive!","['phoenixmall', 'coronaupdate']",['https://twitter.com/i/web/status/1245733545185697792']
 24,"This website is tracking the #COVID19 Mutations - 8 so far
-https://t.co/GY3ld5kWZV #ADOS","['covid', 'ados']"
-25,#Fauci says contact tracing is key to containment. How many institutions are doing this? How to trace without testing? Is #coronavirus containment even possible anymore or is focus mitigation? #CoronaLockdown #COVID19 #CoronavirusUSA #CoronavirusOutbreak  https://t.co/BlDQpazBXA,['fauci']
-26,"#WhenCoronaVirusIsOver, USA needs to re-think how it learns from present mistakes, past foes &amp; collaborates to tackle global challenges eg like Vietnam, Germany: they have a much lower COVID death rate than USA, by following #WHO guidelines: combine #trackingCovid19 #trace #test",['whencoronavirusisover']
+https://t.co/GY3ld5kWZV #ADOS","['covid', 'ados']","['https://nextstrain.org/', 'https://nextstrain.org/']"
+25,#Fauci says contact tracing is key to containment. How many institutions are doing this? How to trace without testing? Is #coronavirus containment even possible anymore or is focus mitigation? #CoronaLockdown #COVID19 #CoronavirusUSA #CoronavirusOutbreak  https://t.co/BlDQpazBXA,['fauci'],"['https://twitter.com/i/web/status/1243506089733300226', 'https://edition.cnn.com/2020/03/27/health/us-coronavirus-friday/index.html']"
+26,"#WhenCoronaVirusIsOver, USA needs to re-think how it learns from present mistakes, past foes &amp; collaborates to tackle global challenges eg like Vietnam, Germany: they have a much lower COVID death rate than USA, by following #WHO guidelines: combine #trackingCovid19 #trace #test",['whencoronavirusisover'],['https://twitter.com/i/web/status/1244592888492818432']
 27,"@agbeniyi_jide #WhenCoronaVirusIsOver we must:
 
 1) Speak the truth by tracking down the exact date &amp; origin of #Covid_19
 
 2) Force #CommunistChina to pay for what they did to the world
 
-3) Spend more money on actual #GlobalPandemic prevention and less money on the #globalwarming hoax. #staysafe",['whencoronavirusisover']
+3) Spend more money on actual #GlobalPandemic prevention and less money on the #globalwarming hoax. #staysafe",['whencoronavirusisover'],['https://twitter.com/i/web/status/1244244346213486598']
 28,"#WhenCoronaVirusIsOver #LGBTQuarantine Bolt abla FIRB Adelaide Oval Princes Park #bencousins #stayathomeandstaysafe #Covid_19 tiger king Stage 3
-Ahhh OK so 2 weeks .. what a lot of shit Scomo is spitting in his press conferences.. We are Fast tracking Claims What Fucking Bullshit https://t.co/G1Jjw2nMNd","['whencoronavirusisover', 'lgbtquarantine', 'bencousins', 'stayathomeandstaysafe']"
+Ahhh OK so 2 weeks .. what a lot of shit Scomo is spitting in his press conferences.. We are Fast tracking Claims What Fucking Bullshit https://t.co/G1Jjw2nMNd","['whencoronavirusisover', 'lgbtquarantine', 'bencousins', 'stayathomeandstaysafe']","['https://twitter.com/i/web/status/1244438957380620288', 'https://twitter.com/WorldNewsPics/status/1244438957380620288/photo/1']"
 29,"#COVID19 UPDATE map...😷👀
 #StayAtHomeAndStaySafe
 VankaPro☀️🌊🌊🌊
-Map: Tracking The Spread Of The Coronavirus In The U.S. https://t.co/Xcs2AUaeZv","['covid', 'stayathomeandstaysafe']"
+Map: Tracking The Spread Of The Coronavirus In The U.S. https://t.co/Xcs2AUaeZv","['covid', 'stayathomeandstaysafe']","['https://twitter.com/i/web/status/1244257505431207936', 'https://choice.npr.org/index.html?origin=https://www.npr.org/sections/health-shots/2020/03/16/816707182/map-tracking-the-spread-of-the-coronavirus-in-the-u-s?utm_campaign=storyshare&utm_source=twitter.com&utm_medium=social']"
 30,"This visual on tracking the potential spread. #coronavirus #Covid_19 #StayAtHomeAndStaySafe 
 👇
 @TectonixGEO 
-https://t.co/T7TGZdeBK5","['coronavirus', 'covid', 'stayathomeandstaysafe']"
-31,Congrats to all involved in this innovative approach to contact tracing. #StayAtHomeAndStaySafe #StrengthenTheNation #HammerTheCurve https://t.co/KMSNCyACt0,['stayathomeandstaysafe']
+https://t.co/T7TGZdeBK5","['coronavirus', 'covid', 'stayathomeandstaysafe']","['https://twitter.com/tectonixgeo/status/1242628347034767361?s=21', 'https://twitter.com/tectonixgeo/status/1242628347034767361?s=21']"
+31,Congrats to all involved in this innovative approach to contact tracing. #StayAtHomeAndStaySafe #StrengthenTheNation #HammerTheCurve https://t.co/KMSNCyACt0,['stayathomeandstaysafe'],"['https://twitter.com/i/web/status/1244228978036092929', 'https://twitter.com/damian__griffin/status/1244162657772601344']"
 32,"#WhenCoronaVirusIsOver #LGBTQuarantine Bolt abla FIRB Adelaide Oval Princes Park #bencousins #stayathomeandstaysafe #Covid_19 tiger king Stage 3
-Ahhh OK so 2 weeks .. what a lot of shit Scomo is spitting in his press conferences.. We are Fast tracking Claims What Fucking Bullshit https://t.co/G1Jjw2nMNd","['whencoronavirusisover', 'lgbtquarantine', 'bencousins', 'stayathomeandstaysafe']"
+Ahhh OK so 2 weeks .. what a lot of shit Scomo is spitting in his press conferences.. We are Fast tracking Claims What Fucking Bullshit https://t.co/G1Jjw2nMNd","['whencoronavirusisover', 'lgbtquarantine', 'bencousins', 'stayathomeandstaysafe']","['https://twitter.com/i/web/status/1244438957380620288', 'https://twitter.com/WorldNewsPics/status/1244438957380620288/photo/1']"
