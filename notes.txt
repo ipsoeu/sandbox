@@ -1,6 +1,0 @@
-https://ipsoeu.github.io/sandbox/covid_19/covid_19_1M/network/
-
-https://ipsoeu.github.io/sandbox/covid_19/covid_19_3M_filtered/network/
-
-https://ipsoeu.github.io/sandbox/covid_19/covid_19_3M_filtered_without_main_comm/network/
-
