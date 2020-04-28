@@ -10,7 +10,7 @@
   "text": {
     "more": "",
     "intro": "",
-    "title": "COVID-19 3Million filtered"
+    "title": "COVID-19 5.3 Millions of tweets"
   },
   "legend": {
     "edgeLabel": "",
@@ -33,11 +33,11 @@
       "defaultLabelBGColor": "#ddd",
       "activeFontStyle": "bold",
       "defaultLabelColor": "#000",
-      "labelThreshold": 10,
+      "labelThreshold": 2,
       "defaultLabelHoverColor": "#fff",
       "fontStyle": "bold",
       "hoverFontStyle": "bold",
-      "defaultLabelSize": 14
+      "defaultLabelSize": 16
     },
     "graphProperties": {
       "maxEdgeSize": 0.5,
