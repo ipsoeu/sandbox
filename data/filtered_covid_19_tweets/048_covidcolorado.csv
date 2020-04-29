@@ -1,14 +1,6 @@
 ,id_str,hashtags,urls,text,clean_text,created_at,lang,quote_count,reply_count,retweet_count,favorite_count,to_cache,sa_label,sa
-0,1244265099520389121,['covidcolorado'],['https://twitter.com/i/web/status/1244265099520389121'],"Latest #COVID19Colorado updates: 
-
--CDOT suspends Bustang services through April 11
-
--Pres. Trump approved Colorado's application for major disaster status (which means we could see more money and supplies to fight #covid19)
-
--Deaths, hospitalizations due to COVID-19 are growing https://t.co/YhHttdjOyt",Latest COVIDColorado updates CDOT suspends Bustang services through April Pres Trump approved Colorados application for major disaster status which means we could see more money and supplies to fight covid Deaths hospitalizations due to COVID are growing,2020-03-29 14:08:11,en,0,0,0,0,True,negative,0.22935
-1,1240771538363670529,['covidcolorado'],['https://twitter.com/i/web/status/1240771538363670529'],"#COVID19Colorado Update:  277 cases | 38 hospitalized
-22 counties | 2,952 people tested |2 deaths Website link to raw data https://t.co/Jme4jy6u8V [Data is confirmed for 4 p.m. the day before]",COVIDColorado Update cases hospitalized counties people tested deaths Website link to raw data Data is confirmed for pm the day before,2020-03-19 22:46:01,en,0,2,5,8,True,neutral,0.5
-2,1251269978788999168,['covidcolorado'],['https://twitter.com/i/web/status/1251269978788999168'],"Latest #covid19colorado data (Change from Thurs):
+0,1240783658639699968,['covidcolorado'],"['https://covid19.colorado.gov/state-recovery-assistance', 'https://twitter.com/i/web/status/1240783658639699968']",New case testing data out on #COVID19colorado found at the @CDPHE site here: [https://t.co/egc8bT9BW2] #DoingMyPartCO https://t.co/oVY2Yhr5CC,New case testing data out on COVIDcolorado found at the CDPHE site here DoingMyPartCO,2020-03-19 23:34:11,en,0,0,1,2,True,neutral,0.5
+1,1251269978788999168,['covidcolorado'],['https://twitter.com/i/web/status/1251269978788999168'],"Latest #covid19colorado data (Change from Thurs):
 
 9,047 cases (+372)
 1,755 hospitalized (+62)
@@ -20,142 +12,7 @@
 https://t.co/PONDz6nF14 
 
 Updates: https://t.co/2qNxXx5oTW",Latest covidcolorado data Change from Thurs cases hospitalized counties people tested deaths outbreaks Updates,2020-04-17 22:03:05,en,0,0,1,4,True,neutral,0.5
-3,1251259405997182976,"['covidcolorado', 'coronavirus']",['https://gazette.com/news/colorado-opens-covid-19-symptom-tracker-to-collect-data/article_08141431-45ac-59b4-abe0-db8a9cd47c0e.html'],"Colorado opens COVID-19 'symptom tracker' to collect data
-https://t.co/0wQxjslmDQ
-#COVID19Colorado 
-#coronavirus",Colorado opens COVID symptom tracker to collect data COVIDColorado coronavirus,2020-04-17 21:21:04,en,0,0,2,1,True,neutral,0.5
-4,1241136645463633920,['covidcolorado'],['https://twitter.com/i/web/status/1241136645463633920'],"#COVID2019Colorado Update  Colorado Case Summary for March 20 | 363 cases
-44 hospitalized
-24 counties
-3,680 people tested
-4 deaths  https://t.co/Jme4jy6u8V  [Note: This summary only includes data through 3/19 and does not reflect cases since then]",COVIDColorado Update Colorado Case Summary for March cases hospitalized counties people tested deaths Note This summary only includes data through and does not reflect cases since then,2020-03-20 22:56:50,en,3,1,7,19,True,neutral,0.5
-5,1245189625892626435,['solidarityat'],[],I’m calling on all LHS students to participate with the #SolidarityAt8 movement! @lhslionsfb you in?,I m calling on all LHS students to participate with the SolidarityAt movement lhslionsfb you in,2020-04-01 03:21:55,en,0,0,0,0,True,neutral,0.5
-6,1250896718226317313,['covidcolorado'],['https://twitter.com/i/web/status/1250896718226317313'],"@CDPHE is now reporting more data on cases of #COVID19Colorado at Colorado nursing homes, assisted living centers and similar facilities. The number of facilities with the virus went from 21 two weeks ago to 86 as of April 15. https://t.co/WmLanbVQmk @colo_politics",CDPHE is now reporting more data on cases of COVIDColorado at Colorado nursing homes assisted living centers and similar facilities The number of facilities with the virus went from two weeks ago to as of April colopolitics,2020-04-16 21:19:52,en,0,0,0,0,True,weakly_positive,0.5386
-7,1248592786070405120,['doingmypartco'],['https://twitter.com/i/web/status/1248592786070405120'],"Blucifer is joining the #DoingMyPartCO movement by wearing a mask while outside to help mitigate the spread of #COVID19 in Colorado. 
-
-We’re in this together!  https://t.co/oKTk1H5yMc …  https://t.co/FSIWci2tZc",Blucifer is joining the DoingMyPartCO movement by wearing a mask while outside to help mitigate the spread of COVID in Colorado We re in this together,2020-04-10 12:44:52,en,0,0,2,0,True,positive,0.70095
-8,1240783658639699968,['covidcolorado'],"['https://covid19.colorado.gov/state-recovery-assistance', 'https://twitter.com/i/web/status/1240783658639699968']",New case testing data out on #COVID19colorado found at the @CDPHE site here: [https://t.co/egc8bT9BW2] #DoingMyPartCO https://t.co/oVY2Yhr5CC,New case testing data out on COVIDcolorado found at the CDPHE site here DoingMyPartCO,2020-03-19 23:34:11,en,0,0,1,2,True,neutral,0.5
-9,1248779426201993218,['solidarityat'],['https://twitter.com/i/web/status/1248779426201993218'],"This is awesome! -&gt; Chicago residents join #Solidarityat8 movement, saluting first responders, health care workers while staying at home - Chicago Tribune https://t.co/hEiIo3ry5L",This is awesome gt Chicago residents join Solidarityat movement saluting first responders health care workers while staying at home Chicago Tribune,2020-04-11 01:06:31,en,0,0,0,0,True,strongly_positive,0.9455
-10,1240269892953067520,['covidcolorado'],['http://covid19.colorado.gov'],"We launched a NEW website just for COVID-19, featuring data visualization for the number of cases. https://t.co/R3CJWZJrJ0 #COVID19colorado",We launched a NEW website just for COVID featuring data visualization for the number of cases COVIDcolorado,2020-03-18 13:32:40,en,12,28,97,137,True,weakly_positive,0.60115
-11,1250912582031953920,['covidcolorado'],['https://twitter.com/i/web/status/1250912582031953920'],"Latest #covid19colorado data (Change from Wed): 
-
-8,675 cases (+395)
-1,693 hospitalized (+57)
-56 counties (+0)
-41,830 people tested (1,297)
-374 deaths (+17)
-93 outbreaks (+10)
-
-https://t.co/PONDz6nF14 
-
-Updates: https://t.co/CxChT8cXqj",Latest covidcolorado data Change from Wed cases hospitalized counties people tested deaths outbreaks Updates,2020-04-16 22:22:55,en,0,1,3,3,True,neutral,0.5
-12,1242052127507300354,['solidarityat'],['https://www.pix11.com/news/coronavirus/viral-movement-solidarityat8-shows-appreciation-for-health-care-workers'],Viral movement #SolidarityAt8 shows appreciation for health care workers https://t.co/qvf39lt16d https://t.co/DBhTVccgpQ,Viral movement SolidarityAt shows appreciation for health care workers,2020-03-23 11:34:38,en,0,0,1,3,True,strongly_positive,0.87895
-13,1251249613849460738,['covidcolorado'],['https://twitter.com/i/web/status/1251249613849460738'],"@cprwarner @CDPHE Now if only someone would tweet about it with the #COVID19Colorado…
-
-Also, check out this nation-wide tracker app being used to study the symptoms of #COVID19 and track the spread of the #coronavirus—Take 1-minute to report daily, even if you are well.
-
-https://t.co/AIBkOp1Mwk",cprwarner CDPHE Now if only someone would tweet about it with the COVIDColorado Also check out this nationwide tracker app being used to study the symptoms of COVID and track the spread of the coronavirusTake minute to report daily even if you are well,2020-04-17 20:42:09,en,0,0,0,0,True,weakly_positive,0.6366
-14,1241530800228663296,['solidarityat'],['https://twitter.com/i/web/status/1241530800228663296'],"We are proud to join the #SOLIDARITYat8 movement, paying tribute to our health care heroes every night at 8 pm. #THANKYOU to all the people seeing us through #COVID19! Why do they do what they do? Check it out here: https://t.co/tC69vsjYEa
-@TayeDiggs @ACEPNow @CORD_EM",We are proud to join the SOLIDARITYat movement paying tribute to our health care heroes every night at pm THANKYOU to all the people seeing us through COVID Why do they do what they do Check it out here TayeDiggs ACEPNow CORDEM,2020-03-22 01:03:03,en,0,0,1,0,True,strongly_positive,0.9478500000000001
-15,1248371109336137728,['covidcolorado'],['https://twitter.com/i/web/status/1248371109336137728'],"New #COVID19colorado data (Change from Wed): 
-
-6,202 cases (+547)
-1,221 hospitalized (+59)
-56 counties (+2)
-31,180 people tested (+1,981)
-226 deaths (+33)
-54 outbreaks residential/non-hospital healthcare facilities (+6)
-
-https://t.co/4bKXfyYvkC 
-
-Updates: https://t.co/fe1A0ZFG4z",New COVIDcolorado data Change from Wed cases hospitalized counties people tested deaths outbreaks residentialnonhospital healthcare facilities Updates,2020-04-09 22:04:00,en,0,0,0,0,True,neutral,0.5
-16,1248734617609404417,['covidcolorado'],['https://twitter.com/i/web/status/1248734617609404417'],"New #COVID19colorado data (Change from Thur):
-
-6,510 cases (+308)
-1,312 hospitalized (+91)
-56 counties (+0)
-32,653 people tested (+1,473)
-226 deaths (+24)
-59 outbreaks residential/non-hospital healthcare facilities (+5)
-
-https://t.co/4bKXfyYvkC
-
-Updates: https://t.co/CIFzDTXnxS",New COVIDcolorado data Change from Thur cases hospitalized counties people tested deaths outbreaks residentialnonhospital healthcare facilities Updates,2020-04-10 22:08:27,en,0,0,0,0,True,neutral,0.5
-17,1250183408048889865,['covidcolorado'],['https://twitter.com/i/web/status/1250183408048889865'],"New #COVID19Colorado data (Change from Mon):
-
-7,941 cases (+250)
-1,556 hospitalized (+63)
-56 counties (+0)
-39,580 people tested (+838)
-329 deaths (+21)
-78 outbreaks residential/non-hospital healthcare facilities (+6)
-
-https://t.co/PONDz6FgpE
-
-Latest: https://t.co/SrGo7Wvafm",New COVIDColorado data Change from Mon cases hospitalized counties people tested deaths outbreaks residentialnonhospital healthcare facilities Latest,2020-04-14 22:05:26,en,1,3,3,2,True,neutral,0.5
-18,1245554238526312448,['solidarityat'],['https://twitter.com/i/web/status/1245554238526312448'],"We work with medical personnel all over the World and wholeheartedly support the #Solidarityat8 movement. We celebrate and thank all healthcare workers battling Covid-19. Tonight, Airlink's Emily led our chorus. Please show your gratitude tomorrow! #AviationCARES #COVID19 https://t.co/8CfB86dXNv",We work with medical personnel all over the World and wholeheartedly support the Solidarityat movement We celebrate and thank all healthcare workers battling Covid Tonight Airlinks Emily led our chorus Please show your gratitude tomorrow AviationCARES COVID,2020-04-02 03:30:46,en,0,0,1,1,True,strongly_positive,0.9540500000000001
-19,1243682744015691783,['solidarityat'],['https://twitter.com/i/web/status/1243682744015691783'],"The global #Solidarityat8 movement has reached Chicago. Starting at 8, residents will step out on balconies and porches to cheer, sing and show support for health care workers, first responders and others on the front lines during the coronavirus pandemic. https://t.co/i4uUdjhZhw",The global Solidarityat movement has reached Chicago Starting at residents will step out on balconies and porches to cheer sing and show support for health care workers first responders and others on the front lines during the coronavirus pandemic,2020-03-27 23:34:07,en,0,0,1,0,True,strongly_positive,0.93125
-20,1240116559122579456,['covidcolorado'],['https://twitter.com/i/web/status/1240116559122579456'],"We're monitoring the #COVID19colorado situation closely and taking action to keep our clients, volunteers, and staff safe and healthy. Here's what you can expect from us. https://t.co/XyHGzQDgMD",Were monitoring the COVIDcolorado situation closely and taking action to keep our clients volunteers and staff safe and healthy Heres what you can expect from us,2020-03-18 03:23:22,en,0,0,0,0,True,strongly_positive,0.8404
-21,1248747582144147457,['covidcolorado'],['https://twitter.com/i/web/status/1248747582144147457'],"#COVID19Colorado Update
-6,510 cases
-1,312 hospitalized
-56 counties
-32,653 people tested
-250 deaths 
-
-Visit our website for details on today's reported data https://t.co/rvY7dQcc2X",COVIDColorado Update cases hospitalized counties people tested deaths Visit our website for details on todays reported data,2020-04-10 22:59:58,en,0,0,6,1,True,neutral,0.5
-22,1245319970919047168,['covidcolorado'],[],This works great for monitoring staff with symptoms too!  We want to help.  #COVID19Colorado,This works great for monitoring staff with symptoms too We want to help COVIDColorado,2020-04-01 11:59:52,en,0,0,0,0,True,strongly_positive,0.8982
-23,1248008650196582400,['covidcolorado'],['https://twitter.com/i/web/status/1248008650196582400'],"Latest #COVID19colorado data (Change from Tues):
-
-5,655 cases (+226)
-1,162 hospitalized (+83)
-54 counties (+0)
-29,199 people tested (+1,105)
-193 deaths (+14)
-48 outbreaks residential/non-hospital healthcare facilities (+4)
-
-https://t.co/PONDz6nF14
-
-Latest: https://t.co/M1pnVlXVbB",Latest COVIDcolorado data Change from Tues cases hospitalized counties people tested deaths outbreaks residentialnonhospital healthcare facilities Latest,2020-04-08 22:03:43,en,0,0,0,2,True,neutral,0.5
-24,1245561514620321794,['solidarityat'],['https://twitter.com/i/web/status/1245561514620321794'],"Chicago Tribune (@chicagotribune) Tweeted:
-Watch Chicago residents take part in the #Solidarityat8 movement by cheering health care workers, first responders and others on the front lines of the fight against the coronavirus.
-
-See more here: https:// https://t.co/bif1umLO9W",Chicago Tribune chicagotribune Tweeted Watch Chicago residents take part in the Solidarityat movement by cheering health care workers first responders and others on the front lines of the fight against the coronavirus See more here,2020-04-02 03:59:41,en,0,0,3,10,True,positive,0.7997000000000001
-25,1248592786062000135,['doingmypartco'],['https://twitter.com/i/web/status/1248592786062000135'],"Blucifer is joining the #DoingMyPartCO movement by wearing a mask while outside to help mitigate the spread of #COVID19 in Colorado. 
-
-We’re in this together!  https://t.co/pS1CE4fjol …  https://t.co/avRosw4i1u",Blucifer is joining the DoingMyPartCO movement by wearing a mask while outside to help mitigate the spread of COVID in Colorado We re in this together,2020-04-10 12:44:52,en,0,0,0,0,True,positive,0.70095
-26,1244066381089452035,['solidarityat'],['https://www.chicagotribune.com/coronavirus/ct-chicago-sing-along-20200327-c5o3ps6tmngjjolr322psqzgva-story.html'],Awesome #Solidarityat8 movement by ⁦@JamalCollier⁩  https://t.co/kMtIuvSN8G,Awesome Solidarityat movement by JamalCollier,2020-03-29 00:58:33,en,0,0,2,1,True,strongly_positive,0.81245
-27,1244043856271769602,['solidarityat'],['https://www.chicagotribune.com/coronavirus/ct-chicago-sing-along-20200327-c5o3ps6tmngjjolr322psqzgva-story.html'],"Chicago residents join #Solidarityat8 movement, saluting first responders, health care workers while staying at home https://t.co/jqv2hZS3X4",Chicago residents join Solidarityat movement saluting first responders health care workers while staying at home,2020-03-28 23:29:03,en,0,0,2,10,True,strongly_positive,0.82985
-28,1248371087378804737,['covidcolorado'],['https://twitter.com/i/web/status/1248371087378804737'],"New #COVID19colorado data (Change from Wed): 
-
-6,202 cases (+547)
-1,221 hospitalized (+59)
-56 counties (+2)
-31,180 people tested (+1,981)
-226 deaths (+33)
-54 outbreaks residential/non-hospital healthcare facilities (+6)
-
-https://t.co/PONDz6nF14 
-
-Updates: https://t.co/Nv3jIqxYTb",New COVIDcolorado data Change from Wed cases hospitalized counties people tested deaths outbreaks residentialnonhospital healthcare facilities Updates,2020-04-09 22:03:55,en,0,2,2,4,True,neutral,0.5
-29,1242615351713636354,"['covidcolorado', 'doingmypartco']",['https://covid19.colorado.gov/data'],Today's testing data out on #COVID19colorado found at the @CDPHE site here: [https://t.co/OAQnNLYF1m] #DoingMyPartCO https://t.co/cNum1wEZm7,Todays testing data out on COVIDcolorado found at the CDPHE site here DoingMyPartCO,2020-03-25 00:52:41,en,0,0,1,2,True,neutral,0.5
-30,1248739499657527300,['covidcolorado'],['https://twitter.com/i/web/status/1248739499657527300'],"New #COVID19colorado data (Change from Thur):
-
-6,510 cases (+308)
-1,312 hospitalized (+91)
-56 counties (+0)
-32,653 people tested (+1,473)
-250 deaths (+24)
-59 outbreaks residential/non-hospital healthcare facilities (+5)
-
-https://t.co/0cUwph4tOz
-
-Updates: https://t.co/CIFzDTXnxS",New COVIDcolorado data Change from Thur cases hospitalized counties people tested deaths outbreaks residentialnonhospital healthcare facilities Updates,2020-04-10 22:27:51,en,0,0,0,0,True,neutral,0.5
-31,1245543247189102592,['solidarityat'],['https://twitter.com/i/web/status/1245543247189102592'],"Watch Chicago residents take part in the #Solidarityat8 movement by cheering health care workers, first responders and others on the front lines of the fight against the coronavirus.
-
-See more here: https://t.co/bS4YPjKV4M https://t.co/Bmyup036YL",Watch Chicago residents take part in the Solidarityat movement by cheering health care workers first responders and others on the front lines of the fight against the coronavirus See more here,2020-04-02 02:47:05,en,15,13,92,375,True,positive,0.7997000000000001
-32,1245880969799884802,['solidarityat'],['https://twitter.com/i/web/status/1245880969799884802'],"Chicago residents join #Solidarityat8 movement, saluting first responders, health care workers while staying at home #StayHome https://t.co/YxjMO7npUo",Chicago residents join Solidarityat movement saluting first responders health care workers while staying at home StayHome,2020-04-03 01:09:05,en,0,0,1,1,True,strongly_positive,0.82985
-33,1251269992118497281,['covidcolorado'],['https://twitter.com/i/web/status/1251269992118497281'],"Latest #covid19colorado data (Change from Thurs):
+2,1251269992118497281,['covidcolorado'],['https://twitter.com/i/web/status/1251269992118497281'],"Latest #covid19colorado data (Change from Thurs):
 
 9,047 cases (+372)
 1,755 hospitalized (+62)
@@ -167,15 +24,9 @@ See more here: https://t.co/bS4YPjKV4M https://t.co/Bmyup036YL",Watch Chicago re
 https://t.co/4bKXfzg6ca 
 
 Updates: https://t.co/fHwC0Nnmxf",Latest covidcolorado data Change from Thurs cases hospitalized counties people tested deaths outbreaks Updates,2020-04-17 22:03:08,en,0,0,1,0,True,neutral,0.5
-34,1240067504996626432,['covidcolorado'],['https://twitter.com/i/web/status/1240067504996626432'],State Unified Command Center with @cdphe and @coemergeny launch new #COVID19Colorado website. View current data on test cases and results on https://t.co/Jme4jy6u8V,State Unified Command Center with cdphe and coemergeny launch new COVIDColorado website View current data on test cases and results on,2020-03-18 00:08:27,en,0,1,3,0,True,weakly_positive,0.6909
-35,1244068014640766976,['solidarityat'],['https://twitter.com/i/web/status/1244068014640766976'],"Chicago residents join #Solidarityat8 movement, saluting first responders, health care workers while staying at home - Chicago Tribune https://t.co/08W5MrhYQO",Chicago residents join Solidarityat movement saluting first responders health care workers while staying at home Chicago Tribune,2020-03-29 01:05:03,en,0,0,1,0,True,strongly_positive,0.82985
-36,1241849472956739585,['covidcolorado'],['https://twitter.com/i/web/status/1241849472956739585'],"#COVID19colorado Update:   591 cases
-58 hospitalized
-29 counties
-5,436 people tested
-6 deaths
-5 outbreaks at residential and non-hospital health care facilities |Case data |  https://t.co/rvY7dPUBbp https://t.co/KV4MCiIBHN",COVIDcolorado Update cases hospitalized counties people tested deaths outbreaks at residential and nonhospital health care facilities Case data,2020-03-22 22:09:21,en,1,1,19,17,True,positive,0.74695
-37,1250545679421734914,['covidcolorado'],['https://twitter.com/i/web/status/1250545679421734914'],"Latest #covid19colorado data (Change from Tues):
+3,1240116559122579456,['covidcolorado'],['https://twitter.com/i/web/status/1240116559122579456'],"We're monitoring the #COVID19colorado situation closely and taking action to keep our clients, volunteers, and staff safe and healthy. Here's what you can expect from us. https://t.co/XyHGzQDgMD",Were monitoring the COVIDcolorado situation closely and taking action to keep our clients volunteers and staff safe and healthy Heres what you can expect from us,2020-03-18 03:23:22,en,0,0,0,0,True,strongly_positive,0.8404
+4,1240067504996626432,['covidcolorado'],['https://twitter.com/i/web/status/1240067504996626432'],State Unified Command Center with @cdphe and @coemergeny launch new #COVID19Colorado website. View current data on test cases and results on https://t.co/Jme4jy6u8V,State Unified Command Center with cdphe and coemergeny launch new COVIDColorado website View current data on test cases and results on,2020-03-18 00:08:27,en,0,1,3,0,True,weakly_positive,0.6909
+5,1250545679421734914,['covidcolorado'],['https://twitter.com/i/web/status/1250545679421734914'],"Latest #covid19colorado data (Change from Tues):
 
 8,280 cases (+339)
 1,636 hospitalized (+80)
@@ -187,10 +38,82 @@ Updates: https://t.co/fHwC0Nnmxf",Latest covidcolorado data Change from Thurs ca
 https://t.co/4bKXfzg6ca
 
 Updates: https://t.co/9oT48aDE42",Latest covidcolorado data Change from Tues cases hospitalized counties people tested deaths outbreaks residentialnonhospital healthcare facilities Updates,2020-04-15 22:04:58,en,0,0,0,0,True,neutral,0.5
-38,1244059590062473216,['solidarityat'],['https://twitter.com/i/web/status/1244059590062473216'],"Watch Chicago residents take part in the #Solidarityat8 movement by cheering health care workers, first responders and others on the front lines of the fight against the coronavirus.
+6,1244043856271769602,['solidarityat'],['https://www.chicagotribune.com/coronavirus/ct-chicago-sing-along-20200327-c5o3ps6tmngjjolr322psqzgva-story.html'],"Chicago residents join #Solidarityat8 movement, saluting first responders, health care workers while staying at home https://t.co/jqv2hZS3X4",Chicago residents join Solidarityat movement saluting first responders health care workers while staying at home,2020-03-28 23:29:03,en,0,0,2,10,True,strongly_positive,0.82985
+7,1248779426201993218,['solidarityat'],['https://twitter.com/i/web/status/1248779426201993218'],"This is awesome! -&gt; Chicago residents join #Solidarityat8 movement, saluting first responders, health care workers while staying at home - Chicago Tribune https://t.co/hEiIo3ry5L",This is awesome gt Chicago residents join Solidarityat movement saluting first responders health care workers while staying at home Chicago Tribune,2020-04-11 01:06:31,en,0,0,0,0,True,strongly_positive,0.9455
+8,1245543247189102592,['solidarityat'],['https://twitter.com/i/web/status/1245543247189102592'],"Watch Chicago residents take part in the #Solidarityat8 movement by cheering health care workers, first responders and others on the front lines of the fight against the coronavirus.
 
-See more here: https://t.co/1b2Bus5eZ4 https://t.co/wkCj5BZXZy",Watch Chicago residents take part in the Solidarityat movement by cheering health care workers first responders and others on the front lines of the fight against the coronavirus See more here,2020-03-29 00:31:34,en,23,14,286,797,True,positive,0.7997000000000001
-39,1250183469243797504,['covidcolorado'],['https://twitter.com/i/web/status/1250183469243797504'],"New #COVID19Colorado data (Change from Mon):
+See more here: https://t.co/bS4YPjKV4M https://t.co/Bmyup036YL",Watch Chicago residents take part in the Solidarityat movement by cheering health care workers first responders and others on the front lines of the fight against the coronavirus See more here,2020-04-02 02:47:05,en,15,13,92,375,True,positive,0.7997000000000001
+9,1241136645463633920,['covidcolorado'],['https://twitter.com/i/web/status/1241136645463633920'],"#COVID2019Colorado Update  Colorado Case Summary for March 20 | 363 cases
+44 hospitalized
+24 counties
+3,680 people tested
+4 deaths  https://t.co/Jme4jy6u8V  [Note: This summary only includes data through 3/19 and does not reflect cases since then]",COVIDColorado Update Colorado Case Summary for March cases hospitalized counties people tested deaths Note This summary only includes data through and does not reflect cases since then,2020-03-20 22:56:50,en,3,1,7,19,True,neutral,0.5
+10,1245319970919047168,['covidcolorado'],[],This works great for monitoring staff with symptoms too!  We want to help.  #COVID19Colorado,This works great for monitoring staff with symptoms too We want to help COVIDColorado,2020-04-01 11:59:52,en,0,0,0,0,True,strongly_positive,0.8982
+11,1240269892953067520,['covidcolorado'],['http://covid19.colorado.gov'],"We launched a NEW website just for COVID-19, featuring data visualization for the number of cases. https://t.co/R3CJWZJrJ0 #COVID19colorado",We launched a NEW website just for COVID featuring data visualization for the number of cases COVIDcolorado,2020-03-18 13:32:40,en,12,28,97,137,True,weakly_positive,0.60115
+12,1239602740722049024,"['coronavirusupdates', 'covidcolorado']",['https://twitter.com/i/web/status/1239602740722049024'],Drafted some visual charts based on March 15th 2020 #CoronaVirusUpdates data for #COVID19colorado sourced from the @CDPHE public database found here: [https://t.co/HmRXfzYVD8] https://t.co/Y8ahqsVr26,Drafted some visual charts based on March th CoronaVirusUpdates data for COVIDcolorado sourced from the CDPHE public database found here,2020-03-16 17:21:38,en,0,0,1,1,True,neutral,0.5
+13,1251259405997182976,"['covidcolorado', 'coronavirus']",['https://gazette.com/news/colorado-opens-covid-19-symptom-tracker-to-collect-data/article_08141431-45ac-59b4-abe0-db8a9cd47c0e.html'],"Colorado opens COVID-19 'symptom tracker' to collect data
+https://t.co/0wQxjslmDQ
+#COVID19Colorado 
+#coronavirus",Colorado opens COVID symptom tracker to collect data COVIDColorado coronavirus,2020-04-17 21:21:04,en,0,0,2,1,True,neutral,0.5
+14,1248747582144147457,['covidcolorado'],['https://twitter.com/i/web/status/1248747582144147457'],"#COVID19Colorado Update
+6,510 cases
+1,312 hospitalized
+56 counties
+32,653 people tested
+250 deaths 
+
+Visit our website for details on today's reported data https://t.co/rvY7dQcc2X",COVIDColorado Update cases hospitalized counties people tested deaths Visit our website for details on todays reported data,2020-04-10 22:59:58,en,0,0,6,1,True,neutral,0.5
+15,1248734617609404417,['covidcolorado'],['https://twitter.com/i/web/status/1248734617609404417'],"New #COVID19colorado data (Change from Thur):
+
+6,510 cases (+308)
+1,312 hospitalized (+91)
+56 counties (+0)
+32,653 people tested (+1,473)
+226 deaths (+24)
+59 outbreaks residential/non-hospital healthcare facilities (+5)
+
+https://t.co/4bKXfyYvkC
+
+Updates: https://t.co/CIFzDTXnxS",New COVIDcolorado data Change from Thur cases hospitalized counties people tested deaths outbreaks residentialnonhospital healthcare facilities Updates,2020-04-10 22:08:27,en,0,0,0,0,True,neutral,0.5
+16,1240771538363670529,['covidcolorado'],['https://twitter.com/i/web/status/1240771538363670529'],"#COVID19Colorado Update:  277 cases | 38 hospitalized
+22 counties | 2,952 people tested |2 deaths Website link to raw data https://t.co/Jme4jy6u8V [Data is confirmed for 4 p.m. the day before]",COVIDColorado Update cases hospitalized counties people tested deaths Website link to raw data Data is confirmed for pm the day before,2020-03-19 22:46:01,en,0,2,5,8,True,neutral,0.5
+17,1241849472956739585,['covidcolorado'],['https://twitter.com/i/web/status/1241849472956739585'],"#COVID19colorado Update:   591 cases
+58 hospitalized
+29 counties
+5,436 people tested
+6 deaths
+5 outbreaks at residential and non-hospital health care facilities |Case data |  https://t.co/rvY7dPUBbp https://t.co/KV4MCiIBHN",COVIDcolorado Update cases hospitalized counties people tested deaths outbreaks at residential and nonhospital health care facilities Case data,2020-03-22 22:09:21,en,1,1,19,17,True,positive,0.74695
+18,1248592786062000135,['doingmypartco'],['https://twitter.com/i/web/status/1248592786062000135'],"Blucifer is joining the #DoingMyPartCO movement by wearing a mask while outside to help mitigate the spread of #COVID19 in Colorado. 
+
+We’re in this together!  https://t.co/pS1CE4fjol …  https://t.co/avRosw4i1u",Blucifer is joining the DoingMyPartCO movement by wearing a mask while outside to help mitigate the spread of COVID in Colorado We re in this together,2020-04-10 12:44:52,en,0,0,0,0,True,positive,0.70095
+19,1248592786070405120,['doingmypartco'],['https://twitter.com/i/web/status/1248592786070405120'],"Blucifer is joining the #DoingMyPartCO movement by wearing a mask while outside to help mitigate the spread of #COVID19 in Colorado. 
+
+We’re in this together!  https://t.co/oKTk1H5yMc …  https://t.co/FSIWci2tZc",Blucifer is joining the DoingMyPartCO movement by wearing a mask while outside to help mitigate the spread of COVID in Colorado We re in this together,2020-04-10 12:44:52,en,0,0,2,0,True,positive,0.70095
+20,1242615351713636354,"['covidcolorado', 'doingmypartco']",['https://covid19.colorado.gov/data'],Today's testing data out on #COVID19colorado found at the @CDPHE site here: [https://t.co/OAQnNLYF1m] #DoingMyPartCO https://t.co/cNum1wEZm7,Todays testing data out on COVIDcolorado found at the CDPHE site here DoingMyPartCO,2020-03-25 00:52:41,en,0,0,1,2,True,neutral,0.5
+21,1244265099520389121,['covidcolorado'],['https://twitter.com/i/web/status/1244265099520389121'],"Latest #COVID19Colorado updates: 
+
+-CDOT suspends Bustang services through April 11
+
+-Pres. Trump approved Colorado's application for major disaster status (which means we could see more money and supplies to fight #covid19)
+
+-Deaths, hospitalizations due to COVID-19 are growing https://t.co/YhHttdjOyt",Latest COVIDColorado updates CDOT suspends Bustang services through April Pres Trump approved Colorados application for major disaster status which means we could see more money and supplies to fight covid Deaths hospitalizations due to COVID are growing,2020-03-29 14:08:11,en,0,0,0,0,True,negative,0.22935
+22,1250825226029539328,['doingmypartco'],['https://twitter.com/i/web/status/1250825226029539328'],"w0w! @GovofCO  publicly fantasizes tyranny beyond known facts &amp; data.  #DoingMyPartCO
+  “And Phase 2 could last a while, Polis said: “two months, three months, 10 months — however long it is until there’s a cure or a vaccine.”
+https://t.co/tilxwpQb9h",ww GovofCO publicly fantasizes tyranny beyond known facts amp data DoingMyPartCO And Phase could last a while Polis said two months three months months however long it is until there s a cure or a vaccine,2020-04-16 16:35:47,en,0,0,0,0,True,neutral,0.5
+23,1245880969799884802,['solidarityat'],['https://twitter.com/i/web/status/1245880969799884802'],"Chicago residents join #Solidarityat8 movement, saluting first responders, health care workers while staying at home #StayHome https://t.co/YxjMO7npUo",Chicago residents join Solidarityat movement saluting first responders health care workers while staying at home StayHome,2020-04-03 01:09:05,en,0,0,1,1,True,strongly_positive,0.82985
+24,1248739499657527300,['covidcolorado'],['https://twitter.com/i/web/status/1248739499657527300'],"New #COVID19colorado data (Change from Thur):
+
+6,510 cases (+308)
+1,312 hospitalized (+91)
+56 counties (+0)
+32,653 people tested (+1,473)
+250 deaths (+24)
+59 outbreaks residential/non-hospital healthcare facilities (+5)
+
+https://t.co/0cUwph4tOz
+
+Updates: https://t.co/CIFzDTXnxS",New COVIDcolorado data Change from Thur cases hospitalized counties people tested deaths outbreaks residentialnonhospital healthcare facilities Updates,2020-04-10 22:27:51,en,0,0,0,0,True,neutral,0.5
+25,1250183469243797504,['covidcolorado'],['https://twitter.com/i/web/status/1250183469243797504'],"New #COVID19Colorado data (Change from Mon):
 
 7,941 cases (+250)
 1,556 hospitalized (+63)
@@ -202,14 +125,74 @@ See more here: https://t.co/1b2Bus5eZ4 https://t.co/wkCj5BZXZy",Watch Chicago re
 https://t.co/4bKXfyYvkC
 
 Latest: https://t.co/f0hAqSUeBq",New COVIDColorado data Change from Mon cases hospitalized counties people tested deaths outbreaks residentialnonhospital healthcare facilities Latest,2020-04-14 22:05:41,en,0,0,0,0,True,neutral,0.5
-40,1245349836536324096,"['solidarityat', 'denver', 'howling', 'doingmypartco']",['https://twitter.com/chicagotribune/status/1244059590062473216'],This is part of the National #SolidarityAt8 movement. Here in #Denver we are #Howling at 8. 🐺#DoingMyPartCO https://t.co/nZ5fIrYEse,This is part of the National SolidarityAt movement Here in Denver we are Howling at DoingMyPartCO,2020-04-01 13:58:33,en,0,0,1,0,True,neutral,0.5
-41,1250825226029539328,['doingmypartco'],['https://twitter.com/i/web/status/1250825226029539328'],"w0w! @GovofCO  publicly fantasizes tyranny beyond known facts &amp; data.  #DoingMyPartCO
-  “And Phase 2 could last a while, Polis said: “two months, three months, 10 months — however long it is until there’s a cure or a vaccine.”
-https://t.co/tilxwpQb9h",ww GovofCO publicly fantasizes tyranny beyond known facts amp data DoingMyPartCO And Phase could last a while Polis said two months three months months however long it is until there s a cure or a vaccine,2020-04-16 16:35:47,en,0,0,0,0,True,neutral,0.5
-42,1248089087140958209,['doingmypartco'],['https://twitter.com/i/web/status/1248089087140958209'],"Blucifer is joining the #DoingMyPartCO movement by wearing a mask while outside to help mitigate the spread of #COVID19 in Colorado. 
+26,1244068014640766976,['solidarityat'],['https://twitter.com/i/web/status/1244068014640766976'],"Chicago residents join #Solidarityat8 movement, saluting first responders, health care workers while staying at home - Chicago Tribune https://t.co/08W5MrhYQO",Chicago residents join Solidarityat movement saluting first responders health care workers while staying at home Chicago Tribune,2020-03-29 01:05:03,en,0,0,1,0,True,strongly_positive,0.82985
+27,1250912582031953920,['covidcolorado'],['https://twitter.com/i/web/status/1250912582031953920'],"Latest #covid19colorado data (Change from Wed): 
+
+8,675 cases (+395)
+1,693 hospitalized (+57)
+56 counties (+0)
+41,830 people tested (1,297)
+374 deaths (+17)
+93 outbreaks (+10)
+
+https://t.co/PONDz6nF14 
+
+Updates: https://t.co/CxChT8cXqj",Latest covidcolorado data Change from Wed cases hospitalized counties people tested deaths outbreaks Updates,2020-04-16 22:22:55,en,0,1,3,3,True,neutral,0.5
+28,1245554238526312448,['solidarityat'],['https://twitter.com/i/web/status/1245554238526312448'],"We work with medical personnel all over the World and wholeheartedly support the #Solidarityat8 movement. We celebrate and thank all healthcare workers battling Covid-19. Tonight, Airlink's Emily led our chorus. Please show your gratitude tomorrow! #AviationCARES #COVID19 https://t.co/8CfB86dXNv",We work with medical personnel all over the World and wholeheartedly support the Solidarityat movement We celebrate and thank all healthcare workers battling Covid Tonight Airlinks Emily led our chorus Please show your gratitude tomorrow AviationCARES COVID,2020-04-02 03:30:46,en,0,0,1,1,True,strongly_positive,0.9540500000000001
+29,1244066381089452035,['solidarityat'],['https://www.chicagotribune.com/coronavirus/ct-chicago-sing-along-20200327-c5o3ps6tmngjjolr322psqzgva-story.html'],Awesome #Solidarityat8 movement by ⁦@JamalCollier⁩  https://t.co/kMtIuvSN8G,Awesome Solidarityat movement by JamalCollier,2020-03-29 00:58:33,en,0,0,2,1,True,strongly_positive,0.81245
+30,1248371087378804737,['covidcolorado'],['https://twitter.com/i/web/status/1248371087378804737'],"New #COVID19colorado data (Change from Wed): 
+
+6,202 cases (+547)
+1,221 hospitalized (+59)
+56 counties (+2)
+31,180 people tested (+1,981)
+226 deaths (+33)
+54 outbreaks residential/non-hospital healthcare facilities (+6)
+
+https://t.co/PONDz6nF14 
+
+Updates: https://t.co/Nv3jIqxYTb",New COVIDcolorado data Change from Wed cases hospitalized counties people tested deaths outbreaks residentialnonhospital healthcare facilities Updates,2020-04-09 22:03:55,en,0,2,2,4,True,neutral,0.5
+31,1245561514620321794,['solidarityat'],['https://twitter.com/i/web/status/1245561514620321794'],"Chicago Tribune (@chicagotribune) Tweeted:
+Watch Chicago residents take part in the #Solidarityat8 movement by cheering health care workers, first responders and others on the front lines of the fight against the coronavirus.
+
+See more here: https:// https://t.co/bif1umLO9W",Chicago Tribune chicagotribune Tweeted Watch Chicago residents take part in the Solidarityat movement by cheering health care workers first responders and others on the front lines of the fight against the coronavirus See more here,2020-04-02 03:59:41,en,0,0,3,10,True,positive,0.7997000000000001
+32,1248371109336137728,['covidcolorado'],['https://twitter.com/i/web/status/1248371109336137728'],"New #COVID19colorado data (Change from Wed): 
+
+6,202 cases (+547)
+1,221 hospitalized (+59)
+56 counties (+2)
+31,180 people tested (+1,981)
+226 deaths (+33)
+54 outbreaks residential/non-hospital healthcare facilities (+6)
+
+https://t.co/4bKXfyYvkC 
+
+Updates: https://t.co/fe1A0ZFG4z",New COVIDcolorado data Change from Wed cases hospitalized counties people tested deaths outbreaks residentialnonhospital healthcare facilities Updates,2020-04-09 22:04:00,en,0,0,0,0,True,neutral,0.5
+33,1243682744015691783,['solidarityat'],['https://twitter.com/i/web/status/1243682744015691783'],"The global #Solidarityat8 movement has reached Chicago. Starting at 8, residents will step out on balconies and porches to cheer, sing and show support for health care workers, first responders and others on the front lines during the coronavirus pandemic. https://t.co/i4uUdjhZhw",The global Solidarityat movement has reached Chicago Starting at residents will step out on balconies and porches to cheer sing and show support for health care workers first responders and others on the front lines during the coronavirus pandemic,2020-03-27 23:34:07,en,0,0,1,0,True,strongly_positive,0.93125
+34,1250896718226317313,['covidcolorado'],['https://twitter.com/i/web/status/1250896718226317313'],"@CDPHE is now reporting more data on cases of #COVID19Colorado at Colorado nursing homes, assisted living centers and similar facilities. The number of facilities with the virus went from 21 two weeks ago to 86 as of April 15. https://t.co/WmLanbVQmk @colo_politics",CDPHE is now reporting more data on cases of COVIDColorado at Colorado nursing homes assisted living centers and similar facilities The number of facilities with the virus went from two weeks ago to as of April colopolitics,2020-04-16 21:19:52,en,0,0,0,0,True,weakly_positive,0.5386
+35,1242052127507300354,['solidarityat'],['https://www.pix11.com/news/coronavirus/viral-movement-solidarityat8-shows-appreciation-for-health-care-workers'],Viral movement #SolidarityAt8 shows appreciation for health care workers https://t.co/qvf39lt16d https://t.co/DBhTVccgpQ,Viral movement SolidarityAt shows appreciation for health care workers,2020-03-23 11:34:38,en,0,0,1,3,True,strongly_positive,0.87895
+36,1250183408048889865,['covidcolorado'],['https://twitter.com/i/web/status/1250183408048889865'],"New #COVID19Colorado data (Change from Mon):
+
+7,941 cases (+250)
+1,556 hospitalized (+63)
+56 counties (+0)
+39,580 people tested (+838)
+329 deaths (+21)
+78 outbreaks residential/non-hospital healthcare facilities (+6)
+
+https://t.co/PONDz6FgpE
+
+Latest: https://t.co/SrGo7Wvafm",New COVIDColorado data Change from Mon cases hospitalized counties people tested deaths outbreaks residentialnonhospital healthcare facilities Latest,2020-04-14 22:05:26,en,1,3,3,2,True,neutral,0.5
+37,1248089087140958209,['doingmypartco'],['https://twitter.com/i/web/status/1248089087140958209'],"Blucifer is joining the #DoingMyPartCO movement by wearing a mask while outside to help mitigate the spread of #COVID19 in Colorado. 
 
 We’re in this together! ❤️ https://t.co/gYdVyFWgiW",Blucifer is joining the DoingMyPartCO movement by wearing a mask while outside to help mitigate the spread of COVID in Colorado We re in this together,2020-04-09 03:23:21,en,2,8,19,80,True,positive,0.70095
-43,1250545695133585408,['covidcolorado'],['https://twitter.com/i/web/status/1250545695133585408'],"Latest #covid19colorado data (Change from Tues):
+38,1245189625892626435,['solidarityat'],[],I’m calling on all LHS students to participate with the #SolidarityAt8 movement! @lhslionsfb you in?,I m calling on all LHS students to participate with the SolidarityAt movement lhslionsfb you in,2020-04-01 03:21:55,en,0,0,0,0,True,neutral,0.5
+39,1244059590062473216,['solidarityat'],['https://twitter.com/i/web/status/1244059590062473216'],"Watch Chicago residents take part in the #Solidarityat8 movement by cheering health care workers, first responders and others on the front lines of the fight against the coronavirus.
+
+See more here: https://t.co/1b2Bus5eZ4 https://t.co/wkCj5BZXZy",Watch Chicago residents take part in the Solidarityat movement by cheering health care workers first responders and others on the front lines of the fight against the coronavirus See more here,2020-03-29 00:31:34,en,23,14,286,797,True,positive,0.7997000000000001
+40,1241530800228663296,['solidarityat'],['https://twitter.com/i/web/status/1241530800228663296'],"We are proud to join the #SOLIDARITYat8 movement, paying tribute to our health care heroes every night at 8 pm. #THANKYOU to all the people seeing us through #COVID19! Why do they do what they do? Check it out here: https://t.co/tC69vsjYEa
+@TayeDiggs @ACEPNow @CORD_EM",We are proud to join the SOLIDARITYat movement paying tribute to our health care heroes every night at pm THANKYOU to all the people seeing us through COVID Why do they do what they do Check it out here TayeDiggs ACEPNow CORDEM,2020-03-22 01:03:03,en,0,0,1,0,True,strongly_positive,0.9478500000000001
+41,1250545695133585408,['covidcolorado'],['https://twitter.com/i/web/status/1250545695133585408'],"Latest #covid19colorado data (Change from Tues):
 
 8,280 cases (+339)
 1,636 hospitalized (+80)
@@ -221,4 +204,21 @@ We’re in this together! ❤️ https://t.co/gYdVyFWgiW",Blucifer is joining th
 https://t.co/PONDz6nF14
 
 Updates: https://t.co/DGiRPKSaCq",Latest covidcolorado data Change from Tues cases hospitalized counties people tested deaths outbreaks residentialnonhospital healthcare facilities Updates,2020-04-15 22:05:02,en,0,0,1,0,True,neutral,0.5
-44,1239602740722049024,"['coronavirusupdates', 'covidcolorado']",['https://twitter.com/i/web/status/1239602740722049024'],Drafted some visual charts based on March 15th 2020 #CoronaVirusUpdates data for #COVID19colorado sourced from the @CDPHE public database found here: [https://t.co/HmRXfzYVD8] https://t.co/Y8ahqsVr26,Drafted some visual charts based on March th CoronaVirusUpdates data for COVIDcolorado sourced from the CDPHE public database found here,2020-03-16 17:21:38,en,0,0,1,1,True,neutral,0.5
+42,1248008650196582400,['covidcolorado'],['https://twitter.com/i/web/status/1248008650196582400'],"Latest #COVID19colorado data (Change from Tues):
+
+5,655 cases (+226)
+1,162 hospitalized (+83)
+54 counties (+0)
+29,199 people tested (+1,105)
+193 deaths (+14)
+48 outbreaks residential/non-hospital healthcare facilities (+4)
+
+https://t.co/PONDz6nF14
+
+Latest: https://t.co/M1pnVlXVbB",Latest COVIDcolorado data Change from Tues cases hospitalized counties people tested deaths outbreaks residentialnonhospital healthcare facilities Latest,2020-04-08 22:03:43,en,0,0,0,2,True,neutral,0.5
+43,1245349836536324096,"['solidarityat', 'denver', 'howling', 'doingmypartco']",['https://twitter.com/chicagotribune/status/1244059590062473216'],This is part of the National #SolidarityAt8 movement. Here in #Denver we are #Howling at 8. 🐺#DoingMyPartCO https://t.co/nZ5fIrYEse,This is part of the National SolidarityAt movement Here in Denver we are Howling at DoingMyPartCO,2020-04-01 13:58:33,en,0,0,1,0,True,neutral,0.5
+44,1251249613849460738,['covidcolorado'],['https://twitter.com/i/web/status/1251249613849460738'],"@cprwarner @CDPHE Now if only someone would tweet about it with the #COVID19Colorado…
+
+Also, check out this nation-wide tracker app being used to study the symptoms of #COVID19 and track the spread of the #coronavirus—Take 1-minute to report daily, even if you are well.
+
+https://t.co/AIBkOp1Mwk",cprwarner CDPHE Now if only someone would tweet about it with the COVIDColorado Also check out this nationwide tracker app being used to study the symptoms of COVID and track the spread of the coronavirusTake minute to report daily even if you are well,2020-04-17 20:42:09,en,0,0,0,0,True,weakly_positive,0.6366
