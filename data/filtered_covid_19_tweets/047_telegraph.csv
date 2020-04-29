@@ -1,4 +1,4 @@
-,id_str,hashtags,urls,text,clean_text,created_at,lang,username,username_description,username_location,quote_count,reply_count,retweet_count,favorite_count,to_cache
+,id_str,hashtags,urls,text,clean_text,created_at,lang,quote_count,reply_count,retweet_count,favorite_count,to_cache,sa_label,sa
 0,1249579240380600321,"['telegraph', 'healthminister']",['https://twitter.com/i/web/status/1249579240380600321'],"@BBCBreakfast @louiseminchin @RogerJ_01 @PostOffice @AndreaBocelli #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -7,7 +7,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",BBCBreakfast louiseminchin RogerJ PostOffice AndreaBocelli Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 06:04:41,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",BBCBreakfast louiseminchin RogerJ PostOffice AndreaBocelli Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 06:04:41,en,0,0,0,0,True,positive,0.78335
 1,1249633520223498242,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249633520223498242'],"@RStranges1 @BBCNews #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -16,7 +16,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",RStranges BBCNews Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 09:40:22,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",RStranges BBCNews Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 09:40:22,en,0,0,0,0,True,positive,0.78335
 2,1249623729916780547,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249623729916780547'],"@SkyNews #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -25,7 +25,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",SkyNews Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 09:01:28,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",SkyNews Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 09:01:28,en,0,0,0,0,True,positive,0.78335
 3,1249613004540428289,"['telegraph', 'healthminister']",['https://twitter.com/i/web/status/1249613004540428289'],"@NickMartinSKY @MATUESmadrid @Mackc110 @piersmorgan #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -34,7 +34,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",NickMartinSKY MATUESmadrid Mackc piersmorgan Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 08:18:51,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",NickMartinSKY MATUESmadrid Mackc piersmorgan Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 08:18:51,en,0,0,0,0,True,positive,0.78335
 4,1249579766270869504,"['telegraph', 'healthminister']",['https://twitter.com/i/web/status/1249579766270869504'],"@GMB @piersmorgan @susannareid100 #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -43,7 +43,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",GMB piersmorgan susannareid Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 06:06:47,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",GMB piersmorgan susannareid Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 06:06:47,en,0,0,0,0,True,positive,0.78335
 5,1249611898829656064,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249611898829656064'],"@BBCr4today @WHO #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -52,7 +52,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",BBCrtoday WHO Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 08:14:28,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",BBCrtoday WHO Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 08:14:28,en,0,0,0,0,True,positive,0.78335
 6,1249577891689566208,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249577891689566208'],"@SkyNews @RachelReevesMP #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -61,7 +61,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",SkyNews RachelReevesMP Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 05:59:20,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",SkyNews RachelReevesMP Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 05:59:20,en,0,0,0,0,True,positive,0.78335
 7,1249583557388972032,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249583557388972032'],"@guardian #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -70,7 +70,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",guardian Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 06:21:50,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",guardian Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 06:21:50,en,0,0,0,0,True,positive,0.78335
 8,1249429474770378757,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249429474770378757'],"@SkyNews #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -79,7 +79,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",SkyNews Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-12 20:09:34,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",SkyNews Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-12 20:09:34,en,0,0,0,0,True,positive,0.78335
 9,1249394171124879361,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249394171124879361'],"@SkyNews #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -88,7 +88,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",SkyNews Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-12 17:49:17,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",SkyNews Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-12 17:49:17,en,0,0,0,0,True,positive,0.78335
 10,1249581951155154953,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249581951155154953'],"@jburnmurdoch #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -97,7 +97,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",jburnmurdoch Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 06:15:27,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",jburnmurdoch Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 06:15:27,en,0,0,0,0,True,positive,0.78335
 11,1249605671118688256,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249605671118688256'],"@SkyNews @NickMartinSKY #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -106,7 +106,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",SkyNews NickMartinSKY Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 07:49:43,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",SkyNews NickMartinSKY Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 07:49:43,en,0,0,0,0,True,positive,0.78335
 12,1249684228415119362,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249684228415119362'],"@guardian #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -115,7 +115,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",guardian Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 13:01:52,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",guardian Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 13:01:52,en,0,0,0,0,True,positive,0.78335
 13,1249611375472775168,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249611375472775168'],"@willog496 @SkyNews #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -124,7 +124,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",willog SkyNews Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 08:12:23,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",willog SkyNews Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 08:12:23,en,0,0,0,0,True,positive,0.78335
 14,1249622824307875840,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249622824307875840'],"@SkyNews #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -133,7 +133,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",SkyNews Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 08:57:52,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",SkyNews Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 08:57:52,en,0,0,0,0,True,positive,0.78335
 15,1249580479508107264,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249580479508107264'],"@Independent #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -142,7 +142,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",Independent Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 06:09:37,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",Independent Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 06:09:37,en,0,0,0,0,True,positive,0.78335
 16,1249615030817034240,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249615030817034240'],"@Telegraph #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -151,7 +151,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",Telegraph Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 08:26:54,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",Telegraph Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 08:26:54,en,0,0,0,0,True,positive,0.78335
 17,1249585691882913793,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249585691882913793'],"@thetimes @maitlis #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -160,7 +160,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",thetimes maitlis Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 06:30:19,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",thetimes maitlis Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 06:30:19,en,0,0,0,0,True,positive,0.78335
 18,1249576308943851521,"['telegraph', 'healthminister']",['https://twitter.com/i/web/status/1249576308943851521'],"@BBCr4today @Marthakearney @JustinOnWeb #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -169,7 +169,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",BBCrtoday Marthakearney JustinOnWeb Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 05:53:02,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",BBCrtoday Marthakearney JustinOnWeb Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 05:53:02,en,0,0,0,0,True,positive,0.78335
 19,1249612824239837184,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249612824239837184'],"@NickMartinSKY #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -178,7 +178,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",NickMartinSKY Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 08:18:08,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",NickMartinSKY Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 08:18:08,en,0,0,0,0,True,positive,0.78335
 20,1249448705771679744,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249448705771679744'],"@guardian #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -187,7 +187,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",guardian Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-12 21:25:59,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",guardian Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-12 21:25:59,en,0,0,0,0,True,positive,0.78335
 21,1249589867400646659,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249589867400646659'],"@GMB @julietdunlop #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -196,7 +196,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",GMB julietdunlop Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 06:46:55,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",GMB julietdunlop Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 06:46:55,en,0,0,0,0,True,positive,0.78335
 22,1249612658753646593,['healthminister'],['https://twitter.com/i/web/status/1249612658753646593'],"@SkyNews @MattHancock @NickMartinSKY @Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair @MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -205,7 +205,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",SkyNews MattHancock NickMartinSKY Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 08:17:29,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",SkyNews MattHancock NickMartinSKY Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 08:17:29,en,0,0,0,0,True,positive,0.78335
 23,1249429650453004290,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249429650453004290'],"@guardian #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -214,7 +214,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",guardian Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-12 20:10:16,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",guardian Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-12 20:10:16,en,0,0,0,0,True,positive,0.78335
 24,1249579587002122240,"['telegraph', 'healthminister']",['https://twitter.com/i/web/status/1249579587002122240'],"@GMB @piersmorgan @susannareid100 @DrHilaryJones #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -223,7 +223,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",GMB piersmorgan susannareid DrHilaryJones Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 06:06:04,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",GMB piersmorgan susannareid DrHilaryJones Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 06:06:04,en,0,0,0,0,True,positive,0.78335
 25,1249580909805871104,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249580909805871104'],"@thetimes #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -232,7 +232,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",thetimes Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 06:11:19,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",thetimes Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 06:11:19,en,0,0,0,0,True,positive,0.78335
 26,1249606451355680768,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249606451355680768'],"@thetimes #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -241,7 +241,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",thetimes Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 07:52:49,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",thetimes Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 07:52:49,en,0,0,0,0,True,positive,0.78335
 27,1249398076974026759,"['telegraph', 'healthminister']",['https://twitter.com/i/web/status/1249398076974026759'],"@ITVNewsPolitics @itvnews @Peston #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -250,7 +250,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",ITVNewsPolitics itvnews Peston Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-12 18:04:48,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",ITVNewsPolitics itvnews Peston Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-12 18:04:48,en,0,0,0,0,True,positive,0.78335
 28,1249401889478922242,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249401889478922242'],"@SkyNews #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -259,7 +259,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",SkyNews Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-12 18:19:57,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",SkyNews Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-12 18:19:57,en,0,0,0,0,True,positive,0.78335
 29,1249619315474731009,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249619315474731009'],"@thetimes #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -268,7 +268,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",thetimes Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 08:43:56,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",thetimes Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 08:43:56,en,0,0,0,0,True,positive,0.78335
 30,1249399280063913985,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249399280063913985'],"@BethRigby @IslaGlaister #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -277,7 +277,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",BethRigby IslaGlaister Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-12 18:09:35,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",BethRigby IslaGlaister Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-12 18:09:35,en,0,0,0,0,True,positive,0.78335
 31,1249448231748198400,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249448231748198400'],"@thetimes #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -286,7 +286,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",thetimes Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-12 21:24:06,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",thetimes Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-12 21:24:06,en,0,0,0,0,True,positive,0.78335
 32,1249615431209488384,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249615431209488384'],"@Independent #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -295,7 +295,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",Independent Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 08:28:30,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",Independent Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 08:28:30,en,0,0,0,0,True,positive,0.78335
 33,1249624754149089281,"['telegraph', 'healthminister']",['https://twitter.com/i/web/status/1249624754149089281'],"@ANG83503664 @Versysrider @thetimes #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -304,7 +304,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",ANG Versysrider thetimes Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 09:05:32,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",ANG Versysrider thetimes Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 09:05:32,en,0,0,0,0,True,positive,0.78335
 34,1249716176428699650,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249716176428699650'],"@Independent #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -313,7 +313,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",Independent Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 15:08:49,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",Independent Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 15:08:49,en,0,0,0,0,True,positive,0.78335
 35,1249576506487181312,"['telegraph', 'healthminister']",['https://twitter.com/i/web/status/1249576506487181312'],"@BBCr4today @WHO @RachelReevesMP @NHSProviders #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -322,7 +322,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",BBCrtoday WHO RachelReevesMP NHSProviders Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 05:53:49,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",BBCrtoday WHO RachelReevesMP NHSProviders Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 05:53:49,en,0,0,0,0,True,positive,0.78335
 36,1249606197751230471,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249606197751230471'],"@Independent #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -331,7 +331,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",Independent Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 07:51:48,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",Independent Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 07:51:48,en,0,0,0,0,True,positive,0.78335
 37,1249614649433247745,"['telegraph', 'healthminister']",['https://twitter.com/i/web/status/1249614649433247745'],"@GMB @piersmorgan @susannareid100 #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -340,7 +340,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",GMB piersmorgan susannareid Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 08:25:23,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",GMB piersmorgan susannareid Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 08:25:23,en,0,0,0,0,True,positive,0.78335
 38,1249618146996236289,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249618146996236289'],"@FinancialTimes #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -349,7 +349,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",FinancialTimes Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 08:39:17,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",FinancialTimes Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 08:39:17,en,0,0,0,0,True,positive,0.78335
 39,1249622893086027776,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249622893086027776'],"@SkyNews #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -358,7 +358,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",SkyNews Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 08:58:09,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",SkyNews Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 08:58:09,en,0,0,0,0,True,positive,0.78335
 40,1249590363230265345,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249590363230265345'],"@Independent #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -367,7 +367,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",Independent Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 06:48:53,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",Independent Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 06:48:53,en,0,0,0,0,True,positive,0.78335
 41,1249590039245398017,"['healthminister', 'covid']",['https://twitter.com/i/web/status/1249590039245398017'],"@Telegraph @Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair @MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -376,7 +376,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",Telegraph Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 06:47:36,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",Telegraph Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 06:47:36,en,0,0,0,0,True,positive,0.78335
 42,1249447954596888576,"['telegraph', 'healthminister']",['https://twitter.com/i/web/status/1249447954596888576'],"@Channel4News @kirancmoodley #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -385,7 +385,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",ChannelNews kirancmoodley Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-12 21:23:00,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",ChannelNews kirancmoodley Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-12 21:23:00,en,0,0,0,0,True,positive,0.78335
 43,1249700675325497347,"['healthminister', 'covid']",['https://twitter.com/i/web/status/1249700675325497347'],"@TelegraphNews @Telegraph @Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair @MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -394,7 +394,7 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",TelegraphNews Telegraph Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 14:07:13,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",TelegraphNews Telegraph Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-13 14:07:13,en,0,0,0,0,True,positive,0.78335
 44,1249393898453073920,"['telegraph', 'healthminister', 'covid']",['https://twitter.com/i/web/status/1249393898453073920'],"@SkyNews #Telegraph Tweet implies #HealthMinister still thinks there'll be under 20,000 #COVID19 deaths"". 
 
 To be fair #MattHancock didn't say this. Indeed, he didn't answer the question! 
@@ -403,4 +403,4 @@ Data shows final total will be well in excess of 20,000!
 
 https://t.co/g1nc0dS5Kl
 
-#CoronaVirusUK",SkyNews Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-12 17:48:12,en,Paul Vittles FMRS FAMI FRSA,"Transformational Change, esp: #democracy #empowerment #MentalHealth #EndLoneliness #SuicidePrevention #ZeroSuicide #DigitalLifeSaving #AI #CommunityEngagement","York, England",0,0,0,0,True
+#CoronaVirusUK",SkyNews Telegraph Tweet implies HealthMinister still thinks therell be under COVID deaths To be fair MattHancock didnt say this Indeed he didnt answer the question Data shows final total will be well in excess of CoronaVirusUK,2020-04-12 17:48:12,en,0,0,0,0,True,positive,0.78335
