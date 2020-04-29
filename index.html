@@ -37,68 +37,91 @@
         .carousel-item {
             text-align: center;
         }
+
+        .caption-section {
+            margin-top: 30px;
+        }
     </style>
 </head>
 
 
 <body>
-    <div style="width:800px;margin:auto;">
+    <div style="width:1000px;margin:auto;">
         <h2>COVID-19 on Twitter</h2>
         <div>
             <h3>Hashtags network about covid-19</h3>
-            <p>Around 5.3 Millions of tweets collected from March 15th to April 19th</p>
-            <p><a target="_blank" href="https://ipsoeu.github.io/sandbox/networks/covid_19_5M/network/">Interactive
-                    hashtags network (slow-loading)</a> -
-                <a href="images/covid_19_5M_tweets.png">Download high resolution image</a></p>
+            <h5>Around 5.3 Millions of tweets collected from March 15th to April 19th</h5>
             <div style="text-align: center;">
                 <img src="images/covid_19_5M_tweets.jpg" style="width: 700px" />
             </div>
+            <div>
+                <button type="button" class="btn btn-light">
+                    <a target="_blank" href="https://ipsoeu.github.io/sandbox/networks/covid_19_5M/network/">Interactive
+                        hashtags network (slow-loading)</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="images/covid_19_5M_tweets.png">Download high resolution image</a>
+                </button>
+            </div>
         </div>
 
-        <div>
+        <div class="caption-section">
             <h3>Hashtags network about covid-19 and Mobile App, Tracking and Privacy</h3>
             <h5>175000 tweets filtered from 5 Million of tweets</h5>
-            <p><a href="https://ipsoeu.github.io/sandbox/networks/covid_19_5M_filtered/network/">Interactive network</a>
-                - <a href="images/covid_19_5M_filtered.png">Download high resolution image</a></p>
             <div style="text-align: center;">
                 <img src="images/covid_19_5M_filtered.jpg" style="width: 700px" />
             </div>
+            <div>
+                <button type="button" class="btn btn-light">
+                    <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_5M_filtered/network/">Interactive
+                        network</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="images/covid_19_5M_filtered.png">Download high resolution image</a>
+                </button>
+            </div>
+        </div>
 
-            <h5>Hashtags network and Sentiment analysis</h5>
-            <p>
-                <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_filtered_sa/network/">Interactive network</a>
-                - <a href="images/covid_19_5M_filtered.sa.png">Download high resolution image</a>
-            </p>
+        <div class="caption-section">
+            <h3>Hashtags network and Sentiment analysis</h3>
+            <h5>Red nodes are negative opinions, blu nodes positive opinions and yellow nodes are neutral</h5>
             <div style="text-align: center;">
                 <img src="images/covid_19_5M_filtered.sa.png" style="width: 700px" />
             </div>
-        </div>
-
-        <div>
-            <h3>Hashtag network about covid-19 and Mobile App, Tracking and Privacy</h3>
-            <p>Focus on Mobile App, Tracking and Privacy</p>
-            <p><a href="https://ipsoeu.github.io/sandbox/networks/covid_19_5M_filtered_without_main_comm/network/">Interactive
-                    network</a> - <a href="images/covid_19_5M_filtered_without_main_comm.png">Donwload</a> - 
-                    <a href="data/filtered_covid_19_tweets/">Tabular data</a>
-                </p>
-            <div style="text-align: center;">
-                <img src="images/covid_19_5M_filtered_without_main_comm.jpg" style="width: 700px" />
+            <div>
+                <button type="button" class="btn btn-light">
+                    <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_filtered_sa/network/">Interactive
+                        network</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="images/covid_19_5M_filtered.sa.png">Download high resolution image</a>
+                </button>
             </div>
         </div>
 
-        <div>
+        <div class="caption-section">
+            <h3>Hashtag network about covid-19 and Mobile App, Tracking and Privacy</h3>
+            <h5>Focus on Mobile App, Tracking and Privacy</h5>
+            <div style="text-align: center;">
+                <img src="images/covid_19_5M_filtered_without_main_comm.jpg" style="width: 700px" />
+            </div>
+            <div>
+                <button type="button" class="btn btn-light">
+                    <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_5M_filtered_without_main_comm/network/">Interactive
+                        network</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="images/covid_19_5M_filtered_without_main_comm.png">Donwload</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="data/filtered_covid_19_tweets/">Tabular data</a>
+                </button>
+            </div>
+        </div>
+
+        <div class="caption-section">
             <h3>Hashtag network about covid-19 and Privacy</h3>
             <h5>Focus on Privacy subnetwork</h5>
-            <p>
-                Interactive networks (
-                <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_privacy_0/network/">1</a>,
-                <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_privacy_1/network/">2</a>,
-                <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_privacy_2/network/">3</a>
-                ) - 
-                <a href="data/filtered_covid_19_tweets/002_privacy.csv">Tabular data</a> - 
-                <a href="images/covid_19_privacy_0.png">Download high resolution image</a>
-            </p>
-
 
             <div id="covid_19_privacy" class="carousel slide" data-ride="carousel">
 
@@ -129,20 +152,31 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-
+            <div>
+                <button type="button" class="btn btn-light">
+                    <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_privacy_0/network/">Interactive network
+                        1</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_privacy_1/network/">Interactive network
+                        2</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_privacy_2/network/">Interactive network
+                        3</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="data/filtered_covid_19_tweets/002_privacy.csv">Tabular data</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="images/covid_19_privacy_0.png">Download high resolution image</a>
+                </button>
+            </div>
         </div>
 
-        <div>
+        <div class="caption-section">
             <h3>Hashtags network about covid-19 and Tracking-App</h3>
-
-            <p>
-                Focus on Tracking-App subnetwork -
-                Interactive networks (
-                <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_app_0/network/">1</a>,
-                <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_app_1/network/">2</a>,
-                <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_app_2/network/">3</a>
-                )
-            </p>
+            <h5>Focus on Tracking-App subnetwork</h5>
 
             <div id="covid_19_app" class="carousel slide" data-ride="carousel">
 
@@ -171,19 +205,31 @@
                     <span class="carousel-control-next-icon"></span>
                 </a>
             </div>
-
+            <div>
+                <button type="button" class="btn btn-light">
+                    <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_app_0/network/">Interactive network
+                        1</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_app_1/network/">Interactive network
+                        2</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_app_2/network/">Interactive network
+                        3</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="data/filtered_covid_19_tweets/009_app.csv">Tabular data</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="images/covid_19_app_0.png">Download high resolution image</a>
+                </button>
+            </div>
         </div>
 
-        <div>
+        <div class="caption-section">
             <h3>Hashtags network about covid-19 and Smartphone</h3>
-            <p>
-                Focus on Smarphone subnetwork -
-                Interactive networks (
-                <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_smartphone_0/network/">1</a>,
-                <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_smartphone_1/network/">2</a>,
-                <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_smartphone_2/network/">3</a>
-                )
-            </p>
+            <h5>Focus on Smarphone subnetwork</h5>
 
             <div id="covid_19_smartphone" class="carousel slide" data-ride="carousel">
 
@@ -212,42 +258,43 @@
                     <span class="carousel-control-next-icon"></span>
                 </a>
             </div>
-
+            <div>
+                <button type="button" class="btn btn-light">
+                    <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_smartphone_0/network/">Interactive
+                        network 1</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_smartphone_1/network/">Interactive
+                        network 2</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_smartphone_2/network/">Interactive
+                        network 3</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="data/filtered_covid_19_tweets/019_smartphone.csv">Tabular data</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="images/covid_19_smartphone_0.png">Download high resolution image</a>
+                </button>
+            </div>
         </div>
-        <!--
-        <div>
-            <h3>Hashtag network about covid-19 and smartphone</h3>
-            <p>
-                Focus on smartphone subnetwork - <a href="data/smartphone_community.csv">300 tweets</a> -  <a href="data/smartphone_community.csv">most likely relevant tweets about tracking</a>
-            </p>
-            <img src="data/Screenshot 2020-04-16 at 16.46.36.png" style="width: 400px" />
-        </div>
 
-         <p>
-                Wordcloud from tweets with ranked words, bi-gram and tri-gram - Extracting keywords using domain-independent method and graph propagation (RAKE)
-            </p>
-            <img src="data/hackathon_wordcloud.png">
-
--->
         <h2>#EUvsVirus Hachathon</h2>
         <div>
             <h3>Hashtags network about EU vs Virus Hachathon</h3>
-            <p>Tweets collected form April 21th to April 27th </p>
+            <h5>Tweets collected form April 21th to April 27th</h5>
             <!-- <p>
                 Focus on Smarphone subnetwork
                 <a href="">1226 tweets</a> and 40 hashtags -  
                 <a href="data/hackathon_community_filtered.csv">most likely relevant tweets about tracking</a> - 
                 <a href="https://ipsoeu.github.io/sandbox/covid_19/covid_19_hackathon/network/">Interactive network</a> - 
                 <a href="images/covid_19_privacy.png">Donwload</a>-->
-            </p>
+
             <div style="text-align: center;">
                 <img src="images/eu_vs_virus.png" style="width: 500px" />
             </div>
-
-
         </div>
-
-
 
     </div>
 </body>
