@@ -42,14 +42,12 @@
             margin-top: 30px;
         }
 
-        #wrap{
-            width:1000px;
-            margin:auto;
+        #wrap {
+            width: 1000px;
+            margin: auto;
         }
 
-        .caption-title{
-           
-        }
+        .caption-title {}
     </style>
 </head>
 
@@ -57,50 +55,131 @@
 <body>
     <div id="wrap">
         <h1>APP Immuni</h2>
-        <h4>An italian case study of Tracking-App to fight Covid-19</h4>
-        
-        <div class="caption-section">
-            <h3 class="caption-title">Dataset details</h3>
-            <ul>
-                <li>Streamed tweets using the keywords Immuni and AppImmuni</li>
-                <li>Around 33000 tweets</li>
-                <li>Collected from May 31, 2020 to July 6, 2020</li>
-            </ul>
-        </div>
-        
-        <div class="caption-section">
-            <h3>Temporal evolution</h3>
-            <h5>In red the high activities of the twitter users</h5>
-            <div style="text-align: center;">
-                <img src="app_immuni/temporal_evolution.png" style="width: 100%" />
-            </div>
-        </div>
+            <h4>An italian case study of Tracking-App to fight Covid-19</h4>
 
-        <div class="caption-section">
-            <h3>Languages</h3>
-            <h5>As expected, the 85% of tweets are in italian languages</h5>
-            <div style="text-align: center;">
-                <img src="app_immuni/languages.png" style="width: 100%" />
+            <div class="caption-section">
+                <h3 class="caption-title">Dataset details</h3>
+                <ul>
+                    <li>Streamed tweets using the keywords Immuni and AppImmuni</li>
+                    <li>Around 33000 tweets</li>
+                    <li>Collected from May 31, 2020 to July 6, 2020</li>
+                </ul>
             </div>
-        </div>
 
-        <div class="caption-section">
-            <h3>Hashtags network about the <em>App Immuni</em></h3>
-            <h5>Most relevant hashtags and communities</h5>
-            <div style="text-align: center;">
-                <img src="app_immuni/network.png" style="width: 100%" />
+            <div class="caption-section">
+                <h3>Temporal evolution</h3>
+                <h5>In red the high activities of the twitter users</h5>
+                <div style="text-align: center;">
+                    <img src="app_immuni/temporal_evolution.png" style="width: 100%" />
+                </div>
             </div>
-            <div>
-                <button type="button" class="btn btn-light">
-                    <a href="https://ipsoeu.github.io/sandbox/app_immuni/network_1/network/index.html">Interactive network</a>
-                </button>
-                <button type="button" class="btn btn-light">
-                    <a href="app_immuni/network.png">Download high resolution image</a>
-                </button>
-            </div>
-        </div>
 
-        <!--
+            <div class="caption-section">
+                <h3>Languages</h3>
+                <h5>As expected, the 85% of tweets are in italian languages</h5>
+                <div style="text-align: center;">
+                    <img src="app_immuni/languages.png" style="width: 100%" />
+                </div>
+            </div>
+
+            <div class="caption-section">
+                <h3>Hashtags network about the <em>App Immuni</em></h3>
+                <h5>Most relevant hashtags and communities</h5>
+                <div style="text-align: center;">
+                    <img src="app_immuni/network.png" style="width: 100%" />
+                </div>
+                <div>
+                    <button type="button" class="btn btn-light">
+                        <a href="https://ipsoeu.github.io/sandbox/app_immuni/network_1/network/index.html">Interactive
+                            network</a>
+                    </button>
+                    <button type="button" class="btn btn-light">
+                        <a href="app_immuni/network.png">Download high resolution image</a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="caption-section">
+                <h3>Twitter and EMM</h3>
+                <h5>Checking the linked pages on tweets and EMM news about Covid-19 and tacking apps (371 news)</h5>
+                <p>Nine tweets or retweets has been found with the related hashtags, text and url. Also, nine potential user (timeline) with a relevant ego network regarding covid-19 and mobile tracing apps.</p>
+                <table style="width:100%">
+                    <tr>
+                        <th>Date</th>
+                        <th>Hashatgs</th>
+                        <th>Link page</th>
+                        <th>Tweet</th>
+                    </tr>
+
+                    <tr>
+                        <td>2020-06-03 11:35:18</td>
+                        <td>coronavirus</td>
+                        <td>http://www.governo.it/it/articolo/al-immuni-lapp-il-contact-tracing/14669</td>
+                        <td>Governo: da 2 giorni è possibile scaricare l’app x tracciare il #Coronavirus "Immuni".
+                            Meglio tardi che mai… ed aggiungono "fase di sperimentazione da 8/6 in Abruzzo, Liguria,
+                            Marche e Puglia, poi Immuni sarà operativa su tutto il territorio nazionale"
+                            https://t.co/bZnzJq1AHK</td>
+                    </tr>
+                    <tr>
+                        <td>2020-06-05 18:10:08</td>
+                        <td>immuni, immuniapp, appimuni, tracing</td>
+                        <td>http://europa.today.it/attualita/tracing-app-offline-confine-ue.html</td>
+                        <td>#Tracing app vanno offline passato il confine. Ue: “Colpa degli Stati”
+                            https://t.co/VgLQg6xwb1 #immuni #appimuni #ImmuniApp</td>
+                    </tr>
+                    <tr>
+                        <td>2020-06-12 16:24:47</td>
+                        <td></td>
+                        <td>https://www.macitynet.it/immuni-scaricata-22-milioni-di-volte-inizia-bene-ma-non-basta/</td>
+                        <td>Immuni scaricata 2,2 milioni di volte, inizia bene ma non basta https://t.co/cqY1nl1hgt via @macitynet</td>
+                    </tr>
+                    <tr>
+                        <td>2020-06-15 05:10:36</td>
+                        <td></td>
+                        <td>https://www.ilsussidiario.net/news/app-immuni-da-oggi-attiva-in-tutta-italia-come-funziona-tracciati-i-primi-contagi/2036314/amp/</td>
+                        <td>https://t.co/Tj0npNkuaB</td>
+                    </tr>
+                    <tr>
+                        <td>2020-06-16 21:15:53</td>
+                        <td>immuni, fuoridalcoro</td>
+                        <td>https://www.today.it/mondo/coronavirus-norvegia-stop-app.html</td>
+                        <td>Serviva la Norvegia per dirci che con l app #Immuni la nostra privacy è a rischio. https://t.co/GFKAkN3oqT #Fuoridalcoro</td>
+                    </tr>
+                    <tr>
+                        <td>2020-06-17 18:14:58</td>
+                        <td></td>
+                        <td>https://www.zerohedge.com/technology/majority-germans-refuse-install-corona-warn-app']
+                        </td>
+                        <td>Majority of Germans Refuse to Install Corona Warning App https://t.co/PFIKrrNm0Z</td>
+                    </tr>
+                    <tr>
+                        <td>2020-07-02 08:47:06</td>
+                        <td></td>
+                        <td>https://www.agendadigitale.eu/sicurezza/privacy/immuni-e-app-aziendali-il-nodo-interoperabilita-il-caso-ferrari/']
+                        </td>
+                        <td>App aziendali anti-covid e Immuni: molti punti aperti https://t.co/ciXasgHtlJ Chiara Ponti
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2020-07-02 15:01:13</td>
+                        <td></td>
+                        <td>https://www.agendadigitale.eu/sicurezza/privacy/immuni-e-app-aziendali-il-nodo-interoperabilita-il-caso-ferrari/']
+                        </td>
+                        <td>App aziendali anti-covid e Immuni: molti punti aperti https://t.co/rbJIILt15M @Agenda_Digitale</td>
+                    </tr>
+                    <tr>
+                        <td>2020-07-02 19:41:14</td>
+                        <td></td>
+                        <td>https://www.bbc.co.uk/news/business-53082917</td>
+                        <td>BBC News - Coronavirus: How 'immunity passports' could create an antibody elite
+                            https://t.co/eEnRZxHQm8</td>
+                    </tr>
+                </table>
+
+                   
+            </div>
+
+            <!--
 
         
         <div class="caption-section">
