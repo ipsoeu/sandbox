@@ -10,7 +10,7 @@
   "text": {
     "more": "",
     "intro": "",
-    "title": "COVID-19 5.3 Millions of tweets"
+    "title": "App immuni"
   },
   "legend": {
     "edgeLabel": "",
@@ -33,11 +33,11 @@
       "defaultLabelBGColor": "#ddd",
       "activeFontStyle": "bold",
       "defaultLabelColor": "#000",
-      "labelThreshold": 10,
+      "labelThreshold": 5,
       "defaultLabelHoverColor": "#fff",
       "fontStyle": "bold",
       "hoverFontStyle": "bold",
-      "defaultLabelSize": 16
+      "defaultLabelSize": 14
     },
     "graphProperties": {
       "maxEdgeSize": 0.5,
