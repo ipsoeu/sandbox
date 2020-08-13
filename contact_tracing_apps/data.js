@@ -1,0 +1,1 @@
+var DATA = {"Corona Warn App (DE)": 12373, "Radar Covid (ES)": 9358, "Immuni (IT)": 8930, "Covid Tracker Ireland (IE)": 2820, "Swiss Contact Tracing App (CH)": 875, "Protego (PL)": 241, "Smittestop (DK)": 175, "Stopp Corona (AT)": 172, "Smittestopp (NO)": 91, "Erouska (CZ)": 28, "Nhs Covid 19 App (UK)": 11}

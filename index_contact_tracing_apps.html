@@ -9,10 +9,13 @@
     <meta name="author" content="Alessandro Dalla Benetta, a.dallabenetta@gmail.com">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
 
     <style>
         /* Make the image fully responsive */
@@ -65,6 +68,9 @@
 
         gtag('config', 'UA-174641246-1');
     </script>
+
+    <script src="contact_tracing_apps/data.js"></script>
+    <script src="contact_tracing_apps/main.js"></script>
 </head>
 
 
@@ -77,8 +83,8 @@
                 <h3 class="caption-title">Dataset details</h3>
                 <ul>
                     <li>Streamed tweets about contact tracing mobile apps</li>
-                    <li>Around 30 000 tweets</li>
-                    <li>Collected from July 9, 2020 to August 6, 2020</li>
+                    <li><span id="total_tweets"></span> tweets</li>
+                    <li>Collected from July 9, 2020 to August 8, 2020</li>
                 </ul>
             </div>
 
@@ -93,62 +99,7 @@
                 </div>
 
                 <div style="margin-top: 20px;">
-
-                    <table style="width:50%;text-align: left;">
-                        <tr>
-                            <th>Mobile application name</th>
-                            <th>Number of tweets</th>
-                        </tr>
-                        <tr>
-                            <td>Corona Warn App (DE)</td>
-                            <td>11358</td>
-                        </tr>
-                        <tr>
-                            <td>Stopcovid (FR)</td>
-                            <td>8082</td>
-                        </tr>
-                        <tr>
-                            <td>Immuni (IT)</td>
-                            <td>7407</td>
-                        </tr>
-                        <tr>
-                            <td>Radar Covid (ES)</td>
-                            <td>1515</td>
-                        </tr>
-                        <tr>
-                            <td>Swiss Contact Tracing App (CH)</td>
-                            <td>816</td>
-                        </tr>
-                        <tr>
-                            <td>Covid Tracker Ireland (IE)</td>
-                            <td>327</td>
-                        </tr>
-                        <tr>
-                            <td>Protego (PL)</td>
-                            <td>218</td>
-                        </tr>
-                        <tr>
-                            <td>Stopp Corona (AT)</td>
-                            <td>156</td>
-                        </tr>
-                        <tr>
-                            <td>Smittestop (DK)</td>
-                            <td>141</td>
-                        </tr>
-                        <tr>
-                            <td>Smittestopp (NO)</td>
-                            <td>54</td>
-                        </tr>
-                        <tr>
-                            <td>Erouska (CZ)</td>
-                            <td>28</td>
-                        </tr>
-                        <tr>
-                            <td>Nhs Covid 19 App (UK)</td>
-                            <td>11</td>
-                        </tr>
-
-                    </table>
+                    <table id="app_list"></table>
                 </div>
             </div>
 
