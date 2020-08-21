@@ -19,7 +19,6 @@ $( document ).ready(function() {
         paging: false
     } );
 
-    console.log()
     _.each(CHARTS, function(chart, index){
         console.log(chart)
         var $content = $('<div class="caption-section"></div>');
