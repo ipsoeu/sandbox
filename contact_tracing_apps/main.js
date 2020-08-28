@@ -21,7 +21,7 @@ $( document ).ready(function() {
 
     _.each(CHARTS, function(chart, index){
 
-        var $content = $('<div class="caption-section"></div>');
+        var $content = $('<div class="caption-section" style="margin-bottom:40px;"></div>');
         var $title = $('<h3></h3>').append(chart.app_name);
         var $subtitle = $('<h5>Temporal evolution of users activity, DATA tweets</h5>'.replace('DATA', chart['number_of_tweets']))
         
