@@ -32,7 +32,7 @@ $( document ).ready(function() {
         $content.append($subtitle)
         $content.append($chart_1);
 
-        
+        console.log(this.emm)
         var emm_chart = _.find(this.emm, function(e){
                 if(e.app_name == this)
                 return true;
