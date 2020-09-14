@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Immuni application mobile</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8">
+    <meta name="author" content="Alessandro Dalla Benetta, a.dallabenetta@gmail.com">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-indicators li {
+            display: inline-block;
+            width: 20px;
+            height: 5px;
+            margin: 1px;
+            text-indent: 0;
+            cursor: pointer;
+            border: none;
+            background-color: black;
+            box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel-indicators .active {
+            background-color: grey;
+        }
+
+        .carousel-item {
+            text-align: center;
+        }
+
+        .caption-section {
+            margin-top: 30px;
+        }
+
+        #wrap {
+            width: 1000px;
+            margin: auto;
+        }
+
+        .caption-title {}
+    </style>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174641246-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-174641246-1');
+    </script>
+
+</head>
+
+
+<body>
+    <div id="wrap">
+        <h1>Radar Covid</h2>
+            <!-- <h4>An italian case study of Tracing-App to fight Covid-19</h4> -->
+
+            <div class="caption-section">
+                <h3 class="caption-title">Dataset details</h3>
+                <ul>
+                    <li>Streamed tweets about Radar Covid mobile application</li>
+                    <li>Around 36826 tweets</li>
+                    <li>Collected since July 9, 2020</li>
+                </ul>
+            </div>
+
+            <div class="caption-section">
+                <h3>Temporal evolution</h3>
+                <h5>In red the high activities of the twitter users.</h5>
+                <div style="text-align: center;margin-bottom: 10px;">
+                    <img src="contact_tracing_apps/lang_radar_covid_(es).png" style="width: 100%" />
+                </div>
+
+                <!--<p>2020-06-01: Release of the <em>App Immuni</em></p> -->
+            </div>
+
+            <div class="caption-section">
+                <h3>Languages</h3>
+                <h5>As expected, the 92% of tweets are in spanish language.</h5>
+                <div style="text-align: center;">
+                    <img src="contact_tracing_apps/lang_radar_covid_(es).png" style="width: 100%" />
+                </div>
+            </div>
+
+            <div class="caption-section">
+                <h3>Hashtags network about the <em>Radar Covid</em></h3>
+                <h5>Most relevant hashtags and communities</h5>
+                <div style="text-align: center;">
+                    <img src="radar_covid/hashtags_network.png" style="width: 100%" />
+                </div>
+                <div>
+                    <button type="button" class="btn btn-light">
+                        <a href="radar_covid/network/index.html">Interactive
+                            network</a>
+                    </button>
+                    <button type="button" class="btn btn-light">
+                        <a href="radar_covid/hashtags_network.png">Download high resolution image</a>
+                    </button>
+                </div>
+            </div>
+
+            
+
+
+            </div>
+
+            <div class="caption-section">
+                <h3>Twitter and EMM</h3>
+                <h5>Checking the linked pages on tweets and EMM news (317) about Covid-19 and tracing apps</h5>
+                <p>Nine tweets or retweets has been found with the related hashtags, text and url. Also, nine potential
+                    user (twiiter timeline) with a relevant ego network regarding covid-19 and mobile tracing apps.</p>
+
+                <h5>Tweets that mention EMM news</h5>
+                <table style="width:100%;font-size:12px;">
+
+                    <tr>
+                        <th>Date</th>
+                        <th>Hashatgs</th>
+                        <th>Link page</th>
+                        <th>Tweet</th>
+                    </tr>
+                    <tr>
+                        <td>2020-06-03 11:35:18</td>
+                        <td>coronavirus</td>
+                        <td>http://www.governo.it/it/articolo/al-immuni-lapp-il-contact-tracing/14669</td>
+                        <td>Governo: da 2 giorni è possibile scaricare l’app x tracciare il #Coronavirus "Immuni".
+                            Meglio tardi che mai… ed aggiungono "fase di sperimentazione da 8/6 in Abruzzo, Liguria,
+                            Marche e Puglia, poi Immuni sarà operativa su tutto il territorio nazionale"
+                            https://t.co/bZnzJq1AHK</td>
+                    </tr>
+                    <tr>
+                        <td>2020-06-05 18:10:08</td>
+                        <td>immuni, immuniapp, appimuni, tracing</td>
+                        <td>http://europa.today.it/attualita/tracing-app-offline-confine-ue.html</td>
+                        <td>#Tracing app vanno offline passato il confine. Ue: “Colpa degli Stati”
+                            https://t.co/VgLQg6xwb1 #immuni #appimuni #ImmuniApp</td>
+                    </tr>
+                    <tr>
+                        <td>2020-06-12 16:24:47</td>
+                        <td></td>
+                        <td>https://www.macitynet.it/immuni-scaricata-22-milioni-di-volte-inizia-bene-ma-non-basta/</td>
+                        <td>Immuni scaricata 2,2 milioni di volte, inizia bene ma non basta https://t.co/cqY1nl1hgt via
+                            @macitynet</td>
+                    </tr>
+                    <tr>
+                        <td>2020-06-15 05:10:36</td>
+                        <td></td>
+                        <td>https://www.ilsussidiario.net/news/app-immuni-da-oggi-attiva-in-tutta-italia-come-funziona-tracciati-i-primi-contagi/2036314/amp/
+                        </td>
+                        <td>https://t.co/Tj0npNkuaB</td>
+                    </tr>
+                    <tr>
+                        <td>2020-06-16 21:15:53</td>
+                        <td>immuni, fuoridalcoro</td>
+                        <td>https://www.today.it/mondo/coronavirus-norvegia-stop-app.html</td>
+                        <td>Serviva la Norvegia per dirci che con l app #Immuni la nostra privacy è a rischio.
+                            https://t.co/GFKAkN3oqT #Fuoridalcoro</td>
+                    </tr>
+                    <tr>
+                        <td>2020-06-17 18:14:58</td>
+                        <td></td>
+                        <td>https://www.zerohedge.com/technology/majority-germans-refuse-install-corona-warn-app']
+                        </td>
+                        <td>Majority of Germans Refuse to Install Corona Warning App https://t.co/PFIKrrNm0Z</td>
+                    </tr>
+                    <tr>
+                        <td>2020-07-02 08:47:06</td>
+                        <td></td>
+                        <td>https://www.agendadigitale.eu/sicurezza/privacy/immuni-e-app-aziendali-il-nodo-interoperabilita-il-caso-ferrari/']
+                        </td>
+                        <td>App aziendali anti-covid e Immuni: molti punti aperti https://t.co/ciXasgHtlJ Chiara Ponti
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2020-07-02 15:01:13</td>
+                        <td></td>
+                        <td>https://www.agendadigitale.eu/sicurezza/privacy/immuni-e-app-aziendali-il-nodo-interoperabilita-il-caso-ferrari/']
+                        </td>
+                        <td>App aziendali anti-covid e Immuni: molti punti aperti https://t.co/rbJIILt15M
+                            @Agenda_Digitale</td>
+                    </tr>
+                    <tr>
+                        <td>2020-07-02 19:41:14</td>
+                        <td></td>
+                        <td>https://www.bbc.co.uk/news/business-53082917</td>
+                        <td>BBC News - Coronavirus: How 'immunity passports' could create an antibody elite
+                            https://t.co/eEnRZxHQm8</td>
+                    </tr>
+                </table>
+
+
+            </div>
+
+            <div class="caption-section">
+                <h3>Potential relevant twitter users</h3>
+                <h5>Download the users timeline and searching tweets about the <em>App immuni</em>.</h5>
+                <table style="width:100%;font-size:12px;">
+
+                    <tr>
+                        <th>USER</th>
+                        <th>Timeline tweets</th>
+                        <th>Tweets about <em>App Immuni</em></th>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <td>A</td>
+                        <td>3232</td>
+                        <td>0</td>
+                    <tr>
+                    <tr>
+                        <td>B</td>
+                        <td>3241</td>
+                        <td>26</td>
+                    <tr>
+                    <tr>
+                        <td>C</td>
+                        <td>3214</td>
+                        <td>4</td>
+                    <tr>
+                    <tr style="color:orange">
+                        <td>D</td>
+                        <td>3210</td>
+                        <td>77</td>
+                    <tr>
+                    <tr style="color:orange">
+                        <td>E</td>
+                        <td>3249</td>
+                        <td>65</td>
+                    <tr>
+                    <tr>
+                        <td>F</td>
+                        <td>3234</td>
+                        <td>25</td>
+                    <tr>
+                    <tr>
+                        <td>G</td>
+                        <td>3229</td>
+                        <td>0</td>
+                    <tr>
+                    <tr>
+                        <td>H</td>
+                        <td>3235</td>
+                        <td>19</td>
+                    <tr>
+                    <tr>
+                        <td>I</td>
+                        <td>3217</td>
+                        <td>33</td>
+                    <tr>
+                    <tr>
+                        <td>L</td>
+                        <td>3195</td>
+                        <td>0</td>
+                    <tr>
+                    </tr>
+                </table>
+            </div>
+            <div style="margin-top: 10px;"></div>
+            <!--
+
+        
+        <div class="caption-section">
+            <h3>Hashtag network about covid-19 and Mobile App, Tracking and Privacy</h3>
+            <h5>Focus on Mobile App, Tracking and Privacy</h5>
+            <div style="text-align: center;">
+                <img src="images/covid_19_5M_filtered_without_main_comm.jpg" style="width: 700px" />
+            </div>
+            <div>
+                <button type="button" class="btn btn-light">
+                    <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_5M_filtered_without_main_comm/network/">Interactive
+                        network</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="images/covid_19_5M_filtered_without_main_comm.png">Donwload</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="data/filtered_covid_19_tweets/">Tabular data</a>
+                </button>
+            </div>
+        </div>
+
+        <div class="caption-section">
+            <h3>Hashtag network about covid-19 and Privacy</h3>
+            <h5>Focus on Privacy subnetwork</h5>
+
+            <div id="covid_19_privacy" class="carousel slide" data-ride="carousel">
+
+                <ul class="carousel-indicators">
+                    <li data-target="#covid_19_privacy" data-slide-to="0" class="active"></li>
+                    <li data-target="#covid_19_privacy" data-slide-to="1"></li>
+                    <li data-target="#covid_19_privacy" data-slide-to="2"></li>
+                </ul>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="text-align: center;">
+                        <img src="images/covid_19_privacy_0.png" style="width: 600px" />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/covid_19_privacy_1.png" style="width: 600px" />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/covid_19_privacy_2.png" style="width: 600px" />
+                    </div>
+                </div>
+
+                <a class="carousel-control-prev" href="#covid_19_privacy" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#covid_19_privacy" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <div>
+                <button type="button" class="btn btn-light">
+                    <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_privacy_0/network/">Interactive network
+                        1</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_privacy_1/network/">Interactive network
+                        2</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_privacy_2/network/">Interactive network
+                        3</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="data/filtered_covid_19_tweets/002_privacy.csv">Tabular data</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="images/covid_19_privacy_0.png">Download high resolution image</a>
+                </button>
+            </div>
+        </div>
+
+        <div class="caption-section">
+            <h3>Hashtags network about covid-19 and Tracking-App</h3>
+            <h5>Focus on Tracking-App subnetwork</h5>
+
+            <div id="covid_19_app" class="carousel slide" data-ride="carousel">
+
+                <ul class="carousel-indicators">
+                    <li data-target="#covid_19_app" data-slide-to="0" class="active"></li>
+                    <li data-target="#covid_19_app" data-slide-to="1"></li>
+                    <li data-target="#covid_19_app" data-slide-to="2"></li>
+                </ul>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="text-align: center;">
+                        <img src="images/covid_19_app_0.png" style="width: 600px" />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/covid_19_app_1.png" style="width: 600px" />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/covid_19_app_2.png" style="width: 600px" />
+                    </div>
+                </div>
+
+                <a class="carousel-control-prev" href="#covid_19_app" data-slide="prev">
+                    <span class="carousel-control-prev-icon" style="color:black;"></span>
+                </a>
+                <a class="carousel-control-next" href="#covid_19_app" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+            <div>
+                <button type="button" class="btn btn-light">
+                    <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_app_0/network/">Interactive network
+                        1</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_app_1/network/">Interactive network
+                        2</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_app_2/network/">Interactive network
+                        3</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="data/filtered_covid_19_tweets/009_app.csv">Tabular data</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="images/covid_19_app_0.png">Download high resolution image</a>
+                </button>
+            </div>
+        </div>
+
+        <div class="caption-section">
+            <h3>Hashtags network about covid-19 and Smartphone</h3>
+            <h5>Focus on Smarphone subnetwork</h5>
+
+            <div id="covid_19_smartphone" class="carousel slide" data-ride="carousel">
+
+                <ul class="carousel-indicators">
+                    <li data-target="#covid_19_smartphone" data-slide-to="0" class="active"></li>
+                    <li data-target="#covid_19_smartphone" data-slide-to="1"></li>
+                    <li data-target="#covid_19_smartphone" data-slide-to="2"></li>
+                </ul>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="text-align: center;">
+                        <img src="images/covid_19_smartphone_0.png" style="width: 600px" />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/covid_19_smartphone_1.png" style="width: 600px" />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/covid_19_smartphone_2.png" style="width: 600px" />
+                    </div>
+                </div>
+
+                <a class="carousel-control-prev" href="#covid_19_smartphone" data-slide="prev">
+                    <span class="carousel-control-prev-icon" style="color:black;"></span>
+                </a>
+                <a class="carousel-control-next" href="#covid_19_smartphone" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+            <div>
+                <button type="button" class="btn btn-light">
+                    <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_smartphone_0/network/">Interactive
+                        network 1</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_smartphone_1/network/">Interactive
+                        network 2</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="https://ipsoeu.github.io/sandbox/networks/covid_19_smartphone_2/network/">Interactive
+                        network 3</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="data/filtered_covid_19_tweets/019_smartphone.csv">Tabular data</a>
+                </button>
+                <button type="button" class="btn btn-light">
+                    <a href="images/covid_19_smartphone_0.png">Download high resolution image</a>
+                </button>
+            </div>
+        </div>
+        <div class="caption-section">
+            <h2>#EUvsVirus Hachathon</h2>
+        <div>
+            <h3>Hashtags network about EU vs Virus Hachathon</h3>
+            <h5>Tweets collected form April 21th to April 27th</h5>
+            !-- <p>
+                Focus on Smarphone subnetwork
+                <a href="">1226 tweets</a> and 40 hashtags -  
+                <a href="data/hackathon_community_filtered.csv">most likely relevant tweets about tracking</a> - 
+                <a href="https://ipsoeu.github.io/sandbox/covid_19/covid_19_hackathon/network/">Interactive network</a> - 
+                <a href="images/covid_19_privacy.png">Donwload</a>--
+
+            <div style="text-align: center;">
+                <img src="images/eu_vs_virus.png" style="width: 500px" />
+            </div>
+        </div>
+        </div>
+    -->
+
+    </div>
+</body>
+
+</html>
