@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Covid 19 end Contacttracing mobile apps</title>
+
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+
+    <meta name="author" content="Alessandro Dalla Benetta, a.dallabenetta@gmail.com">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/bmabey/pyLDAvis/files/ldavis.v1.0.0.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="radar_covid/main.js"></script>
+    <style>
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-indicators li {
+            display: inline-block;
+            width: 20px;
+            height: 5px;
+            margin: 1px;
+            text-indent: 0;
+            cursor: pointer;
+            border: none;
+            background-color: black;
+            box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel-indicators .active {
+            background-color: grey;
+        }
+
+        .carousel-item {
+            text-align: center;
+        }
+
+        .caption-section {
+            margin-top: 30px;
+        }
+
+        #wrap {
+            width: 1000px;
+            margin: auto;
+        }
+
+        .caption-section {
+            margin-left: 20px;
+            border-bottom: 1px solid black;
+        }
+
+        .caption-title {
+            margin-top: 20px;
+            ;
+        }
+    </style>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174641246-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-174641246-1');
+    </script>
+
+</head>
+
+
+<body>
+    <div id="wrap">
+        <h1>Covid-19 and Contact Tracing Apps</h2>
+
+            <h3 class="caption-title">Datasets used for this analysis</h4>
+                <div class="caption-section">
+
+                    <h4>Covid-19</h4>
+                    <ul>
+                        <li>Streamed tweets about Covid-19</li>
+                        <li>Around 140 Million of tweets</li>
+                        <li>Collected since 15th March, 2020</li>
+                    </ul>
+
+                    <h4>Contact tracing apps</h4>
+                    <ul>
+                        <li>Streamed tweets about European contact tracing apps</li>
+                        <li>Around 130 000 tweets</li>
+                        <li>Collected since 9th July, 2020</li>
+                    </ul>
+                </div>
+
+
+                <div class="caption-section">
+                    <h3 class="caption-title">Covid-19 and Contact tracing apps</h3>
+                    <p>The following picture shows a hashtags networks created using the dataset <em>Covid-19</em> where
+                        the tweets have been filtered by keywords related to the contact tracing domain</p>
+                    <div style="text-align: center;margin-bottom: 10px;">
+                        <img src="stoten/covid_19_tracing_apps.png" style="width: 100%" />
+
+                        <div>
+                            <button type="button" class="btn btn-light">
+                                <a href="stoten/network/index.html">Interactive
+                                    network</a>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <a href="stoten/covid_19_tracing_apps.png">Download high resolution image</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="caption-section">
+                    <h3>Temporal evolution</h3>
+                    <h5>In red the high activities of the twitter users.</h5>
+                </div>
+
+                <!--
+            <div class="caption-section">
+                <h3>Temporal evolution</h3>
+                <h5>In red the high activities of the twitter users.</h5>
+                <div style="text-align: center;margin-bottom: 10px;">
+                    <img src="contact_tracing_apps/temporal_evolution_radar_covid_(es).png" style="width: 100%" />
+                </div>
+
+                <h5>[9th August - 12th August] Hashtags network</h5>
+                <div style="text-align: center;margin-bottom: 10px;">
+                    <img src="radar_covid/hashtags_network_event_1.png" style="width: 100%" />
+                </div>
+
+                <h5>[9th August - 12th August] Hashtags network</h5>
+                <div style="text-align: center;margin-bottom: 10px;">
+                    <img src="radar_covid/hashtags_network_event_2.png" style="width: 100%" />
+                </div>
+
+            </div>
+            
+            <div class="caption-section">
+                <h3>Languages</h3>
+                <h5>As expected, the 92% of tweets are in spanish language.</h5>
+                <div style="text-align: center;">
+                    <img src="contact_tracing_apps/lang_radar_covid_(es).png" style="width: 100%" />
+                </div>
+            </div>
+
+            <div class="caption-section">
+                <h3>Hashtags network about the <em>Radar Covid</em></h3>
+                <h5>Most relevant hashtags and communities</h5>
+                <div style="text-align: center;">
+                    <img src="radar_covid/hashtags_network.png" style="width: 100%" />
+                </div>
+                <div>
+                    <button type="button" class="btn btn-light">
+                        <a href="radar_covid/network/index.html">Interactive
+                            network</a>
+                    </button>
+                    <button type="button" class="btn btn-light">
+                        <a href="radar_covid/hashtags_network.png">Download high resolution image</a>
+                    </button>
+                </div>
+            </div>
+
+
+            <div style="margin-top: 20px;"></div>
+            
+            <div class="caption-section">
+                
+                <h3>LDA analysis on the collected tweets and visualization of the top 10 topics</h3>
+                
+                <h5 style="margin-top: 10px;">Word Clouds of Top 10 Keywords in Each Topic</h5>
+                <img src="radar_covid/topic_keywords.png" style="width: 100%" />
+                
+                <h5 style="margin-top: 10px;">Word Counts of Topic Keywords</h5>
+                <img src="radar_covid/topic_keywords_relevance.png" style="width: 100%" />
+            </div>
+
+            <div class="caption-section">
+                <h5 style="margin-top: 10px;">LDA explorer</h5>
+                <div id="ldavis_el182171403780920203044140462833"></div>
+            </div>
+            -->
+    </div>
+
+</body>
+
+</html>
