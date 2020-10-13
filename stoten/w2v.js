@@ -55,7 +55,7 @@ function setup() {
         });
     });
 
-    // Finding the average of two words
+    
     betweenButton.mousePressed(() => {
         let word1 = betweenWordInput1.value();
         let word2 = betweenWordInput2.value();
@@ -64,7 +64,7 @@ function setup() {
         })
     });
 
-    // Adding two words together to "solve" an analogy
+    
     addButton.mousePressed(() => {
         let is1 = addInput1.value();
         let to1 = addInput2.value();
