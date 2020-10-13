@@ -42,7 +42,7 @@ function setup() {
     nearButton.mousePressed(() => {
         console.log('ok')
         let word = nearWordInput.value();
-        word2Vec.nearest(word,20, (err, result) => {
+        word2Vec.nearest(word, 20, (err, result) => {
             let output = '';
             if (result) {
                 for (let i = 0; i < result.length; i++) {
