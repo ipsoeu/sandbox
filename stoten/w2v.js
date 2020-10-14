@@ -11,7 +11,7 @@ Word2Vec example with p5.js. Using a pre-trained model on common English words.
 let word2Vec;
 console.log('start')
 function modelLoaded() {
-    console.log('ok')
+    select('#semantic-search').show()
     select('#status').html('Model Loaded');
 }
 
@@ -20,10 +20,42 @@ function setup() {
     noCanvas();
 
     // Create the Word2Vec model with pre-trained file of 10,000 words
-    word2Vec = ml5.word2vec('stoten/total_network_filtered.w2v.json', modelLoaded);
+    word2Vec = ml5.word2vec('stoten/tweets.w2v.json', modelLoaded);
 
     // Select all the DOM elements
     let nearWordInput = select('#nearword');
+    var availableTags = [
+        "ActionScript",
+        "AppleScript",
+        "Asp",
+        "BASIC",
+        "C",
+        "C++",
+        "Clojure",
+        "COBOL",
+        "ColdFusion",
+        "Erlang",
+        "Fortran",
+        "Groovy",
+        "Haskell",
+        "Java",
+        "JavaScript",
+        "Lisp",
+        "Perl",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Scala",
+        "Scheme"
+      ];
+      
+    //   $('#nearword').autoComplete({
+    //     resolverSettings: {
+    //         url: 'stoten/tweets.vocab.json'
+    //     }
+    // });
+
+
     let nearButton = select('#submit');
     let nearResults = select('#results');
 
