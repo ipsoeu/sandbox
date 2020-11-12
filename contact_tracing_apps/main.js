@@ -4,7 +4,7 @@ $( document ).ready(function() {
 
     $('#total_tweets').append(values.reduce(function(a, b) { return a + b; }, 0))
 
-    $('#sa_n_of_tweets').append(values['SA_N_TWEETS']);
+    $('#sa_n_of_tweets').append(SA_N_TWEETS);
 
     data_sets = []
     for (var key in DATA) {
