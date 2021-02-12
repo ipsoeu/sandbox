@@ -4,7 +4,7 @@ $( document ).ready(function() {
 
     $('#total_tweets').append(values.reduce(function(a, b) { return a + b; }, 0))
 
-    $('#sa_n_of_tweets').append(SA_N_TWEETS);
+    //$('#sa_n_of_tweets').append(SA_N_TWEETS);
 
     data_sets = []
     for (var key in DATA) {
@@ -34,31 +34,31 @@ $( document ).ready(function() {
         $content.append($subtitle)
         $content.append($chart_1);
 
-        console.log(this.emm)
-        var emm_chart = _.find(this.emm, function(e){
-                if(e.app_name == this)
-                return true;
-                else
-                return false;
-            }, chart.app_name );
+        // console.log(this.emm)
+        // var emm_chart = _.find(this.emm, function(e){
+        //         if(e.app_name == this)
+        //         return true;
+        //         else
+        //         return false;
+        //     }, chart.app_name );
         
-        if(emm_chart != undefined){
-            var $subtitle_3 = $('<h5>EMM news linked on Twitter</h5>')
-            var $chart_3 = $('<div style="text-align: center;margin-bottom: 10px;"></div>');
-            $chart_3.append($('<img style="width: 100%" ></img>').attr('src',"contact_tracing_apps/" + emm_chart['emm'] ));
+        // if(emm_chart != undefined){
+        //     var $subtitle_3 = $('<h5>EMM news linked on Twitter</h5>')
+        //     var $chart_3 = $('<div style="text-align: center;margin-bottom: 10px;"></div>');
+        //     $chart_3.append($('<img style="width: 100%" ></img>').attr('src',"contact_tracing_apps/" + emm_chart['emm'] ));
 
-            $content.append($subtitle_3);
-            $content.append($chart_3);
+        //     $content.append($subtitle_3);
+        //     $content.append($chart_3);
             
-        }
+        // }
         
         
-        var $chart_2 = $('<div style="text-align: center;margin-bottom: 10px;"></div>');
-        $chart_2.append($('<img style="width: 100%" ></img>').attr('src',"contact_tracing_apps/" + chart['lang'] ))
-        var $subtitle_2 = $('<h5>Languages</h5>')
+        // var $chart_2 = $('<div style="text-align: center;margin-bottom: 10px;"></div>');
+        // $chart_2.append($('<img style="width: 100%" ></img>').attr('src',"contact_tracing_apps/" + chart['lang'] ))
+        // var $subtitle_2 = $('<h5>Languages</h5>')
         
-        $content.append($subtitle_2);
-        $content.append($chart_2);
+        // $content.append($subtitle_2);
+        // $content.append($chart_2);
         
 
 
