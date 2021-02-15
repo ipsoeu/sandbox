@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>European contact tracing mobile apps - Dashboard</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8">
+    <meta name="author" content="Alessandro Dalla Benetta, a.dallabenetta@gmail.com">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="scripts/underscore.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    <style>
+        
+
+        #wrap {
+            width: 1200px;
+            margin: auto;
+            height: 900px;
+            border: 1px solid red;
+            margin-top: 10px;
+        }
+
+    </style>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174641246-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-174641246-1');
+    </script>
+
+<script src="contact_tracing_apps_dashboard/us.js"></script>
+    <script src="contact_tracing_apps_dashboard/main.js"></script>
+</head>
+
+
+<body>
+    <div id="wrap">
+        <svg id="my_dataviz" width="440" height="300"></svg>
+    </div>
+</body>
+
+</html>

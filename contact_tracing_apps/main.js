@@ -29,7 +29,7 @@ $( document ).ready(function() {
         
         var $chart_1 = $('<div style="text-align: center;margin-bottom: 10px;"></div>');
         $chart_1.append($('<img style="width: 100%" ></img>').attr('src',"contact_tracing_apps/" + chart['temporal_evolution'] ));
-
+        console.log($title)
         $content.append($title)
         $content.append($subtitle)
         $content.append($chart_1);
@@ -65,7 +65,7 @@ $( document ).ready(function() {
         this.$content.append($content)
     }, {
         $content: $('#charts'),
-        emm: EMM_CHARTS
+        //emm: EMM_CHARTS
     })
 
 });
