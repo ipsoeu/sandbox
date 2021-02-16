@@ -112,12 +112,13 @@ function ready(geo, userData) {
 
     // Hexgrid instance.
     const hex = hexgrid(userData);
-
+    console.log(hex)
     // Calculate Ckmeans based colour scale.
     const counts = hex.grid.layout
         .map(el => el.datapointsWt)
         .filter(el => el > 0);
     const ckBreaks = ss.ckmeans(counts, 4).map(clusters => clusters[0]);
+
     const colourScale = d3
         .scaleThreshold()
         .domain(ckBreaks)
@@ -140,7 +141,8 @@ function ready(geo, userData) {
         .attr('d', hex.hexagon())
         .style('fill', d => colourScale(d.datapointsWt))
         .style('stroke', '#999')
-        .style('stroke-opacity', 0.4);
+        .style('stroke-opacity', 0.4)
+        .on('click', function(d,i){ console.log(d), console.log(i)  });
 
     // Build and mount legend.
     const legendKey = svg
