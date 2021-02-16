@@ -151,17 +151,20 @@ function ready(geo, userData) {
             buildKey,
             hex.grid.extentPointsWeighted[1],
             colourScale,
-            'Number of disputes'
+            'Number of positive tweets'
         );
 }
 
 // Data load.
 const geoData = d3.json(
-    'https://raw.githubusercontent.com/larsvers/map-store/master/earth-lands-10km.json'
+    //'https://raw.githubusercontent.com/larsvers/map-store/master/earth-lands-10km.json'
+    'https://raw.githubusercontent.com/larsvers/map-store/master/europe_geo.json'
 );
-const points = d3.csv(
-    'https://raw.githubusercontent.com/larsvers/data-store/master/military_disputes_world.csv'
-);
+const points = GEO_POSITIVE_TWEETS;
+
+// const points = d3.csv(
+//     'https://raw.githubusercontent.com/larsvers/data-store/master/military_disputes_world.csv'
+// );
 
 Promise.all([geoData, points]).then(res => {
     let [geoData, userData] = res;
