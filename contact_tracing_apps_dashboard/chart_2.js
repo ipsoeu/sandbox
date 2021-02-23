@@ -70,7 +70,8 @@ $(document).ready(function () {
         .call(d3.axisBottom(x).ticks(null, "s"))					//  .call(d3.axisLeft(y).ticks(null, "s"))
         .append("text")
         .attr("y", 2)												//     .attr("y", 2)
-        .attr("x", x(x.ticks().pop()) + 450.5) 						//     .attr("y", y(y.ticks().pop()) + 0.5)
+        //.attr("x", x(x.ticks().pop()) + 450.5) 						//     .attr("y", y(y.ticks().pop()) + 0.5)
+        .attr("y", y(y.ticks().pop()) + 0.5)
         .attr("dy", "0.32em")										//     .attr("dy", "0.32em")
         .attr("fill", "#000")
         .attr("font-weight", "bold")
@@ -86,7 +87,7 @@ $(document).ready(function () {
         .data(keys.slice().reverse())
         .enter().append("g")
         //.attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
-        .attr("transform", function (d, i) { return "translate(-50," + (100 + i * 20) + ")"; });
+        .attr("transform", function (d, i) { return "translate(-50," + (200 + i * 40) + ")"; });
 
     legend.append("rect")
         .attr("x", width - 100)
@@ -98,7 +99,7 @@ $(document).ready(function () {
         .attr("x", width - 24)
         .attr("y", 9.5)
         .attr("dy", "0.32em")
-        .text(function (d) { return d; });
+        .text(function (d) { console.log(d);return d; });
     
 });
 
