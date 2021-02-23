@@ -21,7 +21,8 @@
     <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
     
     <script src="contact_tracing_apps_dashboard/data.js"></script>
-    <script src="contact_tracing_apps_dashboard/chart_1.js"></script>
+    <!-- <script src="contact_tracing_apps_dashboard/chart_1.js"></script> -->
+    <script src="contact_tracing_apps_dashboard/chart_2.js"></script>
 
     <style>
         
@@ -54,7 +55,14 @@
         <div id="chart_1_content">
             <svg id="chart_1" width="600" height="600"></svg>
         </div>
-        
+        <div id="chart_2_content">
+            <svg id="chart_2" width="600" height="600"></svg>
+            Select year: 
+            <select id="year"></select>
+
+            <input type="checkbox" id="sort">	
+            Toggle sort 
+        </div>
     </div>
 </body>
 

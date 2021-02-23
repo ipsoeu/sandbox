@@ -142,7 +142,7 @@ function ready(geo, userData) {
         .style('fill', d => colourScale(d.datapointsWt))
         .style('stroke', '#999')
         .style('stroke-opacity', 0.4)
-        .on('click', function(d,i){ console.log(d), console.log(i)  });
+        .on('click', function (d, i) { console.log(d), console.log(i) });
 
     // Build and mount legend.
     const legendKey = svg

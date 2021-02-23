@@ -17,13 +17,13 @@ $(document).ready(function () {
 
     var z = d3.scaleOrdinal()
         .range(["#007f5f", "#D90429", "#ced4da"]);
-    
-        var keys = ['positive', 'negative', 'neutral'];
-    console.log(SA_TABLE)
+
+    var keys = ['positive', 'negative', 'neutral'];
+ 
 
     var data = SA_TABLE;
 
-    
+
     y.domain(data.map(function (d) { return d.app; }));
     x.domain([0, d3.max(data, function (d) { return d.positive + d.negative + d.neutral; })]).nice();
 
