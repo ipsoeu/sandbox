@@ -2,6 +2,10 @@ $(document).ready(function () {
 
     function makestack_chart(div_id, data, keys, dates, title) {
 
+        var div = d3.select("body").append("div")	
+    .attr("class", "tooltip")				
+    .style("opacity", 0);
+
         var svg = d3.select(div_id),
             margin = { top: 20, right: 10, bottom: 40, left: 35 },
             width = +svg.attr("width") - margin.left - margin.right,
@@ -31,6 +35,15 @@ $(document).ready(function () {
             .selectAll("rect")
             .data(function (d) { return d; })
             .enter().append("rect")
+            .on("mouseover", function(d) {
+                var datetime = d3.select(this).data()[0].data.datetime;
+                div.transition()		
+                    .duration(200)		
+                    .style("opacity", .9);		
+                div.html(datetime)	
+                    .style("left", (d.clientX - 30) + "px")		
+                    .style("top", (d.clientY + 400) + "px");	
+                })	
             .attr("x", function (d) { return x(d.data.datetime); })
             .attr("y", function (d) { a = d[1] === NaN ? 0 : d[1]; return y(a); })
             .attr("height", function (d) {
@@ -38,7 +51,13 @@ $(document).ready(function () {
                 b = d[0] === NaN ? 0 : d[0];
                 return y(b) - y(a);
             })
-            .attr("width", x.bandwidth());
+            .attr("width", x.bandwidth())
+            				
+            .on("mouseout", function(d) {		
+                // div.transition()		
+                //     .duration(500)		
+                //     .style("opacity", 0);	
+            });
 
         g.append("g")
             .attr("class", "axis")
@@ -80,7 +99,7 @@ $(document).ready(function () {
             .attr("x", width - 24)
             .attr("y", 9.5)
             .attr("dy", "1em")
-            .text(function (d) { console.log(d); return d; });
+            .text(function (d) { return d; });
 
     }
 
