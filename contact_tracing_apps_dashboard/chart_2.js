@@ -9,7 +9,7 @@ $(document).ready(function () {
             g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
         svg.append("text")
-            .attr("x", width / 2 )
+            .attr("x", width / 2)
             .attr("y", 20)
             .style("text-anchor", "middle")
             .text(title);
@@ -47,17 +47,19 @@ $(document).ready(function () {
 
         g.append("g")
             .attr("class", "axis")
-            .attr("transform", "translate(0," + height + ")")
+            .attr("transform", "translate(0," + (height - 15) + ")")
             .call(d3.axisBottom(x).ticks(null, "s"))
-            .append("text")
-            .attr("y", 2)
-            .attr("y", y(y.ticks().pop()) + 0.5)
-            .attr("dy", "0.32em")
-            .attr("fill", "#000")
-            .attr("font-weight", "bold")
-            .attr("text-anchor", "start")
-            .text("Tweets")
-            .attr("transform", "translate(" + (-width) + ",-10)");
+            .selectAll("text")
+            .style("text-anchor", "end")
+            .attr("dx", "-.8em")
+            .attr("dy", ".15em")
+            .attr("transform", "rotate(-70)")
+            .attr("class", "x-label-temporal")
+
+        // var ticks = d3.selectAll("x-label-temporal");
+        // ticks.each(function (_, i) {
+        //     if (i % 3 !== 0) d3.select(this).remove();
+        // });
 
         var legend = g.append("g")
             .attr("font-family", "sans-serif")
