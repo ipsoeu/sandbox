@@ -1,18 +1,23 @@
 $(document).ready(function () {
 
-    function makestack_chart(div_id, data, keys, dates) {
+    function makestack_chart(div_id, data, keys, dates, title) {
 
         var svg = d3.select(div_id),
-            margin = { top: 10, right: 10, bottom: 40, left: 35 },
+            margin = { top: 20, right: 10, bottom: 40, left: 35 },
             width = +svg.attr("width") - margin.left - margin.right,
             height = +svg.attr("height") - margin.top - margin.bottom,
             g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+        svg.append("text")
+            .attr("x", width / 2 )
+            .attr("y", 20)
+            .style("text-anchor", "middle")
+            .text(title);
 
         x = d3.scaleBand().range([margin.left, width - margin.right]).padding(0.1);
         y = d3.scaleLinear().rangeRound([height - margin.bottom, margin.top])
 
-        var z = d3.scaleOrdinal().range(["#264653", "#2a9d8f", "#e9c46a", "#f4a261", "#e76f51", "#1d3557"]);
+        var z = d3.scaleOrdinal().range(["#b5179e", "#8ac926", "#1982c4", "#6a4c93", "#e76f51", "#619b8a", '#1b4332']);
 
         x.domain(dates);
         y.domain([0, d3.max(data, function (d) { return d.total; })])
@@ -64,7 +69,7 @@ $(document).ready(function () {
             .attr("transform", function (d, i) { return "translate(-50," + (50 + i * 40) + ")"; });
 
         legend.append("rect")
-            .attr("x", width - 100)
+            .attr("x", width)
             .attr("width", 50)
             .attr("height", 50)
             .attr("fill", z);
@@ -72,7 +77,7 @@ $(document).ready(function () {
         legend.append("text")
             .attr("x", width - 24)
             .attr("y", 9.5)
-            .attr("dy", "0.32em")
+            .attr("dy", "1em")
             .text(function (d) { console.log(d); return d; });
 
     }
@@ -82,13 +87,13 @@ $(document).ready(function () {
     var keys = MOBILE_APPS;
     var dates = MOBILE_APPS_DATES;
 
-    makestack_chart(div_id, data, keys, dates);
+    makestack_chart(div_id, data, keys, dates, 'Temporal evolution of positive tweets');
 
     var div_id = "#chart_3";
     var data = NEGATIVE_SENTIMENT_TEMPORAL_EVOLUTION;
     var keys = MOBILE_APPS;
     var dates = MOBILE_APPS_DATES;
 
-    makestack_chart(div_id, data, keys, dates);
+    makestack_chart(div_id, data, keys, dates, 'Temporal evolution of negative tweets');
 });
 
