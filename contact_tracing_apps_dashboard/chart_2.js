@@ -19,15 +19,17 @@ $(document).ready(function () {
             .text(title);
 
         x = d3.scaleBand().range([margin.left, width - margin.right]).padding(0.1);
-        y = d3.scaleLinear().rangeRound([height - margin.bottom, margin.top])
+        y = d3.scaleLinear().rangeRound([height - margin.bottom, margin.top]);
 
         var z = d3.scaleOrdinal().range(["#b5179e", "#8ac926", "#1982c4", "#6a4c93", "#e76f51", "#619b8a", '#1b4332', '#cb997e']);
 
-        x.domain(dates);
+        x.domain(data.map(d => d.datetime));
         y.domain([0, d3.max(data, function (d) { return d.total; })])
         z.domain(keys);
 
         g.append("g")
+        .attr('class', 'stack-chart')
+        .attr("transform", "translate(-30,0)")
             .selectAll("g")
             .data(d3.stack().keys(keys)(data))
             .enter().append("g")
@@ -49,8 +51,6 @@ $(document).ready(function () {
             })
             .attr("y", function (d) { 
                 a = d[1] === NaN ? 0 : d[1]; 
-                if (y(a) == NaN)
-                    console.log('errr')
                 return y(a); 
             })
             .attr("height", function (d) {
@@ -63,32 +63,42 @@ $(document).ready(function () {
             })
             .attr("width", x.bandwidth())
             .on("mouseout", function (d) {
-                // div.transition()		
-                //     .duration(500)		
-                //     .style("opacity", 0);	
+                div.transition()		
+                .duration(500)		
+                .style("opacity", 0);
             });
 
         g.append("g")
             .attr("class", "axis")
             .attr("transform", "translate(0,0)")
             .call(d3.axisLeft(y));
-
+        
+        
         g.append("g")
             .attr("class", "axis")
-            .attr("transform", "translate(0," + (height - 15) + ")")
-            .call(d3.axisBottom(x).ticks(null, "s"))
+            .attr("transform", "translate(-30," + (height - margin.bottom) + ")")
+            .call(d3.axisBottom(x))
             .selectAll("text")
-            .style("text-anchor", "end")
-            .attr("dx", "-.8em")
-            .attr("dy", ".15em")
-            .attr("transform", "rotate(-70)")
+            //.style("text-anchor", "start")
+            .attr("y", "-2")
+            .attr("x", "-35")
+            .attr("transform", "rotate(-90)")
             .attr("class", "x-label-temporal")
+            .attr('color', function(d){
+                const found = data.find(element => element.datetime == d);
+                if (found.total > 600){
+                    return 'gray';
+                }
+                else
+                    //d3.select(this).remove();
+                    return 'transparent'
+            });
 
-        var ticks = d3.selectAll("x-label-temporal");
-        ticks.each(function (_, i) {
-            console.log('')
-            if (i % 3 !== 0) d3.select(this).remove();
-        });
+        // var ticks = d3.selectAll(".x-label-temporal");
+        // ticks.each(function (_, i) {
+
+        //     if (i % 3 !== 0) d3.select(this).remove();
+        // });
 
         var legend = g.append("g")
             .attr("font-family", "sans-serif")
