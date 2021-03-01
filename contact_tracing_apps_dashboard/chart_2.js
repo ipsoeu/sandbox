@@ -7,7 +7,7 @@ $(document).ready(function () {
             .style("opacity", 0);
 
         var svg = d3.select(div_id),
-            margin = { top: 20, right: 10, bottom: 40, left: 35 },
+            margin = { top: 20, right: 0, bottom: 40, left: 35 },
             width = +svg.attr("width") - margin.left - margin.right,
             height = +svg.attr("height") - margin.top - margin.bottom,
             g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -73,25 +73,27 @@ $(document).ready(function () {
             .attr("transform", "translate(0,0)")
             .call(d3.axisLeft(y));
         
-        
+        var x_axis = d3.axisBottom(x).tickValues(x.domain().filter(function(d,i){ return !(i%2)}));
+
         g.append("g")
             .attr("class", "axis")
             .attr("transform", "translate(-30," + (height - margin.bottom) + ")")
-            .call(d3.axisBottom(x))
+            .call(x_axis)
             .selectAll("text")
             //.style("text-anchor", "start")
             .attr("y", "-2")
             .attr("x", "-35")
             .attr("transform", "rotate(-90)")
             .attr("class", "x-label-temporal")
+            
             .attr('color', function(d){
                 const found = data.find(element => element.datetime == d);
                 if (found.total > 600){
-                    return 'gray';
+                    return '#D90429';
                 }
                 else
                     //d3.select(this).remove();
-                    return 'transparent'
+                    return 'gray'
             });
 
         // var ticks = d3.selectAll(".x-label-temporal");
