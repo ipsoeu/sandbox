@@ -7,7 +7,7 @@ $(document).ready(function () {
             .style("opacity", 0);
 
         var svg = d3.select(div_id),
-            margin = { top: 20, right: 0, bottom: 40, left: 35 },
+            margin = { top: 50, right: 0, bottom: 40, left: 35 },
             width = +svg.attr("width") - margin.left - margin.right,
             height = +svg.attr("height") - margin.top - margin.bottom,
             g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -39,10 +39,11 @@ $(document).ready(function () {
             .enter().append("rect")
             .on("mouseover", function (d) {
                 var datetime = d3.select(this).data()[0].data.datetime;
+                var zscore = d3.select(this).data()[0].data.zscore;
                 div.transition()
                     .duration(200)
                     .style("opacity", .9);
-                div.html(datetime)
+                div.html(datetime + ' ' + zscore)
                     .style("left", (d.clientX - 30) + "px")
                     .style("top", (d.clientY + 400) + "px");
             })
@@ -67,6 +68,20 @@ $(document).ready(function () {
                 .duration(500)		
                 .style("opacity", 0);
             });
+            
+            g.append('g')
+            .selectAll("g")
+            .data(data.filter(d => d.zscore > 3) )
+            .enter()
+            .append('circle')
+            .attr("cx", function (d) { 
+                return x(d.datetime) - 27; 
+            })
+            .attr("cy", function (d) {
+                return y(d.total) - 20; 
+            })
+            .attr('r','10px')
+            .style('fill', '#D90429');
 
         g.append("g")
             .attr("class", "axis")
@@ -88,7 +103,7 @@ $(document).ready(function () {
             
             .attr('color', function(d){
                 const found = data.find(element => element.datetime == d);
-                if (found.total > 600){
+                if (found.zscore > 4){
                     return '#D90429';
                 }
                 else
