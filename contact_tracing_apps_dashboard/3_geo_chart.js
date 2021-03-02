@@ -1,3 +1,11 @@
+function Counter(list) {
+    var count = {};
+    list.forEach(val => count[val] = (count[val] || 0) + 1);
+    return Object.fromEntries(
+        Object.entries(count).sort(([,a],[,b]) => b-a)
+    );
+}
+
 function make_geo_chart(chart_id, geo, userData, title, range_colors) {
     /**
      * Build legend.
@@ -105,14 +113,14 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
         .geography(geo)
         .projection(projection)
         .pathGenerator(geoPath)
-        .hexRadius(7)
+        .hexRadius(10)
         .edgePrecision(1)
         .gridExtend(2)
         .geoKeys(['lng', 'lat']);
 
     // Hexgrid instance.
-    const hex = hexgrid(userData);
-    console.log(hex)
+    const hex = hexgrid(userData, ['hashtags', 'place_name']);
+    
     // Calculate Ckmeans based colour scale.
     const counts = hex.grid.layout
         .map(el => el.datapointsWt)
@@ -143,7 +151,19 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
         .style('fill', d => colourScale(d.datapointsWt))
         .style('stroke', '#999')
         .style('stroke-opacity', 0.4)
-        .on('click', function (d, i) { console.log(d), console.log(i) });
+        
+        .on('click', function (event, data) { 
+            console.log(data)
+            var hashtags = [];
+            
+            data.forEach(function(element){
+                hashtags = hashtags.concat(element.hashtags);
+            });
+            var place_names =  data.map(function(element){
+                return element.place_name;
+            });
+            console.log(Counter(place_names))
+        });
 
     // Build and mount legend.
     const legendKey = svg
@@ -173,8 +193,8 @@ const geoData = d3.json(
 //     let [geoData, userData] = res;
 //     make_geo_chart('#chart_4', geoData, userData);
 // });
-const positive_range_colors = ['#FFF', '#f9c74f', '#f8961e', '#f3722c', '#f94144'];
-const negative_range_colors = ['#FFF', '#90be6d', '#43aa8b', '#4d908e', '#277da1'];
+const positive_range_colors = ['#FFF', '#90be6d', '#43aa8b', '#4d908e', '#277da1'];
+const negative_range_colors = ['#FFF', '#f9c74f', '#f8961e', '#f3722c', '#f94144'];
 
 Promise.all([geoData]).then(response => {
     let [geo_data] = response;
