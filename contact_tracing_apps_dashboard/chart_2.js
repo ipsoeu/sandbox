@@ -28,8 +28,8 @@ $(document).ready(function () {
         z.domain(keys);
 
         g.append("g")
-        .attr('class', 'stack-chart')
-        .attr("transform", "translate(-30,0)")
+            .attr('class', 'stack-chart')
+            .attr("transform", "translate(-30,0)")
             .selectAll("g")
             .data(d3.stack().keys(keys)(data))
             .enter().append("g")
@@ -47,12 +47,12 @@ $(document).ready(function () {
                     .style("left", (d.clientX - 30) + "px")
                     .style("top", (d.clientY + 400) + "px");
             })
-            .attr("x", function (d) { 
-                return x(d.data.datetime); 
+            .attr("x", function (d) {
+                return x(d.data.datetime);
             })
-            .attr("y", function (d) { 
-                a = d[1] === NaN ? 0 : d[1]; 
-                return y(a); 
+            .attr("y", function (d) {
+                a = d[1] === NaN ? 0 : d[1];
+                return y(a);
             })
             .attr("height", function (d) {
                 a = d[1] === NaN ? 0 : d[1];
@@ -64,31 +64,31 @@ $(document).ready(function () {
             })
             .attr("width", x.bandwidth())
             .on("mouseout", function (d) {
-                div.transition()		
-                .duration(500)		
-                .style("opacity", 0);
+                div.transition()
+                    .duration(500)
+                    .style("opacity", 0);
             });
-            
-            g.append('g')
+
+        g.append('g')
             .selectAll("g")
-            .data(data.filter(d => d.zscore > 3) )
+            .data(data.filter(d => d.zscore > 3))
             .enter()
             .append('circle')
-            .attr("cx", function (d) { 
-                return x(d.datetime) - 27; 
+            .attr("cx", function (d) {
+                return x(d.datetime) - 27;
             })
             .attr("cy", function (d) {
-                return y(d.total) - 20; 
+                return y(d.total) - 20;
             })
-            .attr('r','10px')
+            .attr('r', '5px')
             .style('fill', '#D90429');
 
         g.append("g")
             .attr("class", "axis")
             .attr("transform", "translate(0,0)")
             .call(d3.axisLeft(y));
-        
-        var x_axis = d3.axisBottom(x).tickValues(x.domain().filter(function(d,i){ return !(i%2)}));
+
+        var x_axis = d3.axisBottom(x).tickValues(x.domain().filter(function (d, i) { return !(i % 2) }));
 
         g.append("g")
             .attr("class", "axis")
@@ -100,22 +100,16 @@ $(document).ready(function () {
             .attr("x", "-35")
             .attr("transform", "rotate(-90)")
             .attr("class", "x-label-temporal")
-            
-            .attr('color', function(d){
+
+            .attr('color', function (d) {
                 const found = data.find(element => element.datetime == d);
-                if (found.zscore > 4){
+                if (found.zscore > 4) {
                     return '#D90429';
                 }
                 else
                     //d3.select(this).remove();
                     return 'gray'
             });
-
-        // var ticks = d3.selectAll(".x-label-temporal");
-        // ticks.each(function (_, i) {
-
-        //     if (i % 3 !== 0) d3.select(this).remove();
-        // });
 
         var legend = g.append("g")
             .attr("font-family", "sans-serif")

@@ -13,16 +13,23 @@
     
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://d3js.org/d3.v6.min.js"></script>
+    
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script src="scripts/underscore.min.js"></script>
-    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
     
+    <script src="//unpkg.com/d3-hexgrid"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <!--<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>-->
+    <script src="//unpkg.com/d3-geo-projection"></script>
+    <script src='//unpkg.com/simple-statistics'></script>
+
     <script src="contact_tracing_apps_dashboard/data.js"></script>
+    <script src="contact_tracing_apps_dashboard/geo_data.js"></script>
     <script src="contact_tracing_apps_dashboard/chart_1.js"></script>
     <script src="contact_tracing_apps_dashboard/chart_2.js"></script>
+    <script src="contact_tracing_apps_dashboard/3_geo_chart.js"></script>
 
     <style>
         div.tooltip {	
@@ -73,6 +80,14 @@
 
         <div id="chart_3_content">
             <svg id="chart_3" width="1300" height="600"></svg>
+        </div>
+
+        <div id="chart_4_content">
+            <svg id="chart_4" width="1300" height="1200"></svg>
+        </div>
+
+        <div id="chart_5_content">
+            <svg id="chart_5" width="1300" height="1300"></svg>
         </div>
 
     </div>

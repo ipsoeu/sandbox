@@ -1,4 +1,4 @@
-function ready(geo, userData) {
+function make_geo_chart(chart_id, geo, userData, title, range_colors) {
     /**
      * Build legend.
      * @param  {Object}   legendKey   Selection to mount legend on.
@@ -59,7 +59,7 @@ function ready(geo, userData) {
         width = 1000 - margin.left - margin.right,
         height = 1000 - margin.top - margin.bottom;
 
-    const svg = d3.select('#container')
+    const svg = d3.select(chart_id)
         .append('svg')
         .attr('width', width + margin.left + margin.top)
         .attr('height', height + margin.top + margin.bottom)
@@ -122,8 +122,9 @@ function ready(geo, userData) {
     const colourScale = d3
         .scaleThreshold()
         .domain(ckBreaks)
-        .range(['#fff', '#e7e7e7', '#aaa', '#777', '#555']);
-
+        //.range(['#fff', '#e7e7e7', '#aaa', '#777', 'red']);
+        .range(range_colors);
+    
     // Clip.
     const gHex = svg
         .append('g')
@@ -153,7 +154,7 @@ function ready(geo, userData) {
             buildKey,
             hex.grid.extentPointsWeighted[1],
             colourScale,
-            'Number of positive tweets'
+            'Number of ' + title
         );
 }
 
@@ -162,15 +163,23 @@ const geoData = d3.json(
     //'https://raw.githubusercontent.com/larsvers/map-store/master/earth-lands-10km.json'
     'https://raw.githubusercontent.com/larsvers/map-store/master/europe_geo.json'
 );
-const points = GEO_POSITIVE_TWEETS;
+//const points = GEO_POSITIVE_TWEETS;
 
 // const points = d3.csv(
 //     'https://raw.githubusercontent.com/larsvers/data-store/master/military_disputes_world.csv'
 // );
 
-Promise.all([geoData, points]).then(res => {
-    let [geoData, userData] = res;
-    ready(geoData, userData);
+// Promise.all([geoData, GEO_POSITIVE_TWEETS]).then(res => {
+//     let [geoData, userData] = res;
+//     make_geo_chart('#chart_4', geoData, userData);
+// });
+const positive_range_colors = ['#FFF', '#f9c74f', '#f8961e', '#f3722c', '#f94144'];
+const negative_range_colors = ['#FFF', '#90be6d', '#43aa8b', '#4d908e', '#277da1'];
+
+Promise.all([geoData]).then(response => {
+    let [geo_data] = response;
+    make_geo_chart('#chart_4', geo_data, GEO_POSITIVE_TWEETS, 'Positive Tweets', positive_range_colors);
+    make_geo_chart('#chart_5', geo_data, GEO_NEGATIVE_TWEETS, 'Negative Tweets', negative_range_colors);
 });
 
 //https://observablehq.com/@larsvers/d3-hexgrid-examples
