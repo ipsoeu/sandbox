@@ -16,8 +16,6 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
      * @return {undefined}            DOM side effects.
      */
 
-    console.log(userData)
-
     function buildKey(legendKey, max, scale, legendText) {
         const x = d3.scaleLinear()
             .domain([1, max])
@@ -153,7 +151,7 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
         .style('stroke-opacity', 0.4)
         
         .on('click', function (event, data) { 
-            console.log(data)
+
             var hashtags = [];
             
             data.forEach(function(element){
@@ -162,7 +160,7 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
             var place_names =  data.map(function(element){
                 return element.place_name;
             });
-            console.log(Counter(place_names))
+
         });
 
     // Build and mount legend.

@@ -31,6 +31,9 @@
     <script src="contact_tracing_apps_dashboard/chart_2.js"></script>
     <script src="contact_tracing_apps_dashboard/3_geo_chart.js"></script>
 
+    <script src="contact_tracing_apps_dashboard/events_data.js"></script>
+    <script src="contact_tracing_apps_dashboard/events.js"></script>
+
     <style>
         div.tooltip {	
     position: absolute;			
@@ -81,7 +84,10 @@
         <div id="chart_3_content">
             <svg id="chart_3" width="1300" height="600"></svg>
         </div>
-
+        <div>
+            <h3>Events (<span id="events_number"></span>)</h3>
+            <div id=events_list></div>
+        </div>
         <div id="chart_4_content">
             <svg id="chart_4" width="1300" height="1200"></svg>
         </div>
