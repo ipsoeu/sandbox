@@ -92,6 +92,26 @@
         </div>
 
         <div>
+            <h3>Combining sentiment analysis and geo-extraction</h3>
+            <p>
+                The following maps show the geographical distribution of the positive and negative 
+                tweets. The datasets created is composed by the intersection of the tweets with 
+                opinions and place names. The places names have been extracted using nlp techniques
+                plus the database geonames for the translation from extracted place names to coordinates.
+            </p>
+            <div id="chart_4_content">
+                <svg id="chart_4" width="1300" height="1200"></svg>
+            </div>
+
+            <div id="chart_5_content">
+                <svg id="chart_5" width="1300" height="1300"></svg>
+            </div>
+
+
+        </div>
+
+        <div>
+            <h3>Event detection</h3>
             <div id="chart_2_content">
                 <svg id="chart_2" width="1300" height="600"></svg>
             </div>
@@ -101,30 +121,23 @@
                 The red points are the event detected considering
                 the standard deviations from the mean (zscore).
             </p>
-        </div>
-       
-        <div>
+
             <div id="chart_3_content">
                 <svg id="chart_3" width="1300" height="600"></svg>
             </div>
             <p>
                 As the previus stacked barchar, it represents the negative tweets.
-                There are two more events detected and usually more peaks and activities 
-                from the users. 
+                There are two more events detected and usually more peaks and activities
+                from the users.
             </p>
         </div>
-        
+
         <div>
             <h3>Events (<span id="events_number"></span>)</h3>
             <div id=events_list></div>
         </div>
-        <div id="chart_4_content">
-            <svg id="chart_4" width="1300" height="1200"></svg>
-        </div>
 
-        <div id="chart_5_content">
-            <svg id="chart_5" width="1300" height="1300"></svg>
-        </div>
+
 
     </div>
 </body>
