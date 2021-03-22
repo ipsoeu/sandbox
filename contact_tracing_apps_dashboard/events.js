@@ -11,7 +11,7 @@ $(document).ready(function () {
         $table.DataTable({
             data: _.map(event, function (value) {
                 var entities = value['organizations'].concat(value['misc']).concat(value['person']);
-                console.log(entities)
+              
                 return [
                     value['app_name'],
                     

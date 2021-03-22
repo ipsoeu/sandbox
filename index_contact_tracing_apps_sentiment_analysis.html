@@ -10,14 +10,14 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
-    
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script src="scripts/underscore.min.js"></script>
-    
+
     <script src="//unpkg.com/d3-hexgrid"></script>
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
@@ -35,27 +35,26 @@
     <script src="contact_tracing_apps_dashboard/events.js"></script>
 
     <style>
-        div.tooltip {	
-    position: absolute;			
-    text-align: center;			
-    width: 60px;					
-    height: 28px;					
-    padding: 2px;				
-    font: 12px sans-serif;		
-    background: lightsteelblue;	
-    border: 0px;		
-    border-radius: 8px;			
-    pointer-events: none;			
-}
+        div.tooltip {
+            position: absolute;
+            text-align: center;
+            width: 60px;
+            height: 28px;
+            padding: 2px;
+            font: 12px sans-serif;
+            background: lightsteelblue;
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+        }
 
         #wrap {
             width: 1200px;
             margin: auto;
             height: 900px;
-            
+
             margin-top: 10px;
         }
-
     </style>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174641246-1"></script>
@@ -66,24 +65,55 @@
         gtag('config', 'UA-174641246-1');
     </script>
 
-<script src="contact_tracing_apps_dashboard/us.js"></script>
+    <script src="contact_tracing_apps_dashboard/us.js"></script>
     <script src="contact_tracing_apps_dashboard/main.js"></script>
 </head>
 
 
 <body>
     <div id="wrap">
-        <div id="chart_1_content">
-            <svg id="chart_1" width="1300" height="600"></svg>
-        </div>
-        
-        <div id="chart_2_content">
-            <svg id="chart_2" width="1300" height="600"></svg>
+        <h1>Sentiment analysis about Contact tracing apps</h1>
+        <h3>
+            <em>A study to understand the sentiments and opinons of the contact tracing apps</em>
+        </h3>
+
+        <div>
+            <div id="chart_1_content">
+                <svg id="chart_1" width="1300" height="600"></svg>
+            </div>
+
+            <p>
+                The stacked barchar represents the tweets collected about
+                the european contact tracing apps.
+                In order to extract opinions and sentiments pretrained BERT model
+                have been used for each main langueges (English, Italian, French, German and Spanish)
+            </p>
+
         </div>
 
-        <div id="chart_3_content">
-            <svg id="chart_3" width="1300" height="600"></svg>
+        <div>
+            <div id="chart_2_content">
+                <svg id="chart_2" width="1300" height="600"></svg>
+            </div>
+            <p>
+                The stacked bar char represents the temporal evolution of
+                positive tweets collected from July 2020 to February 2021.
+                The red points are the event detected considering
+                the standard deviations from the mean (zscore).
+            </p>
         </div>
+       
+        <div>
+            <div id="chart_3_content">
+                <svg id="chart_3" width="1300" height="600"></svg>
+            </div>
+            <p>
+                As the previus stacked barchar, it represents the negative tweets.
+                There are two more events detected and usually more peaks and activities 
+                from the users. 
+            </p>
+        </div>
+        
         <div>
             <h3>Events (<span id="events_number"></span>)</h3>
             <div id=events_list></div>
