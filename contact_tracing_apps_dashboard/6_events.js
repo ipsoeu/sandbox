@@ -1,0 +1,134 @@
+function make_geo_event_chart(chart_id, geo_data, event) {
+
+    //var event = events[0];
+
+    var countries = event.map(function (e) {
+        return e.country
+    });
+
+    var count_values = event.map(function (e) {
+        return e.count;
+    });
+
+    geo_data.features = geo_data.features.filter(function (d) {
+        return true;
+        //return countries.includes(d.properties.ISO_A2.toLowerCase());
+    })
+
+    const x = d3.scaleLinear()
+        .domain([d3.min(count_values), d3.max(count_values)])
+        .range([0, 120]);
+
+    const colour_scale = d3
+        .scaleLinear()
+        .domain([d3.min(count_values), d3.max(count_values)])
+        .range(["#f1faee", "#1d3557"]);
+
+    // Set up SVG.
+    const margin = { top: 30, right: 30, bottom: 30, left: 30 },
+        width = 500 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
+
+    const svg = d3.select(chart_id)
+        .append('svg')
+        .attr('width', width + margin.left + margin.top)
+        .attr('height', height + margin.top + margin.bottom)
+        .append('g')
+        .attr('transform', `translate(${margin.left} ${margin.top})`);
+
+    // Projection and path.
+    const projection = d3.geoConicEqualArea()
+        .fitSize([width, height], geo_data)
+        .parallels([36, 66]);
+    const geoPath = d3.geoPath().projection(projection);
+
+    svg.append("g")
+        .selectAll("path")
+        .data(geo_data.features)
+        .enter()
+        .append("path")
+        .attr("fill", function (d) {
+            var country = event.filter(function (e) {
+                return e.country == d.properties.ISO_A2.toLowerCase();
+            })[0]
+            return country === undefined ? '#FFF' : colour_scale(country.count);
+        })
+        .attr("d", d3.geoPath().projection(projection))
+        .style("stroke", "#000")
+        .style('stroke-width', '1px')
+}
+
+function make_tag_cloud_chart(chart_id, event) {
+
+    console.log(event)
+
+    const margin = { top: 30, right: 30, bottom: 30, left: 30 },
+        width = 500 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
+
+    const svg_word_cloud = d3.select(chart_id)
+        .append('svg')
+        .attr('id', 'svg_word_cloud')
+        .attr('width', width + margin.left + margin.top)
+        .attr('height', height + margin.top + margin.bottom)
+        .attr('x', 500)
+        //.append('g')
+        //.attr('transform', `translate(${margin.left} ${margin.top})`);
+
+    var words = event.map(function (item) {
+        var wordcloud = item.hashtags.map(function (h) {
+            if (h[1] > 1)
+                return { 'text': h[0], 'size': h[1] }
+        })
+        return wordcloud.filter(function (w) {
+            return w != undefined;
+        });
+
+    });
+    var words = [].concat.apply([], words);
+    var color = d3.scaleLinear()
+        .domain([0, 1, 2, 3, 4, 5, 6, 10, 15, 20, 100])
+        .range(["#ddd", "#ccc", "#bbb", "#aaa", "#999", "#888", "#777", "#666", "#555", "#444", "#333", "#222"]);
+
+
+    var layout = d3.layout.cloud()
+        .size([500, 500])
+        .words(words)
+        .padding(5)
+        .rotate(function () { return ~~(Math.random() * 2) * 90; })
+        .font("Impact")
+        .fontSize(function (d) { return d.size; })
+        .on("end", draw);
+
+    layout.start();
+
+    function draw(words) {
+            d3.select('#svg_word_cloud')
+            .attr("width", layout.size()[0])
+            .attr("height", layout.size()[1])
+            .append("g")
+            .attr("transform", "translate(" + layout.size()[0] / 2 + "," + layout.size()[1] / 2 + ")")
+            .selectAll("text")
+            .data(words)
+            .enter().append("text")
+            .style("font-size", function (d) { return d.size + "px"; })
+            .style("font-family", "Impact")
+            .attr("text-anchor", "middle")
+            .attr("transform", function (d) {
+                return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+            })
+            .text(function (d) { return d.text; });
+    }
+}
+const geo_data = d3.json('https://raw.githubusercontent.com/ipsoeu/sandbox/master/contact_tracing_apps_dashboard/europe.geo.json');
+
+$(document).ready(function () {
+
+    Promise.all([geo_data]).then(response => {
+        let [geo_data] = response;
+        make_geo_event_chart('#chart_6', geo_data, EVENTS[0]);
+
+        make_tag_cloud_chart('#chart_6', EVENTS[0]);
+    });
+
+});
