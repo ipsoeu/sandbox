@@ -126,6 +126,10 @@ $(document).ready(function () {
 
     Promise.all([geo_data]).then(response => {
         let [geo_data] = response;
+        var event_news = EVENTS_NEWS['positive'][0][EVENTS[0][0]['datetime'][0]];
+        
+        console.log(event_news);
+
         make_geo_event_chart('#chart_6', geo_data, EVENTS[0]);
 
         make_tag_cloud_chart('#chart_6', EVENTS[0]);
