@@ -1,12 +1,22 @@
 make_stack_bar_char = function () {
 
-    var data = DATA_SECTION_1_RIGHT_1;
+    var parse_created_at = d3.timeParse("%Y-%m-%d");
 
+    var data = DATA_SECTION_1_RIGHT_1;
+    
     console.log(data);
+
+    data = data.map(function(e){
+        e['date'] = parse_created_at(e['date']);
+        return e;
+    });
+    
 
     margin = ({ top: 20, right: 30, bottom: 30, left: 40 })
 
-    height = 400
+    height = 400;
+    width = 700;
+    
     yAxis = g => g
         .attr("transform", `translate(${margin.left},0)`)
         .call(d3.axisLeft(y))
@@ -22,7 +32,7 @@ make_stack_bar_char = function () {
         .call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0));
 
     series = d3.stack().keys(MOBILE_APPS)(data)
-
+    
     color = d3.scaleOrdinal()
         .domain(MOBILE_APPS)
         .range(d3.schemeCategory10);
@@ -60,7 +70,6 @@ make_stack_bar_char = function () {
     svg.append("g")
         .call(yAxis);
 
-    console.log(series)
 }
 
 $(document).ready(function () {
