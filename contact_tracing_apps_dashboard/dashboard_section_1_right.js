@@ -15,8 +15,8 @@ make_stack_bar_char = function () {
     margin = ({ top: 20, right: 30, bottom: 30, left: 40 })
 
     height = 400;
-    width = 700;
-    
+    width = 800;
+
     yAxis = g => g
         .attr("transform", `translate(${margin.left},0)`)
         .call(d3.axisLeft(y))
