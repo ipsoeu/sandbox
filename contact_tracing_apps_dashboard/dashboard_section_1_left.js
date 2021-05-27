@@ -82,24 +82,13 @@ $(document).ready(function () {
             '0': APPS_PIECHART,
             '1': LANGS_PIECHART
         }
-
         return _data[value];
-        // var data = [];
-
-        // for (let [key, value] of Object.entries(_data[value])) { //solve by server side
-        //     data.push({
-        //         'name': key,
-        //         'value': value
-        //     });
-        // }
-
     }
 
     
     make_pie_chart(get_data('0'));
 
     $("#section_1_left_menu").change(function (e) {
-        console.log(get_data(this.value))
         make_pie_chart(get_data(this.value));
     });
 });
