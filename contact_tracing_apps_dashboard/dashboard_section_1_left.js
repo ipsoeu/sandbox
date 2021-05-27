@@ -80,7 +80,8 @@ $(document).ready(function () {
     get_data = function (value) {
         _data = {
             '0': APPS_PIECHART,
-            '1': LANGS_PIECHART
+            '1': LANGS_PIECHART,
+            '2': SA_PIECHART
         }
         return _data[value];
     }
