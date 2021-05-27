@@ -1,41 +1,38 @@
 
 
-var data_pie_chart = [];
-
-for (let [key, value] of Object.entries(DATA)) { //solve by server side
-    data_pie_chart.push({
-        'name': key,
-        'value': value
-    });
-}
-
-console.log(data_pie_chart)
-pie = d3.pie()
-    .sort(null)
-    .value(d => d.value)
 
 
 
 
 
 
-height = 400;
-width = 400;
 
-arcLabel = function () {
-    const radius = Math.min(width, height) / 2 * 1.2;
-    return d3.arc().innerRadius(radius).outerRadius(radius);
-}
+make_pie_chart = function (data_pie_chart) {
+    console.log(data_pie_chart)
+    pie = d3.pie()
+        .sort(null)
+        .value(d => d.value)
 
-color = d3.scaleOrdinal()
-    .domain(data_pie_chart.map(d => d.name))
-    .range(d3.quantize(t => d3.interpolateSpectral(t * 0.8 + 0.1), data_pie_chart.length).reverse())
 
-arc = d3.arc()
-    .innerRadius(0)
-    .outerRadius(Math.min(width, height) / 2 - 1)
 
-make_pie_chart = function () {
+
+
+
+    height = 400;
+    width = 400;
+
+    arcLabel = function () {
+        const radius = Math.min(width, height) / 2 * 1.2;
+        return d3.arc().innerRadius(radius).outerRadius(radius);
+    }
+
+    color = d3.scaleOrdinal()
+        .domain(data_pie_chart.map(d => d.name))
+        .range(d3.quantize(t => d3.interpolateSpectral(t * 0.8 + 0.1), data_pie_chart.length).reverse())
+
+    arc = d3.arc()
+        .innerRadius(0)
+        .outerRadius(Math.min(width, height) / 2 - 1)
 
     const arcs = pie(data_pie_chart);
 
@@ -79,7 +76,32 @@ make_pie_chart = function () {
 }
 
 $(document).ready(function () {
-    make_pie_chart();
+
+    get_data = function (value) {
+        _data = {
+            '0': APPS_PIECHART,
+            '1': LANGS_PIECHART
+        }
+
+        return _data[value];
+        // var data = [];
+
+        // for (let [key, value] of Object.entries(_data[value])) { //solve by server side
+        //     data.push({
+        //         'name': key,
+        //         'value': value
+        //     });
+        // }
+
+    }
+
+    
+    make_pie_chart(get_data('0'));
+
+    $("#section_1_left_menu").change(function (e) {
+        console.log(get_data(this.value))
+        make_pie_chart(get_data(this.value));
+    });
 });
 //https://stackoverflow.com/questions/45084933/how-to-append-an-svg-to-an-prexisting-svg-using-d3-js
 

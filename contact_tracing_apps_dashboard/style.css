@@ -1,6 +1,6 @@
 #container {
     width: 1200px;
-    border: 1px solid red;
+    border: 1px solid rgb(0, 102, 255);
     position:relative;
     margin: 0px auto;
 }
@@ -26,4 +26,10 @@
     /* background-color: grey; --*/
     position: absolute;
     right: 0px;
+}
+
+.section_select_menu{
+    margin-bottom: 20px;
+    margin-left: 100px;
+    
 }
