@@ -9,9 +9,10 @@
   <link rel="stylesheet" href="contact_tracing_apps_dashboard/style.css">
 
   <!-- Loading data -->
-  <script src="contact_tracing_apps/data.js"></script>
+  <!--<script src="contact_tracing_apps/data.js"></script>-->
 
   <script src="contact_tracing_apps_dashboard/data/pie_charts.js"></script>
+  <script src="contact_tracing_apps_dashboard/data/series_charts.js"></script>
 
   <script src="contact_tracing_apps_dashboard/data_section_1_right_1.js"></script>
   <!-- d3-hexgrid script comes first. -->
@@ -41,14 +42,20 @@
           <select id="section_1_left_menu" class="form-select form-select-sm" aria-label=".form-select-sm example">
             <option value="0" selected>Number of Tweets by contact tracing apps</option>
             <option value="1">Number of Tweets by languages</option>
-            <option value="2">Sentiment analysysof contact tracing apps</option>
-            
+            <option value="2">Sentiment analysis and contact tracing apps</option>
           </select>
         </div>
-
         <svg id="section_1_left" width="400" height="400"></svg>
       </div>
       <div class="section_right">
+        
+        <div class="section_select_menu">
+          <select id="section_1_right_menu" class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option value="0" selected>Number of Tweets by contact tracing apps</option>
+            <option value="1">Sentiment analysis and contact tracing apps</option>
+          </select>
+        </div>
+
         <svg id="section_1_right" width="800" height="400"></svg>
       </div>
     </div>
