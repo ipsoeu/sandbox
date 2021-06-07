@@ -3,8 +3,6 @@ make_stack_bar_char = function () {
     var parse_created_at = d3.timeParse("%Y-%m-%d");
 
     var data = APPS_SERIES;//DATA_SECTION_1_RIGHT_1;
-    console.log(data);
-    console.log(APPS_LABELS)
 
     data = data.map(function(e){
         e['date'] = parse_created_at(e['date']);

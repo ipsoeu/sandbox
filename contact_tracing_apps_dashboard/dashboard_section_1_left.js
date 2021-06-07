@@ -1,14 +1,5 @@
-
-
-
-
-
-
-
-
-
 make_pie_chart = function (data_pie_chart) {
-    console.log(data_pie_chart)
+    
     pie = d3.pie()
         .sort(null)
         .value(d => d.value)

@@ -13,6 +13,7 @@
 
   <script src="contact_tracing_apps_dashboard/data/pie_charts.js"></script>
   <script src="contact_tracing_apps_dashboard/data/series_charts.js"></script>
+  <script src="contact_tracing_apps_dashboard/data/wordcloud_data.js"></script>
 
   <script src="contact_tracing_apps_dashboard/data_section_1_right_1.js"></script>
   <!-- d3-hexgrid script comes first. -->
@@ -23,7 +24,10 @@
   <script src="//unpkg.com/d3-geo-projection"></script>
   <script src='//unpkg.com/simple-statistics'></script>
   <script src="contact_tracing_apps_dashboard/dashboard_section_1_left.js"></script>
+  <script src="contact_tracing_apps_dashboard/dashboard_section_2_left.js"></script>
   <script src="contact_tracing_apps_dashboard/dashboard_section_1_right.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <script src="contact_tracing_apps_dashboard/layout.cloud.js"></script>
 
 </head>
 
@@ -63,8 +67,9 @@
     <div id="section_2" class="section">
 
       <div id="section_2_left" class="section_left">
-
-
+        
+        <svg id="section_2_left_svg" width="400" height="400"></svg>
+        
       </div>
       <div id="section_2_right" class="section_right">
 
