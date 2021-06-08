@@ -27,8 +27,14 @@
   <script src="contact_tracing_apps_dashboard/dashboard_section_2_left.js"></script>
   <script src="contact_tracing_apps_dashboard/dashboard_section_1_right.js"></script>
   <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  
+
   <script src="contact_tracing_apps_dashboard/layout.cloud.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/d3-color@3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3-interpolate@3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3-scale-chromatic@3"></script>
+  <!-- https://github.com/d3/d3-scale-chromatic -->
 </head>
 
 <body>
@@ -68,7 +74,7 @@
 
       <div id="section_2_left" class="section_left">
         
-        <svg id="section_2_left_svg" width="400" height="400"></svg>
+        <svg id="section_2_left_svg"></svg>
         
       </div>
       <div id="section_2_right" class="section_right">
