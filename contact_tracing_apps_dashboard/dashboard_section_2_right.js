@@ -206,10 +206,7 @@ Promise.all([geoData]).then(response => {
             
             make_geo_chart('#section_2_right_geo', geo_data, data.data, 'Positive Tweets', data.colors);
         });
-    
 
-   
-    console.log('ok')
     make_geo_chart('#section_2_right_geo', geo_data, GEO_POSITIVE_TWEETS, 'Positive Tweets', positive_range_colors);
-    //make_geo_chart('#chart_5', geo_data, GEO_NEGATIVE_TWEETS, 'Negative Tweets', negative_range_colors);
+
 });
