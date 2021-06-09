@@ -64,7 +64,7 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
 
     // Set up SVG.
     const margin = { top: 30, right: 30, bottom: 30, left: 30 },
-        width = 600 - margin.left - margin.right,
+        width = 800 - margin.left - margin.right,
         height = 400 - margin.top - margin.bottom;
 
     const svg = d3.select(chart_id)
