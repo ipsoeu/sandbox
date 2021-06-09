@@ -53,8 +53,8 @@ $(document).ready(function () {
 
     get_data = function (value) {
         _data = {
-            '0': WORDCLOUD_EMM,
-            '1': WORDCLOUD_HASHTAGS,
+            '1': WORDCLOUD_EMM,
+            '0': WORDCLOUD_HASHTAGS,
             
         }
         return _data[value].slice(0);;
