@@ -15,6 +15,8 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
      * @param  {string}   legendText  Legend title.
      * @return {undefined}            DOM side effects.
      */
+    
+    $(chart_id).empty()
 
     function buildKey(legendKey, max, scale, legendText) {
         const x = d3.scaleLinear()
@@ -62,7 +64,7 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
 
     // Set up SVG.
     const margin = { top: 30, right: 30, bottom: 30, left: 30 },
-        width = 800 - margin.left - margin.right,
+        width = 600 - margin.left - margin.right,
         height = 400 - margin.top - margin.bottom;
 
     const svg = d3.select(chart_id)
@@ -181,12 +183,33 @@ const geoData = d3.json(
     'https://raw.githubusercontent.com/larsvers/map-store/master/europe_geo.json'
 );
 
-const positive_range_colors = ['#FFF', '#90be6d', '#43aa8b', '#4d908e', '#277da1'];
-const negative_range_colors = ['#FFF', '#f9c74f', '#f8961e', '#f3722c', '#f94144'];
 
 Promise.all([geoData]).then(response => {
     let [geo_data] = response;
+    const positive_range_colors = ['#FFF', '#90be6d', '#43aa8b', '#4d908e', '#277da1'];
+    const negative_range_colors = ['#FFF', '#f9c74f', '#f8961e', '#f3722c', '#f94144'];
+    
+    
+
+        var get_data = function (value) {
+            _data = {
+                '0': {data: GEO_NEGATIVE_TWEETS, colors: negative_range_colors},
+                '1': {data: GEO_POSITIVE_TWEETS, colors: positive_range_colors}
+            }
+            return _data[value];
+        }
+    
+        $("#section_2_right_menu").change(function (e) {
+            
+            var data = get_data(this.value);
+
+            
+            make_geo_chart('#section_2_right_geo', geo_data, data.data, 'Positive Tweets', data.colors);
+        });
+    
+
+   
     console.log('ok')
-    make_geo_chart('#section_2_right', geo_data, GEO_POSITIVE_TWEETS, 'Positive Tweets', positive_range_colors);
+    make_geo_chart('#section_2_right_geo', geo_data, GEO_POSITIVE_TWEETS, 'Positive Tweets', positive_range_colors);
     //make_geo_chart('#chart_5', geo_data, GEO_NEGATIVE_TWEETS, 'Negative Tweets', negative_range_colors);
 });
