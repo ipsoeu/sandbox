@@ -1,15 +1,13 @@
 make_dashboard = function () {
 
     var parse_created_at = d3.timeParse("%Y-%m-%d");
-    
+
     var data = JSON.parse(JSON.stringify(APPS_SERIES));
 
     var data = data.map(function (e) {
         e['day'] = parse_created_at(e['day']);
         return e;
     });
-
-    
 
     margin = ({ top: 20, right: 30, bottom: 100, left: 40 })
 
@@ -27,7 +25,7 @@ make_dashboard = function () {
             .text(data.y))
 
     xAxis = g => g
-        .attr("transform", `translate(0,${height - margin.bottom +260})`)
+        .attr("transform", `translate(0,${height - margin.bottom + 260})`)
         .call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0));
 
     series = d3.stack().keys(['total'])(data)
@@ -52,7 +50,7 @@ make_dashboard = function () {
 
 
     const svg = d3.select("#dashboard_svg");
-        //.attr("viewBox", [0, 500, width, height]);
+    //.attr("viewBox", [0, 500, width, height]);
 
     svg.append("g")
         .attr('transform', 'translate(0, 250)')
@@ -63,9 +61,9 @@ make_dashboard = function () {
         .attr("d", area)
         .append("title")
         .text(({ key }) => key);
-        
+
     svg.append("g")
-    
+
         .call(xAxis);
 
     // svg.append("g")
@@ -78,64 +76,87 @@ make_dashboard = function () {
 
 
 make_slider_time = function (svg) {
-    console.log(svg)
+    const parse_created_at = d3.timeParse("%Y-%m-%d");
+
     var data = JSON.parse(JSON.stringify(APPS_SERIES))
-
-    var parse_created_at = d3.timeParse("%Y-%m-%d");
-
     var data_time = data.map(function (e) {
         return parse_created_at(e.day);
     });
 
-    
+
+
     var sliderTime = d3
         .sliderTop()
         .min(d3.min(data_time))
         .max(d3.max(data_time))
         //.step(30)
         .step(1000 * 60 * 60 * 24)
-        .width(1118)
+        .width(1128)
         .tickFormat(d3.timeFormat('%Y-%m-%d'))
-
+        .fill('#2196f3')
         .displayFormat(d3.timeFormat('%Y-%m-%d'))
         //.tickValues(data_time)
         //.ticks(30)
         //.displayTicks(false)
-        .default(d3.max(data_time))
+        .default([d3.min(data_time), d3.max(data_time)])
         .on('onchange', val => {
-           display_by_day(svg, val)
+            display_by_day(svg, val)
         });
 
-      // d3
-         //.select("#dashboard_svg")
-    var g_time =   svg
+    // d3
+    //.select("#dashboard_svg")
+    var g_time = svg
         .append('g')
         .attr('id', 'svg_slider')
         .attr('width', 1220)
         .attr('height', 100)
-        .attr('transform', 'translate(51, 555)');
+        .attr('transform', 'translate(41, 555)');
 
     g_time.call(sliderTime);
     d3.select('#svg_slider').selectAll('.tick').remove();
-    
+
 }
 
-display_by_day = function(svg, day){
-    console.log(day)
-    console.log(svg)
+display_by_day = function (svg, days) {
+    //const formatTime = d3.timeFormat("%B %d, %Y");
+    const formatTime = d3.timeFormat('%Y-%m-%d');
+    
+    var data = JSON.parse(JSON.stringify(APPS_SERIES));
+
+    data = data.filter(function (e) {
+        return Date.parse(e.day) >= days[0] & Date.parse(e.day) <= days[1];
+    });
+
+    var data_pie_chart = [];
+
+    for (app_name of APPS_LABELS) {
+        if (app_name != 'total') {
+            data_pie_chart.push({
+                name: app_name,
+                'value': data.reduce(function (total, e) {
+                    return total + (e[app_name] ? e[app_name] : 0);
+                }, 0)
+            });
+        }
+    }
+
+
+    make_pie_chart(svg, data_pie_chart)
+
 }
 
 make_pie_chart = function (svg, data_pie_chart) {
-    
+    console.log('data_pie_schart', data_pie_chart)
     pie = d3.pie()
         .sort(null)
         .value(d => d.value)
 
-    height = 400;
-    width = 400;
+    height = 300;
+    width = 300;
 
     arcLabel = function () {
         const radius = Math.min(width, height) / 2 * 1.2;
+
         return d3.arc().innerRadius(radius).outerRadius(radius);
     }
 
@@ -154,21 +175,24 @@ make_pie_chart = function (svg, data_pie_chart) {
 
     margin = { top: 20, right: 50, bottom: 30, left: 130 },
         width = width - margin.left - margin.right,
-        height = height - margin.top - margin.bottom,
+        height = height - margin.top - margin.bottom;
 
-        svg.append("g")
-            .attr("stroke", "white")
-            .selectAll("path")
-            .data(arcs)
-            .join("path")
-            .attr("fill", d => color(d.data.name))
-            .attr("d", arc)
-            .append("title")
-            .text(d => `${d.data.name}: ${d.data.value.toLocaleString()}`);
+    pie_g = svg.append("g")
+        .attr('transform', 'translate(150, 150)')
+        .attr('id', 'dashboard_pie_chart');
 
-    svg.append("g")
-        .attr("font-family", "sans-serif")
-        .attr("font-size", 12)
+    pie_g.attr("stroke", "black")
+        .selectAll("path")
+        .data(arcs)
+        .join("path")
+        .attr("fill", d => color(d.data.name))
+        .attr("d", arc)
+        .append("text")
+        .text(d => `${d.data.name}: ${d.data.value.toLocaleString()}`);
+
+    pie_g.append("g")
+        .attr("font-family", "verdana")
+        .attr("font-size", 11)
         .attr("text-anchor", "middle")
         .selectAll("text")
         .data(arcs)
@@ -177,12 +201,12 @@ make_pie_chart = function (svg, data_pie_chart) {
 
         .call(text => text.append("tspan")
             .attr("y", "-0.4em")
-            .attr("font-weight", "bold")
+            .attr("font-weight", "normal")
             .text(d => d.data.name))
         .call(text => text.filter(d => (d.endAngle - d.startAngle) > 0.25).append("tspan")
             .attr("x", 0)
             .attr("y", "0.7em")
-            .attr("fill-opacity", 0.7)
+            .attr("fill-opacity", 0.6)
             .text(d => d.data.value.toLocaleString()));
 
 
@@ -194,7 +218,7 @@ make_pie_chart = function (svg, data_pie_chart) {
 $(document).ready(function () {
 
     make_dashboard();
-    
+
 });
 
 
