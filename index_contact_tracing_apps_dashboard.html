@@ -31,10 +31,14 @@
   <script src="https://cdn.jsdelivr.net/npm/d3-color@3"></script>
   <script src="https://cdn.jsdelivr.net/npm/d3-interpolate@3"></script>
   <script src="https://cdn.jsdelivr.net/npm/d3-scale-chromatic@3"></script>
+  <script src="https://unpkg.com/d3-simple-slider"></script>
+
   <!-- https://github.com/d3/d3-scale-chromatic -->
 
+  <script src="contact_tracing_apps_dashboard/dashboard.js"></script>
+  <!--
   <script src="contact_tracing_apps_dashboard/dashboard_section_1_left.js"></script>
-  <script src="contact_tracing_apps_dashboard/dashboard_section_2_left.js"></script>
+  <script src="contact_tracing_apps_dashboard/dashboard_section_2_left.js"></script>-->
   <script src="contact_tracing_apps_dashboard/dashboard_section_1_right.js"></script>
   <script src="contact_tracing_apps_dashboard/dashboard_section_2_right.js"></script>
 
@@ -46,6 +50,11 @@
 
     <div id="header">
       <h1>Mobile contact tracing apps on Twitter</h1>
+    </div>
+
+    <div id="dashboard_content" class="section" style="border: 1px solid red;">
+      <svg id="dashboard_svg" width="1200" height="600"></svg>
+
     </div>
 
     <div id="section_1" class="section">

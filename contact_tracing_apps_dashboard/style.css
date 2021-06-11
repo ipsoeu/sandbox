@@ -5,6 +5,10 @@
     margin: 0px auto;
 }
 
+#dashboard_content {
+    height: 600px;
+}
+
 .section {
     width: 100%;
     height: 500px;
