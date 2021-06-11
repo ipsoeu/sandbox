@@ -146,7 +146,7 @@ display_by_day = function (svg, days) {
 }
 
 make_pie_chart = function (svg, data_pie_chart) {
-    console.log('data_pie_schart', data_pie_chart)
+    
     pie = d3.pie()
         .sort(null)
         .value(d => d.value)
@@ -170,12 +170,11 @@ make_pie_chart = function (svg, data_pie_chart) {
 
     const arcs = pie(data_pie_chart);
 
-    // var svg = d3.select("#section_1_left")
-    //     .attr("viewBox", [-width / 2, -height / 2, width, height]);
-
     margin = { top: 20, right: 50, bottom: 30, left: 130 },
         width = width - margin.left - margin.right,
         height = height - margin.top - margin.bottom;
+    
+    d3.select('#dashboard_pie_chart').remove();
 
     pie_g = svg.append("g")
         .attr('transform', 'translate(150, 150)')
@@ -211,9 +210,6 @@ make_pie_chart = function (svg, data_pie_chart) {
 
 
 }
-
-
-
 
 $(document).ready(function () {
 
