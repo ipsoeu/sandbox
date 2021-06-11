@@ -71,6 +71,8 @@ make_dashboard = function () {
     make_slider_time(svg)
 
     make_pie_chart(svg, APPS_PIECHART)
+
+    make_stackbar_chart(svg)
 }
 
 
@@ -120,7 +122,7 @@ make_slider_time = function (svg) {
 display_by_day = function (svg, days) {
     //const formatTime = d3.timeFormat("%B %d, %Y");
     const formatTime = d3.timeFormat('%Y-%m-%d');
-    
+
     var data = JSON.parse(JSON.stringify(APPS_SERIES));
 
     data = data.filter(function (e) {
@@ -142,11 +144,11 @@ display_by_day = function (svg, days) {
 
 
     make_pie_chart(svg, data_pie_chart)
-
+    make_stackbar_chart(svg, data_pie_chart)
 }
 
 make_pie_chart = function (svg, data_pie_chart) {
-    
+
     pie = d3.pie()
         .sort(null)
         .value(d => d.value)
@@ -173,7 +175,7 @@ make_pie_chart = function (svg, data_pie_chart) {
     margin = { top: 20, right: 50, bottom: 30, left: 130 },
         width = width - margin.left - margin.right,
         height = height - margin.top - margin.bottom;
-    
+
     d3.select('#dashboard_pie_chart').remove();
 
     pie_g = svg.append("g")
@@ -210,6 +212,90 @@ make_pie_chart = function (svg, data_pie_chart) {
 
 
 }
+
+make_stackbar_chart = function (svg, data) {
+
+
+
+    // var svg = d3.select("#chart_1"),
+    margin = { top: 20, right: 50, bottom: 30, left: 130 },
+        width = 600 - margin.left - margin.right,
+        height = 400 - margin.top - margin.bottom,
+
+        g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+    // set the ranges
+    var y = d3.scaleBand()
+        .range([0, width])
+        .padding(0.1);
+    var x = d3.scaleLinear()
+        .range([height, 0]);
+
+    //var data = APPS_PIECHART;// [{ "name": "IT_immuni", "value": 15009, }, { "name": "FR_StopCovid", "value": 8380 }];
+    barHeight = 10
+
+
+    x = d3.scaleLinear()
+        .domain([0, d3.max(data, d => d.value)])
+        .range([margin.left, width - margin.right])
+
+    y = d3.scaleBand()
+        .domain(d3.range(data.length))
+        .rangeRound([margin.top, height - margin.bottom])
+        .padding(0.1)
+
+    xAxis = g => g
+        .attr("transform", `translate(0,${margin.top})`)
+        .call(d3.axisTop(x).ticks(width / 80, data.format))
+        .call(g => g.select(".domain").remove())
+
+    yAxis = g => g
+        .attr("transform", `translate(${margin.left},0)`)
+        .call(d3.axisLeft(y).tickFormat(i => data[i].name).tickSizeOuter(0))
+
+    format = x.tickFormat(20, data.format)
+
+    d3.select('#dashboard_bar_chart').remove();
+    
+    barchart_g = svg.append('g')
+        .attr('id', 'dashboard_bar_chart')
+
+    barchart_g.append("g")
+        .attr("fill", "steelblue")
+        .selectAll("rect")
+        .data(data)
+        .join("rect")
+        .attr("x", x(0))
+        .attr("y", (d, i) => y(i))
+        .attr("width", d => x(d.value) - x(0))
+        .attr("height", y.bandwidth());
+
+    barchart_g.append("g")
+        .attr("fill", "white")
+        .attr("text-anchor", "end")
+        .attr("font-family", "sans-serif")
+        .attr("font-size", 12)
+        .selectAll("text")
+        .data(data)
+        .join("text")
+        .attr("x", d => x(d.value))
+        .attr("y", (d, i) => y(i) + y.bandwidth() / 2)
+        .attr("dy", "0.35em")
+        .attr("dx", -4)
+        .text(d => format(d.value))
+        .call(text => text.filter(d => x(d.value) - x(0) < 20) // short bars
+            .attr("dx", +4)
+            .attr("fill", "black")
+            .attr("text-anchor", "start"));
+
+    barchart_g.append("g")
+        .call(xAxis);
+
+    barchart_g.append("g")
+        .call(yAxis);
+};
+
 
 $(document).ready(function () {
 
