@@ -36,12 +36,7 @@
   <!-- https://github.com/d3/d3-scale-chromatic -->
 
   <script src="contact_tracing_apps_dashboard/dashboard.js"></script>
-  <!--
-  <script src="contact_tracing_apps_dashboard/dashboard_section_1_left.js"></script>
-  <script src="contact_tracing_apps_dashboard/dashboard_section_2_left.js"></script>
-  <script src="contact_tracing_apps_dashboard/dashboard_section_1_right.js"></script>
-  <script src="contact_tracing_apps_dashboard/dashboard_section_2_right.js"></script>
-    -->
+
 </head>
 
 <body>
@@ -54,58 +49,9 @@
 
     <div id="dashboard_content" class="section" style="border: 1px solid red;">
       <svg id="dashboard_svg" width="1200" height="600"></svg>
-
     </div>
 
-    <div id="section_1" class="section">
-
-      <div class="section_left">
-        <div class="section_select_menu">
-          <select id="section_1_left_menu" class="form-select form-select-sm" aria-label=".form-select-sm example">
-            <option value="0" selected>Number of Tweets by contact tracing apps</option>
-            <option value="1">Number of Tweets by languages</option>
-            <option value="2">Sentiment analysis and contact tracing apps</option>
-          </select>
-        </div>
-        <svg id="section_1_left" width="400" height="400"></svg>
-      </div>
-      <div class="section_right">
-
-        <div class="section_select_menu">
-          <select id="section_1_right_menu" class="form-select form-select-sm" aria-label=".form-select-sm example">
-            <option value="0" selected>Number of Tweets by contact tracing apps</option>
-            <option value="1">Sentiment analysis and contact tracing apps</option>
-          </select>
-        </div>
-
-        <svg id="section_1_right" width="800" height="400"></svg>
-      </div>
-    </div>
-
-    <div id="section_2" class="section">
-
-      <div id="section_2_left" class="section_left">
-        <select id="section_2_left_menu" class="form-select form-select-sm" aria-label=".form-select-sm example">
-          <option value="0" selected>Hashtags</option>
-          <option value="1">EMM news keywords</option>
-        </select>
-
-        <svg id="section_2_left_svg"></svg>
-
-      </div>
-      <div id="section_2_right" class="section_right">
-        
-        <div class="section_select_menu">
-          <select id="section_2_right_menu" class="form-select form-select-sm" aria-label=".form-select-sm example">
-            <option value="0">Geo negative tweets</option>
-            <option value="1" selected>Geo positive tweets</option>
-          </select>
-          
-        </div>
-        <div id="section_2_right_geo"></div>
-      </div>
-    </div>
-
+   
     <div id="footer">
 
     </div>
