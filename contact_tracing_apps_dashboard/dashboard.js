@@ -72,7 +72,7 @@ make_dashboard = function () {
 
     make_pie_chart(svg, APPS_PIECHART)
 
-    make_stackbar_chart(svg)
+    make_stackbar_chart(svg, APPS_PIECHART)
 }
 
 
@@ -141,13 +141,18 @@ display_by_day = function (svg, days) {
             });
         }
     }
-
+    
+    data_pie_chart.sort(function(a, b) {
+        return b.value - a.value;
+    });
 
     make_pie_chart(svg, data_pie_chart)
     make_stackbar_chart(svg, data_pie_chart)
+    
 }
 
 make_pie_chart = function (svg, data_pie_chart) {
+    return false;
 
     pie = d3.pie()
         .sort(null)
@@ -214,10 +219,7 @@ make_pie_chart = function (svg, data_pie_chart) {
 }
 
 make_stackbar_chart = function (svg, data) {
-
-
-
-    // var svg = d3.select("#chart_1"),
+    
     margin = { top: 20, right: 50, bottom: 30, left: 130 },
         width = 600 - margin.left - margin.right,
         height = 400 - margin.top - margin.bottom,
@@ -260,6 +262,7 @@ make_stackbar_chart = function (svg, data) {
     
     barchart_g = svg.append('g')
         .attr('id', 'dashboard_bar_chart')
+        //.attr("transform", 'translate(0,0)');
 
     barchart_g.append("g")
         .attr("fill", "steelblue")
@@ -289,8 +292,8 @@ make_stackbar_chart = function (svg, data) {
             .attr("fill", "black")
             .attr("text-anchor", "start"));
 
-    barchart_g.append("g")
-        .call(xAxis);
+    // barchart_g.append("g")
+    //     .call(xAxis);
 
     barchart_g.append("g")
         .call(yAxis);
