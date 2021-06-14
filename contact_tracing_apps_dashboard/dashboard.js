@@ -1,4 +1,4 @@
-make_dashboard = function () {
+make_dashboard = function (geo_data) {
 
     var parse_created_at = d3.timeParse("%Y-%m-%d");
 
@@ -70,9 +70,11 @@ make_dashboard = function () {
     //     .call(yAxis);
     make_slider_time(svg)
 
-    make_pie_chart(svg, APPS_PIECHART)
+    //make_pie_chart(svg, APPS_PIECHART)
 
     make_stackbar_chart(svg, APPS_PIECHART)
+
+    make_geo_chart(svg, geo_data, GEO_POSITIVE_TWEETS, 'Positive Tweets');
 }
 
 
@@ -141,85 +143,86 @@ display_by_day = function (svg, days) {
             });
         }
     }
-    
-    data_pie_chart.sort(function(a, b) {
+
+    data_pie_chart.sort(function (a, b) {
         return b.value - a.value;
     });
 
     make_pie_chart(svg, data_pie_chart)
     make_stackbar_chart(svg, data_pie_chart)
-    
+
+
 }
 
 make_pie_chart = function (svg, data_pie_chart) {
     return false;
 
-    pie = d3.pie()
-        .sort(null)
-        .value(d => d.value)
+    // pie = d3.pie()
+    //     .sort(null)
+    //     .value(d => d.value)
 
-    height = 300;
-    width = 300;
+    // height = 300;
+    // width = 300;
 
-    arcLabel = function () {
-        const radius = Math.min(width, height) / 2 * 1.2;
+    // arcLabel = function () {
+    //     const radius = Math.min(width, height) / 2 * 1.2;
 
-        return d3.arc().innerRadius(radius).outerRadius(radius);
-    }
+    //     return d3.arc().innerRadius(radius).outerRadius(radius);
+    // }
 
-    color = d3.scaleOrdinal()
-        .domain(data_pie_chart.map(d => d.name))
-        .range(d3.quantize(t => d3.interpolateSpectral(t * 0.8 + 0.1), data_pie_chart.length).reverse())
+    // color = d3.scaleOrdinal()
+    //     .domain(data_pie_chart.map(d => d.name))
+    //     .range(d3.quantize(t => d3.interpolateSpectral(t * 0.8 + 0.1), data_pie_chart.length).reverse())
 
-    arc = d3.arc()
-        .innerRadius(0)
-        .outerRadius(Math.min(width, height) / 2 - 1)
+    // arc = d3.arc()
+    //     .innerRadius(0)
+    //     .outerRadius(Math.min(width, height) / 2 - 1)
 
-    const arcs = pie(data_pie_chart);
+    // const arcs = pie(data_pie_chart);
 
-    margin = { top: 20, right: 50, bottom: 30, left: 130 },
-        width = width - margin.left - margin.right,
-        height = height - margin.top - margin.bottom;
+    // margin = { top: 20, right: 50, bottom: 30, left: 130 },
+    //     width = width - margin.left - margin.right,
+    //     height = height - margin.top - margin.bottom;
 
-    d3.select('#dashboard_pie_chart').remove();
+    // d3.select('#dashboard_pie_chart').remove();
 
-    pie_g = svg.append("g")
-        .attr('transform', 'translate(150, 150)')
-        .attr('id', 'dashboard_pie_chart');
+    // pie_g = svg.append("g")
+    //     .attr('transform', 'translate(150, 150)')
+    //     .attr('id', 'dashboard_pie_chart');
 
-    pie_g.attr("stroke", "black")
-        .selectAll("path")
-        .data(arcs)
-        .join("path")
-        .attr("fill", d => color(d.data.name))
-        .attr("d", arc)
-        .append("text")
-        .text(d => `${d.data.name}: ${d.data.value.toLocaleString()}`);
+    // pie_g.attr("stroke", "black")
+    //     .selectAll("path")
+    //     .data(arcs)
+    //     .join("path")
+    //     .attr("fill", d => color(d.data.name))
+    //     .attr("d", arc)
+    //     .append("text")
+    //     .text(d => `${d.data.name}: ${d.data.value.toLocaleString()}`);
 
-    pie_g.append("g")
-        .attr("font-family", "verdana")
-        .attr("font-size", 11)
-        .attr("text-anchor", "middle")
-        .selectAll("text")
-        .data(arcs)
-        .join("text")
-        .attr("transform", d => `translate(${arcLabel().centroid(d)})`)
+    // pie_g.append("g")
+    //     .attr("font-family", "verdana")
+    //     .attr("font-size", 11)
+    //     .attr("text-anchor", "middle")
+    //     .selectAll("text")
+    //     .data(arcs)
+    //     .join("text")
+    //     .attr("transform", d => `translate(${arcLabel().centroid(d)})`)
 
-        .call(text => text.append("tspan")
-            .attr("y", "-0.4em")
-            .attr("font-weight", "normal")
-            .text(d => d.data.name))
-        .call(text => text.filter(d => (d.endAngle - d.startAngle) > 0.25).append("tspan")
-            .attr("x", 0)
-            .attr("y", "0.7em")
-            .attr("fill-opacity", 0.6)
-            .text(d => d.data.value.toLocaleString()));
+    //     .call(text => text.append("tspan")
+    //         .attr("y", "-0.4em")
+    //         .attr("font-weight", "normal")
+    //         .text(d => d.data.name))
+    //     .call(text => text.filter(d => (d.endAngle - d.startAngle) > 0.25).append("tspan")
+    //         .attr("x", 0)
+    //         .attr("y", "0.7em")
+    //         .attr("fill-opacity", 0.6)
+    //         .text(d => d.data.value.toLocaleString()));
 
 
 }
 
 make_stackbar_chart = function (svg, data) {
-    
+
     margin = { top: 20, right: 50, bottom: 30, left: 130 },
         width = 600 - margin.left - margin.right,
         height = 400 - margin.top - margin.bottom,
@@ -259,10 +262,10 @@ make_stackbar_chart = function (svg, data) {
     format = x.tickFormat(20, data.format)
 
     d3.select('#dashboard_bar_chart').remove();
-    
+
     barchart_g = svg.append('g')
         .attr('id', 'dashboard_bar_chart')
-        //.attr("transform", 'translate(0,0)');
+    //.attr("transform", 'translate(0,0)');
 
     barchart_g.append("g")
         .attr("fill", "steelblue")
@@ -302,9 +305,193 @@ make_stackbar_chart = function (svg, data) {
 
 $(document).ready(function () {
 
-    make_dashboard();
+
+
+    const geoData = d3.json(
+        'https://raw.githubusercontent.com/larsvers/map-store/master/europe_geo.json'
+    );
+
+
+    const negative_range_colors = ['#FFF', '#f9c74f', '#f8961e', '#f3722c', '#f94144'];
+
+    Promise.all([geoData]).then(response => {
+
+        let [geo_data] = response;
+        make_dashboard(geo_data);
+        //make_geo_chart('#chart_5', geo_data, GEO_NEGATIVE_TWEETS, 'Negative Tweets', negative_range_colors);
+    });
 
 });
 
 
+function Counter(list) {
+    var count = {};
+    list.forEach(val => count[val] = (count[val] || 0) + 1);
+    return Object.fromEntries(
+        Object.entries(count).sort(([, a], [, b]) => b - a)
+    );
+}
 
+function make_geo_chart(svg, geo, userData, title) {
+
+    const range_colors = ['#FFF', '#90be6d', '#43aa8b', '#4d908e', '#277da1'];
+
+    function buildKey(legendKey, max, scale, legendText) {
+        
+        const x = d3.scaleLinear()
+            .domain([1, max])
+            .range([0, 220]);
+
+        const xAxis = d3.axisBottom(x)
+            .tickSize(13)
+            .tickValues(scale.domain());
+
+        const g = legendKey.call(xAxis);
+
+        g.select('.domain').remove();
+
+        const data = scale.range().map(color => {
+            const d = scale.invertExtent(color);
+            if (d[0] == null) d[0] = x.domain()[0];
+            if (d[1] == null) d[1] = x.domain()[1];
+            return d;
+        });
+
+        g.selectAll('rect')
+            .data(
+                scale.range().map(color => {
+                    const d = scale.invertExtent(color);
+                    if (d[0] == null) d[0] = x.domain()[0];
+                    if (d[1] == null) d[1] = x.domain()[1];
+                    return d;
+                })
+            )
+            .enter()
+            .insert('rect', '.tick')
+            .attr('height', 8)
+            .attr('x', d => x(d[0]))
+            .attr('width', d => x(d[1]) - x(d[0]))
+            .attr('fill', d => scale(d[0]));
+
+        g.append('text')
+            .attr('fill', '#000')
+            .attr('font-weight', 'bold')
+            .attr('text-anchor', 'start')
+            .attr('y', -6)
+            .text(legendText);
+    }
+
+    // Set up SVG.
+    const margin = { top: 30, right: 0, bottom: 30, left: 0 },
+        width = 1000 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
+
+    geo_svg = svg.append('g')
+        .attr('id', 'geo_chart')
+        .attr('transform', 'translate(470, -25)');
+
+    // Projection and path.
+   const projection = d3.geoConicEqualArea()
+        .fitSize([width, height], geo)
+        .parallels([36, 66]);
+
+    const geoPath = d3.geoPath().projection(projection);
+
+    // Prep user data.
+    userData.forEach(site => {
+        const coords = projection([+site.lng, +site.lat]);
+        site.x = coords[0];
+        site.y = coords[1];
+    });
+
+    // Confine the global points to Europe.
+    const poly = d3.geoPolygon(geo, projection);
+    userData = d3.polygonPoints(userData, poly);
+
+    // Set up clip paths.
+    geo_svg
+        .append('defs')
+        .append('clipPath')
+        .attr('id', 'clip-it')
+        .append('path')
+        .attr('d', geoPath(geo));
+
+    geo_svg
+        .append('g')
+        .attr('id', 'world')
+        .append('path')
+        .attr('d', geoPath(geo))
+        .attr('stroke', '#000')
+        .attr('padding', '1px')
+        .attr('fill', 'none');
+
+    // Hexgrid generator.
+    const hexgrid = d3.hexgrid()
+        .extent([width, height])
+        .geography(geo)
+        .projection(projection)
+        .pathGenerator(geoPath)
+        .hexRadius(10)
+        .edgePrecision(1)
+        .gridExtend(2)
+        .geoKeys(['lng', 'lat']);
+
+    // Hexgrid instance.
+    const hex = hexgrid(userData, ['hashtags', 'place_name']);
+
+    // Calculate Ckmeans based colour scale.
+    const counts = hex.grid.layout
+        .map(el => el.datapointsWt)
+        .filter(el => el > 0);
+    const ckBreaks = ss.ckmeans(counts, 4).map(clusters => clusters[0]);
+
+    const colourScale = d3
+        .scaleThreshold()
+        .domain(ckBreaks)
+        //.range(['#fff', '#e7e7e7', '#aaa', '#777', 'red']);
+        .range(range_colors);
+
+    // Clip.
+    const gHex = geo_svg
+        .append('g')
+        .attr('id', 'hexes')
+        .attr('clip-path', 'url(#clip-it)');
+
+    // Draw.
+    gHex
+        .selectAll('.hex')
+        .data(hex.grid.layout)
+        .enter()
+        .append('path')
+        .attr('class', 'hex')
+        .attr('transform', d => `translate(${d.x}, ${d.y})`)
+        .attr('d', hex.hexagon())
+        .style('fill', d => colourScale(d.datapointsWt))
+        .style('stroke', '#999')
+        .style('stroke-opacity', 0.4)
+
+        .on('click', function (event, data) {
+
+            var hashtags = [];
+
+            data.forEach(function (element) {
+                hashtags = hashtags.concat(element.hashtags);
+            });
+            var place_names = data.map(function (element) {
+                return element.place_name;
+            });
+
+        });
+
+    // Build and mount legend.
+    const legendKey = geo_svg
+        .append('g')
+        .attr('class', 'legend')
+        .attr('transform', `translate(${width - 600}, ${height + 30})`)
+        .call(
+            buildKey,
+            hex.grid.extentPointsWeighted[1],
+            colourScale,
+            'Geolocalized tweets'
+        );
+}
