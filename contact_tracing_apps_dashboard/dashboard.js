@@ -1,4 +1,4 @@
-make_dashboard = function (geo_data) {
+make_dashboard = function (geo_data_polygons) {
 
     var parse_created_at = d3.timeParse("%Y-%m-%d");
 
@@ -74,7 +74,14 @@ make_dashboard = function (geo_data) {
 
     make_stackbar_chart(svg, APPS_PIECHART)
 
-    make_geo_chart(svg, geo_data, GEO_POSITIVE_TWEETS, 'Positive Tweets');
+    var geo_data = JSON.parse(JSON.stringify(GEO_TWEETS))
+    var geo_coordinates = [];
+
+    for (const [day, coordinates] of Object.entries(geo_data)) {
+        geo_coordinates = geo_coordinates.concat(coordinates)
+    }
+
+    make_geo_chart(svg, geo_data_polygons, geo_coordinates);
 }
 
 
@@ -82,7 +89,7 @@ make_dashboard = function (geo_data) {
 make_slider_time = function (svg) {
     const parse_created_at = d3.timeParse("%Y-%m-%d");
 
-    var data = JSON.parse(JSON.stringify(APPS_SERIES))
+    var data = JSON.parse(JSON.stringify(APPS_SERIES));
     var data_time = data.map(function (e) {
         return parse_created_at(e.day);
     });
@@ -148,8 +155,30 @@ display_by_day = function (svg, days) {
         return b.value - a.value;
     });
 
-    make_pie_chart(svg, data_pie_chart)
+    //make_pie_chart(svg, data_pie_chart)
     make_stackbar_chart(svg, data_pie_chart)
+
+    var geo_data = JSON.parse(JSON.stringify(GEO_TWEETS))
+
+    var geo_coordinates = [];
+
+    for (const [day, coordinates] of Object.entries(geo_data)) {
+        if (Date.parse(day) >= days[0] & Date.parse(day) <= days[1])
+            geo_coordinates = geo_coordinates.concat(coordinates)
+    }
+
+    const geoData = d3.json(
+        'https://raw.githubusercontent.com/larsvers/map-store/master/europe_geo.json'
+    ); // MOVE LOCAL REPO
+
+    Promise.all([geoData]).then(response => {
+
+        let [GEO_DATA_POLYGONS_EU] = response;
+    
+        make_geo_chart(svg, GEO_DATA_POLYGONS_EU, geo_coordinates);
+    });
+
+    
 
 
 }
@@ -316,8 +345,8 @@ $(document).ready(function () {
 
     Promise.all([geoData]).then(response => {
 
-        let [geo_data] = response;
-        make_dashboard(geo_data);
+        let [GEO_DATA_POLYGONS_EU] = response;
+        make_dashboard(GEO_DATA_POLYGONS_EU);
         //make_geo_chart('#chart_5', geo_data, GEO_NEGATIVE_TWEETS, 'Negative Tweets', negative_range_colors);
     });
 
@@ -333,7 +362,7 @@ function Counter(list) {
 }
 
 function make_geo_chart(svg, geo, userData, title) {
-
+    
     const range_colors = ['#FFF', '#90be6d', '#43aa8b', '#4d908e', '#277da1'];
 
     function buildKey(legendKey, max, scale, legendText) {
@@ -386,6 +415,8 @@ function make_geo_chart(svg, geo, userData, title) {
         width = 1000 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
 
+    d3.select('#geo_chart').remove();
+    
     geo_svg = svg.append('g')
         .attr('id', 'geo_chart')
         .attr('transform', 'translate(470, -25)');
