@@ -117,22 +117,16 @@ make_slider_time = function (svg) {
         .sliderTop()
         .min(d3.min(data_time))
         .max(d3.max(data_time))
-        //.step(30)
         .step(1000 * 60 * 60 * 24)
         .width(1128)
         .tickFormat(d3.timeFormat('%Y-%m-%d'))
         .fill('#2196f3')
         .displayFormat(d3.timeFormat('%Y-%m-%d'))
-        //.tickValues(data_time)
-        //.ticks(30)
-        //.displayTicks(false)
         .default([d3.min(data_time), d3.max(data_time)])
         .on('onchange', val => {
             display_by_day(svg, val)
         });
 
-    // d3
-    //.select("#dashboard_svg")
     var g_time = svg
         .append('g')
         .attr('id', 'svg_slider')
@@ -186,7 +180,7 @@ display_by_day = function (svg, days) {
 
     const geoData = d3.json(
         'https://raw.githubusercontent.com/larsvers/map-store/master/europe_geo.json'
-    ); // MOVE LOCAL REPO
+    ); // MOVE TO LOCAL REPO
 
     Promise.all([geoData]).then(response => {
 
@@ -196,6 +190,24 @@ display_by_day = function (svg, days) {
     });
 
     
+    var wordcloud_data = {};
+    for (const [day, hashtags] of Object.entries(JSON.parse(JSON.stringify(HASHTAGS_TWEETS)))) {
+        if(Date.parse(day) >= days[0] & Date.parse(day) <= days[1])
+            hashtags.forEach((item) => {
+            wordcloud_data[item.text] = item.text in wordcloud_data ? wordcloud_data[item.text] + item.value : item.value;
+        });    
+    }
+
+    wordcloud_data_list = []
+    for (const [k, v] of Object.entries(wordcloud_data)) {
+        wordcloud_data_list.push({
+            'text':k,
+            'value':v
+        })
+    }
+
+    make_tag_cloud_chart(svg, wordcloud_data_list)
+
 
 
 }

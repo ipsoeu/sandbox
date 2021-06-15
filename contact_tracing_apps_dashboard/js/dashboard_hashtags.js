@@ -7,12 +7,12 @@ function make_tag_cloud_chart(svg, words_data) {
     wordScale.range([5, 150]);
 
     draw_tagcloud = function (words) {
-        //d3.select('#_wordgloud_svg').remove();
+        d3.select('#wordcloud_svg').remove();
         svg
             //.attr("width", layout.size()[0])
             //.attr("height", layout.size()[1])
             .append("g")
-            .attr("id", "_wordgloud_svg")
+            .attr("id", "wordcloud_svg")
             .attr("transform", "translate(570, 200)")
             .selectAll("text")
             .data(words)
@@ -29,7 +29,7 @@ function make_tag_cloud_chart(svg, words_data) {
 
 
     var layout = d3.layout.cloud()
-        .size([350, 350])
+        .size([350, 250])
         .words(words_data.map(function (d) {
             return { text: d.text, size: wordScale(d.value) };
         }))
@@ -49,25 +49,3 @@ function make_tag_cloud_chart(svg, words_data) {
 
     layout.stop();
 }
-
-
-// $(document).ready(function () {
-
-//     get_data = function (value) {
-//         _data = {
-//             '1': WORDCLOUD_EMM,
-//             '0': WORDCLOUD_HASHTAGS,
-
-//         }
-//         return _data[value].slice(0);;
-//     }
-
-//     console.log(WORDCLOUD_EMM)
-//     // make_tag_cloud_chart(get_data('0'));
-
-//     // $("#section_2_left_menu").change(function (e) {
-//     //     console.log('inut value', this.value)
-//     //     make_tag_cloud_chart(get_data(this.value));
-//     // });
-
-// });
