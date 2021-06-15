@@ -90,9 +90,15 @@ make_dashboard = function (geo_data_polygons) {
         });    
     }
 
-    console.log(wordcloud_data)
-    
-    make_tag_cloud_chart(svg, wordcloud_data)
+    wordcloud_data_list = []
+    for (const [k, v] of Object.entries(wordcloud_data)) {
+        wordcloud_data_list.push({
+            'text':k,
+            'value':v
+        })
+    }
+
+    make_tag_cloud_chart(svg, wordcloud_data_list)
 }
 
 
