@@ -1,10 +1,10 @@
-#container {
+#dashboard_container {
     width: 1200px;
     position:relative;
     margin: 0px auto;
 }
 
-#dashboard_content {
+#dashboard {
     height: 600px;
 }
 
@@ -34,6 +34,10 @@
     margin-bottom: 20px;
     margin-left: 100px;
     
+}
+
+#dashboard_sections{
+    margin-top: 20px;
 }
 
 
