@@ -63,14 +63,19 @@ make_dashboard = function (geo_data_polygons) {
         .text(({ key }) => key);
 
     svg.append("g")
-
         .call(xAxis);
 
-    // svg.append("g")
-    //     .call(yAxis);
-    make_slider_time(svg)
+    svg.append('g')
+        .attr('id', 'dashboard_title')
+        .attr('transform', 'translate(30, 50)')
+        .append('text')
+        .style('fill','steelblue')
+        .style('weight', 'bold')
+        .style("font-size", "34px")
+        .style('font-family', 'Impact')
+        .text('COVID-19 Contact Tracing Apps on Twitter');
 
-    //make_pie_chart(svg, APPS_PIECHART)
+    make_slider_time(svg)
 
     make_stackbar_chart(svg, APPS_PIECHART)
 
@@ -87,14 +92,14 @@ make_dashboard = function (geo_data_polygons) {
     for (const [day, hashtags] of Object.entries(JSON.parse(JSON.stringify(HASHTAGS_TWEETS)))) {
         hashtags.forEach((item) => {
             wordcloud_data[item.text] = item.text in wordcloud_data ? wordcloud_data[item.text] + item.value : item.value;
-        });    
+        });
     }
 
     wordcloud_data_list = []
     for (const [k, v] of Object.entries(wordcloud_data)) {
         wordcloud_data_list.push({
-            'text':k,
-            'value':v
+            'text': k,
+            'value': v
         })
     }
 
@@ -111,8 +116,6 @@ make_slider_time = function (svg) {
         return parse_created_at(e.day);
     });
 
-
-
     var sliderTime = d3
         .sliderTop()
         .min(d3.min(data_time))
@@ -123,7 +126,7 @@ make_slider_time = function (svg) {
         .fill('#2196f3')
         .displayFormat(d3.timeFormat('%Y-%m-%d'))
         .default([d3.min(data_time), d3.max(data_time)])
-        .on('onchange', val => {
+        .on('end', val => {
             display_by_day(svg, val)
         });
 
@@ -185,24 +188,24 @@ display_by_day = function (svg, days) {
     Promise.all([geoData]).then(response => {
 
         let [GEO_DATA_POLYGONS_EU] = response;
-    
+
         make_geo_chart(svg, GEO_DATA_POLYGONS_EU, geo_coordinates);
     });
 
-    
+
     var wordcloud_data = {};
     for (const [day, hashtags] of Object.entries(JSON.parse(JSON.stringify(HASHTAGS_TWEETS)))) {
-        if(Date.parse(day) >= days[0] & Date.parse(day) <= days[1])
+        if (Date.parse(day) >= days[0] & Date.parse(day) <= days[1])
             hashtags.forEach((item) => {
-            wordcloud_data[item.text] = item.text in wordcloud_data ? wordcloud_data[item.text] + item.value : item.value;
-        });    
+                wordcloud_data[item.text] = item.text in wordcloud_data ? wordcloud_data[item.text] + item.value : item.value;
+            });
     }
 
     wordcloud_data_list = []
     for (const [k, v] of Object.entries(wordcloud_data)) {
         wordcloud_data_list.push({
-            'text':k,
-            'value':v
+            'text': k,
+            'value': v
         })
     }
 
@@ -281,11 +284,11 @@ make_pie_chart = function (svg, data_pie_chart) {
 
 make_stackbar_chart = function (svg, data) {
 
-    margin = { top: 20, right: 50, bottom: 30, left: 130 },
+    margin = { top: 30, right: 80, bottom: 30, left: 130 },
         width = 600 - margin.left - margin.right,
-        height = 400 - margin.top - margin.bottom,
+        height = 400 - margin.top - margin.bottom;
 
-        g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        //g = svg.append("g").attr("transform", "translate(" + margin.left + "," + 180 + ")");
 
 
     // set the ranges
@@ -295,7 +298,6 @@ make_stackbar_chart = function (svg, data) {
     var x = d3.scaleLinear()
         .range([height, 0]);
 
-    //var data = APPS_PIECHART;// [{ "name": "IT_immuni", "value": 15009, }, { "name": "FR_StopCovid", "value": 8380 }];
     barHeight = 10
 
 
@@ -323,7 +325,7 @@ make_stackbar_chart = function (svg, data) {
 
     barchart_g = svg.append('g')
         .attr('id', 'dashboard_bar_chart')
-    //.attr("transform", 'translate(0,0)');
+        .attr("transform", 'translate(10, 40)');
 
     barchart_g.append("g")
         .attr("fill", "steelblue")
@@ -352,9 +354,6 @@ make_stackbar_chart = function (svg, data) {
             .attr("dx", +4)
             .attr("fill", "black")
             .attr("text-anchor", "start"));
-
-    // barchart_g.append("g")
-    //     .call(xAxis);
 
     barchart_g.append("g")
         .call(yAxis);
