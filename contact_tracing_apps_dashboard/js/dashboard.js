@@ -69,7 +69,7 @@ make_dashboard = function (geo_data_polygons) {
         .attr('id', 'dashboard_title')
         .attr('transform', 'translate(30, 50)')
         .append('text')
-        .style('fill','steelblue')
+        .style('fill', 'steelblue')
         .style('weight', 'bold')
         .style("font-size", "34px")
         .style('font-family', 'Impact')
@@ -124,10 +124,52 @@ make_slider_time = function (svg) {
         .width(1128)
         .tickFormat(d3.timeFormat('%Y-%m-%d'))
         .fill('#2196f3')
-        .displayFormat(d3.timeFormat('%Y-%m-%d'))
+        .displayFormat(d3.timeFormat('%d %B, %Y'))
         .default([d3.min(data_time), d3.max(data_time)])
         .on('end', val => {
+
+
+            d3.select('#svg_slider')
+                .selectAll('.parameter-value text')
+                .style('fill', 'steelblue')
+                .style('font-size', '12px')
+                .style('font-family', 'Inpact')
+                .style('font-weight', 'bold')
+                .attr('transform', 'translate(0, 65)');
             display_by_day(svg, val)
+        })
+        .on('drag', val => {
+
+
+            d3.select('#svg_slider')
+                .selectAll('.parameter-value text')
+                .style('fill', 'steelblue')
+                .style('font-size', '12px')
+                .style('font-family', 'Inpact')
+                .style('font-weight', 'bold')
+                .attr('transform', 'translate(0, 65)');
+        })
+        .on('onchange', val => {
+
+
+            d3.select('#svg_slider')
+                .selectAll('.parameter-value text')
+                .style('fill', 'steelblue')
+                .style('font-size', '12px')
+                .style('font-family', 'Inpact')
+                .style('font-weight', 'bold')
+                .attr('transform', 'translate(0, 65)');
+        })
+        .on('start', val => {
+
+
+            d3.select('#svg_slider')
+                .selectAll('.parameter-value text')
+                .style('fill', 'steelblue')
+                .style('font-size', '12px')
+                .style('font-family', 'Inpact')
+                .style('font-weight', 'bold')
+                .attr('transform', 'translate(0, 65)');
         });
 
     var g_time = svg
@@ -139,6 +181,13 @@ make_slider_time = function (svg) {
 
     g_time.call(sliderTime);
     d3.select('#svg_slider').selectAll('.tick').remove();
+    d3.select('#svg_slider')
+        .selectAll('.parameter-value text')
+        .style('fill', 'steelblue')
+        .style('font-size', '12px')
+        .style('font-family', 'Inpact')
+        .style('font-weight', 'bold')
+        .attr('transform', 'translate(0, 65)');
 
 }
 
@@ -288,7 +337,7 @@ make_stackbar_chart = function (svg, data) {
         width = 600 - margin.left - margin.right,
         height = 400 - margin.top - margin.bottom;
 
-        //g = svg.append("g").attr("transform", "translate(" + margin.left + "," + 180 + ")");
+    //g = svg.append("g").attr("transform", "translate(" + margin.left + "," + 180 + ")");
 
 
     // set the ranges
