@@ -67,10 +67,7 @@ make_stack_bar_char = function () {
         .x(d => x(d.data.date))
         .y0(d => y(d[0]))
         .y1(function(d){
-            //console.log(d[1], y(d[1])) ;
             return isNaN(y(d[1])) ? y(d[0]) : y(d[1]) ;
-            
-            //return y(d[1]);
         });
 
     console.log(area)
@@ -92,6 +89,27 @@ make_stack_bar_char = function () {
 
     svg.append("g")
         .call(yAxis);
+
+    svg.selectAll("mylabels")
+        .data(series)
+        .enter()
+        .append("text")
+          .attr('font-size', '10px')
+          .attr("x", 650)
+          .attr("y", function(d,i){ return 50+ i*15})
+          .style("fill", function(d){ return color(d.key)})
+          .text(function(d){return d.key})
+          .attr("text-anchor", "left")
+          .style("alignment-baseline", "middle")
+    
+    svg.selectAll("mydots")
+          .data(series)
+          .enter()
+          .append("circle")
+            .attr("cx", 640)
+            .attr("cy", function(d,i){ return 47 + i*15}) // 100 is where the first dot appears. 25 is the distance between dots
+            .attr("r", 3)
+            .style("fill", function(d){ return color(d.key)})
 
 }
 
