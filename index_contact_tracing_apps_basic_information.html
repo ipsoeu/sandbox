@@ -14,11 +14,12 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 
 
-  <script src="contact_tracing_apps_dashboard/data/pie_charts.js"></script>
-  <script src="contact_tracing_apps_dashboard/data/series_charts.js"></script>
+<!--
+  
+  
   <script src="contact_tracing_apps_dashboard/data/wordcloud_data.js"></script>
   <script src="contact_tracing_apps_dashboard/data/geo_data.js"></script>
-  <script src="contact_tracing_apps_dashboard/data/hashtags_data.js"></script>
+  <script src="contact_tracing_apps_dashboard/data/hashtags_data.js"></script>-->
 
   <script src="contact_tracing_apps_dashboard/data_section_1_right_1.js"></script>
   <!-- d3-hexgrid script comes first. -->
@@ -39,43 +40,29 @@
 
   <!-- https://github.com/d3/d3-scale-chromatic -->
 
-  <script src="contact_tracing_apps_dashboard/js/dashboard.js"></script>
-  <script src="contact_tracing_apps_dashboard/js/dashboard_geo.js"></script>
-  <script src="contact_tracing_apps_dashboard/js/dashboard_hashtags.js"></script>
+  <script src="contact_tracing_apps_basic_information/data/pie_chart.js"></script>
+  <script src="contact_tracing_apps_basic_information/data/series_charts.js"></script>
+
+  <script src="contact_tracing_apps_basic_information/js/basic_information.js"></script>
+  <script src="contact_tracing_apps_basic_information/js/pie_chart.js"></script>
+  <script src="contact_tracing_apps_basic_information/js/stacked_bar_chart.js"></script>
 
 </head>
 
 <body>
-
-  <div id="dashboard_container">
-    <div id="dashboard" style="border: 3px solid steelblue;">
-      <svg id="dashboard_svg" width="1200" height="600"></svg>
-    </div>
-
-    <div id="dashboard_sections" class="container">
-      <div class="row">
-        <div class="col-sm">
-          Basic Information
-        </div>
-        <div class="col-sm">
-          Geospatial information
-        </div>
-        <div class="col-sm">
-          Temporal series
-        </div>
-        <div class="col-sm">
-          Sentiment Analysis
-        </div>
-        <div class="col-sm">
-          News and Events
-        </div>
-        <div class="col-sm">
-          Entities
-        </div>
-      </div>
-    </div>
-
+  
+<div>
+  <h3>Basic information</h3>
+  <p>Pie chart</p>
+  <div id="basic_information_pie_chart">
+    <svg id="basic_information_pie_chart_svg" width="600" height="600"></svg>
   </div>
+  <p>by time</p>
+  <div id="basic_information_stacked_bar_chart">
+    <svg id="basic_information_stacked_bar_chart_svg" width="1200" height="600"></svg>
+  </div>
+  <p>table</p>
+</div>
 
 
 
