@@ -6,7 +6,6 @@ make_stack_bar_char = function () {
 
     data = data.map(function(e){
         e['date'] = parse_created_at(e['day']);
-        console.log(Object.keys(e).length)
         return e;
     });
 
@@ -16,8 +15,6 @@ make_stack_bar_char = function () {
         return e;
     });
     
-    console.log(APPS_LABELS)
-
     margin = ({ top: 20, right: 30, bottom: 30, left: 40 })
 
     height = 400;
@@ -44,7 +41,7 @@ make_stack_bar_char = function () {
         .offset(d3.stackOffsetNone)
         (data);
 
-    console.log('---', series)
+    
     series = series.map(function(e){
         console.log(e.key)
         return e
@@ -117,4 +114,14 @@ $(document).ready(function () {
 
     make_stack_bar_char();
 
+    $('#app_list').DataTable({
+        data: data_sets,
+        columns: [
+            { title: "Mobile application name" },
+            { title: "Number of tweets" }
+        ],
+        order: [[1, "desc"]],
+        paging: false
+    });
+    
 });
