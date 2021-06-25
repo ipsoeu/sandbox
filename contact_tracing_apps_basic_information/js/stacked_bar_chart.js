@@ -42,10 +42,9 @@ make_stack_bar_char = function () {
         (data);
 
     
-    series = series.map(function(e){
-        console.log(e.key)
-        return e
-    });
+    // series = series.map(function(e){
+    //     return e
+    // });
 
     color = d3.scaleOrdinal()
         .domain(APPS_LABELS)
@@ -66,8 +65,6 @@ make_stack_bar_char = function () {
         .y1(function(d){
             return isNaN(y(d[1])) ? y(d[0]) : y(d[1]) ;
         });
-
-    console.log(area)
 
     const svg = d3.select("#basic_information_stacked_bar_chart_svg")
         .attr("viewBox", [0, 0, width, height]);
@@ -115,10 +112,12 @@ $(document).ready(function () {
     make_stack_bar_char();
 
     $('#app_list').DataTable({
-        data: data_sets,
+        data: DATA_TABLE,
         columns: [
             { title: "Mobile application name" },
-            { title: "Number of tweets" }
+            { title: "Number of tweets" },
+            { title: "Tweets with opinions (%)" },
+            { title: "Geolocalized tweets (%)" },
         ],
         order: [[1, "desc"]],
         paging: false
