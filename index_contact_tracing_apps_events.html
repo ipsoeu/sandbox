@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>European contact tracing mobile apps - Dashboard</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8">
+    <meta name="author" content="Alessandro Dalla Benetta, a.dallabenetta@gmail.com">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="scripts/underscore.min.js"></script>
+
+    <script src="//unpkg.com/d3-hexgrid"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="contact_tracing_apps_dashboard/layout.cloud.js"></script>
+    <!--<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>-->
+    <script src="//unpkg.com/d3-geo-projection"></script>
+    <script src='//unpkg.com/simple-statistics'></script>
+
+    <script src="contact_tracing_apps_dashboard/data.js"></script>
+    <script src="contact_tracing_apps_dashboard/geo_data.js"></script>
+    <script src="contact_tracing_apps_dashboard/chart_1.js"></script>
+    <script src="contact_tracing_apps_dashboard/chart_2.js"></script>
+    <script src="contact_tracing_apps_dashboard/3_geo_chart.js"></script>
+    <script src="contact_tracing_apps_dashboard/6_events.js"></script>
+
+    <script src="contact_tracing_apps_dashboard/events_data.js"></script>
+    <script src="contact_tracing_apps_dashboard/events.js"></script>
+
+    <style>
+        div.tooltip {
+            position: absolute;
+            text-align: center;
+            width: 60px;
+            height: 28px;
+            padding: 2px;
+            font: 12px sans-serif;
+            background: lightsteelblue;
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+        }
+
+        #wrap {
+            width: 1200px;
+            margin: auto;
+            height: 900px;
+
+            margin-top: 10px;
+        }
+    </style>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174641246-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-174641246-1');
+    </script>
+
+    <script src="contact_tracing_apps_dashboard/us.js"></script>
+    <script src="contact_tracing_apps_dashboard/main.js"></script>
+</head>
+
+
+<body>
+    <div id="wrap">
+        <h1>Sentiment analysis about Contact tracing apps</h1>
+        <h3>
+            <em>A study to understand the sentiments and opinons of the contact tracing apps</em>
+        </h3>
+        <div>
+            The following analysis was performed using around 430K tweets
+            collected from July 2020 to February 2021.
+            In order to extract opinions and sentiments pretrained BERT model
+            have been used for each main langueges (English, Italian, French, German and Spanish)
+            Around half tweets from this datasets not contain any sentiment or opinions and
+            these are classified as neutral (224143 tweets). The rest of the tweets, three-quarters are
+            negative and one-quarter positive.
+        </div>
+        <div style="margin-top: 10px;">
+            <table>
+                <tr>
+                    <th>Sentiment</th>
+                    <th>Number of tweets</th>
+                </tr>
+
+                <tr>
+                    <td>strongly_positive</td>
+                    <td>50969</td>
+                </tr>
+                <tr>
+                    <td>positive</td>
+                    <td>12145</td>
+                </tr>
+                <tr>
+                    <td>neutral</td>
+                    <td>224143</td>
+                </tr>
+                <tr>
+                    <td>weakly_negative</td>
+                    <td>109302</td>
+                </tr>
+                <tr>
+                    <td>negative</td>
+                    <td>35257</td>
+                </tr>
+                <tr>
+                    <td>strongly_negative</td>
+                    <td>82</td>
+                </tr>
+
+            </table>
+        </div>
+        <div>
+            <div id="chart_1_content">
+                <svg id="chart_1" width="1300" height="600"></svg>
+            </div>
+
+            <p>
+                The stacked barchar represents the tweets collected about
+                the european contact tracing apps and classified as neutral, positive and negative.
+            </p>
+
+        </div>
+
+        <div>
+            <h3>Combining sentiment analysis and geo-extraction</h3>
+            <p>
+                The following maps show the geographical distribution of the positive and negative
+                tweets. The datasets created is composed by the intersection of the tweets with
+                opinions and place names. The places names have been extracted using nlp techniques
+                plus the database geonames for the translation from extracted place names to coordinates.
+            </p>
+            <div id="chart_4_content">
+                <svg id="chart_4" width="1300" height="1200"></svg>
+            </div>
+
+            <div id="chart_5_content">
+                <svg id="chart_5" width="1300" height="1300"></svg>
+            </div>
+
+
+        </div>
+
+        <div>
+            <h3>Event detection</h3>
+            <div id="chart_2_content">
+                <svg id="chart_2" width="1300" height="600"></svg>
+            </div>
+            <p>
+                The stacked bar char represents the temporal evolution of
+                positive tweets collected from July 2020 to February 2021.
+                The red points are the event detected considering
+                the standard deviations from the mean (zscore).
+            </p>
+
+            <div id="chart_3_content">
+                <svg id="chart_3" width="1300" height="600"></svg>
+            </div>
+            <p>
+                As the previus stacked barchar, it represents the negative tweets.
+                There are two more events detected and usually more peaks and activities
+                from the users.
+            </p>
+        </div>
+
+        <div id="chart_6_content">
+            <h3>Event with positive tweet on 24 Sept, 2020</h3>
+            <svg id="chart_6" width="1300" height="600"></svg>
+            <p>The above images combines a geographical visualization and a word cloud of the <em>positive</em> event detected on 
+                24 Sept, 2020. The map show the high number of tweets occured in UK regarding the contact tracing
+                mobile app <emd>NHS coronavirus APP</emd>. The word cloud represents the hashtags extracted with the relative 
+                frequency. Inspecting in a manually way the tweets that contain the hashtags <em>haveyoudownloaded</em> 
+                we can understand that the 24 Sept is the launch date of the NHS coronavirus APP
+            </p>
+            <p>
+                Combining the linked pages on tweets and the GDELT observatory we have been extracted 59 tweets where the related links are detected by GDELT as news.
+                In details, 23 neutral tweets, 17 positive tweets and 3 negative, as we aspected the number of positive news-tweets is greather than the negative tweet-news.
+                Sorting the positive tweets by <em>favorite count</em> and get first tweet-news we can deduce what it's about the positive event detected. Following the 
+                text of the tweet-news and the linked page, the author of the tweet is a governative organization:
+                <p><em>
+                        We've worked extensively to develop an app that's secure, simple to use; will help keep us safe.
+                        This is an important step in our fight against #coronavirus I urge everyone who can to download the app to protect themselves
+                    </em>
+                    <br/>
+                    <em>
+                        https:\\/\\/www.gov.uk\\/government\\/news\\/nhs-covid-19-app-launches-across-england-and-wales
+                    </em>
+                </p>
+                Also, GDELT provids a classification of the news usinf the codelist CAMEO and a georeference information.
+
+            </p>
+        </div>
+
+        <div >
+            <h3>Events (<span id="events_number"></span>)</h3>
+            <div id=events_list></div>
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>
+
+<!-- https://stackoverflow.com/questions/50478133/d3js-export-svg-to-image -->

@@ -118,6 +118,7 @@ $(document).ready(function () {
             { title: "Number of tweets" },
             { title: "Tweets with opinions (%)" },
             { title: "Geolocalized tweets (%)" },
+            { title: "Extracted news" },
         ],
         order: [[1, "desc"]],
         paging: false
