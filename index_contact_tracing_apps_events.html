@@ -74,84 +74,6 @@
 
 <body>
     <div id="wrap">
-        <h1>Sentiment analysis about Contact tracing apps</h1>
-        <h3>
-            <em>A study to understand the sentiments and opinons of the contact tracing apps</em>
-        </h3>
-        <div>
-            The following analysis was performed using around 430K tweets
-            collected from July 2020 to February 2021.
-            In order to extract opinions and sentiments pretrained BERT model
-            have been used for each main langueges (English, Italian, French, German and Spanish)
-            Around half tweets from this datasets not contain any sentiment or opinions and
-            these are classified as neutral (224143 tweets). The rest of the tweets, three-quarters are
-            negative and one-quarter positive.
-        </div>
-        <div style="margin-top: 10px;">
-            <table>
-                <tr>
-                    <th>Sentiment</th>
-                    <th>Number of tweets</th>
-                </tr>
-
-                <tr>
-                    <td>strongly_positive</td>
-                    <td>50969</td>
-                </tr>
-                <tr>
-                    <td>positive</td>
-                    <td>12145</td>
-                </tr>
-                <tr>
-                    <td>neutral</td>
-                    <td>224143</td>
-                </tr>
-                <tr>
-                    <td>weakly_negative</td>
-                    <td>109302</td>
-                </tr>
-                <tr>
-                    <td>negative</td>
-                    <td>35257</td>
-                </tr>
-                <tr>
-                    <td>strongly_negative</td>
-                    <td>82</td>
-                </tr>
-
-            </table>
-        </div>
-        <div>
-            <div id="chart_1_content">
-                <svg id="chart_1" width="1300" height="600"></svg>
-            </div>
-
-            <p>
-                The stacked barchar represents the tweets collected about
-                the european contact tracing apps and classified as neutral, positive and negative.
-            </p>
-
-        </div>
-
-        <div>
-            <h3>Combining sentiment analysis and geo-extraction</h3>
-            <p>
-                The following maps show the geographical distribution of the positive and negative
-                tweets. The datasets created is composed by the intersection of the tweets with
-                opinions and place names. The places names have been extracted using nlp techniques
-                plus the database geonames for the translation from extracted place names to coordinates.
-            </p>
-            <div id="chart_4_content">
-                <svg id="chart_4" width="1300" height="1200"></svg>
-            </div>
-
-            <div id="chart_5_content">
-                <svg id="chart_5" width="1300" height="1300"></svg>
-            </div>
-
-
-        </div>
-
         <div>
             <h3>Event detection</h3>
             <div id="chart_2_content">
@@ -202,11 +124,12 @@
             </p>
         </div>
 
+        <!--
         <div >
             <h3>Events (<span id="events_number"></span>)</h3>
             <div id=events_list></div>
         </div>
-
+        -->
 
 
     </div>
