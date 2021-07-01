@@ -26,6 +26,15 @@
     <script src="//unpkg.com/d3-geo-projection"></script>
     <script src='//unpkg.com/simple-statistics'></script>
 
+    <script src="contact_tracing_apps_sentiment_analysis/data/data_table.js"></script>
+    <script src="contact_tracing_apps_sentiment_analysis/data/geo_data.js"></script>
+
+
+    <script src="contact_tracing_apps_sentiment_analysis/js/main.js"></script>
+    <script src="contact_tracing_apps_sentiment_analysis/js/stacked_bar_chart.js"></script>
+    <script src="contact_tracing_apps_sentiment_analysis/js/geo_chart.js"></script>
+
+    <!--
     <script src="contact_tracing_apps_dashboard/data.js"></script>
     <script src="contact_tracing_apps_dashboard/geo_data.js"></script>
     <script src="contact_tracing_apps_dashboard/chart_1.js"></script>
@@ -34,7 +43,7 @@
     <script src="contact_tracing_apps_dashboard/6_events.js"></script>
 
     <script src="contact_tracing_apps_dashboard/events_data.js"></script>
-    <script src="contact_tracing_apps_dashboard/events.js"></script>
+    <script src="contact_tracing_apps_dashboard/events.js"></script>-->
 
     <style>
         div.tooltip {
@@ -88,42 +97,11 @@
             negative and one-quarter positive.
         </div>
         <div style="margin-top: 10px;">
-            <table>
-                <tr>
-                    <th>Sentiment</th>
-                    <th>Number of tweets</th>
-                </tr>
-
-                <tr>
-                    <td>strongly_positive</td>
-                    <td>50969</td>
-                </tr>
-                <tr>
-                    <td>positive</td>
-                    <td>12145</td>
-                </tr>
-                <tr>
-                    <td>neutral</td>
-                    <td>224143</td>
-                </tr>
-                <tr>
-                    <td>weakly_negative</td>
-                    <td>109302</td>
-                </tr>
-                <tr>
-                    <td>negative</td>
-                    <td>35257</td>
-                </tr>
-                <tr>
-                    <td>strongly_negative</td>
-                    <td>82</td>
-                </tr>
-
-            </table>
+            <table id="sa_table"></table>
         </div>
         <div>
             <div id="chart_1_content">
-                <svg id="chart_1" width="1300" height="600"></svg>
+                <svg id="chart_1" width="1300" height="500"></svg>
             </div>
 
             <p>
