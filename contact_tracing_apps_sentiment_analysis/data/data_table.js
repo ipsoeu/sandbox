@@ -2,4 +2,4 @@ var SA_DATA_TABLE_RELATIVE = [["it_immuni", 146875, 60, 9, 22], ["ie_covid_track
 
 var SA_DATA_TABLE_COUNT = [["it_immuni", 146875, 88151, 13580, 33069], ["ie_covid_tracker_ireland", 98314, 43419, 13604, 31795], ["fr_stopcovid", 86007, 11212, 26378, 35561], ["de_corona_warn_app", 77191, 39648, 4248, 26880], ["es_radar_covid", 72318, 34745, 7647, 23285], ["uk_nhs_covid_19_app", 35072, 16186, 6901, 10313], ["ch_swisscovid", 6598, 3482, 899, 1803], ["cz_erouska", 2687, 45, 20, 15], ["no_smittestopp", 2071, 91, 42, 31], ["at_stopp_corona", 1834, 920, 90, 717]]; 
 
-var TIMESTAMP = "2021/6/25";
+var TIMESTAMP = "2021/7/2";
