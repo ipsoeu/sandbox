@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>European contact tracing mobile apps - Dashboard</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8">
+    <meta name="author" content="Alessandro Dalla Benetta, a.dallabenetta@gmail.com">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="scripts/underscore.min.js"></script>
+
+    <script src="//unpkg.com/d3-hexgrid"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="contact_tracing_apps_dashboard/layout.cloud.js"></script>
+    <!--<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>-->
+    <script src="//unpkg.com/d3-geo-projection"></script>
+    <script src='//unpkg.com/simple-statistics'></script>
+
+    <!--
+    <script src="contact_tracing_apps_sentiment_analysis/data/data_table.js"></script>
+    <script src="contact_tracing_apps_sentiment_analysis/data/geo_data.js"></script>
+    <script src="contact_tracing_apps_sentiment_analysis/data/plot_timeline_charts.js"></script>
+
+
+    <script src="contact_tracing_apps_sentiment_analysis/js/main.js"></script>
+    <script src="contact_tracing_apps_sentiment_analysis/js/stacked_bar_chart.js"></script>
+    <script src="contact_tracing_apps_sentiment_analysis/js/plot_chart.js"></script>
+    <script src="contact_tracing_apps_sentiment_analysis/js/geo_chart.js"></script>
+
+    
+    <script src="contact_tracing_apps_dashboard/data.js"></script>
+    <script src="contact_tracing_apps_dashboard/geo_data.js"></script>
+    <script src="contact_tracing_apps_dashboard/chart_1.js"></script>
+    <script src="contact_tracing_apps_dashboard/chart_2.js"></script>
+    <script src="contact_tracing_apps_dashboard/3_geo_chart.js"></script>
+    <script src="contact_tracing_apps_dashboard/6_events.js"></script>
+
+    <script src="contact_tracing_apps_dashboard/events_data.js"></script>
+    <script src="contact_tracing_apps_dashboard/events.js"></script>-->
+
+    <style>
+        div.tooltip {
+            position: absolute;
+            text-align: center;
+            width: 60px;
+            height: 28px;
+            padding: 2px;
+            font: 12px sans-serif;
+            background: lightsteelblue;
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+        }
+
+        #wrap {
+            width: 1200px;
+            margin: auto;
+            height: 900px;
+
+            margin-top: 10px;
+        }
+    </style>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174641246-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-174641246-1');
+    </script>
+
+    <script src="contact_tracing_apps_dashboard/us.js"></script>
+    <script src="contact_tracing_apps_dashboard/main.js"></script>
+</head>
+
+
+<body>
+    <div id="wrap">
+        <h1>Sentiment analysis about Contact tracing apps</h1>
+        <h3>
+            <em>Network hashtags</em>
+        </h3>
+        <div>
+            <img src="contact_tracing_apps_hashtags/data/network_all_apps.png"></img>
+        </div>
+        <div style="margin-top: 10px;">
+            The picture shows the network hashtags of 400,000 tweets about mobile contact tracing appsand collected since July 2020.
+            The size of the nodes denoted the co-occurrence frequency with the others hashtags expressed with the degree centrality measure.
+            Each color represents a community calculated using the Louvain method [LOUVAIN-2008] where the hashtags are closely related.
+            E.g, for the orange community the topic seems “Healt and Healtcare”. Note that the colours of the community are computed randomly using standard color palettes.
+        </div>
+        <div style="margin-top: 10px;">
+            The Louvian method detected 8 main communities where the central hashtags is the name of 
+            contact tracing apps. For example the red community represents the Italian contact tracing apps Immuni,
+            the green community the Irish contact tracing apps. Furthermore, in gray there are small communities 
+            where the hashtags are related for most of theme by political entities or geographic names.
+        </div>
+        <div>
+            
+
+        </div>
+
+        
+
+    </div>
+</body>
+
+</html>
+
+<!-- https://stackoverflow.com/questions/50478133/d3js-export-svg-to-image -->
