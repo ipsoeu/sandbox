@@ -98,27 +98,93 @@
             <img src="contact_tracing_apps_hashtags/data/network_all_apps.png"></img>
         </div>
         <div style="margin-top: 10px;">
-            The picture shows the network hashtags of 400,000 tweets about mobile contact tracing appsand collected since July 2020.
-            The size of the nodes denoted the co-occurrence frequency with the others hashtags expressed with the degree centrality measure.
-            Each color represents a community calculated using the Louvain method [LOUVAIN-2008] where the hashtags are closely related.
-            E.g, for the orange community the topic seems “Healt and Healtcare”. Note that the colours of the community are computed randomly using standard color palettes.
-        </div>
-        <div style="margin-top: 10px;">
-            The Louvian method detected 8 main communities where the central hashtags is the name of 
-            contact tracing apps. For example the red community represents the Italian contact tracing apps Immuni,
-            the green community the Irish contact tracing apps. Furthermore, in gray there are small communities 
-            where the hashtags are related for most of theme by political entities or geographic names.
+
+            <p>
+                The picture shows the network hashtags of arounf 260,000 tweets about mobile contact tracing apps and
+                they collected
+                since July 2020 to June 2021.
+            </p>
+
+            <p>
+                The size of the nodes denoted the co-occurrence frequency with the others hashtags expressed with the
+                degree centrality measure.
+            </p>
+
+            <p>
+                Please notice that the small communities with a low number of nodes and density are pruned from the
+                network
+                in order to have a more clear overview.
+            </p>
+            <p>
+                Each color represents a community calculated using the Louvain method [LOUVAIN-2008] where the hashtags
+                are closely related.
+                E.g, for the orange community the topic seems “Healt and Healtcare”.
+                Note that the colours of the community are computed randomly using standard color palettes.
+            </p>
+
         </div>
 
-        <table id="community_table">
+        <div style="margin-top: 10px;">
+            <p>
+                The Louvian method revealed 8 main distinct communities where usually the <em>central hashtag</em> is a
+                name of
+                contact tracing apps. For example the red community represents the Italian contact tracing apps
+                <em>Immuni</em>,
+                the green community the Irish contact tracing apps <em>Covid Ireland</em>.
+            </p>
+
+            <p>
+                Furthermore, in gray there are small communities
+                where the hashtags are related for most of theme by political entities or geographic names.
+            </p>
+        </div>
+
+        <div style="margin-top: 10px;">
+            <p>
+                The table below displays the all communities extracted using [LOUVAIN-2008] algorithm and sorted by the
+                number of hashtags.
+                The communities detected usually represents a specific topic, entities or events but is not easy to
+                extract in an
+                automatic way one single word that describe each community.
+            </p>
+
+            <p>
+                For this reason have been reported the two columns <em>Top 5 hashtags</em> and <em>Main mobile app</em>.
+                The first column contains the first 5 hashtags with the highest value of degree centrality to understand
+                which
+                topic have the community.
+            </p>
+
+            <p>
+                In the second column is reported the most frequent contact tracing app in the tweets related to each
+                community.
+                In more details, each hashtags can belong to one or more tweets, consequently, a community has a set of
+                tweets, where
+                the size is reported in the <em>number of tweets</em> column.
+            </p>
+
+            <p>
+                On the other hand, a tweet can belonging to two or more hashtags and a community can be shared tweets
+                among the communities.
+                The <em>Isolation index</em> means how the communities are isolated and it has been calculated by the
+                ratio
+                (number of not shared tweets)/(total number of tweets inside the community).
+                A small value of the <em>Isolation index</em> indicates a hight isolated community.
+            </p>
+
+
+
+        </div>
+
+        <table id="community_table" style="margin-top: 50px;">
 
         </table>
         <div>
-            
+
 
         </div>
 
-        
+
 
     </div>
 </body>

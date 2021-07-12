@@ -18,7 +18,7 @@ $(document).ready(function() {
             { data: "community_isolation_by_tweets", title: 'Isolation index' },
             
         ],
-        order: [[3, "desc"]],      
+        order: [[2, "desc"]],      
     });
 } );
 
