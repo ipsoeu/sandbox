@@ -4,13 +4,21 @@ $(document).ready(function() {
     $('#community_table').DataTable({
         data: HASHTAGS_COMMUNITIES,
         columns: [
+            { data: function(d){
+                return d.hashtags.slice(0,5).map(function(e){return e.hashtag}).join(', ');
+            }, title: 'Top 5 hashtags' },
+
+            { data: function(d){
+                return d.mobile_apps.slice(0,1).map(function(e){return e.name}).join(', ');
+            }, title: 'Main mobile app' },
+
             { data: "hashtags_count", title: "Number of Hashtags" },
 
             { data: "total_tweets", title: 'Number of Tweets' },
             { data: "community_isolation_by_tweets", title: 'Isolation index' },
-          
+            
         ],
-        order: [[0, "desc"]],      
+        order: [[3, "desc"]],      
     });
 } );
 
