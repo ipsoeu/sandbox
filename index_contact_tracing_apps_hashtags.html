@@ -95,14 +95,14 @@
             <em>Network hashtags</em>
         </h3>
         <div>
-            <img src="contact_tracing_apps_hashtags/data/network_all_apps.png"></img>
+            <img src="contact_tracing_apps_hashtags/data/network_all_apps_low_resolution.png"></img>
         </div>
         <div style="margin-top: 10px;">
 
             <p>
-                The picture shows the network hashtags of arounf 260,000 tweets about mobile contact tracing apps and
-                they collected
-                since July 2020 to June 2021.
+                The picture shows the network hashtags of arounf 260,000 tweets about mobile contact tracing apps. 
+                The tweets were collected since July 2020 to June 2021 using the official Twitter APIs. 
+
             </p>
 
             <p>
@@ -112,13 +112,12 @@
 
             <p>
                 Please notice that the small communities with a low number of nodes and density are pruned from the
-                network
-                in order to have a more clear overview.
+                network in order to have a more clear overview of the network.
             </p>
             <p>
                 Each color represents a community calculated using the Louvain method [LOUVAIN-2008] where the hashtags
                 are closely related.
-                E.g, for the orange community the topic seems “Healt and Healtcare”.
+                E.g, for the purple community the topic seems “Healt and Healtcare”.
                 Note that the colours of the community are computed randomly using standard color palettes.
             </p>
 
@@ -128,9 +127,9 @@
             <p>
                 The Louvian method revealed 8 main distinct communities where usually the <em>central hashtag</em> is a
                 name of
-                contact tracing apps. For example the red community represents the Italian contact tracing apps
+                contact tracing apps. For example the dar green community represents the Italian contact tracing apps
                 <em>Immuni</em>,
-                the green community the Irish contact tracing apps <em>Covid Ireland</em>.
+                the medium green community the Irish contact tracing apps <em>Covid Ireland</em>.
             </p>
 
             <p>
@@ -164,21 +163,19 @@
             </p>
 
             <p>
-                On the other hand, a tweet can belonging to two or more hashtags and a community can be shared tweets
-                among the communities.
+                On the other hand, a tweet can belonging to one or more hashtags and a community can share tweets
+                with the other communities.
                 The <em>Isolation index</em> means how the communities are isolated and it has been calculated by the
                 ratio
                 (number of not shared tweets)/(total number of tweets inside the community).
-                A small value of the <em>Isolation index</em> indicates a hight isolated community.
+                Therefore, a small value of the <em>Isolation index</em> indicates a hight isolated community.
             </p>
-
-
 
         </div>
 
         <table id="community_table" style="margin-top: 50px;">
-
         </table>
+        
         <div>
 
 
