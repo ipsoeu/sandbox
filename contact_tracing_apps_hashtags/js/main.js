@@ -15,8 +15,10 @@ $(document).ready(function() {
             { data: "hashtags_count", title: "Number of Hashtags" },
 
             { data: "total_tweets", title: 'Number of Tweets' },
+            
             { data: "community_isolation_by_tweets", title: 'Isolation index' },
             
+            { data: "density", title: 'Density' },
         ],
         order: [[2, "desc"]],      
     });
