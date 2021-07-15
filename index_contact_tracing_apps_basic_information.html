@@ -9,13 +9,14 @@
   <link rel="stylesheet" href="contact_tracing_apps_dashboard/style.css">
   <link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
   <!-- Loading data -->
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
     crossorigin="anonymous"></script>
 
+  <script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
 
   <!--
   
@@ -27,7 +28,7 @@
   <script src="contact_tracing_apps_dashboard/data_section_1_right_1.js"></script>
   <!-- d3-hexgrid script comes first. -->
   <!-- d3-hexgrid script comes first. -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
   <script src="//unpkg.com/d3-hexgrid"></script>
   <script src="https://d3js.org/d3.v6.min.js"></script>
   <script src="//unpkg.com/d3-geo-projection"></script>
@@ -43,7 +44,6 @@
 
   <!-- https://github.com/d3/d3-scale-chromatic -->
 
-  <script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
 
   <script src="contact_tracing_apps_basic_information/data/pie_chart.js"></script>
   <script src="contact_tracing_apps_basic_information/data/series_charts.js"></script>
@@ -55,13 +55,13 @@
 
   <style>
     #wrap {
-        width: 800px;
-        margin: auto;
-        height: 900px;
+      width: 800px;
+      margin: auto;
+      height: 900px;
 
-        margin-top: 10px;
+      margin-top: 10px;
     }
-</style>
+  </style>
 
 </head>
 
@@ -71,21 +71,66 @@
   <div id="wrap">
 
 
-    <h3>Basic information</h3>
-    <p>Pie chart</p>
-    <div id="basic_information_pie_chart">
-      <svg id="basic_information_pie_chart_svg" width="600" height="600"></svg>
+    <h3>Data collection</h3>
+
+    <div class="container">
+      <p>
+        An online search of the Twitter social media platform has been performed
+        since July, 2020 to June 2021.
+
+        To collect the tweets we used the official streaming Twitter APIs, in particular
+        we open a streaming of tweets for each contract tracing apps. The table below shows
+        the analyzed contact tracing apps and the search-keys used on the streaming.
+
+      </p>
+
+      <table id='app_list_streaming'></table>
+
+      <p>
+        For every individual tweets, a set of predeterminated analysis were collected
+        in a real-time way combining the Tweepy library, Apache kafka and Elasticsearch.
+        We developed a system able process different streaming of tweets and collecting
+        place names, opinions, hashtags, entities and
+        a quite number of aggregations.
+      </p>
+
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <div id="basic_information_pie_chart">
+              <svg id="basic_information_pie_chart_svg" width="400" height="400"></svg>
+            </div>
+          </div>
+          <div class="col-sm">
+            <p>
+              The table below and the left pie chart show the number of tweets collected for each contact tracing apps.
+              Moreover, the table reports the percentage of tweets with opinions, place names and the number
+              of detected EMM news. The opinions were extraced for the main languages detected which
+              they are: English, French, German, Spanish and Italian.
+              Tweets that contained geo information were identified using the Mordecai library. Finally, a cross
+              checking
+              between the dedicated EMM channel for Contact tracing apps (url) and the tweets-linked pages was performed
+              in order to detect meaningful tweets.
+            </p>
+          </div>
+
+        </div>
+      </div>
+      <table id="app_list"></table>
+
+
     </div>
-    <p>by time</p>
-    <div id="basic_information_stacked_bar_chart">
-      <svg id="basic_information_stacked_bar_chart_svg" width="1200" height="600"></svg>
+
+    <div class="container">
+      <div id="basic_information_stacked_bar_chart">
+        <svg id="basic_information_stacked_bar_chart_svg" width="1200" height="600"></svg>
+      </div>
     </div>
-    <p>table</p>
-    <table id="app_list"></table>
   </div>
 
 
 
 </body>
 
-</html> 
+</html>
