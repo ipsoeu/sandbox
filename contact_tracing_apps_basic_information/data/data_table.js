@@ -1,3 +1,3 @@
-var DATA_TABLE = [["it_immuni", 153615, 75, 31, 85], ["ie_covid_tracker_ireland", 101820, 63, 45, 61], ["fr_stopcovid", 94370, 55, 72, 51], ["de_corona_warn_app", 90710, 59, 40, 29], ["es_radar_covid", 73645, 63, 42, 3], ["uk_nhs_covid_19_app", 37077, 52, 49, 92], ["ch_swisscovid", 6825, 52, 41, 2], ["cz_erouska", 2694, 81, 1, 0], ["no_smittestopp", 2134, 69, 3, 1], ["at_stopp_corona", 1879, 53, 44, 0]]; 
+var DATA_TABLE = [["it_immuni", 153615, 75, 31, 89], ["ie_covid_tracker_ireland", 101820, 63, 45, 65], ["fr_stopcovid", 94370, 55, 72, 95], ["de_corona_warn_app", 90710, 59, 40, 42], ["es_radar_covid", 73645, 63, 42, 4], ["uk_nhs_covid_19_app", 37077, 52, 49, 98], ["ch_swisscovid", 6825, 52, 41, 2], ["cz_erouska", 2694, 81, 1, 0], ["no_smittestopp", 2134, 69, 3, 1], ["at_stopp_corona", 1879, 53, 44, 0]]; 
 
-var TIMESTAMP = "2021/7/12";
+var TIMESTAMP = "2021/7/15";
