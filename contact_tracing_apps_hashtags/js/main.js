@@ -28,6 +28,22 @@ function make_community_info_table(html_id, info) {
 
 }
 
+function make_table_nodes_edges(html_id, data){
+    $(html_id).DataTable({
+        data: data.slice(0,10),
+        columns: [
+            { data: "hashtag", title: "Hashtags", className: 'column_grey'},
+            { data: "degree_centrality", title: "Degree centrality", className: 'column_grey' },
+            { data: "strong_link", title: "Similar links" },
+            { data: "jaccard_index", title: "Jaccard index" },
+            { data: "weak_link", title: "Distant links", className: 'column_grey' },
+            { data: "jaccard_distance", title: "Jaccard distance", className: 'column_grey' },
+        
+        ],
+        order: [[1, "asc"]],
+    });
+}
+
 const zip = (a, b, c) => a.map((k, i) => ({ ...k, ...b[i], ...c[i]} ));
 
 $(document).ready(function () {
@@ -63,27 +79,26 @@ $(document).ready(function () {
 
     // Partition 3
     
-    var node_edge = zip(    HASHTAGS_COMMUNITIES[1]['hashtags'], 
-            HASHTAGS_COMMUNITIES[1]['strong_links'],
-            HASHTAGS_COMMUNITIES[1]['weak_links']
+    var node_edge = zip(    HASHTAGS_COMMUNITIES[0]['hashtags'], 
+            HASHTAGS_COMMUNITIES[0]['strong_links'],
+            HASHTAGS_COMMUNITIES[0]['weak_links']
         )
-    make_community_info_table('#community_1_info', HASHTAGS_COMMUNITIES[0])
 
-    console.log(node_edge);
+    make_community_info_table('#community_7_info', HASHTAGS_COMMUNITIES[0])
 
-    $('#community_1_nodes_edges').DataTable({
-        data: node_edge.slice(0,10),
-        columns: [
-            { data: "hashtag", title: "Hashtags", className: 'column_grey'},
-            { data: "degree_centrality", title: "Degree centrality", className: 'column_grey' },
-            { data: "strong_link", title: "Similar links" },
-            { data: "jaccard_index", title: "Jaccard index" },
-            { data: "weak_link", title: "Distant links", className: 'column_grey' },
-            { data: "jaccard_distance", title: "Jaccard distance", className: 'column_grey' },
-            
-        ],
-        //order: [[3, "desc"]],
-    });
+    make_table_nodes_edges('#community_7_nodes_edges', node_edge)
+    
+    // Partition 7
+
+    var node_edge = zip(    HASHTAGS_COMMUNITIES[1]['hashtags'], 
+    HASHTAGS_COMMUNITIES[1]['strong_links'],
+    HASHTAGS_COMMUNITIES[1]['weak_links']
+    )
+    make_community_info_table('#community_1_info', HASHTAGS_COMMUNITIES[1])
+
+    make_table_nodes_edges('#community_1_nodes_edges', node_edge)
+
+    
 });
 
 //dict_keys(['tweets_ids', 'hashtags', 'total_tweets', 'isolated_tweets', 'shared_tweets', 'community_isolation_by_tweets', 'isolated_geolocalized_tweets', 'isolated_mobile_apps', 'isolated_neutral_tweets', 'isolated_positive_tweets', 'isolated_negative_tweets', 'isolated_emm_news', 'geolocalized_tweets', 'mobile_apps', 'neutral_tweets', 'positive_tweets', 'negative_tweets', 'emm_news'])
