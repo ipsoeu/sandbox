@@ -33,7 +33,7 @@ function make_stacked_bar_chart(data){
         .rangeRound([0, width]);	// .rangeRound([height, 0]);
 
     var z = d3.scaleOrdinal()
-        .range(["#007f5f", "#D90429", "#ced4da"]);
+        .range(['rgb(27, 89, 151)', "#D90429", "#ced4da"]);
 
     var keys = ['positive', 'negative', 'neutral'];
  
