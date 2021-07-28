@@ -5,13 +5,14 @@ $(document).ready(function () {
     $('#sa_table').DataTable({
         data: SA_DATA_TABLE_RELATIVE,
         columns: [
-            { title: "App name" },
-            { title: "Number of tweets" },
-            { title: "Neutral tweets (%)" },
-            { title: "Positive tweets (%)" },
-            { title: "Negative tweets (%)" },
+            { data: function(e){return e.app_name.slice(0,2);}, title: "Country" },
+            { data: function(e){return e.app_name.slice(3).replace('_', ' ');}, title: "App name" },
+            { title: "Number of tweets", data: 'n_of_tweets' },
+            { title: "Neutral tweets (%)", data: 'neutral' },
+            { title: "Positive tweets (%)", data: 'positive' },
+            { title: "Negative tweets (%)", data: 'negative' },
         ],
-        order: [[1, "desc"]],
+        order: [[2, "desc"]],
         paging: false
     });
     
