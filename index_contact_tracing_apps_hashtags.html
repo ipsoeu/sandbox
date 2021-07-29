@@ -154,12 +154,11 @@
             <p>
                 For this reason have been reported the two columns <em>Top 5 hashtags</em> and <em>Main mobile app</em>.
                 The first column contains the first 5 hashtags with the highest value of degree centrality to understand
-                which
-                topic have the community.
+                which topics have the community.
             </p>
 
             <p>
-                In the second column is reported the most frequent contact tracing app in the tweets related to each
+                In the second column is reported the most frequent contact tracing app in the <em>isolated</em> tweets related to each
                 community.
                 In more details, each hashtags can belong to one or more tweets, consequently, a community has a set of
                 tweets, where
@@ -176,9 +175,12 @@
             </p>
 
             <p>
-                The global network density was <span id="network_density"></span> with <span id="network_nodes"></span>
-                and <span id="network_edges"></span>. The range density for the main 8 communities is between 0.016 and
-                0.051,
+                Futhermore, to evaluate the accuracy of the detected communities respect the global graph the network density
+                has been calculated following the formula <br/> <em>2m/n(n - 1)</em> where n is the number of hashtags (or nodes) 
+                and m is the number of edges in the hashtags network.
+                The global network density was <span id="network_density"></span> with <span id="network_nodes"></span> nodes
+                and <span id="network_edges"></span> edges.
+                The range density for the main 8 communities is between 0.016 and 0.051,
                 with an averege of 0.026, 5,25 times greater than the overall density, a good indication of separated
                 groups.
 
@@ -187,13 +189,22 @@
         </div>
 
         <table id="community_table" style="margin-top: 50px;">
+            <caption style="caption-side: well"> TABLE 1 - LIST OF EXTRACTED COMMUNITIES</caption>'
         </table>
 
         <div class="container">
             <h3>Covid UK and Healtcare</h3>
             <p>
-                Description
+                Following the table [TABLE 1] the first community detected respect the number of hastags is regarding the UK mobile
+                contact tracing app <em>UK NHS Covid 19 app</em> and Healtcare.
+                With a high number of hashtags and a low value of isolation index this community can provide a lot of information also, 
+                a considerable number of <em>EMM news</em> are included.
             </p>
+
+            <div class="container">
+                <img src="contact_tracing_apps_hashtags/data/community_7_nodes_edges.png" />
+                <table id="community_7_nodes_edges" style="margin-top: 50px;"></table>
+            </div>
 
             <div class="container">
                 <div class="row">
@@ -204,13 +215,7 @@
                 </div>
             </div>
 
-            <div class="container">
-                <img src="contact_tracing_apps_hashtags/data/community_7_nodes_edges.png" />
-                <table id="community_7_nodes_edges" style="margin-top: 50px;"></table>
-            </div>
-
-
-
+            
 
         </div>
 

@@ -60,7 +60,7 @@ $(document).ready(function () {
             },
             {
                 data: function (d) {
-                    return d.mobile_apps.slice(0, 1).map(function (e) { return e.name }).join(', ');
+                    return d.isolated_mobile_apps.slice(0, 1).map(function (e) { return e.name }).join(', ');
                 }, title: 'Main mobile app'
             },
             { data: "hashtags_count", title: "Number of Hashtags" },
@@ -79,6 +79,8 @@ $(document).ready(function () {
 
     // Partition 3
     
+    console.log(HASHTAGS_COMMUNITIES[0])
+
     var node_edge = zip(    HASHTAGS_COMMUNITIES[0]['hashtags'], 
             HASHTAGS_COMMUNITIES[0]['strong_links'],
             HASHTAGS_COMMUNITIES[0]['weak_links']
