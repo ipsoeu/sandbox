@@ -67,6 +67,7 @@ $(document).ready(function () {
             { data: "total_tweets", title: 'Number of Tweets' },
             { data: "community_isolation_by_tweets", title: 'Isolation index' },
             { data: "density", title: 'Density' },
+            { data: "interconnection_index", title: 'Interconnection index' },
             { data: "isolated_emm_news", title: 'EMM news' },
         ],
         order: [[3, "desc"]],
