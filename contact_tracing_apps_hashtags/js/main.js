@@ -1,3 +1,5 @@
+
+
 function make_community_info_table(html_id, info) {
 
     var $list = $('<dl></dl>');
@@ -88,6 +90,8 @@ $(document).ready(function () {
         )
 
     make_community_info_table('#community_7_info', HASHTAGS_COMMUNITIES[0])
+    //make_stacked_bar_chart('#community_7_svg', HASHTAGS_COMMUNITIES[0])
+    make_sunburst_chart('#community_7_svg', HASHTAGS_COMMUNITIES[0])
 
     make_table_nodes_edges('#community_7_nodes_edges', node_edge)
     
