@@ -13,12 +13,14 @@ function make_sunburst_chart(chart_id, data) {
         "name": "Geolocalized tweets",
         "children": [{
             "name": "Isolated",
+            'color': 'rgb(27, 89, 151)',
             "children": [
                 { "name": "Geo", "size": data['isolated_geolocalized_tweets'] },
                 { "name": "No Geo", "size": data['isolated_tweets'] - data['isolated_geolocalized_tweets'] }]
         },
         {
             "name": "Shared",
+            'color': "#D90429",
             "children": [
                 { "name": "Geo", "size": data['geolocalized_tweets'] - data['isolated_geolocalized_tweets'] },
                 { "name": "No Geo", "size": data['shared_tweets'] - data['geolocalized_tweets'] - data['isolated_geolocalized_tweets'] }
@@ -62,7 +64,7 @@ function make_sunburst_chart(chart_id, data) {
         .attr("display", function (d) { return d.depth ? null : "none"; })
         .attr("d", arc)
         .style('stroke', '#fff')
-        .style("fill", function (d) { return color((d.children ? d : d.parent).data.name); });
+        .style("fill", function (d) { return (d.children ? d : d.parent).data.color; });
 
     g.selectAll(".node")
         .append("text")
