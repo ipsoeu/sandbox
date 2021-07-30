@@ -27,8 +27,8 @@ function make_sunburst_chart(chart_id, data) {
     };
 
     // Variables
-    var width = 300;
-    var height = 300;
+    var width = 400;
+    var height = 400;
     var radius = Math.min(width, height) / 2;
     var color = d3.scaleOrdinal(d3.schemeAccent);
 
@@ -67,12 +67,20 @@ function make_sunburst_chart(chart_id, data) {
     g.selectAll(".node")
         .append("text")
         .attr("transform", function (d) {
-            console.log('oo')
             return "translate(" + arc.centroid(d) + ")rotate(" + computeTextRotation(d) + ")";
         })
         .attr("dx", "-20") // radius margin
         .attr("dy", ".5em") // rotation align
         .text(function (d) { return d.parent ? d.data.name : "" });
 
+    g.append('text')
+        .attr('transform', 'translate(-30, 30)')
+        .text('Tweets')
+
+    g.append('text')
+        .attr('transform', 'translate(-30, 0)')
+        .attr('font-size', '20px')
+        .attr('font-weight', 'bold')
+        .text(data['total_tweets'])
 
 }
