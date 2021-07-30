@@ -71,6 +71,7 @@
   <div id="wrap">
 
     <div class="container">
+      <h3>Basic information on Covid-19 mobile contact tracing apps from tweets</h3>
       <p>
         An online search of the Twitter social media platform has been performed
         since July, 2020 to June 2021.
@@ -80,7 +81,7 @@
         the analyzed contact tracing apps and the search-keys used on the streaming.
 
       </p>
-
+      <h5>Keywords used for streaming on Twitter about European contact tracing apps</h5>
       <table id='app_list_streaming'></table>
 
       <p>
@@ -92,29 +93,41 @@
       </p>
 
 
-      <div class="container">
-        <div class="row">
-          <div class="col-sm">
-            <div id="basic_information_pie_chart">
-              <svg id="basic_information_pie_chart_svg" width="400" height="400"></svg>
-            </div>
-          </div>
-          <div class="col-sm">
-            <p>
-              The table below and the left pie chart show the number of tweets collected for each contact tracing apps.
-              Moreover, the table reports the percentage of tweets with opinions, place names and the number
-              of detected EMM news. The opinions were extraced for the main languages detected which
-              they are: English, French, German, Spanish and Italian.
-              Tweets that contained geo information were identified using the Mordecai library. Finally, a cross
-              checking
-              between the dedicated EMM channel for Contact tracing apps (url) and the tweets-linked pages was performed
-              in order to detect meaningful tweets.
-            </p>
-          </div>
 
-        </div>
-      </div>
+      <h5>Relevant information extracted from the collected tweets</h5>
+      <p>
+        The table below and the left pie chart show the number of tweets collected for each contact tracing apps.
+        Moreover, the table reports the percentage of tweets with opinions, place names and the number
+        of detected EMM news. The opinions were extraced for the main languages detected which
+        they are: English, French, German, Spanish and Italian.
+        Tweets that contained geo information were identified using the Mordecai library. Finally, a cross
+        checking
+        between the dedicated EMM channel for Contact tracing apps (url) and the tweets-linked pages was performed
+        in order to detect meaningful tweets.
+      </p>
+
       <table id="app_list"></table>
+
+      <div class="row">
+        <div class="col-sm">
+          <div id="basic_information_pie_chart">
+            <svg id="basic_information_pie_chart_svg" width="400" height="400"></svg>
+          </div>
+        </div>
+        <div class="col-sm">
+          other visualization about geo (one visualization stacked barchar),
+          maps 
+          
+          geo opinions and news count (combine the vis) try hierarchy opinion geo news
+
+          relation tweet app 1 to 1
+
+          high priority for basic information
+        </div>
+
+      </div>
+
+      
 
 
     </div>
