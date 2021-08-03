@@ -62,8 +62,8 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
 
     // Set up SVG.
     const margin = { top: 30, right: 30, bottom: 30, left: 30 },
-        width = 1000 - margin.left - margin.right,
-        height = 1000 - margin.top - margin.bottom;
+        width = 800 - margin.left - margin.right,
+        height = 800 - margin.top - margin.bottom;
 
     const svg = d3.select(chart_id)
         .append('svg')
@@ -123,7 +123,7 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
     const counts = hex.grid.layout
         .map(el => el.datapointsWt)
         .filter(el => el > 0);
-    const ckBreaks = ss.ckmeans(counts, 4).map(clusters => clusters[0]);
+    const ckBreaks = ss.ckmeans(counts, 6).map(clusters => clusters[0]);
 
     const colourScale = d3
         .scaleThreshold()
@@ -192,12 +192,14 @@ const geoData = d3.json(
 //     make_geo_chart('#chart_4', geoData, userData);
 // });
 const positive_range_colors = ['#FFF', '#90be6d', '#43aa8b', '#4d908e', '#277da1'];
-const negative_range_colors = ['#FFF', '#f9c74f', '#f8961e', '#f3722c', '#f94144'];
+
+
+//const negative_range_colors = ['#FFF', '#f9c74f', '#f8961e', '#f3722c', '#f94144'];
 
 Promise.all([geoData]).then(response => {
     let [geo_data] = response;
-    make_geo_chart('#chart_4', geo_data, GEO_POSITIVE_TWEETS, 'Positive Tweets', positive_range_colors);
-    make_geo_chart('#chart_5', geo_data, GEO_NEGATIVE_TWEETS, 'Negative Tweets', negative_range_colors);
+    make_geo_chart('#basic_information_geo_data', geo_data, GEO_TWEETS, 'Positive Tweets', positive_range_colors);
+    
 });
 
 //https://observablehq.com/@larsvers/d3-hexgrid-examples
