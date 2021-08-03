@@ -6,8 +6,8 @@ function make_sunburst_chart(chart_id, data) {
         var angle = (d.x0 + d.x1) / Math.PI * 90;
 
         // Avoid upside-down labels
-        return (angle < 120 || angle > 270) ? angle : angle + 180;  // labels as rims
-        //return (angle < 180) ? angle - 90 : angle + 90;  // labels as spokes
+        //return (angle < 120 || angle > 270) ? angle : angle + 180;  // labels as rims
+        return (angle < 180) ? angle - 90 : angle + 90;  // labels as spokes
     }
 
     color = d3.scaleOrdinal()
@@ -15,34 +15,17 @@ function make_sunburst_chart(chart_id, data) {
     .range(d3.schemeCategory10);
 
     var partitions = data.map(function(d, index){
+        positive = (d[3]/(d[3] + d[4]) * 100).toFixed()
         return {
-            name: d[0].slice(3).replace('_', ' '),
+            name: d[0].slice(0,2).toUpperCase(),
             color: color(d[0]),
             children:[
-                {name: 'Positive', size: d[3], color: 'rgb(27, 89, 151)'},
-                {name: 'negative', size: d[4], color: "#D90429"},
+                {name: positive + ' %', size: d[3], color: 'rgb(27, 89, 151, 0.6)'},
+                {name: (100 - positive) + ' %', size: d[4], color: 'rgb(196,43,50, 0.6)'},
             ]
         }
     })
 
-    var nodeData = {
-        "name": "sentiment analysis",
-        "children": [{
-            "name": "Isolated",
-            'color': 'rgb(27, 89, 151)',
-            "children": [
-                { "name": "Geo", "size": 1 },
-                { "name": "No Geo", "size": 12 }]
-        },
-        {
-            "name": "Shared",
-            'color': "#D90429",
-            "children": [
-                { "name": "Geo", "size": 23 },
-                { "name": "No Geo", "size": 33 }
-            ]
-        }]
-    };
 
     var nodeData = {
         "name": "sentiment analysis",
@@ -97,15 +80,15 @@ function make_sunburst_chart(chart_id, data) {
         .attr("dy", ".5em") // rotation align
         .text(function (d) { return d.parent ? d.data.name : "" });
 
-    g.append('text')
-        .attr('transform', 'translate(-30, 30)')
-        .text('Tweets')
+    // g.append('text')
+    //     .attr('transform', 'translate(-30, 30)')
+    //     .text('')
 
-    g.append('text')
-        .attr('transform', 'translate(-30, 0)')
-        .attr('font-size', '20px')
-        .attr('font-weight', 'bold')
-        .text(data['total_tweets'])
+    // g.append('text')
+    //     .attr('transform', 'translate(-30, 0)')
+    //     .attr('font-size', '20px')
+    //     .attr('font-weight', 'bold')
+    //     .text(data['total_tweets'])
 
 
     g.selectAll("mylabels")
