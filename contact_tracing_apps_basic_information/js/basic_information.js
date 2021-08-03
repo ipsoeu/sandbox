@@ -66,7 +66,7 @@ $(document).ready(function () {
     $('#app_list_streaming').DataTable({
         data: apps_streamings,
         columns: [
-            { data: function(e){return e.name.slice(0,2);}, title: "Country" },
+            { data: function(e){return e.name.slice(0,2).toUpperCase();}, title: "Country" },
             { data: function(e){return e.name.slice(3).replace('_', ' ');}, title: "App name" },
             { data: function(e){return e.keys.join(', ');}, title: "Search keys" },
             
@@ -77,17 +77,20 @@ $(document).ready(function () {
         
     });
 
+    console.log(DATA_TABLE);
 
     $('#app_list').DataTable({
         data: DATA_TABLE,
         columns: [
-            { title: "Mobile application name" },
-            { title: "Number of tweets" },
-            { title: "Tweets with opinions (%)" },
-            { title: "Geolocalized tweets (%)" },
-            { title: "Extracted EMM news" },
+
+            { data: function(e){return e.app_name.slice(0,2);}, title: "Country" },
+            { data: function(e){return e.app_name.slice(3).replace('_', ' ');}, title: "App name" },
+            { title: "Number of tweets", data: 'n_of_tweets' },
+            { title: "Tweets with opinions (%)", data: 'with_opinions' },
+            { title: "Geolocalized tweets (%)", data: 'geo' },
+            { title: "Extracted EMM news", data: 'emm_news' },
         ],
-        order: [[1, "desc"]],
+        order: [[2, "desc"]],
         paging: false,
         searching: false
     });

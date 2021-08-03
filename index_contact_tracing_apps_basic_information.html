@@ -49,11 +49,14 @@
   <script src="contact_tracing_apps_basic_information/data/series_charts.js"></script>
   <script src="contact_tracing_apps_basic_information/data/data_table.js"></script>
   <script src="contact_tracing_apps_basic_information/data/geo_data.js"></script>
+  <script src="contact_tracing_apps_basic_information/data/sa.js"></script>
 
   <script src="contact_tracing_apps_basic_information/js/basic_information.js"></script>
   <script src="contact_tracing_apps_basic_information/js/pie_chart.js"></script>
   <script src="contact_tracing_apps_basic_information/js/stacked_bar_chart.js"></script>
   <script src="contact_tracing_apps_basic_information/js/geo_chart.js"></script>
+  <script src="contact_tracing_apps_basic_information/js/sa_sunburst.js"></script>
+  
   <style>
     #wrap {
       width: 800px;
@@ -111,6 +114,19 @@
 
       <h4>Covid apps and temporal evolution</h4>
 
+      The chart below show the frequency of the tweets by contact tracing apps from July 2020 to June 2021.
+
+      <div id="basic_information_stacked_bar_chart">
+        <svg id="basic_information_stacked_bar_chart_svg" width="800" height="600"></svg>
+      </div>
+
+      <h4>Sentiment analysis</h4>
+
+      <div id="basic_information_sa_starbust">
+        <svg id="basic_information_sa_starbust_svg" width="800" height="600"></svg>
+      </div>
+
+
       <h4>Geolocalized Tweets</h4>
 
       <div id="basic_information_geo_data"></div>
@@ -140,11 +156,7 @@
     </div>
 
     <div class="container">
-      The chart below show the frequency of the tweets by contact tracing apps from July 2020 to June 2021.
-
-      <div id="basic_information_stacked_bar_chart">
-        <svg id="basic_information_stacked_bar_chart_svg" width="1200" height="600"></svg>
-      </div>
+      
     </div>
   </div>
 
