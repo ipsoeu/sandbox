@@ -2,7 +2,7 @@ function Counter(list) {
     var count = {};
     list.forEach(val => count[val] = (count[val] || 0) + 1);
     return Object.fromEntries(
-        Object.entries(count).sort(([,a],[,b]) => b-a)
+        Object.entries(count).sort(([, a], [, b]) => b - a)
     );
 }
 
@@ -17,9 +17,10 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
      */
 
     function buildKey(legendKey, max, scale, legendText) {
+        console.log(scale.domain())
         const x = d3.scaleLinear()
             .domain([1, max])
-            .range([0, 120]);
+            .range([0, 350]);
 
         const xAxis = d3.axisBottom(x)
             .tickSize(13)
@@ -36,6 +37,7 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
             return d;
         });
 
+
         g.selectAll('rect')
             .data(
                 scale.range().map(color => {
@@ -47,11 +49,12 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
             )
             .enter()
             .insert('rect', '.tick')
-            .attr('height', 8)
+            .attr('height', 10)
             .attr('x', d => x(d[0]))
             .attr('width', d => x(d[1]) - x(d[0]))
             .attr('fill', d => scale(d[0]));
-
+        
+        
         g.append('text')
             .attr('fill', '#000')
             .attr('font-weight', 'bold')
@@ -118,19 +121,18 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
 
     // Hexgrid instance.
     const hex = hexgrid(userData, ['hashtags', 'place_name']);
-    
+
     // Calculate Ckmeans based colour scale.
     const counts = hex.grid.layout
         .map(el => el.datapointsWt)
         .filter(el => el > 0);
-    const ckBreaks = ss.ckmeans(counts, 6).map(clusters => clusters[0]);
+    const ckBreaks = ss.ckmeans(counts, range_colors.length).map(clusters => clusters[0]);
 
     const colourScale = d3
         .scaleThreshold()
         .domain(ckBreaks)
-        //.range(['#fff', '#e7e7e7', '#aaa', '#777', 'red']);
         .range(range_colors);
-    
+
     // Clip.
     const gHex = svg
         .append('g')
@@ -149,15 +151,14 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
         .style('fill', d => colourScale(d.datapointsWt))
         .style('stroke', '#999')
         .style('stroke-opacity', 0.4)
-        
-        .on('click', function (event, data) { 
+        .on('click', function (event, data) {
 
             var hashtags = [];
-            
-            data.forEach(function(element){
+
+            data.forEach(function (element) {
                 hashtags = hashtags.concat(element.hashtags);
             });
-            var place_names =  data.map(function(element){
+            var place_names = data.map(function (element) {
                 return element.place_name;
             });
 
@@ -166,8 +167,9 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
     // Build and mount legend.
     const legendKey = svg
         .append('g')
-        .attr('class', 'legend')
-        .attr('transform', `translate(${width - 120}, ${height})`)
+        // /.attr('class', 'legend')
+        
+        .attr('transform', `translate(${width - 360}, ${height})`)
         .call(
             buildKey,
             hex.grid.extentPointsWeighted[1],
@@ -178,28 +180,22 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
 
 // Data load.
 const geoData = d3.json(
-    //'https://raw.githubusercontent.com/larsvers/map-store/master/earth-lands-10km.json'
     'https://raw.githubusercontent.com/larsvers/map-store/master/europe_geo.json'
 );
-//const points = GEO_POSITIVE_TWEETS;
 
-// const points = d3.csv(
-//     'https://raw.githubusercontent.com/larsvers/data-store/master/military_disputes_world.csv'
-// );
+const range_colors = [
+    '#ffffff',
+    '#d0ded8',
+    '#85aa9b',
+    '#588b76',
+    '#18392b'
 
-// Promise.all([geoData, GEO_POSITIVE_TWEETS]).then(res => {
-//     let [geoData, userData] = res;
-//     make_geo_chart('#chart_4', geoData, userData);
-// });
-const positive_range_colors = ['#FFF', '#90be6d', '#43aa8b', '#4d908e', '#277da1'];
-
-
-//const negative_range_colors = ['#FFF', '#f9c74f', '#f8961e', '#f3722c', '#f94144'];
+]
 
 Promise.all([geoData]).then(response => {
     let [geo_data] = response;
-    make_geo_chart('#basic_information_geo_data', geo_data, GEO_TWEETS, 'Positive Tweets', positive_range_colors);
-    
+    make_geo_chart('#basic_information_geo_data', geo_data, GEO_TWEETS, 'Geolocalized Tweets', range_colors);
+
 });
 
 //https://observablehq.com/@larsvers/d3-hexgrid-examples
