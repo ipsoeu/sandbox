@@ -100,14 +100,25 @@
 
       <h5>Relevant information extracted from the collected tweets</h5>
       <p>
-        The table below and the left pie chart show the number of tweets collected for each contact tracing apps.
-        Moreover, the table reports the percentage of tweets with opinions, place names and the number
-        of detected EMM news. The opinions were extraced for the main languages detected which
-        they are: English, French, German, Spanish and Italian.
-        Tweets that contained geo information were identified using the Mordecai library. Finally, a cross
-        checking
-        between the dedicated EMM channel for Contact tracing apps (url) and the tweets-linked pages was performed
-        in order to detect meaningful tweets.
+        The table below shows the number of tweets collected for each mobile contact tracing apps sorted by 
+        number of tweets.
+        Moreover, the table reports the percentage of tweets with opinions, geo information and the number
+        of detected EMM news. 
+      </p>
+      <p>
+        The opinions were extraced respecting the five main languages detected in the collocetion which
+        they are: English, French, German, Spanish and Italian. 
+        For the detection of the languages we used the standard engine evaluation language identification
+        of Twitter.
+      </p>  
+      <p>
+        Tweets that contained any kind of geo information were identified using the  geoparser library Mordecai.
+        The table reports the percentage of tweets which contains a place name in the tweet text or in the user profile.
+      </p>  
+      
+       <p>
+        Finally, a cross checking was performed between the dedicated <a href="https://emm.newsbrief.eu/NewsBrief/filteredition/en/COVID-19-Apps.html" target="_parent">EMM channel</a> 
+        for Contact tracing apps and the tweets-linked pages in order to detect meaningful tweets.
       </p>
 
       <table id="app_list"></table>

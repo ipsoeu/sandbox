@@ -4,4 +4,4 @@ var LANGS_PIECHART = [{"name": "English", "value": 174190}, {"name": "Italian", 
 
 var SA_PIECHART = [{"name": "Neutral", "value": 253282}, {"name": "Weakly_negative", "value": 130459}, {"name": "Strongly_positive", "value": 63702}, {"name": "Negative", "value": 44467}, {"name": "Positive", "value": 15764}, {"name": "Strongly_negative", "value": 91}]; 
 
-var TIMESTAMP = "2021/8/3";
+var TIMESTAMP = "2021/8/4";
