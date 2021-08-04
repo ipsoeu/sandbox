@@ -91,7 +91,7 @@ function make_plot_chart(svg_id, data) {
         .attr('fill-opacity', d => y_scale_opacity(d.value))
         .attr('stroke', d => d.value > 0 ? 'rgb(27, 89, 151)' : 'rgb(182, 43, 52)')
         .attr('fill', d => d.value > 0 ? 'rgb(27, 89, 151)' : 'rgb(182, 43, 52)')
-        .attr('r', 6);
+        .attr('r', 3);
 
 
     xAxisG.call(xAxis);
