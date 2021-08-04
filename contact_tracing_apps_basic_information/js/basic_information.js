@@ -89,6 +89,7 @@ $(document).ready(function () {
             { title: "Tweets with opinions (%)", data: 'with_opinions' },
             { title: "Geolocalized tweets (%)", data: 'geo' },
             { title: "Extracted EMM news", data: 'emm_news' },
+            { title: "Number of hashtags", data: 'n_hashtags' },
         ],
         order: [[2, "desc"]],
         paging: false,
