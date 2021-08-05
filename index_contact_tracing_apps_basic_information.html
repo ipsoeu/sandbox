@@ -49,13 +49,13 @@
   <script src="contact_tracing_apps_basic_information/data/series_charts.js"></script>
   <script src="contact_tracing_apps_basic_information/data/data_table.js"></script>
   <script src="contact_tracing_apps_basic_information/data/geo_data.js"></script>
-  
+
 
   <script src="contact_tracing_apps_basic_information/js/basic_information.js"></script>
   <script src="contact_tracing_apps_basic_information/js/pie_chart.js"></script>
   <script src="contact_tracing_apps_basic_information/js/stacked_bar_chart.js"></script>
   <script src="contact_tracing_apps_basic_information/js/geo_chart.js"></script>
-  
+
   <script src="contact_tracing_apps_basic_information/js/news_chart.js"></script>
 
   <style>
@@ -101,31 +101,34 @@
 
       <h5>Relevant information extracted from the collected tweets</h5>
       <p>
-        The table below shows the number of tweets collected for each mobile contact tracing apps sorted by 
+        The table below shows the number of tweets collected for each mobile contact tracing apps sorted by
         number of tweets.
         Moreover, the table reports the percentage of tweets with opinions, geo information and the number
-        of detected EMM news. 
+        of detected EMM news.
       </p>
       <p>
         The opinions were extraced respecting the following languages English, French, German, Spanish and Italian
-        that they are the more frequent languages in the our dataset. 
+        that they are the more frequent languages in the our dataset.
         For the detection of the languages we used the standard engine evaluation language identification
-        of Twitter. In the <a href="./index_contact_tracing_apps_sentiment_analysis.html">Sentiment analysis</a> section you can find more information and the our final
+        of Twitter. In the <a href="./index_contact_tracing_apps_sentiment_analysis.html">Sentiment analysis</a> section
+        you can find more information and the our final
         considerations.
-      </p>  
+      </p>
       <p>
-        Tweets that contained any kind of geo information were identified using the  geoparser library Mordecai.
+        Tweets that contained any kind of geo information were identified using the geoparser library Mordecai.
         The table reports the percentage of tweets which contains a place name in the tweet text or in the user profile.
-      </p>  
-      
-       <p>
-        A cross checking was performed between the dedicated <a href="https://emm.newsbrief.eu/NewsBrief/filteredition/en/COVID-19-Apps.html" target="_parent">EMM channel</a> 
+      </p>
+
+      <p>
+        A cross checking was performed between the dedicated <a
+          href="https://emm.newsbrief.eu/NewsBrief/filteredition/en/COVID-19-Apps.html" target="_parent">EMM channel</a>
         for Contact tracing apps and the tweets-linked pages in order to detect meaningful tweets.
       </p>
 
       <p>
-        Finally, we would to consider the hashtags that they are a very good source of information. 
-        In the section <a href='/index_contact_tracing_apps_hashtags.html'>Hashtags</a> there are more analisyses regarding hashtags with related
+        Finally, we would to consider the hashtags that they are a very good source of information.
+        In the section <a href='/index_contact_tracing_apps_hashtags.html'>Hashtags</a> there are more analisyses
+        regarding hashtags with related
         results and considerations.
       </p>
 
@@ -153,35 +156,32 @@
       </div>
       -->
       <p>
-        The stacked area chart below shows the user activities respecting the main 
-      mobile contact tracing apps. We can denote a high activity during the second wave
-      bettween the October and November months.
-      Futhermore, the chart shows some peak-area with a temporal extension of around five days that 
-      they represent some particular activites. For example a software release, news and any kind 
-      of relevant events.
+        The stacked area chart below shows the user activities respecting the main
+        mobile contact tracing apps. We can denote a high activity during the second wave
+        bettween the October and November months.
+        Futhermore, the chart shows some peak-area with a temporal extension of around five days that
+        they represent some particular activites. For example a software release, news and any kind
+        of relevant events.
       </p>
-      
+
 
       <div id="basic_information_stacked_bar_chart">
         <svg id="basic_information_stacked_bar_chart_svg" width="800" height="500"></svg>
       </div>
 
-
-
-
       <h4>Geolocalized Tweets</h4>
-      As already anticipated in the table XX above, geoinformation has been extracted from the tweet-text 
+      As already anticipated in the table XX above, geoinformation has been extracted from the tweet-text
       and user profile.
       The map above shows the density of the geo-tweets around the Europe, considering only the place names
       extracted from the tweet-text. The Europe capitals, as Paris, London, Dublin and Madrid are the
-      main area interested by the geo-tweets. In Italy and Germany, the density of the geo-tweets is 
-      more scattered along theirs cities. 
+      main area interested by the geo-tweets. In Italy and Germany, the density of the geo-tweets is
+      more scattered along theirs cities.
       <div id="basic_information_geo_data"></div>
 
       <h4>EMM news about covid-19 apps</h4>
       <p>
-        The plot chart below shows the number of the detected EMM-news by cross checking with the 
-        linked pages and in background the trend of the tweets. 
+        The plot chart below shows the number of the detected EMM-news by cross checking with the
+        linked pages and in background the trend of the tweets.
       </p>
 
       <div id="basic_information_emm_news">
@@ -191,23 +191,15 @@
       <h4>Sentiment analysis and Hashtags</h4>
       <p>
         As the two analysis return a quite of relevant results adedicated sections have been created.
-        The first section, 
+        The first section,
         a deep analysis about <a href="./index_contact_tracing_apps_sentiment_analysis.html">opinions</a>
-        and the second one an exploratory analysis using 
+        and the second one an exploratory analysis using
         <a href='/index_contact_tracing_apps_hashtags.html'>hashtags</a> and network analysis.
       </p>
 
-      
-
-      
-
-
     </div>
 
-
   </div>
-
-
 
 </body>
 
