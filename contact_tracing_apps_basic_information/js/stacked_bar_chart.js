@@ -2,7 +2,7 @@ make_stack_bar_char = function () {
 
     var parse_created_at = d3.timeParse("%Y-%m-%d");
 
-    var data = APPS_SERIES;
+    var data = JSON.parse(JSON.stringify(APPS_SERIES));
 
     data = data.map(function(e){
         e['date'] = parse_created_at(e['day']);
@@ -42,9 +42,6 @@ make_stack_bar_char = function () {
         (data);
 
     
-    // series = series.map(function(e){
-    //     return e
-    // });
 
     color = d3.scaleOrdinal()
         .domain(APPS_LABELS)
@@ -104,6 +101,7 @@ make_stack_bar_char = function () {
             .attr("cy", function(d,i){ return 47 + i*15}) // 100 is where the first dot appears. 25 is the distance between dots
             .attr("r", 3)
             .style("fill", function(d){ return color(d.key)})
+
 
 }
 

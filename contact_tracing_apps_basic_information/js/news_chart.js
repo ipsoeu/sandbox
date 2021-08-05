@@ -3,15 +3,20 @@ function make_plot_chart(svg_id, data) {
     
     var parse_created_at = d3.timeParse("%Y-%m-%d");
 
-
-    //var data = SA_SERIES;
-    
     data = data.map(function(e){
         e['date'] = parse_created_at(e['date']);
         return e;
     });
 
-    console.log(data)
+
+    var data_series = JSON.parse(JSON.stringify(APPS_SERIES));
+    
+    data_series = data_series.map(function (e) {
+        e['date'] = parse_created_at(e['day']);
+        return e;
+    });
+    
+
     const xValue = d => d.date;
     const xLabel = 'Time';
     
@@ -78,7 +83,7 @@ function make_plot_chart(svg_id, data) {
 
 
     xScale
-        .domain(d3.extent(data, xValue))
+        .domain(d3.extent(data_series, xValue))
         .range([0, innerWidth])
         .nice();
 
@@ -97,6 +102,20 @@ function make_plot_chart(svg_id, data) {
     xAxisG.call(xAxis);
     yAxisG.call(yAxis);
     
+
+
+    console.log(data_series)
+    g.append("g")
+            .attr('id', 'index_chart')
+            .attr('transform', 'translate(-10, -10)')
+            .selectAll("path")
+            .data(d3.stack().keys(['total'])(data_series))
+            .join("path")
+            .attr("fill", 'rgb(27, 89, 151, 0.2)')
+            .attr("d", area);
+            //.append("title")
+            //.text(({ key }) => key);
+
 }
 
 $(document).ready(function () {
