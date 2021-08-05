@@ -1,25 +1,25 @@
 
 function make_plot_chart(svg_id, data) {
-    
+
     var parse_created_at = d3.timeParse("%Y-%m-%d");
 
-    data = data.map(function(e){
+    data = data.map(function (e) {
         e['date'] = parse_created_at(e['date']);
         return e;
     });
 
 
     var data_series = JSON.parse(JSON.stringify(APPS_SERIES));
-    
+
     data_series = data_series.map(function (e) {
         e['date'] = parse_created_at(e['day']);
         return e;
     });
-    
+
 
     const xValue = d => d.date;
     const xLabel = 'Time';
-    
+
 
     const yLabel = 'Number of news';
 
@@ -55,31 +55,31 @@ function make_plot_chart(svg_id, data) {
         .text(yLabel);
 
     const xScale = d3.scaleTime();
-    
+
 
     const xAxis = d3.axisBottom()
         .scale(xScale)
-        // .tickPadding(15)
-        // .tickSize(-innerHeight);
+    // .tickPadding(15)
+    // .tickSize(-innerHeight);
 
-    
+
     y_scale = d3.scaleLinear()
-        .domain(d3.extent(d3.extent(data.map(d => d.value) )))
+        .domain(d3.extent(d3.extent(data.map(d => d.value))))
         .range([innerHeight, 0])
         .nice();
 
     y_scale_opacity = d3.scaleLinear()
         .domain(d3.extent(data.map(d => d.value)))
-        .range([0.3,1])
+        .range([0.3, 6])
         .nice();
 
 
     const yAxis = d3.axisLeft()
         .scale(y_scale);
-        
-        // .ticks(1, 's')
-        // .tickPadding(15)
-        // .tickSize(-innerWidth);
+
+    //         .ticks(1, 's')
+    //         .tickPadding(15)
+    //  .tickSize(-innerWidth);
 
 
     xScale
@@ -88,34 +88,31 @@ function make_plot_chart(svg_id, data) {
         .nice();
 
 
-    g.selectAll('circle').data(data)
-        .enter().append('circle')
+    g.append('g')
+        .selectAll('circle').data(data)
+        .enter()
+        .append('circle')
         .attr('cx', d => xScale(xValue(d)))
 
         .attr('cy', d => y_scale(d.value))
         .attr('fill-opacity', d => y_scale_opacity(d.value))
-        .attr('stroke', d => d.value > 0 ? 'rgb(27, 89, 151)' : 'rgb(182, 43, 52)')
-        .attr('fill', d => d.value > 0 ? 'rgb(27, 89, 151)' : 'rgb(182, 43, 52)')
-        .attr('r', 3);
+        .attr('stroke', 'rgb(27, 89, 151)')
+        .attr('fill', 'rgb(27, 89, 151)')
+        .attr('r', 2);
 
 
     xAxisG.call(xAxis);
     yAxisG.call(yAxis);
     
-
-
-    console.log(data_series)
     g.append("g")
-            .attr('id', 'index_chart')
-            .attr('transform', 'translate(-10, -10)')
-            .selectAll("path")
-            .data(d3.stack().keys(['total'])(data_series))
-            .join("path")
-            .attr("fill", 'rgb(27, 89, 151, 0.2)')
-            .attr("d", area);
-            //.append("title")
-            //.text(({ key }) => key);
-
+        .attr('id', 'index_chart')
+        .attr('transform', 'translate(-36, -10)')
+        .selectAll("path")
+        .data(d3.stack().keys(['total'])(data_series))
+        .join("path")
+        .attr("fill", 'rgb(27, 89, 151, 0.2)')
+        .attr("d", area);
+    
 }
 
 $(document).ready(function () {
