@@ -76,92 +76,72 @@
   <div id="wrap">
 
     <div class="container">
-      <h3>Basic information on Covid-19 mobile contact tracing apps from tweets</h3>
+      <h3>Basic information on COVID-19 mobile contact tracing apps from tweets</h3>
       <p>
-        An online search of the Twitter social media platform has been performed
-        since July, 2020 to June 2021.
 
-        To collect the tweets we used the official streaming Twitter APIs, in particular
-        we open a streaming of tweets for each contract tracing apps. The table below shows
-        the analyzed contact tracing apps and the search-keys used on the streaming.
-
+        We have been monitoring the Twitter social media platform for tweets relevant to 
+        European COVID-19 mobile contact tracing apps for a year (from July 2020 to June 2021). 
+        
+        We used the official streaming Twitter APIs to collect the relevant tweets, and we opened a 
+        tweet streaming for each contract tracing app. 
+        
+        The table below shows the analysed contact tracing apps and the search keys used for streaming. 
       </p>
-      <h5>Keywords used for streaming on Twitter about European contact tracing apps</h5>
+      <h5>Keywords used for streaming on Twitter about European COVID-19 mobile contact tracing apps</h5>
       <table id='app_list_streaming'></table>
 
       <p>
-        For every individual tweets, a set of predeterminated analysis were collected
-        in a real-time way combining the Tweepy library, Apache kafka and Elasticsearch.
-        We developed a system able process different streaming of tweets and collecting
-        place names, opinions, hashtags, entities and
-        a quite number of aggregations.
+
+        For every individual tweet, a set of predetermined analyses were conducted in a real-time way 
+        combining the Tweepy library, Apache kafka and Elasticsearch. 
+        
+        We developed a system capable of processing different streams of tweets and 
+        extracting place names, opinions, hashtags, entities and quite a number of aggregations. 
+
       </p>
-
-
 
       <h5>Relevant information extracted from the collected tweets</h5>
       <p>
-        The table below shows the number of tweets collected for each mobile contact tracing apps sorted by
-        number of tweets.
-        Moreover, the table reports the percentage of tweets with opinions, geo information and the number
-        of detected EMM news.
+        The table below shows the number of tweets collected for each mobile contact tracing app, 
+        ordered by the number of tweets. 
+        Moreover, the table reports the percentage of tweets with opinions, geographic (geo) 
+        information and the number of detected relevant EMM news. 
       </p>
       <p>
-        The opinions were extraced respecting the following languages English, French, German, Spanish and Italian
-        that they are the more frequent languages in the our dataset.
-        For the detection of the languages we used the standard engine evaluation language identification
-        of Twitter. In the <a href="./index_contact_tracing_apps_sentiment_analysis.html">Sentiment analysis</a> section
-        you can find more information and the our final
-        considerations.
+        The opinions were extracted for the languages English, French, German, Spanish and Italian, 
+        which are the more frequently used languages in the our dataset. 
+        
+        For the language detection we used the standard Twitter engine for language identification and evaluation. 
+        In the <a href="./index_contact_tracing_apps_sentiment_analysis.html">Sentiment analysis</a> section 
+        you can find more information and our relevant observations. 
+
       </p>
       <p>
-        Tweets that contained any kind of geo information were identified using the geoparser library Mordecai.
-        The table reports the percentage of tweets which contains a place name in the tweet text or in the user profile.
+        Tweets that contained any kind of geo information were identified using the geoparser library Mordecai. 
+        The table shows the percentage of tweets which contain a place name in the tweet text or in the user profile.
       </p>
 
       <p>
-        A cross checking was performed between the dedicated <a
-          href="https://emm.newsbrief.eu/NewsBrief/filteredition/en/COVID-19-Apps.html" target="_parent">EMM channel</a>
-        for Contact tracing apps and the tweets-linked pages in order to detect meaningful tweets.
+        A cross checking was performed between the dedicated 
+        <a href="https://emm.newsbrief.eu/NewsBrief/filteredition/en/COVID-19-Apps.html" target="_parent">EMM channel</a>
+        for Contact tracing apps and the tweet-linked pages in order to detect meaningful tweets.
       </p>
 
       <p>
-        Finally, we would to consider the hashtags that they are a very good source of information.
-        In the section <a href='/index_contact_tracing_apps_hashtags.html'>Hashtags</a> there are more analisyses
-        regarding hashtags with related
-        results and considerations.
+        Finally, we considered the hashtags that are a very good source of information. 
+        In the section <a href='/index_contact_tracing_apps_hashtags.html'>Hashtags</a> 
+        there are more analyses regarding hashtags with related results and observations. 
       </p>
 
       <table id="app_list"></table>
 
       <h4>Covid apps and temporal evolution</h4>
-      <!--
-      <div class="row">
-        <div class="col-sm">
-          <div id="basic_information_pie_chart">
-            <svg id="basic_information_pie_chart_svg" width="400" height="400"></svg>
-          </div>
-        </div>
-        <div class="col-sm">
-          other visualization about geo (one visualization stacked barchar),
-          maps 
-          
-          geo opinions and news count (combine the vis) try hierarchy opinion geo news
 
-          relation tweet app 1 to 1
-
-          high priority for basic information
-        </div>
-
-      </div>
-      -->
       <p>
-        The stacked area chart below shows the user activities respecting the main
-        mobile contact tracing apps. We can denote a high activity during the second wave
-        bettween the October and November months.
-        Futhermore, the chart shows some peak-area with a temporal extension of around five days that
-        they represent some particular activites. For example a software release, news and any kind
-        of relevant events.
+        The stacked area chart below shows the user activities about the main European COVID-19 mobile contact tracing apps. 
+        We can notice a high activity during the second wave of the pandemic between the October and November months. 
+        Furthermore, the chart shows some peak-areas with a temporal extension of around five days 
+        that usually represent relevant activities, like, for example software releases, news and any kind of relevant events. 
       </p>
 
 
@@ -170,18 +150,19 @@
       </div>
 
       <h4>Geolocalized Tweets</h4>
-      As already anticipated in the table XX above, geoinformation has been extracted from the tweet-text
-      and user profile.
-      The map above shows the density of the geo-tweets around the Europe, considering only the place names
-      extracted from the tweet-text. The Europe capitals, as Paris, London, Dublin and Madrid are the
-      main area interested by the geo-tweets. In Italy and Germany, the density of the geo-tweets is
-      more scattered along theirs cities.
+      As already anticipated in the table about COVID-19 apps and temporal evolution, 
+      geoinformation has been extracted from the tweet texts and the user profiles. 
+      The map below shows the density of the geolocalised tweets (geo-tweets) around Europe, 
+      considering only the place names extracted from the tweet text. 
+      Some European capitals, such as Paris, London, Dublin and Madrid are the main areas of interest 
+      detected by the geo-tweets in their countries. 
+      In Italy and Germany, though, the geo-tweet density is more scattered along theirs cities.
       <div id="basic_information_geo_data"></div>
 
       <h4>EMM news about covid-19 apps</h4>
       <p>
-        The plot chart below shows the number of the detected EMM-news by cross checking with the
-        linked pages and in background the trend of the tweets.
+        The plot chart below shows the number of the relevant 
+        EMM-news detected by cross checking with the linked pages, and the background shows the trend of the tweets. 
       </p>
 
       <div id="basic_information_emm_news">
@@ -190,11 +171,9 @@
 
       <h4>Sentiment analysis and Hashtags</h4>
       <p>
-        As the two analysis return a quite of relevant results a dedicated sections have been created.
-        The first section,
-        a deep analysis about <a href="./index_contact_tracing_apps_sentiment_analysis.html">opinions</a>
-        and the second one an exploratory analysis using
-        <a href='/index_contact_tracing_apps_hashtags.html'>hashtags</a> and network analysis.
+        As the two analyses return related results, dedicated sections have been created. 
+        The first section includes a deep analysis about  <a href="./index_contact_tracing_apps_sentiment_analysis.html">opinions</a> 
+        and the second one an exploratory analysis using <a href='/index_contact_tracing_apps_hashtags.html'>hashtags</a> and network analysis. 
       </p>
 
     </div>
