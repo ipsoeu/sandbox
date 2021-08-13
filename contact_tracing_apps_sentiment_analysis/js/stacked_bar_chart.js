@@ -5,8 +5,8 @@ $(document).ready(function () {
     data = data.map(function(e){
         var record = {
             'app': e[0],
-            'positive': e[2],
-            'negative': e[3],
+            'positive': e[3],
+            'negative': e[2],
             'neutral': e[1]
         }
         return record;
