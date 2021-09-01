@@ -5,12 +5,12 @@ function make_plot_chart() {
 
 
     var data = SA_SERIES;
+
     data = data.map(function(e){
         e['date'] = parse_created_at(e['date']);
         return e;
     });
 
-    console.log(data)
     const xValue = d => d.date;
     const xLabel = 'Time';
     

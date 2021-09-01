@@ -1,13 +1,14 @@
 $(document).ready(function () {
 
-    var data = JSON.parse(JSON.stringify(SA_DATA_TABLE_COUNT));
+    var data = JSON.parse(JSON.stringify(SA_BY_APP));
+    data = data.slice(0, 7)
 
-    data = data.map(function(e){
+    data = data.map(function (e) {
         var record = {
-            'app': e[0],
-            'positive': e[3],
-            'negative': e[2],
-            'neutral': e[1]
+            'app': `(${e.app_name.slice(0, 2).toUpperCase()}) ${e.app_name.slice(3).replace('_', ' ')}`,
+            'positive': e['positive_tweets'],
+            'negative': e['negative_tweets'],
+            'neutral': e['neutral_tweets']
         }
         return record;
     })
@@ -16,7 +17,7 @@ $(document).ready(function () {
 
 });
 
-function make_stacked_bar_chart(data){
+function make_stacked_bar_chart(data) {
 
     var svg = d3.select("#chart_1"),
         margin = { top: 20, right: 50, bottom: 30, left: 130 },
@@ -36,7 +37,7 @@ function make_stacked_bar_chart(data){
         .range(['rgb(27, 89, 151)', "#D90429", "#ced4da"]);
 
     var keys = ['positive', 'negative', 'neutral'];
- 
+
 
     //var data = SA_TABLE;
 
@@ -99,5 +100,5 @@ function make_stacked_bar_chart(data){
         .attr("y", 9.5)
         .attr("dy", "0.32em")
         .text(function (d) { return d; });
- 
+
 }

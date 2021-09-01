@@ -1,5 +1,5 @@
 function make_sunburst_chart(chart_id, data) {
-    console.log(data)
+    
     data = data.slice(0, 6)
 
     function computeTextRotation(d) {
@@ -15,13 +15,13 @@ function make_sunburst_chart(chart_id, data) {
     .range(d3.schemeCategory10);
 
     var partitions = data.map(function(d, index){
-        positive = (d[3]/(d[3] + d[4]) * 100).toFixed()
+        positive = (d['positive_tweets']/(d['positive_tweets'] + d['negative_tweets']) * 100).toFixed()
         return {
-            name: d[0].slice(0,2).toUpperCase(),
+            name: d['app_name'].slice(0,2).toUpperCase(),
             color: color(d[0]),
             children:[
-                {name: positive + ' %', size: d[3], color: 'rgb(27, 89, 151, 0.6)'},
-                {name: (100 - positive) + ' %', size: d[4], color: 'rgb(196,43,50, 0.6)'},
+                {name: positive + ' %', size: d['positive_tweets'], color: 'rgb(27, 89, 151, 0.6)'},
+                {name: (100 - positive) + ' %', size: d['negative_tweets'], color: 'rgb(196,43,50, 0.6)'},
             ]
         }
     })
@@ -100,7 +100,7 @@ function make_sunburst_chart(chart_id, data) {
           .attr("y", function(d,i){ return -280 + i*25})
           .style("fill", function(d){ return color(d[0])})
           .text(function(d){
-              return d[0].slice(3).replaceAll('_', ' ')
+              return d['app_name'].slice(3).replaceAll('_', ' ')
             })
           .attr("text-anchor", "left")
           .style("alignment-baseline", "middle")
@@ -116,8 +116,9 @@ function make_sunburst_chart(chart_id, data) {
 }
 
 $(document).ready(function () {
-
-    make_sunburst_chart('aa', SA_DATA)
+    
+    var data = JSON.parse(JSON.stringify(SA_BY_APP));
+    make_sunburst_chart('aa', data)
     
 });
 
