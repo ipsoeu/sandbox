@@ -90,7 +90,7 @@
         <div>
             The following analysis was performed using around 600K tweets
             collected from July 2020 to July 2021.
-            
+
             In order to extract opinions and sentiments several pretrained BERT models
             have been used for each main langueges (English, Italian, French, German and Spanish).
 
@@ -102,6 +102,19 @@
         <div style="margin-top: 10px;">
             <table id="sa_table"></table>
         </div>
+        <div>
+            <div id="chart_1_content">
+                <svg id="chart_1" width="1300" height="550"></svg>
+            </div>
+
+            <p>
+                The stacked barchar represents the tweets collected about
+                the european contact tracing apps and classified as neutral, positive and negative.
+                
+            </p>
+
+        </div>
+
         <h3>Detected languages</h3>
 
         <div>
@@ -115,17 +128,7 @@
                 <li><a href="https://huggingface.co/finiteautomata/beto-sentiment-analysis">Spanish - model trained with ~5k tweets</a></li>
             </ul>
         </div>
-        <div>
-            <div id="chart_1_content">
-                <svg id="chart_1" width="1300" height="550"></svg>
-            </div>
-
-            <p>
-                The stacked barchar represents the tweets collected about
-                the european contact tracing apps and classified as neutral, positive and negative.
-            </p>
-
-        </div>
+       
         
         <p><!--
           We extracted the opinions for each contact tracing apps from the tweet-text. The engine classifier
