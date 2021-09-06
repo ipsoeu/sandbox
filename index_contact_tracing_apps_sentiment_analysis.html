@@ -39,7 +39,7 @@
     <script src="contact_tracing_apps_sentiment_analysis/js/plot_chart.js"></script>
     <script src="contact_tracing_apps_sentiment_analysis/js/geo_chart.js"></script>
     <script src="contact_tracing_apps_sentiment_analysis/js/sa_sunburst.js"></script>
-
+    <script src="contact_tracing_apps_sentiment_analysis/js/pie_chart.js"></script>
 
     <style>
         div.tooltip {
@@ -130,6 +130,11 @@
         </div>
 
         <h3>Detected languages</h3>
+        
+        <div id="chart_languages_content">
+            <svg id="chart_languages" width="500" height="500"></svg>
+        </div>
+
         [add chart for languages ]
         <div>
             For each language we used a pretrained BERT model where the involved training set was regarding
