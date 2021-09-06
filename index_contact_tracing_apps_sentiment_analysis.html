@@ -26,26 +26,20 @@
     <script src="//unpkg.com/d3-geo-projection"></script>
     <script src='//unpkg.com/simple-statistics'></script>
 
+    <!-- Data -->
+    <script src="contact_tracing_apps_sentiment_analysis/data/sa_general_info.js"></script>
     <script src="contact_tracing_apps_sentiment_analysis/data/data_table.js"></script>
     <script src="contact_tracing_apps_sentiment_analysis/data/geo_data.js"></script>
     <script src="contact_tracing_apps_sentiment_analysis/data/plot_timeline_charts.js"></script>
     <script src="contact_tracing_apps_basic_information/data/sa.js"></script>
 
+    <!-- Generation charts-->
     <script src="contact_tracing_apps_sentiment_analysis/js/main.js"></script>
     <script src="contact_tracing_apps_sentiment_analysis/js/stacked_bar_chart.js"></script>
     <script src="contact_tracing_apps_sentiment_analysis/js/plot_chart.js"></script>
     <script src="contact_tracing_apps_sentiment_analysis/js/geo_chart.js"></script>
     <script src="contact_tracing_apps_sentiment_analysis/js/sa_sunburst.js"></script>
-    <!--
-    <script src="contact_tracing_apps_dashboard/data.js"></script>
-    <script src="contact_tracing_apps_dashboard/geo_data.js"></script>
-    <script src="contact_tracing_apps_dashboard/chart_1.js"></script>
-    <script src="contact_tracing_apps_dashboard/chart_2.js"></script>
-    <script src="contact_tracing_apps_dashboard/3_geo_chart.js"></script>
-    <script src="contact_tracing_apps_dashboard/6_events.js"></script>
 
-    <script src="contact_tracing_apps_dashboard/events_data.js"></script>
-    <script src="contact_tracing_apps_dashboard/events.js"></script>-->
 
     <style>
         div.tooltip {
@@ -88,16 +82,34 @@
         <h3>Sentiment analysis about Contact tracing apps</h3>
         
         <div>
-            The following analysis was performed using around 600K tweets
-            collected from July 2020 to July 2021.
+            <p>
+                The extraction of opinions was performed analysing <span id="total_tweets"></span> tweets
+                collected from July 2020 to July 2021 as already mentioned in the 
+                <a href="./index_contact_tracing_apps_basic_information.html">basic information section</a>.
+            </p>
+            
+            <p>
+                In order to extract negative, positive and neutral sentiments different pretrained BERT models
+                have been used respecting the five main languages extracted using the standard Twitter engine 
+                for language identification.
+            </p>
 
-            In order to extract opinions and sentiments five pretrained BERT models
-            have been used respecting the main langueges detected (English, Italian, French, German and Spanish).
+            <p>
+                In details, the <span id="neutral_tweets_relative"></span>% of tweets are classified without
+                opinions (<span id="neutral_tweets"></span> tweets) and labeled as <em>Neutral tweets</em>.
 
-            Around 250k tweets not contain any sentiments or opinions and around 2% of
-            unclassified tweets. [motivations]
+                The <span id="no_classified_tweets_relative"></span>% of tweets are excluded from this analysis
+                becouse 1) the language detected is not present in the main list of languages of our dataset 
+                (<span id="others_tweet"></span> tweets) or
+                2) the Twitter engine for language classification is not able to detect the language 
+                (<span id="undefined_tweet"></span> tweets).
 
-            The tweets with opinions are around three-quarters negative (253K )and one-quarter positive (78k).
+                The tweets with opinions are the <spam id="with_opinions"></spam>% where around three-quarters are negative teewts 
+                (<spam id="negative_tweets"></spam> tweets) and one-quarter positive tweets (<spam id="positve_tweets"></spam> tweets).
+            </p>
+            
+
+            
         </div>
         <div style="margin-top: 10px;">
             <table id="sa_table"></table>
