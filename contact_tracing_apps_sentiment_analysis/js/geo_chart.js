@@ -111,7 +111,7 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
         .geography(geo)
         .projection(projection)
         .pathGenerator(geoPath)
-        .hexRadius(10)
+        .hexRadius(20)
         .edgePrecision(1)
         .gridExtend(2)
         .geoKeys(['lng', 'lat']);
@@ -136,7 +136,7 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
         .append('g')
         .attr('id', 'hexes')
         .attr('clip-path', 'url(#clip-it)');
-
+    
     // Draw.
     gHex
         .selectAll('.hex')
@@ -149,7 +149,6 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
         .style('fill', d => colourScale(d.datapointsWt))
         .style('stroke', '#999')
         .style('stroke-opacity', 0.4)
-        
         .on('click', function (event, data) { 
 
             var hashtags = [];
@@ -161,7 +160,31 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
                 return element.place_name;
             });
 
-        });
+        })
+        const bar_chars = svg
+            .append('g')
+            .attr('id', 'bar_chars');
+            
+
+        bar_chars
+        .selectAll('.positive_barchar')
+        .data(hex.grid.layout)
+        .enter()
+        .append('path')
+        
+        .attr('d', d3.line()([[0, 0], [0, -20]]))
+        .attr('transform', d => `translate(${d.x}, ${d.y})`)
+        //.attr('test', function(d){console.log(d)})
+        .attr("x", 100 )
+        .attr("y", 200 )
+        .attr("stroke", function(data){
+            console.log(data);
+            return data.datapoints > 0 ? 'rgb(27, 89, 151)' : 'transparent'
+        })
+        .attr("stroke-width", 10);
+        
+        
+
 
     // Build and mount legend.
     const legendKey = svg
@@ -196,8 +219,8 @@ const negative_range_colors = ['#FFF', '#f9c74f', '#f8961e', '#f3722c', '#f94144
 
 Promise.all([geoData]).then(response => {
     let [geo_data] = response;
-    make_geo_chart('#chart_4', geo_data, GEO_POSITIVE_TWEETS, 'Positive Tweets', positive_range_colors);
-    make_geo_chart('#chart_5', geo_data, GEO_NEGATIVE_TWEETS, 'Negative Tweets', negative_range_colors);
+    make_geo_chart('#chart_4', geo_data, GEO_SA_TWEETS, 'Positive Tweets', positive_range_colors);
+    //make_geo_chart('#chart_5', geo_data, GEO_NEGATIVE_TWEETS, 'Negative Tweets', negative_range_colors);
 });
 
 //https://observablehq.com/@larsvers/d3-hexgrid-examples
