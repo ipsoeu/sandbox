@@ -81,18 +81,43 @@
     <div id="wrap">
         <h3>Sentiment analysis about Contact tracing apps</h3>
         
+        <h4>Introduction</h4>
+        
         <div>
             <p>
                 The extraction of opinions was performed analysing <span id="total_tweets"></span> tweets
                 collected from July 2020 to July 2021 as already mentioned in the 
                 <a href="./index_contact_tracing_apps_basic_information.html">basic information section</a>.
             </p>
-            
+
+            <p>
+                The sentiment analysis was performed on the following languages: English, French, German, Spanish and Italian.
+                The pie chart below shows the distribution of the languages on the datasets. As expected the main languages is 
+                English,followed by the Italian language and German language. The Spanish and French language have approximately
+                the same number of tweets. Also, the pie chart represents the unclassifed tweets, where the standard Twitter engine 
+                was not able to classify the text inside the tweet. Finally, Others languages which is a small percentage 
+                of different laguages not inclided in the our study.
+            </p>
+            <div id="chart_languages_content">
+                <svg id="chart_languages" width="400" height="400"></svg>
+            </div>
+
+            <br/><br/>
             <p>
                 In order to extract negative, positive and neutral sentiments different pretrained BERT models
-                have been used respecting the five main languages extracted using the standard Twitter engine 
-                for language identification.
+                have been used respecting the five main languages considered in the datasets. Also, considering that
+                the tweet-texts are cleaned by removing no alphanumeric character and hyperink.
+                Below the list of the pre-trained bert model and the training set used to learn the classifier.
             </p>
+
+            <ul>
+                <li><a href="https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment">English - model trained on ~58M tweets</a></li>
+                <li><a href="https://github.com/TheophileBlard/french-sentiment-analysis-with-bert">French - model trained with 100k positive tweets and 100k negative tweets</a></li>
+                <li><a href="https://huggingface.co/oliverguhr/german-sentiment-bert#how-to-use">German - the training data contains texts dorm different domains like Twitter, facebook and reviews</a></li>
+                <li><a href="https://huggingface.co/neuraly/bert-base-italian-cased-sentiment">Italian - model trained with 45k tweets</a></li>
+                <li><a href="https://huggingface.co/finiteautomata/beto-sentiment-analysis">Spanish - model trained with ~5k tweets</a></li>
+            </ul>
+        
 
             <p>
                 In details, the <span id="neutral_tweets_relative"></span>% of tweets are classified without
@@ -111,6 +136,17 @@
 
             
         </div>
+        <p>
+            The below table shows the clasified tweets by sentiment splitted by mobile covid apps.
+            On average, the neutral tweets are the half of the total tweets, except the app Immuni
+            with the 65% and the StopCovid app with the 14%. 
+        </p>
+
+        <p>
+            Except for the erouska and smittestopp mobile apps, the number of positive
+            tweets is less respect the negative teewts.  
+        </p>
+
         <div style="margin-top: 10px;">
             <table id="sa_table"></table>
         </div>
@@ -127,37 +163,16 @@
 
             </p>
 
-            <p>
-                The below table shows the clasified tweets by sentiment splitted by mobile covid apps.
-                On average, the neutral tweets are the half of the total tweets, except the app Immuni
-                with the 65% and the StopCovid app with the 14%. 
-            </p>
-
-            <p>
-                Except for the erouska and smittestopp mobile apps, the number of positive
-                tweets is less respect the negative teewts.  
-            </p>
+           
 
         </div>
 
-        <h3>Detected languages</h3>
+   
         
-        <div id="chart_languages_content">
-            <svg id="chart_languages" width="500" height="500"></svg>
-        </div>
+        
 
-        [add chart for languages ]
-        <div>
-            For each language we used a pretrained BERT model where the involved training set was regarding
-            social media and reviews, following the details:
-            <ul>
-                <li><a href="https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment">English - model trained on ~58M tweets</a></li>
-                <li><a href="https://github.com/TheophileBlard/french-sentiment-analysis-with-bert">French - model trained with 100k positive tweets and 100k negative tweets</a></li>
-                <li><a href="https://huggingface.co/oliverguhr/german-sentiment-bert#how-to-use">German - the training data contains texts dorm different domains like Twitter, facebook and reviews</a></li>
-                <li><a href="https://huggingface.co/neuraly/bert-base-italian-cased-sentiment">Italian - model trained with 45k tweets</a></li>
-                <li><a href="https://huggingface.co/finiteautomata/beto-sentiment-analysis">Spanish - model trained with ~5k tweets</a></li>
-            </ul>
-        </div>
+        
+       
        
         
         <p><!--
