@@ -28,6 +28,9 @@ $(document).ready(function () {
             { title: "Neutral tweets (%)", data: 'neutral_tweets_relative' },
             { title: "Positive tweets (%)", data: 'positive_tweets_relative' },
             { title: "Negative tweets (%)", data: 'negative_tweets_relative' },
+            { title: "Positve/Negative tweets (%)", data: function(e){
+                return (e.positive_tweets_relative/e.negative_tweets_relative).toFixed(2);
+            } },
             { title: "Unclassified tweets (%)", data: 'unclassified_tweets_relative' },
         ],
         order: [[2, "desc"]],
