@@ -215,15 +215,18 @@
                 from the tweet-text. Thus, we can combine the geographic and sentiment analysis
                 by filtering the dataset and obtain only geo-sentiment tweets. We have detected
                 <span id="geo_sentiment_tweets"></span> tweets where the tweet-text contains almost one
-                place name and an opinion.
+                place name and an opinion. We have considered only the geo-sentiment tweets regarding the 
+                Europe shich are <span id="europe_geo_sentiment_tweets"></span>.
             </p>
             <p>
 
+                The following maps show the geographical distribution of geo-sentiment tweets. For each hex-grid
+                the intensity of the background color represents the number of tweets detected in its area.
+                Also, a double vertical bar chart is displayed, where the blue bar represents the positive tweets
+                and the red the negative tweets.
+                The main areas with a hight activities corresponding to the European capitals: Paris, London, Dublin
+                and Madrid. For the countries Germany and Italy the tweets are distrubuite more homogeneously.
 
-                The following maps show the geographical distribution of geo-sentiment tweets
-                <!---The datasets created is composed by the intersection of the tweets with
-                opinions and place names. The places names have been extracted using nlp techniques
-                plus the database geonames for the translation from extracted place names to coordinates.-->
             </p>
             <div id="chart_4_content">
                 <svg id="chart_4" width="1300" height="1200"></svg>

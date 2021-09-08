@@ -184,8 +184,7 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
 
             coordinate_y = (positive_tweets.length / (positive_tweets.length + negative_tweets.length)) * 0.5 * 100 | 0;
 
-            console.log(positive_tweets.length, negative_tweets.length, coordinate_y);
-
+           
             return d3.line()([[0, 0], [0, -coordinate_y]]);
         })
         .attr('transform', d => `translate(${d.x}, ${d.y})`)
@@ -216,7 +215,7 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
 
             coordinate_y = (negative_tweets.length / (positive_tweets.length + negative_tweets.length)) * 0.5 * 100 | 0;
 
-            console.log(positive_tweets.length, negative_tweets.length, coordinate_y);
+           
 
             return d3.line()([[5, 0], [5, -coordinate_y]]);
         })
@@ -227,6 +226,14 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
             return data.datapoints > 0 ? '#D90429' : 'transparent'
         })
         .attr("stroke-width", 5);
+    
+    
+    
+    var european_tweets = 0;
+    hex.grid.layout.forEach(function(element){
+        european_tweets += element.length;
+    });
+    $('#europe_geo_sentiment_tweets').append(european_tweets);
 
     // Build and mount legend.
     const legendKey = svg
