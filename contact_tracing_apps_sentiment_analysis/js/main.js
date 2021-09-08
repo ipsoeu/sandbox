@@ -17,6 +17,10 @@ $(document).ready(function () {
     $('#positive_tweets').append(SA_GENERAL_INFO['positive_tweets']);
 
     $('#with_opinions').append(SA_GENERAL_INFO['positive_tweets_relative'] + SA_GENERAL_INFO['negative_tweets_relative'])
+    
+    $('#geo_sentiment_tweets').append(GEO_SA_TWEETS_COUNT)
+    
+    
     var data = JSON.parse(JSON.stringify(SA_BY_APP));
     $('#sa_table').DataTable({
         data: data,

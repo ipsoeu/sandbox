@@ -33,7 +33,7 @@
     <script src="contact_tracing_apps_sentiment_analysis/data/plot_timeline_charts.js"></script>
     <script src="contact_tracing_apps_sentiment_analysis/data/geo_sa_data.js"></script>
     <script src="contact_tracing_apps_basic_information/data/sa.js"></script>
-    
+
 
     <!-- Generation charts-->
     <script src="contact_tracing_apps_sentiment_analysis/js/main.js"></script>
@@ -82,29 +82,34 @@
 <body>
     <div id="wrap">
         <h3>Sentiment analysis about Contact tracing apps</h3>
-        
+
         <h4>Introduction</h4>
 
         <div>
             <p>
                 The extraction of opinions was performed analysing <span id="total_tweets"></span> tweets
-                collected from July 2020 to July 2021 as already mentioned in the 
+                collected from July 2020 to July 2021 as already mentioned in the
                 <a href="./index_contact_tracing_apps_basic_information.html">basic information section</a>.
             </p>
 
             <p>
-                The sentiment analysis was performed on the following languages: English, French, German, Spanish and Italian.
-                The pie chart below shows the distribution of the languages on the datasets. As expected the main languages is 
-                English,followed by the Italian language and German language. The Spanish and French language have approximately
-                the same number of tweets. Also, the pie chart represents the unclassifed tweets, where the standard Twitter engine 
-                was not able to classify the text inside the tweet. Finally, Others languages which is a small percentage 
+                The sentiment analysis was performed on the following languages: English, French, German, Spanish and
+                Italian.
+                The pie chart below shows the distribution of the languages on the datasets. As expected the main
+                languages is
+                English,followed by the Italian language and German language. The Spanish and French language have
+                approximately
+                the same number of tweets. Also, the pie chart represents the unclassifed tweets, where the standard
+                Twitter engine
+                was not able to classify the text inside the tweet. Finally, Others languages which is a small
+                percentage
                 of different laguages not inclided in the our study.
             </p>
             <div id="chart_languages_content">
                 <svg id="chart_languages" width="400" height="400"></svg>
             </div>
 
-            <br/><br/>
+            <br /><br />
             <p>
                 In order to extract negative, positive and neutral sentiments different pretrained BERT models
                 have been used respecting the five main languages considered in the datasets. Also, considering that
@@ -113,49 +118,56 @@
             </p>
 
             <ul>
-                <li><a href="https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment">English - model trained on ~58M tweets</a></li>
-                <li><a href="https://github.com/TheophileBlard/french-sentiment-analysis-with-bert">French - model trained with 100k positive tweets and 100k negative tweets</a></li>
-                <li><a href="https://huggingface.co/oliverguhr/german-sentiment-bert#how-to-use">German - the training data contains texts dorm different domains like Twitter, facebook and reviews</a></li>
-                <li><a href="https://huggingface.co/neuraly/bert-base-italian-cased-sentiment">Italian - model trained with 45k tweets</a></li>
-                <li><a href="https://huggingface.co/finiteautomata/beto-sentiment-analysis">Spanish - model trained with ~5k tweets</a></li>
+                <li><a href="https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment">English - model trained
+                        on ~58M tweets</a></li>
+                <li><a href="https://github.com/TheophileBlard/french-sentiment-analysis-with-bert">French - model
+                        trained with 100k positive tweets and 100k negative tweets</a></li>
+                <li><a href="https://huggingface.co/oliverguhr/german-sentiment-bert#how-to-use">German - the training
+                        data contains texts dorm different domains like Twitter, facebook and reviews</a></li>
+                <li><a href="https://huggingface.co/neuraly/bert-base-italian-cased-sentiment">Italian - model trained
+                        with 45k tweets</a></li>
+                <li><a href="https://huggingface.co/finiteautomata/beto-sentiment-analysis">Spanish - model trained with
+                        ~5k tweets</a></li>
             </ul>
-        
+
 
             <p>
                 In details, the <span id="neutral_tweets_relative"></span>% of tweets are classified without
                 opinions (<span id="neutral_tweets"></span> tweets) and labeled as <em>Neutral tweets</em>.
 
                 The <span id="no_classified_tweets_relative"></span>% of tweets are excluded from this analysis
-                becouse 1) the language detected is not present in the main list of languages of our dataset 
+                becouse 1) the language detected is not present in the main list of languages of our dataset
                 (<span id="others_tweet"></span> tweets) or
-                2) the Twitter engine for language classification is not able to detect the language 
+                2) the Twitter engine for language classification is not able to detect the language
                 (<span id="undefined_tweet"></span> tweets).
 
-                The tweets with opinions are the <spam id="with_opinions"></spam>% where around three-quarters are negative teewts 
-                (<spam id="negative_tweets"></spam> tweets) and one-quarter positive tweets (<spam id="positve_tweets"></spam> tweets).
+                The tweets with opinions are the <spam id="with_opinions"></spam>% where around three-quarters are
+                negative teewts
+                (<spam id="negative_tweets"></spam> tweets) and one-quarter positive tweets (<spam id="positve_tweets">
+                </spam> tweets).
             </p>
-            
 
-            
+
+
         </div>
         <p>
             The below table shows the clasified tweets by sentiment splitted by mobile covid apps.
             On average, the neutral tweets are the half of the total tweets, except the app Immuni
-            with the 65% and the StopCovid app with the 14%. 
+            with the 65% and the StopCovid app with the 14%.
         </p>
 
         <p>
             Except for the Erouska and Smittestopp mobile apps, the number of positive
-            tweets is less respect the negative teewts. Futhermore, the percentage of 
+            tweets is less respect the negative teewts. Futhermore, the percentage of
             positive tweets not exeed the 20% except the French mobile apps where
             the positive teewts is to 37%.
         </p>
 
         <p>
-            Negative tweets are predominant except the aforementioned mobile apps 
-            Erouska and Smittestopp. 
+            Negative tweets are predominant except the aforementioned mobile apps
+            Erouska and Smittestopp.
             and for some mobile apps the ratio beetween positive and negative tweet is minor of 0.5
-            indicating a lot of negative opinions.  
+            indicating a lot of negative opinions.
         </p>
 
         <div style="margin-top: 10px;">
@@ -174,54 +186,48 @@
 
             </p>
 
-           
-
         </div>
 
-   
-        
-        
 
-        
-       
-       
-        
-        <p><!--
-          We extracted the opinions for each contact tracing apps from the tweet-text. The engine classifier
-        is able to extract opinion from the English, French, German, Spanish and Italian languages.
-        Futhermore, we can have one or more languages for a mobile contact tracing app, for example the Immuni
-        app can have Italian and English languages.!-->
-        
-  
-      </p>
-        
-        
 
         <div id="basic_information_sa_starbust">
             <h4>Geographical distribution and temporal evolution of sentiments and opinions</h4>
-            
-        <p>The hierarchical chart below shows how the twitter users think in general about the covid-19 apps.
-            In general the users are pessimistc except the French and English people.</p>
-            [colors for mobile app]
-          <svg id="basic_information_sa_starbust_svg" width="800" height="500"></svg>
-        </div>
 
-        <div>
-            
             <p>
-                The following maps show the geographical distribution of the positive and negative
-                tweets. The datasets created is composed by the intersection of the tweets with
+
+
+                The scope of this paragraph is to analyze the sentiments and opinions combining
+                geographical and temporal information. We start with a simple consideration which each
+                mobile apps refers to specific country. Indeed, the NHS covid-19 app for UK, Immuni for Italy
+                and in this way for the rest of mobile apps. However, we have detected a
+                subset of tweets which mention two or more mobile apps but the size of this dataset is very low
+                respect the all dataset. Consequently, we developed the following hierarchical chart
+                which shows how the twitter users think in general about the covid-19 apps splitted by
+                country.The hierarchical chart shows that in general the users are pessimistc except
+                for the countries UK and France.</p>
+            </p>
+            <svg id="basic_information_sa_starbust_svg" width="800" height="500"></svg>
+
+
+            <p>
+
+                As already mentioned in the basic information section, place names has been extracted
+                from the tweet-text. Thus, we can combine the geographic and sentiment analysis
+                by filtering the dataset and obtain only geo-sentiment tweets. We have detected
+                <span id="geo_sentiment_tweets"></span> tweets where the tweet-text contains almost one
+                place name and an opinion.
+            </p>
+            <p>
+
+
+                The following maps show the geographical distribution of geo-sentiment tweets
+                <!---The datasets created is composed by the intersection of the tweets with
                 opinions and place names. The places names have been extracted using nlp techniques
-                plus the database geonames for the translation from extracted place names to coordinates.
+                plus the database geonames for the translation from extracted place names to coordinates.-->
             </p>
             <div id="chart_4_content">
                 <svg id="chart_4" width="1300" height="1200"></svg>
             </div>
-
-            <div id="chart_5_content">
-                <svg id="chart_5" width="1300" height="1300"></svg>
-            </div>
-
 
         </div>
 
