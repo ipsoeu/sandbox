@@ -2,7 +2,7 @@ function Counter(list) {
     var count = {};
     list.forEach(val => count[val] = (count[val] || 0) + 1);
     return Object.fromEntries(
-        Object.entries(count).sort(([,a],[,b]) => b-a)
+        Object.entries(count).sort(([, a], [, b]) => b - a)
     );
 }
 
@@ -19,7 +19,7 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
     function buildKey(legendKey, max, scale, legendText) {
         const x = d3.scaleLinear()
             .domain([1, max])
-            .range([0, 120]);
+            .range([0, 350]); //define widht of the legend
 
         const xAxis = d3.axisBottom(x)
             .tickSize(13)
@@ -111,33 +111,33 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
         .geography(geo)
         .projection(projection)
         .pathGenerator(geoPath)
-        .hexRadius(20)
+        .hexRadius(100, 'km')
         .edgePrecision(1)
-        .gridExtend(2)
+        .gridExtend(200)
         .geoKeys(['lng', 'lat']);
 
     // Hexgrid instance.
-    const hex = hexgrid(userData, ['hashtags', 'place_name']);
-    
+    const hex = hexgrid(userData, ['hashtags', 'place_name', 'sa']);
+
     // Calculate Ckmeans based colour scale.
     const counts = hex.grid.layout
         .map(el => el.datapointsWt)
         .filter(el => el > 0);
-    const ckBreaks = ss.ckmeans(counts, 4).map(clusters => clusters[0]);
+
+    const ckBreaks = ss.ckmeans(counts, range_colors.length).map(clusters => clusters[0]);
 
     const colourScale = d3
         .scaleThreshold()
         .domain(ckBreaks)
-        //.range(['#fff', '#e7e7e7', '#aaa', '#777', 'red']);
         .range(range_colors);
-    
+
     // Clip.
     const gHex = svg
         .append('g')
         .attr('id', 'hexes')
         .attr('clip-path', 'url(#clip-it)');
-    
-    // Draw.
+
+
     gHex
         .selectAll('.hex')
         .data(hex.grid.layout)
@@ -149,53 +149,95 @@ function make_geo_chart(chart_id, geo, userData, title, range_colors) {
         .style('fill', d => colourScale(d.datapointsWt))
         .style('stroke', '#999')
         .style('stroke-opacity', 0.4)
-        .on('click', function (event, data) { 
+    // .on('click', function (event, data) { 
 
-            var hashtags = [];
-            
-            data.forEach(function(element){
-                hashtags = hashtags.concat(element.hashtags);
-            });
-            var place_names =  data.map(function(element){
-                return element.place_name;
-            });
+    //     var hashtags = [];
 
-        })
-        const bar_chars = svg
-            .append('g')
-            .attr('id', 'bar_chars');
-            
+    //     data.forEach(function(element){
+    //         hashtags = hashtags.concat(element.hashtags);
+    //     });
+    //     var place_names =  data.map(function(element){
+    //         return element.place_name;
+    //     });
 
-        bar_chars
+    // })
+    const bar_chars = svg
+        .append('g')
+        .attr('id', 'bar_chars');
+
+
+    bar_chars
         .selectAll('.positive_barchar')
         .data(hex.grid.layout)
         .enter()
         .append('path')
-        
-        .attr('d', d3.line()([[0, 0], [0, -20]]))
+
+        .attr('d', function (data) {
+
+            var positive_tweets = data.filter(function (element) {
+                return element.sa > 0.5;
+            });
+
+            var negative_tweets = data.filter(function (element) {
+                return element.sa < 0.5;
+            });
+
+            coordinate_y = (positive_tweets.length / (positive_tweets.length + negative_tweets.length)) * 0.5 * 100 | 0;
+
+            console.log(positive_tweets.length, negative_tweets.length, coordinate_y);
+
+            return d3.line()([[0, 0], [0, -coordinate_y]]);
+        })
         .attr('transform', d => `translate(${d.x}, ${d.y})`)
         //.attr('test', function(d){console.log(d)})
-        .attr("x", 100 )
-        .attr("y", 200 )
-        .attr("stroke", function(data){
-            console.log(data);
+        .attr("x", 100)
+        .attr("y", 200)
+        .attr("stroke", function (data) {
+
             return data.datapoints > 0 ? 'rgb(27, 89, 151)' : 'transparent'
         })
-        .attr("stroke-width", 10);
-        
-        
+        .attr("stroke-width", 5);
 
+    bar_chars
+        .selectAll('.positive_barchar')
+        .data(hex.grid.layout)
+        .enter()
+        .append('path')
+
+        .attr('d', function (data) {
+
+            var positive_tweets = data.filter(function (element) {
+                return element.sa > 0.5;
+            });
+
+            var negative_tweets = data.filter(function (element) {
+                return element.sa < 0.5;
+            });
+
+            coordinate_y = (negative_tweets.length / (positive_tweets.length + negative_tweets.length)) * 0.5 * 100 | 0;
+
+            console.log(positive_tweets.length, negative_tweets.length, coordinate_y);
+
+            return d3.line()([[5, 0], [5, -coordinate_y]]);
+        })
+        .attr('transform', d => `translate(${d.x}, ${d.y})`)
+        .attr("x", 100)
+        .attr("y", 200)
+        .attr("stroke", function (data) {
+            return data.datapoints > 0 ? '#D90429' : 'transparent'
+        })
+        .attr("stroke-width", 5);
 
     // Build and mount legend.
     const legendKey = svg
         .append('g')
         .attr('class', 'legend')
-        .attr('transform', `translate(${width - 120}, ${height})`)
+        .attr('transform', `translate(${width - 400}, ${height})`)
         .call(
             buildKey,
             hex.grid.extentPointsWeighted[1],
             colourScale,
-            'Number of ' + title
+            'Number of tweets'
         );
 }
 
@@ -216,10 +258,10 @@ const geoData = d3.json(
 // });
 const positive_range_colors = ['#FFF', '#90be6d', '#43aa8b', '#4d908e', '#277da1'];
 const negative_range_colors = ['#FFF', '#f9c74f', '#f8961e', '#f3722c', '#f94144'];
-
+const grey_scale = ['#FFF', '#EEE', '#CCC', '#999', '#666', '#333', '#000']
 Promise.all([geoData]).then(response => {
     let [geo_data] = response;
-    make_geo_chart('#chart_4', geo_data, GEO_SA_TWEETS, 'Positive Tweets', positive_range_colors);
+    make_geo_chart('#chart_4', geo_data, GEO_SA_TWEETS, 'Positive Tweets', grey_scale);
     //make_geo_chart('#chart_5', geo_data, GEO_NEGATIVE_TWEETS, 'Negative Tweets', negative_range_colors);
 });
 
