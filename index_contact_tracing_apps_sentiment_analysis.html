@@ -4,6 +4,9 @@
 <head>
     <title>European contact tracing mobile apps - Dashboard</title>
 
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta charset="utf-8">
     <meta name="author" content="Alessandro Dalla Benetta, a.dallabenetta@gmail.com">
@@ -215,7 +218,7 @@
                 from the tweet-text. Thus, we can combine the geographic and sentiment analysis
                 by filtering the dataset and obtain only geo-sentiment tweets. We have detected
                 <span id="geo_sentiment_tweets"></span> tweets where the tweet-text contains almost one
-                place name and an opinion. We have considered only the geo-sentiment tweets regarding the 
+                place name and an opinion. We have considered only the geo-sentiment tweets regarding the
                 Europe shich are <span id="europe_geo_sentiment_tweets"></span>.
             </p>
             <p>
@@ -237,25 +240,148 @@
         <h4>Temporal evolution of positive and negative tweets</h4>
         The chart below shows the trend of the positive and negative tweets from July 2020 to July 2021.
         We denote a relation on October and November 2020 with the covid-19 second wave. Also, on May 2021
-        another quite increment. More details about specific event are descibed in the event section. 
+        another quite increment. More details about specific event are descibed in the event section.
 
         <svg id="chart_plot" width="1300" height="800"></svg>
 
         <h4>Hashtags network: Positive vs Negative</h4>
         As already described in the section <a>hashtags network</a> we developed a new kind of network
         combining hashtags and sentiment analysis. A hashtag as node in the network has related a set of tweets
-        which can contains opinions. Therefore, a node may be a sort of orientation depending by the number of positive 
-        and negative tweets. For example the hastag <em>covid</em> has 12593 negative tweets and 8099 positive tweets, hence,
-        it seems that is quite negative. However, a tweet has several properties which explain its relevance. For example, whether
-        a tweets has been published by an authoritative user (public entity, news paper) or it is retweeted/shared many times.
-        For the our analysis, we take in account the number of retweets to obtain weigthed tweets with opinions.
+        which can contains opinions. Therefore, a node may be a sort of orientation depending by the number of positive
+        and negative tweets. For example the hastag <em>covid</em> has 12593 negative tweets and 8099 positive tweets,
+        hence,
+        it seems that is quite negative. However, a tweet has several properties which explain its relevance. For
+        example, whether
+        a tweets has been published by an authoritative user (public entities, newspaper) or how many times it is
+        retweeted/shared.
+        For the our analysis, we take in account the number of retweets to obtain weigthed tweets with opinions. In
+        details, we developed
+        a sentiment index that summarize the sentiment orientation of a hashtag.
+        Firstly, the weighted-tweet value for each tweet is calculated following the formula: <br />
 
-        [number of tweet, degree, remove neutral]
-        [combinations]
-        [positive]
-        [negative]
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mi>weighted-sentiment</mi>
+            <mo>=</mo>
+            <mmultiscripts>
+                <mi>score</mi>
+                <mn>sent</mn>
+            </mmultiscripts>
+            <mo>(</mo>
+            <mi>retweets</mi>
+            <mo>+</mo>
+            <mi>1</mi>
+            <mo>)</mo>
+        </math>
+
+
+        <p>
+            where
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mmultiscripts>
+                    <mi>score</mi>
+                    <mn>sent</mn>
+                </mmultiscripts>
+            </math>
+            in normalized beetween [0,1] and the <em>sent</em> can be 0 or 1, which detonote
+            respectly a negative tweet <em>sent=0</em> or positive tweet <em>sent=1</em>.
+        </p>
+
+
+        <p>
+            Secondly, we have normalized the weighted tweets by the following formula:
+            <br /><br />
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mfrac>
+                    <mrow>
+                        <munderover>
+                            <mo>&#x2211;</mo>
+                            <mrow>
+                                <mi>x</mi>
+                                <mo>=</mo>
+                                <mi>0</mi>
+                            </mrow>
+                            <mi>p</mi>
+                        </munderover>
+                        <mrow>
+                            <mmultiscripts>
+                                <mi>weighted-sentiment</mi>
+                                <mn>positve</mn>
+                            </mmultiscripts>
+                        </mrow>
+
+                        <mo>-</mo>
+
+                        <munderover>
+                            <mo>&#x2211;</mo>
+                            <mrow>
+                                <mi>x</mi>
+                                <mo>=</mo>
+                                <mi>0</mi>
+                            </mrow>
+                            <mi>n</mi>
+                        </munderover>
+                        <mrow>
+                            <mmultiscripts>
+                                <mi>weighted-sentiment</mi>
+                                <mn>negative</mn>
+                            </mmultiscripts>
+                        </mrow>
+
+                    </mrow>
+
+                    <mrow>
+                        <munderover>
+                            <mo>&#x2211;</mo>
+                            <mrow>
+                                <mi>x</mi>
+                                <mo>=</mo>
+                                <mi>0</mi>
+                            </mrow>
+                            <mi>p</mi>
+                        </munderover>
+                        <mrow>
+                            <mmultiscripts>
+                                <mi>weighted-sentiment</mi>
+                                <mn>positve</mn>
+                            </mmultiscripts>
+                        </mrow>
+
+                        <mo>+</mo>
+
+                        <munderover>
+                            <mo>&#x2211;</mo>
+                            <mrow>
+                                <mi>x</mi>
+                                <mo>=</mo>
+                                <mi>0</mi>
+                            </mrow>
+                            <mi>n</mi>
+                        </munderover>
+                        <mrow>
+                            <mmultiscripts>
+                                <mi>weighted-sentiment</mi>
+                                <mn>negative</mn>
+                            </mmultiscripts>
+                        </mrow>
+                    </mrow>
+
+                </mfrac>
+            </math>
+            where <em>p</em> and <em>n</em> are respectly the number of positive and negative tweets ragarding a hashtags.
+        </p>
+
+        <p>
+            Finally, by applying the above formula to each hashtag we can calculate the orientation
+            that it will be beetween -1 and 1, where 1 is positive and -1 negative.
+            Also, considering that a value to 0 does not mean that the hashtag is neutral but only a equal distribution
+            of positive and negative opinions.
+        </p>
+
+
+
+
         <img src="contact_tracing_apps_sentiment_analysis/data/sa_network_1.png" />
-        [[ move hashtags section ]]
+
     </div>
 </body>
 
