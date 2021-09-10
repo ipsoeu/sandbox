@@ -250,18 +250,23 @@
         
         We developed a new kind of network combining the properties of the hashtags network and sentiment analysis.
         
-        A hashtag as node in the network has related a set of tweets
-        which can contains opinions. Therefore, a node may be a sort of orientation depending by the number of positive
-        and negative tweets. For example the hastag <em>covid</em> has 12593 negative tweets and 8099 positive tweets,
-        hence,
-        it seems that is quite negative. However, a tweet has several properties which explain its relevance. For
-        example, whether
-        a tweets has been published by an authoritative user (public entities, newspaper) or how many times it is
+        As hashtag a node in the network, it has related a set of tweets which can contains opinions. 
+        
+        Therefore, a node might have a sentiment orientation depending by the number of positive
+        and negative tweets. 
+        
+        For example the hastag <em>covid</em> has 12593 negative tweets and 8099 positive tweets,
+        hence, it seems that is quite negative. 
+        
+        However, a tweet has several properties which explain its relevance. 
+        
+        For example, whether a tweets has been published by an authoritative user (public entities, newspaper) or how many times it is
         retweeted/shared.
-        For the our analysis, we take in account the number of retweets to obtain weigthed tweets with opinions. In
-        details, we developed
-        a sentiment index that summarize the sentiment orientation of a hashtag.
-        Firstly, the weighted-tweet value for each tweet is calculated following the formula: <br />
+
+        For the our analysis, we take in account the number of retweets to obtain weigthed tweets opinioned. In
+        details, we developed a sentiment index that summarize the sentiment orientation of a hashtag.
+
+        Firstly, the weighted tweet value for each tweet is calculated following the formula: <br />
 
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <mi>weighted-sentiment</mi>
@@ -376,11 +381,17 @@
 
         <p>
             Finally, by applying the above formula to each hashtag we can calculate the orientation
-            that it will be beetween -1 and 1, where 1 is positive and -1 negative.
+            that it will be beetween the value -1 and 1, where 1 is positive and -1 negative respectly.
             Considering the 0 value not as neutral but only as a equal distribution
             of positive and negative opinions.
         </p>
 
+        <p>
+            The image below shows sentiment hashtags network. The blue nodes are positive hashtags and the red nodes
+            are negative hashtags. The size of the node is proportional to the <em>sentiment index</em>. Thus, in the large 
+            node the orientation will be strong to positive or negative opinions depending by the color of the node.
+            Small nodes the orientatation will be weak, with a equal number of positive and negative tweets.
+        </p>
         <img src="contact_tracing_apps_sentiment_analysis/data/sa_network_1.png" />
 
     </div>
