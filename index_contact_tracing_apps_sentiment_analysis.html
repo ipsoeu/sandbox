@@ -84,29 +84,27 @@
 
 <body>
     <div id="wrap">
-        <h3>Sentiment analysis about Contact tracing apps</h3>
+        <h3>Sentiment analysis of tweets about contact tracing apps</h3>
 
         <h4>Introduction</h4>
 
         <div>
             <p>
-                The extraction of opinions was performed analysing <span id="total_tweets"></span> tweets
-                collected from July 2020 to July 2021 as already mentioned in the
-                <a href="./index_contact_tracing_apps_basic_information.html">basic information section</a>.
+                We performed sentiment analysis and extraction of opinions on a dataset consisting of 
+                <span id="total_tweets"></span> tweets that were collected from July 2020 to July 2021 
+                (as already mentioned in the
+                <a href="./index_contact_tracing_apps_basic_information.html">basic information section</a>).
             </p>
 
             <p>
-                The sentiment analysis was performed on the following languages: English, French, German, Spanish and
-                Italian.
-                The pie chart below shows the distribution of the languages on the datasets. As expected the main
-                languages is
-                English,followed by the Italian language and German language. The Spanish and French language have
-                approximately
-                the same number of tweets. Also, the pie chart represents the unclassifed tweets, where the standard
-                Twitter engine
-                was not able to classify the text inside the tweet. Finally, Others languages which is a small
-                percentage
-                of different laguages not inclided in the our study.
+                The sentiment analysis was performed on the following languages: 
+                English, French, German, Spanish and Italian. 
+                The pie chart below shows the distribution of the languages in the datasets. 
+                As expected, the most popular language is English, followed by Italian and German, 
+                with Spanish and French having approximately the same number of tweets. 
+                The pie chart also shows the share of unclassified tweets 
+                (that the standard Twitter engine was not able to identify the language of the text inside a tweet), 
+                and that of other languages (i.e. a small percentage of different languages not included in our study).
             </p>
             <div id="chart_languages_content">
                 <svg id="chart_languages" width="400" height="400"></svg>
@@ -114,10 +112,10 @@
 
             <br /><br />
             <p>
-                In order to extract negative, positive and neutral sentiments different pretrained BERT models
-                have been used respecting the five main languages considered in the datasets. Also, considering that
-                the tweet-texts are cleaned by removing no alphanumeric character and hyperink.
-                Below the list of the pre-trained bert model and the training set used to learn the classifier.
+                In order to extract negative, positive and neutral sentiments, different pre-trained BERT models 
+                have been used in the five most popular languages mentioned above, with the tweet-texts 
+                cleaned by removing alphanumeric characters and hyperlinks. 
+                The pre-trained BERT models and the training sets used to train the classifiers are listed below.
             </p>
 
             <ul>
@@ -138,39 +136,35 @@
                 In details, the <span id="neutral_tweets_relative"></span>% of tweets are classified without
                 opinions (<span id="neutral_tweets"></span> tweets) and labeled as <em>Neutral tweets</em>.
 
-                The <span id="no_classified_tweets_relative"></span>% of tweets are excluded from this analysis
-                becouse 1) the language detected is not present in the main list of languages of our dataset
-                (<span id="others_tweet"></span> tweets) or
-                2) the Twitter engine for language classification is not able to detect the language
+                <span id="no_classified_tweets_relative"></span>% of the tweets have been excluded from our analysis because 
+                either the language detected is not among the languages we take into account for the analysis 
+                (<span id="others_tweet"></span> tweets)
+                or the Twitter engine for language classification is not able to detect the languages
                 (<span id="undefined_tweet"></span> tweets).
 
                 The tweets with opinions are the <spam id="with_opinions"></spam>% where around three-quarters are
                 negative teewts
-                (<spam id="negative_tweets"></spam> tweets) and one-quarter positive tweets (<spam id="positve_tweets">
-                </spam> tweets).
+                (<spam id="negative_tweets"></spam> tweets) and one-quarter positive tweets 
+                (<spam id="positve_tweets"></spam> tweets).
             </p>
 
 
 
         </div>
         <p>
-            The below table shows the clasified tweets by sentiment splitted by mobile covid apps.
-            On average, the neutral tweets are the half of the total tweets, except the app Immuni
-            with the 65% and the StopCovid app with the 14%.
+            The table below shows the tweet classification by sentiment for each contact tracing app. 
+            On average, the neutral tweets are half of the total tweets for each app, except for Immuni with 65% and StopCovid with 14%.
         </p>
 
         <p>
-            Except for the Erouska and Smittestopp mobile apps, the number of positive
-            tweets is less respect the negative teewts. Futhermore, the percentage of
-            positive tweets not exeed the 20% except the French mobile apps where
-            the positive teewts is to 37%.
+            Except for Erouska and Smittestopp, the number of positive tweets is less from the negative 
+            tweets for the rest of the contact tracing apps. Furthermore, the percentage of positive 
+            tweets does not exceed 20%, with the exception of the (French) mobile app StopCovid, with 37% positive tweets.
         </p>
 
         <p>
-            Negative tweets are predominant except the aforementioned mobile apps
-            Erouska and Smittestopp.
-            and for some mobile apps the ratio beetween positive and negative tweet is minor of 0.5
-            indicating a lot of negative opinions.
+            Negative tweets are predominant except for Erouska and Smittestopp, with the ratio between positive and negative 
+            tweets to be less than 0.5 for some apps, thus indicating very negative opinions.
         </p>
 
         <div style="margin-top: 10px;">
@@ -182,11 +176,10 @@
             </div>
 
             <p>
-                The stacked barchar represents the tweets collected about
-                the european contact tracing apps and classified as neutral, positive and negative.
-                On average, the number of negative tweets is greater respect the positive tweets except for
-                the French mobile apps whre the ratio of positive and negative tweets is to 1.
-
+                The above stacked barchart shows the distribution of the tweets collected about the 
+                european contact tracing apps that have been classified as neutral, positive and negative. 
+                On average, the number of negative tweets is much greater than that of positive tweets 
+                except for the French mobile apps where the ratio of positive and negative tweets is 1.
             </p>
 
         </div>
@@ -197,39 +190,33 @@
             <h4>Geographical distribution of sentiments and opinions</h4>
 
             <p>
-
-
-                The scope of this paragraph is to analyze the sentiments and opinions combining
-                geographical and temporal information. We start with a simple consideration which each
-                mobile apps refers to specific country. Indeed, the NHS covid-19 app for UK, Immuni for Italy
-                and in this way for the rest of mobile apps. However, we have detected a
-                subset of tweets which mention two or more mobile apps but the size of this dataset is very low
-                respect the all dataset. Consequently, we developed the following hierarchical chart
-                which shows how the twitter users think in general about the covid-19 apps splitted by
-                country.The hierarchical chart shows that in general the users are pessimistc except
-                for the countries UK and France.</p>
+                We analyse here the sentiments and opinions taking into account geographical and temporal information, 
+                starting with the mobile apps that refer to specific countries, like the NHS covid-19 app for UK, Immuni 
+                for Italy and continuing with for the rest of mobile apps. However, we have detected a subset of tweets 
+                which mention two or more mobile apps but the size of this dataset is very low with respect to the whole dataset. 
+                Consequently, we developed the following hierarchical chart which shows how the twitter users think in general 
+                about the covid-19 contact tracing apps in each country. The hierarchical chart shows that in general 
+                the users are negative, except for the the ones from UK and France.
             </p>
             <svg id="basic_information_sa_starbust_svg" width="800" height="500"></svg>
 
 
             <p>
 
-                As already mentioned in the basic information section, place names has been extracted
-                from the tweet-text. Thus, we can combine the geographic and sentiment analysis
-                by filtering the dataset and obtain only geo-sentiment tweets. We have detected
-                <span id="geo_sentiment_tweets"></span> tweets where the tweet-text contains almost one
-                place name and an opinion. We have considered only the geo-sentiment tweets regarding the
-                Europe shich are <span id="europe_geo_sentiment_tweets"></span>.
+                As already mentioned in the basic information section, place names have been extracted from the tweet-texts. Thus, we have combined the geographic and sentiment analysis by filtering the dataset and obtaining only geo-sentiment tweets. 
+                We have detected
+                <span id="geo_sentiment_tweets"></span> tweets where the tweet-text contains almost one place name and an opinion. 
+                We have taken into account only the geo-sentiment tweets in Europe, which are  <span id="europe_geo_sentiment_tweets"></span>.
             </p>
             <p>
 
-                The following maps show the geographical distribution of geo-sentiment tweets. For each hex-grid
-                the intensity of the background color represents the number of tweets detected in its area.
-                Also, a double vertical bar chart is displayed, where the blue bar represents the positive tweets
-                and the red the negative tweets.
-                We observe that in most of the countries there is high activity on tweeter in the capital, 
-                as is the case for Paris, London, Dublin and Madrid. We notice, though, a different pattern 
-                in Italy and Germany, where the number of tweets is distributed more homogeneously.
+                The following maps show the geographical distribution of geo-sentiment tweets. For each hex-grid, 
+                the intensity of the background colour represents the number of tweets detected in its area. 
+                Also, a double vertical bar chart is displayed, where the blue bar represents the positive 
+                tweets and the red the negative tweets. We observe that in most of the countries there is 
+                high activity on tweeter in the capital, as is the case for Paris, London, Dublin and Madrid. 
+                We notice, though, a different pattern in Italy and Germany, where the number of tweets is 
+                distributed more homogeneously.
 
             </p>
             <div id="chart_4_content">
@@ -241,46 +228,32 @@
         <h4>Temporal evolution of positive and negative tweets</h4>
 
         <p>
-            The chart below shows the trend of the positive and negative tweets from July 2020 to July 2021.
-
-            We notice a differentiation in the sentiment polarisation in the opinions expressed in tweets during October and November 
-            2020 that could be related to the covid-19 second wave.
-            On September 24th we have the most positive day with 2076 positive tweets, otherwise the most
-            negative day is October 12th with 2005 negative tweets.
-
-            After December we have a flat activities of positive tweets until the and of April, where
-            the users start again ti publish positive tweets.
-            On the other hand, the trend of negative tweets is quite active, with some negative days
-            until June.
-            
-            More details about specific event are descibed in the event section.
+            The chart below shows the trend of positive and negative tweets from July 2020 to July 2021. 
+            We notice a differentiation in sentiment polarisation in the opinions expressed in tweets during 
+            October and November 2020 that could be related to the covid-19 second wave. On September 24th 
+            we have the most positive day with 2076 positive tweets, with the most negative day being October 
+            12th with 2005 negative tweets. After December we have a flattening activity of positive tweets 
+            until the end of April, when the users start again to publish positive tweets. On the other hand, 
+            the trend of negative tweets is quite active, with some negative days until June. More details about 
+            specific events are provided in the event section.
         </p>
         
 
         <svg id="chart_plot" width="1300" height="800"></svg>
 
-        <h4>Hashtags network: Positive vs Negative</h4>
-        The hashtags network can helping to understand the relations beetween entities, detecting
-        communities and others different analysis as already described in the section <a>hashtags network</a>. 
-        
-        We developed a new kind of network combining the properties of the hashtags network and sentiment analysis.
-        
-        As hashtag a node in the network, it has related a set of tweets which can contains opinions. 
-        
-        Therefore, a node might have a sentiment orientation depending by the number of positive
-        and negative tweets. 
-        
-        For example the hastag <em>covid</em> has 12593 negative tweets and 8099 positive tweets,
-        hence, it seems that is quite negative. 
-        
-        However, a tweet has several properties which explain its relevance. 
-        
-        For example, whether a tweets has been published by an authoritative user (public entities, newspaper) or how many times it is
-        retweeted/shared.
+        <h4>Hashtag network: Positive vs Negative</h4>
 
-        For the our analysis, we take in account the number of retweets to obtain weigthed tweets opinioned. In
-        details, we developed a sentiment index that summarize the sentiment orientation of a hashtag.
-
+        The hashtag network can help to understand the relations between entities, detecting communities and can 
+        assist other types of analysis as was already mentioned in the section hashtags network. 
+        We developed a new type of network combining the properties of the hashtag network and sentiment analysis. 
+        A hashtag node in the network has a related set of tweets which can contain opinions. 
+        Therefore, a node might have a sentiment orientation depending on the number of positive and 
+        negative tweets. For example, the hastag <em>covid</em> has 12593 negative tweets and 8099 positive tweets, 
+        hence, it seems that is quite negative. However, a tweet has several properties which explain its relevance. 
+        For example, whether a tweet has been published by an authoritative user (public entity, newspaper) or 
+        how many times it is retweeted/shared. For our analysis, we take into account the number of retweets 
+        to obtain weighted tweets with opinions. In particular, we developed a sentiment index that summarises 
+        the sentiment orientation of a hashtag. 
         Firstly, the weighted tweet value for each tweet is calculated following the formula: <br />
 
         <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -306,8 +279,8 @@
                     <mn>sent</mn>
                 </mmultiscripts>
             </math>
-            in normalized beetween [0,1] and the <em>sent</em> can be 0 or 1, which detonote
-            respectly a negative tweet <em>sent=0</em> or positive tweet <em>sent=1</em>.
+            in normalized beetween [0,1] and the <em>sent</em> can be 0 or 1, which detonote,
+            respectly, a negative tweet <em>sent=0</em> or positive tweet when<em>sent=1</em>.
         </p>
 
 
@@ -391,22 +364,22 @@
 
                 </mfrac>
             </math>
-            where <em>p</em> and <em>n</em> are respectly the number of positive and negative tweets ragarding a hashtags.
+            where <em>p</em> and <em>n</em> are respectively the number of positive and negative tweets regarding hashtag.
         </p>
 
         <p>
-            Finally, by applying the above formula to each hashtag we can calculate the orientation
-            that it will be beetween the value -1 and 1, where 1 is positive and -1 negative respectly.
-            Considering the 0 value not as neutral but only as a equal distribution
-            of positive and negative opinions.
+            Finally, by applying the above formula to each hashtag, we can calculate the hashtag orientation, 
+            which is between the values -1 and 1, where 1 is highly positive and -1 highly negative respectively. 
+            We consider the 0 value not as neutral but only as an equal distribution of positive and negative opinions.
         </p>
 
         <p>
-            The image below shows sentiment hashtags network. The blue nodes are positive hashtags and the red nodes
-            are negative hashtags. The size of the node is proportional to the <em>sentiment index</em>. Thus, in the large 
-            node the orientation will be strong to positive or negative opinions depending by the color of the node.
-            Small nodes, in the center of the network, have wikly orientatation, with a equal number of positive and negative tweets.
-            Futhermore, the network was pruned by removing the nodes with a low degree and the neutral tweets was ignored.
+            The image below shows sentiment hashtag network. The blue nodes are positive hashtags and the red nodes 
+            are negative hashtags. The size of the node is proportional to the <em>sentiment index</em>.
+            Thus, in the large nodes the orientation is strongly positive or negative, depending on the colour 
+            of the node. Small nodes, in the center of the network, have weak orientation, with an equal 
+            number of positive and negative tweets. Furthermore, the network was pruned by removing the nodes 
+            with a low degree and the neutral tweets were ignored.
         </p>
         <img src="contact_tracing_apps_sentiment_analysis/data/sa_network_2.png" />
         <!--
