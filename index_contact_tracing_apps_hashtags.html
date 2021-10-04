@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
 
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -96,99 +99,97 @@
 <body>
     <div id="wrap">
 
-        <h3>
-            <em>Hashtags network analysis</em>
-        </h3>
-        <div>
+        <h3>Hashtags network analysis</h3>
+
+        <figure class="figure">
             <img src="contact_tracing_apps_hashtags/data/network_all_apps_low_resolution.png"></img>
-        </div>
-        <div style="margin-top: 10px;">
+            <figcaption class="figure-caption">Figure 1. Hashtag network about contact tracing apps, built on top of
+                ~260,000 tweets collected from July 2020 to June 2021. </figcaption>
+        </figure>
 
-            <p>
-                The picture shows the network hashtags of arounf 260,000 tweets about mobile contact tracing apps.
-                The tweets were collected since July 2020 to June 2021 using the official Twitter APIs.
 
-            </p>
-
-            <p>
-                The size of the nodes denoted the co-occurrence frequency with the others hashtags expressed with the
-                degree centrality measure.
-            </p>
-
-            <p>
-                Please notice that the small communities with a low number of nodes and density are pruned from the
-                network in order to have a more clear overview of the network.
-            </p>
-            <p>
-                Each color represents a community calculated using the Louvain method [LOUVAIN-2008] where the hashtags
-                are closely related.
-                E.g, for the purple community the topic seems “Healt and Healtcare”.
-                Note that the colours of the community are computed randomly using standard color palettes.
-            </p>
-
-        </div>
 
         <div style="margin-top: 10px;">
+
             <p>
-                The Louvian method revealed 8 main distinct communities where usually the <em>central hashtag</em> is a
-                name of
-                contact tracing apps. For example the dar green community represents the Italian contact tracing apps
-                <em>Immuni</em>,
-                the medium green community the Irish contact tracing apps <em>Covid Ireland</em>.
+                The picture shows the network hashtags of around 260,000 tweets about mobile contact tracing apps. 
+                The tweets were collected from July 2020 to June 2021 using the official Twitter APIs. 
             </p>
 
             <p>
-                Furthermore, in gray there are small communities
-                where the hashtags are related for most of theme by political entities or geographic names.
+                The size of the nodes denotes the co-occurrence frequency with the other hashtags, 
+                which is expressed by the degree centrality measure. 
             </p>
+
+            <p>
+                Please notice that the small communities with a low number of nodes and density are 
+                pruned from the network in order to have a clearer overview of the network. 
+            </p>
+            <p>
+                Each colour represents a community, identified using the Louvain method [LOUVAIN-2008], where the hashtags are closely related. 
+                For example, for the purple community the topic seems to be <em>Health and Healthcare</em>. 
+                Note that the colours of the communities are selected randomly using standard colour palettes. 
+            </p>
+
         </div>
 
         <div style="margin-top: 10px;">
             <p>
-                The table below displays the all communities extracted using [LOUVAIN-2008] algorithm and sorted by the
-                number of hashtags.
-                The communities detected usually represents a specific topic, entities or events but is not easy to
-                extract in an
-                automatic way one single word that describe each community.
+
+                The Louvain method revealed 8 main distinct communities, where the <em>central hashtag</em> is usually a contact tracing app name. 
+                For example, the dark green community represents the Italian contact tracing app <em>Immuni</em>, and the medium green community 
+                the Irish contact tracing app <em>Covid Ireland</em>.
             </p>
 
             <p>
-                For this reason have been reported the two columns <em>Top 5 hashtags</em> and <em>Main mobile app</em>.
-                The first column contains the first 5 hashtags with the highest value of degree centrality to understand
-                which topics have the community.
+                Furthermore, in grey there are small communities where the hashtags are related for most of the themes with political entities or geographic names. 
+            </p>
+        </div>
+
+        <div style="margin-top: 10px;">
+            <p>
+                The table below displays the all the communities extracted using the [LOUVAIN-2008] algorithm and sorted by the number of hashtags. 
+                The communities detected usually represent specific topics, entities or events but it is not easy to extract in 
+                an automatic way a single word that describes each community. 
             </p>
 
             <p>
-                In the second column is reported the most frequent contact tracing app in the <em>isolated</em> tweets
-                related to each
-                community.
-                In more details, each hashtags can belong to one or more tweets, consequently, a community has a set of
-                tweets, where
-                the size is reported in the <em>number of tweets</em> column.
+                For this reason, we provide for the most frequent contact tracing app in the <em>isolated</em> tweets 
+                related to each community (specified in the column Main mobile app in Table 1) 
+                the Top 5 hashtags (in the homonym column of Table 1), which allows to understand which topics dominate the community. 
+                The top 5 hashtags are determined based on the highest value of degree centrality. 
+                Note that, since every hashtag may be used in one or more tweets, 
+                a community is determined by a set of tweets and the size of the set is reported in the <em>number of tweets</em> column.
             </p>
 
             <p>
-                On the other hand, a tweet can belonging to one or more hashtags and a community can share tweets
-                with the other communities.
-                The <em>Isolation index</em> means how the communities are isolated and it has been calculated by the
-                ratio
+
+                On the other hand, a tweet can contain one or more hashtags and a community can share tweets with the other communities. 
+                The <em>Isolation index</em> shows how much a community is isolated and it has been calculated as the ratio 
                 (number of not shared tweets)/(total number of tweets inside the community).
-                Therefore, a high value of the <em>Isolation index</em> indicates a hight isolated community.
+                Therefore, a <em>high value</em> of the Isolation index indicates a highly isolated community. 
             </p>
 
             <p>
-                Futhermore, to evaluate the accuracy of the detected communities respect the global graph the network
-                density
-                has been calculated following the formula <br /> <em>2m/n(n - 1)</em> where n is the number of hashtags
-                (or nodes)
-                and m is the number of edges in the hashtags network.
-                The global network density was <span id="network_density"></span> with <span id="network_nodes"></span>
-                nodes
-                and <span id="network_edges"></span> edges.
-                The range density for the main 8 communities is between 0.016 and 0.051,
-                with an averege of 0.026, 5,25 times greater than the overall density, a good indication of separated
-                groups.
 
+                Furthermore, to evaluate the accuracy of the detected communities with respect to the global graph, 
+                the network density metric has been calculated following the formula:
+            </p>
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <mi>netwokr density</mi>
+                    <mo>=</mo>
+                    <mfrac>
+                        <mi> 2m </mi>
+                        <mi>n(n - 1)</mi>
+                    </mfrac>
+                </math>
+
+            <p>
+                where n is the number of hashtags (or nodes) and m is the number of edges in the hashtag network. 
+                The global network density was <span id="network_density"></span> with <span id="network_nodes"></span> nodes 
+                and <span id="network_edges"></span> edges.                 
+                The range density for the main 8 communities is between 0.016 and 0.051, 
+                with an average of 0.026, 5.25 times greater than the overall density, a good indication of separated groups. 
             </p>
 
         </div>
