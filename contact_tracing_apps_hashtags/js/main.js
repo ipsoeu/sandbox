@@ -36,13 +36,18 @@ function make_table_nodes_edges(html_id, data){
         columns: [
             { data: "hashtag", title: "Hashtags", className: 'column_grey'},
             { data: "degree_centrality", title: "Degree centrality", className: 'column_grey' },
-            { data: "strong_link", title: "Similar links" },
-            { data: "jaccard_index", title: "Jaccard index" },
-            { data: "weak_link", title: "Distant links", className: 'column_grey' },
-            { data: "jaccard_distance", title: "Jaccard distance", className: 'column_grey' },
+
+            { data: "weak_link", title: "Similar links"},
+            { data: "jaccard_distance", title: "Jaccard distance"},
+
+            { data: "strong_link", title: "Distant links", className: 'column_grey' },
+            { data: "jaccard_index", title: "Jaccard index", className: 'column_grey' },
+            
+            
         
         ],
         order: [[1, "asc"]],
+        'paging': false
     });
 }
 
@@ -67,8 +72,10 @@ $(document).ready(function () {
             },
             { data: "hashtags_count", title: "Number of Hashtags" },
             { data: "total_tweets", title: 'Number of Tweets' },
+
             { data: "community_isolation_by_tweets", title: 'Isolation index' },
             { data: "density", title: 'Density' },
+            
             { data: "interconnection_index", title: 'Interconnection index' },
             { data: "isolated_emm_news", title: 'EMM news' },
         ],
