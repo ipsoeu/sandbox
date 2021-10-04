@@ -9,7 +9,7 @@ function make_sunburst_chart(chart_id, data) {
     }
 
 
-    var nodeData = {
+    var node_data = {
         "name": "Geolocalized tweets",
         "children": [{
             "name": "Isolated",
@@ -22,12 +22,12 @@ function make_sunburst_chart(chart_id, data) {
             "name": "Shared",
             'color': "#D90429",
             "children": [
-                { "name": "Geo", "size": data['geolocalized_tweets'] - data['isolated_geolocalized_tweets'] },
-                { "name": "No Geo", "size": data['shared_tweets'] - data['geolocalized_tweets'] - data['isolated_geolocalized_tweets'] }
+                { "name": "Geo", "size": data['share_geolocalized_tweets']},
+                { "name": "No Geo", "size": data['shared_tweets'] - data['share_geolocalized_tweets'] }
             ]
         }]
     };
-
+    console.log(node_data)
     // Variables
     var width = 400;
     var height = 400;
@@ -35,7 +35,7 @@ function make_sunburst_chart(chart_id, data) {
     var color = d3.scaleOrdinal(d3.schemeAccent);
 
     // Create primary <g> element
-    var g = d3.select('#community_7_svg')
+    var g = d3.select(chart_id)
         .attr('width', width)
         .attr('height', height)
         .append('g')
@@ -46,7 +46,7 @@ function make_sunburst_chart(chart_id, data) {
         .size([2 * Math.PI, radius]);
 
     // Find data root
-    var root = d3.hierarchy(nodeData)
+    var root = d3.hierarchy(node_data)
         .sum(function (d) { return d.size });
 
     // Size arcs
@@ -73,7 +73,12 @@ function make_sunburst_chart(chart_id, data) {
         })
         .attr("dx", "-20") // radius margin
         .attr("dy", ".5em") // rotation align
-        .text(function (d) { return d.parent ? d.data.name : "" });
+        .text(function (d) { 
+            if (d.value > 0)
+                return d.parent ? d.data.name : "" 
+            else
+                return ''
+        });
 
     g.append('text')
         .attr('transform', 'translate(-30, 30)')

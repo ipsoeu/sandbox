@@ -9,12 +9,13 @@ function make_community_info_table(html_id, info) {
     $list.append(`<dd>- Total: ${info['total_tweets']}</dd>`)
     $list.append(`<dd>- Shared: ${info['shared_tweets']}</dd>`)
     $list.append(`<dd>- NOT Shared: ${info['isolated_tweets']}</dd>`)
-    $list.append(`<dd>- Geolocalized: ${info['geolocalized_tweets']}</dd>`)
+    $list.append(`<dd>- ShareGeolocalized: ${info['share_geolocalized_tweets']}</dd>`)
+    $list.append(`<dd>- IsolatedGeolocalized: ${info['isolated_geolocalized_tweets']}</dd>`)
     
     $list.append($('<dt>Sentiment analysis</dt>'));
-    $list.append(`<dd>- Positive: ${info['positive_tweets']}</dd>`)
-    $list.append(`<dd>- Negative: ${info['negative_tweets']}</dd>`)
-    $list.append(`<dd>- Neutral: ${info['neutral_tweets']}</dd>`)
+    $list.append(`<dd>- Positive: ${info['share_positive_tweets']}</dd>`)
+    $list.append(`<dd>- Negative: ${info['share_negative_tweets']}</dd>`)
+    $list.append(`<dd>- Neutral: ${info['share_neutral_tweets']}</dd>`)
 
     $list.append($('<dt>Sentiment analysis on isolated tweets</dt>'));
     $list.append(`<dd>- Positive: ${info['isolated_positive_tweets']}</dd>`)
@@ -87,30 +88,37 @@ $(document).ready(function () {
     $('#network_edges').append(NETWORK_INFO['edges']);
 
 
-    // Partition 3
+    // Partition 7 UK
     
-    console.log(HASHTAGS_COMMUNITIES[0])
+    //console.log(HASHTAGS_COMMUNITIES[0])
 
-    var node_edge = zip(    HASHTAGS_COMMUNITIES[0]['hashtags'], 
+    var node_edge = zip(
+            HASHTAGS_COMMUNITIES[0]['hashtags'], 
             HASHTAGS_COMMUNITIES[0]['strong_links'],
             HASHTAGS_COMMUNITIES[0]['weak_links']
         )
 
     make_community_info_table('#community_7_info', HASHTAGS_COMMUNITIES[0])
     //make_stacked_bar_chart('#community_7_svg', HASHTAGS_COMMUNITIES[0])
+    
+
     make_sunburst_chart('#community_7_svg', HASHTAGS_COMMUNITIES[0])
 
     make_table_nodes_edges('#community_7_nodes_edges', node_edge)
     
-    // Partition 7
+    // Partition 3
+    console.log(HASHTAGS_COMMUNITIES[1])
 
     var node_edge = zip(    HASHTAGS_COMMUNITIES[1]['hashtags'], 
     HASHTAGS_COMMUNITIES[1]['strong_links'],
     HASHTAGS_COMMUNITIES[1]['weak_links']
     )
-    make_community_info_table('#community_1_info', HASHTAGS_COMMUNITIES[1])
+    
+    make_community_info_table('#community_3_info', HASHTAGS_COMMUNITIES[1]);
+    
+    make_sunburst_chart('#community_3_svg', HASHTAGS_COMMUNITIES[1]);
 
-    make_table_nodes_edges('#community_1_nodes_edges', node_edge)
+    make_table_nodes_edges('#community_3_nodes_edges', node_edge);
 
     
 });
