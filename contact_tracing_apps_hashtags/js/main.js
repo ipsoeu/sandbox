@@ -23,7 +23,7 @@ function make_community_info_table(html_id, info) {
     $list.append(`<dd>- Neutral: ${info['isolated_neutral_tweets']}</dd>`)
     
     $list.append($('<dt>EMM news</dt>'));
-    $list.append(`<dd>- News: ${info['emm_news']}</dd>`)
+    $list.append(`<dd>- News: ${info['share_emm_news']}</dd>`)
     $list.append(`<dd>- News on isolated tweets: ${info['isolated_emm_news']}</dd>`)
 
     $(html_id).append($list)
