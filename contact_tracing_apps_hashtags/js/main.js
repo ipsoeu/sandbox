@@ -120,9 +120,9 @@ $(document).ready(function () {
 
     make_table_nodes_edges('#community_3_nodes_edges', node_edge);
 
-        // Partition 1 DE
+    // Partition 1 DE
 
-        var node_edge = zip(HASHTAGS_COMMUNITIES[2]['hashtags'],
+    var node_edge = zip(HASHTAGS_COMMUNITIES[2]['hashtags'],
         HASHTAGS_COMMUNITIES[1]['strong_links'],
         HASHTAGS_COMMUNITIES[1]['weak_links']
     )
@@ -148,7 +148,7 @@ $(document).ready(function () {
 
     // Partition 8 IE
 
-        var node_edge = zip(HASHTAGS_COMMUNITIES[4]['hashtags'],
+    var node_edge = zip(HASHTAGS_COMMUNITIES[4]['hashtags'],
         HASHTAGS_COMMUNITIES[4]['strong_links'],
         HASHTAGS_COMMUNITIES[4]['weak_links']
     )
@@ -161,7 +161,7 @@ $(document).ready(function () {
 
     // Partition 6 IE
 
-        var node_edge = zip(HASHTAGS_COMMUNITIES[6]['hashtags'],
+    var node_edge = zip(HASHTAGS_COMMUNITIES[6]['hashtags'],
         HASHTAGS_COMMUNITIES[6]['strong_links'],
         HASHTAGS_COMMUNITIES[6]['weak_links']
     )
