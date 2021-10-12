@@ -1,4 +1,8 @@
-
+var GLOBAL_COLORS = {
+    blue: 'rgb(27, 89, 151)',
+    gree: '#2ca02c',
+    red: '#08519c',
+}
 
 function make_community_info_table(html_id, info) {
 
