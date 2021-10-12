@@ -20,7 +20,7 @@ function make_sunburst_chart(chart_id, data) {
         },
         {
             "name": "Shared",
-            'color': "#D90429",
+            'color': '#2ca02c', //"#08519c",
             "children": [
                 { "name": "Geo", "size": data['share_geolocalized_tweets']},
                 { "name": "No Geo", "size": data['shared_tweets'] - data['share_geolocalized_tweets'] }
