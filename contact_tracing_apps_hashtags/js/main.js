@@ -1,5 +1,5 @@
 var GLOBAL_COLORS = {
-    blue: 'rgb(27, 89, 151)',
+    blue: '#1B5997',
     gree: '#2ca02c',
     red: '#08519c',
 }
@@ -51,7 +51,11 @@ function make_table_nodes_edges(html_id, data) {
 
 
         ],
-        order: [[1, "asc"]],
+        order: [[1, "desc"]],
+        columnDefs: [{
+            targets: [1,3,5],
+            render: $.fn.dataTable.render.number(',', '.', 3)
+          }],
         'paging': false
     });
 }
@@ -85,6 +89,10 @@ $(document).ready(function () {
             { data: "isolated_emm_news", title: 'EMM news' },
         ],
         order: [[3, "desc"]],
+        columnDefs: [{
+            targets: [6,7,8],
+            render: $.fn.dataTable.render.number(',', '.', 3)
+          }]
     });
 
     $('#network_density').append(NETWORK_INFO['density']);
