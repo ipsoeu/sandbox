@@ -4,8 +4,8 @@ function make_sunburst_chart(chart_id, data) {
         var angle = (d.x0 + d.x1) / Math.PI * 90;
 
         // Avoid upside-down labels
-        return (angle < 120 || angle > 270) ? angle : angle + 180;  // labels as rims
-        //return (angle < 180) ? angle - 90 : angle + 90;  // labels as spokes
+        //return (angle < 120 || angle > 270) ? angle : angle + 180;  // labels as rims
+        return (angle < 180) ? angle - 90 : angle + 90;  // labels as spokes
     }
 
 
@@ -14,23 +14,42 @@ function make_sunburst_chart(chart_id, data) {
         "children": [{
             "name": "Isolated",
             'color': 'rgb(27, 89, 151)',
+            size_perc: parseInt(data.isolated_tweets / data.total_tweets * 100),
             "children": [
-                { "name": "Geo", "size": data['isolated_geolocalized_tweets'] },
-                { "name": "No Geo", "size": data['isolated_tweets'] - data['isolated_geolocalized_tweets'] }]
+                {
+                    "name": "Geo",
+                    "size": data['isolated_geolocalized_tweets'],
+                    'size_perc': parseInt(data.isolated_geolocalized_tweets / data.isolated_tweets * 100)
+                },
+                {
+                    "name": "No Geo",
+                    "size": data.isolated_tweets - data.isolated_geolocalized_tweets,
+                    'size_perc': 100 - parseInt(data.isolated_geolocalized_tweets / data.isolated_tweets * 100)
+                }]
         },
         {
-            "name": "Shared",
-            'color': '#2ca02c', //"#08519c",
-            "children": [
-                { "name": "Geo", "size": data['share_geolocalized_tweets']},
-                { "name": "No Geo", "size": data['shared_tweets'] - data['share_geolocalized_tweets'] }
+            name: "Shared",
+            color: '#2ca02c', //"#08519c",
+            size_perc: 100 - parseInt(data.isolated_tweets / data.total_tweets * 100),
+            children: [
+                {
+                    name: "Geo",
+                    size: data.share_geolocalized_tweets,
+                    size_perc: parseInt(data.share_geolocalized_tweets / data.shared_tweets * 100)
+                },
+                {
+                    name: "No Geo",
+                    size: data.shared_tweets - data.share_geolocalized_tweets,
+                    size_perc: 100 - parseInt(data.share_geolocalized_tweets / data.shared_tweets * 100)
+                }
             ]
         }]
     };
-    
+    console.log(data)
+    console.log(data.share_geolocalized_tweets)
     // Variables
-    var width = 400;
-    var height = 400;
+    var width = 500;
+    var height = 500;
     var radius = Math.min(width, height) / 2;
     var color = d3.scaleOrdinal(d3.schemeAccent);
 
@@ -73,20 +92,40 @@ function make_sunburst_chart(chart_id, data) {
         })
         .attr("dx", "-20") // radius margin
         .attr("dy", ".5em") // rotation align
-        .text(function (d) { 
-            if (d.value > 0)
-                return d.parent ? d.data.name : "" 
+        .text(function (d) {
+            if (d.value > 0) {
+                //console.log(d)
+                return d.parent ? d.data.name : "";
+            }
+            else
+                return ''
+        });
+
+    g.selectAll(".node")
+        .append("text")
+        .attr('font-size', '25px')
+        .attr('z-index', '10')
+        .attr("transform", function (d) {
+            return "translate(" + arc.centroid(d) + ")rotate(" + computeTextRotation(d) + ")";
+        })
+        .attr("dx", "-20") // radius margin
+        .attr("dy", "50") // rotation align
+        .text(function (d) {
+            if (d.value > 0) {
+                
+                return d.parent ? d.data.size_perc + ' %': "";
+            }
             else
                 return ''
         });
 
     g.append('text')
-        .attr('transform', 'translate(-30, 30)')
+        .attr('transform', 'translate(-25, 30)')
         .text('Tweets')
 
     g.append('text')
         .attr('transform', 'translate(-30, 0)')
-        .attr('font-size', '20px')
+        .attr('font-size', '18px')
         .attr('font-weight', 'bold')
         .text(data['total_tweets'])
 
