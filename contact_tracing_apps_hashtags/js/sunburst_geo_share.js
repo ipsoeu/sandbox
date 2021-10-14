@@ -4,14 +4,33 @@ function make_sunburst_chart(chart_id, data) {
         var angle = (d.x0 + d.x1) / Math.PI * 90;
 
         // Avoid upside-down labels
-        //return (angle < 120 || angle > 270) ? angle : angle + 180;  // labels as rims
-        return (angle < 180) ? angle - 90 : angle + 90;  // labels as spokes
+        return (angle < 120 || angle > 270) ? angle : angle + 180;  // labels as rims
+        //return (angle < 180) ? angle - 90 : angle + 90;  // labels as spokes
+        //return 0;
     }
 
 
     var node_data = {
         "name": "Geolocalized tweets",
-        "children": [{
+        "children": [
+            {
+                name: "Shared",
+                color: '#2ca02c', //"#08519c",
+                size_perc: 100 - parseInt(data.isolated_tweets / data.total_tweets * 100),
+                children: [
+                    {
+                        name: "Geo",
+                        size: data.share_geolocalized_tweets,
+                        size_perc: parseInt(data.share_geolocalized_tweets / data.shared_tweets * 100)
+                    },
+                    {
+                        name: "No Geo",
+                        size: data.shared_tweets - data.share_geolocalized_tweets,
+                        size_perc: 100 - parseInt(data.share_geolocalized_tweets / data.shared_tweets * 100)
+                    }
+                ]
+            },
+            {
             "name": "Isolated",
             'color': 'rgb(27, 89, 151)',
             size_perc: parseInt(data.isolated_tweets / data.total_tweets * 100),
@@ -27,23 +46,7 @@ function make_sunburst_chart(chart_id, data) {
                     'size_perc': 100 - parseInt(data.isolated_geolocalized_tweets / data.isolated_tweets * 100)
                 }]
         },
-        {
-            name: "Shared",
-            color: '#2ca02c', //"#08519c",
-            size_perc: 100 - parseInt(data.isolated_tweets / data.total_tweets * 100),
-            children: [
-                {
-                    name: "Geo",
-                    size: data.share_geolocalized_tweets,
-                    size_perc: parseInt(data.share_geolocalized_tweets / data.shared_tweets * 100)
-                },
-                {
-                    name: "No Geo",
-                    size: data.shared_tweets - data.share_geolocalized_tweets,
-                    size_perc: 100 - parseInt(data.share_geolocalized_tweets / data.shared_tweets * 100)
-                }
-            ]
-        }]
+        ]
     };
     console.log(data)
     console.log(data.share_geolocalized_tweets)
@@ -91,7 +94,7 @@ function make_sunburst_chart(chart_id, data) {
             return "translate(" + arc.centroid(d) + ")rotate(" + computeTextRotation(d) + ")";
         })
         .attr("dx", "-20") // radius margin
-        .attr("dy", ".5em") // rotation align
+        .attr("dy", '-15') // rotation align
         .text(function (d) {
             if (d.value > 0) {
                 //console.log(d)
@@ -109,10 +112,9 @@ function make_sunburst_chart(chart_id, data) {
             return "translate(" + arc.centroid(d) + ")rotate(" + computeTextRotation(d) + ")";
         })
         .attr("dx", "-20") // radius margin
-        .attr("dy", "50") // rotation align
+        .attr("dy", "20") // rotation align
         .text(function (d) {
             if (d.value > 0) {
-                
                 return d.parent ? d.data.size_perc + ' %': "";
             }
             else
