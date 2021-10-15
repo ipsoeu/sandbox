@@ -174,9 +174,9 @@ $(document).ready(function () {
         HASHTAGS_COMMUNITIES[6]['weak_links']
     )
 
-    make_community_info_table('#community_24_info', HASHTAGS_COMMUNITIES[4]);
+    make_community_info_table('#community_24_info', HASHTAGS_COMMUNITIES[6]);
 
-    make_sunburst_chart('#community_24_svg', HASHTAGS_COMMUNITIES[4]);
+    make_sunburst_chart('#community_24_svg', HASHTAGS_COMMUNITIES[6]);
 
     make_table_nodes_edges('#community_24_nodes_edges', node_edge);
 
