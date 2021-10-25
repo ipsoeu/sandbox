@@ -13,7 +13,7 @@ function make_community_info_table(html_id, info) {
     $list.append(`<dd>- Total: ${info['total_tweets']}</dd>`)
     $list.append(`<dd>- Shared: ${info['shared_tweets']}</dd>`)
     $list.append(`<dd>- NOT Shared: ${info['isolated_tweets']}</dd>`)
-    $list.append(`<dd>- ShareGeolocalized: ${info['share_geolocalized_tweets']}</dd>`)
+    $list.append(`<dd>- SharedGeolocalized: ${info['share_geolocalized_tweets']}</dd>`)
     $list.append(`<dd>- IsolatedGeolocalized: ${info['isolated_geolocalized_tweets']}</dd>`)
 
     $list.append($('<dt>Sentiment analysis</dt>'));
