@@ -90,7 +90,7 @@ $(document).ready(function () {
         ],
         order: [[3, "desc"]],
         columnDefs: [{
-            targets: [6,7,8],
+            targets: [5,6,7,8],
             render: $.fn.dataTable.render.number(',', '.', 3)
           }]
     });
@@ -153,6 +153,19 @@ $(document).ready(function () {
     make_sunburst_chart('#community_12_svg', HASHTAGS_COMMUNITIES[3]);
 
     make_table_nodes_edges('#community_12_nodes_edges', node_edge);
+
+    // Partition 23 FR
+    console.log(HASHTAGS_COMMUNITIES)
+    var node_edge = zip(HASHTAGS_COMMUNITIES[5]['hashtags'],
+        HASHTAGS_COMMUNITIES[5]['strong_links'],
+        HASHTAGS_COMMUNITIES[5]['weak_links']
+    )
+
+    make_community_info_table('#community_23_info', HASHTAGS_COMMUNITIES[5]);
+
+    make_sunburst_chart('#community_23_svg', HASHTAGS_COMMUNITIES[3]);
+
+    make_table_nodes_edges('#community_23_nodes_edges', node_edge);
 
     // Partition 8 IE
 

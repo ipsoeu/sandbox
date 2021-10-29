@@ -48,8 +48,7 @@ function make_sunburst_chart(chart_id, data) {
         },
         ]
     };
-    console.log(data)
-    console.log(data.share_geolocalized_tweets)
+
     // Variables
     var width = 500;
     var height = 500;
