@@ -1,7 +1,8 @@
 var GLOBAL_COLORS = {
     blue: '#1B5997',
-    gree: '#2ca02c',
-    red: '#08519c',
+    green: '#2ca02c',
+    red: '#D90429',
+    cyan: '#62a0de'
 }
 
 function make_community_info_table(html_id, info) {
@@ -110,7 +111,8 @@ $(document).ready(function () {
 
     make_community_info_table('#community_7_info', HASHTAGS_COMMUNITIES[0])
 
-    make_sunburst_chart('#community_7_svg', HASHTAGS_COMMUNITIES[0])
+    make_sunburst_chart('#community_7_geo_svg', HASHTAGS_COMMUNITIES[0])
+    make_sunburst_sentiment_chart('#community_7_sentiment_svg', HASHTAGS_COMMUNITIES[0])
 
     make_table_nodes_edges('#community_7_nodes_edges', node_edge)
 
