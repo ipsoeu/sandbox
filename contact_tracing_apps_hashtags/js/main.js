@@ -10,10 +10,10 @@ function write_geo_info(div_id, data){
 
     var $table = $('<table class="table"></table>');
 
-    $table.append('<tr><th></th><th>Shared tweets</th><th>Isolated tweets</th></tr>')
+    $table.append('<tr><th>Tweets</th><th>Shared</th><th>Isolated</th></tr>')
     $table.append(`
     <tr>
-        <td>Geolocalized tweets</td>
+        <td>Geolocalized</td>
         <td>${data.share_geolocalized_tweets}</td>
         <td>${data.isolated_geolocalized_tweets}</td>
     </tr>
@@ -21,19 +21,13 @@ function write_geo_info(div_id, data){
 
     $table.append(`
     <tr>
-        <td>No geolocalized tweets</td>
+        <td>No geolocalized</td>
         <td>${data.shared_tweets - data.share_geolocalized_tweets}</td>
         <td>${data.isolated_tweets - data.isolated_geolocalized_tweets}</td>
     </tr>
     `);
 
-    $table.append(`
-    <tr>
-        <td>Negative tweets</td>
-        <td>${data['share_negative_tweets']}</td>
-        <td>${data['isolated_negative_tweets']}</td>
-    </tr>
-    `);
+    
 
     $(div_id).append($table)
 }
@@ -42,10 +36,10 @@ function write_sentiment_info(div_id, data){
 
     var $table = $('<table class="table"></table>');
 
-    $table.append('<tr><th></th><th>Shared tweets</th><th>Isolated tweets</th></tr>')
+    $table.append('<tr><th>Tweets</th><th>Shared</th><th>Isolated</th></tr>')
     $table.append(`
     <tr>
-        <td>Positive tweets</td>
+        <td>Positive</td>
         <td>${data['share_positive_tweets']}</td>
         <td>${data['isolated_positive_tweets']}</td>
     </tr>
@@ -53,9 +47,17 @@ function write_sentiment_info(div_id, data){
 
     $table.append(`
     <tr>
-        <td>Neutral tweets</td>
+        <td>Neutral</td>
         <td>${data['share_neutral_tweets']}</td>
         <td>${data['isolated_neutral_tweets']}</td>
+    </tr>
+    `);
+    
+    $table.append(`
+    <tr>
+        <td>Negative</td>
+        <td>${data['share_negative_tweets']}</td>
+        <td>${data['isolated_negative_tweets']}</td>
     </tr>
     `);
 
