@@ -8,7 +8,7 @@ var GLOBAL_COLORS = {
 
 function write_geo_info(div_id, data){
 
-    var $table = $('<table class="table"></table>');
+    var $table = $('<table class="table" style="padding:10px;font-size:14px;width:400px"></table>');
 
     $table.append('<tr><th>Tweets</th><th>Shared</th><th>Isolated</th></tr>')
     $table.append(`
@@ -34,7 +34,7 @@ function write_geo_info(div_id, data){
 
 function write_sentiment_info(div_id, data){
 
-    var $table = $('<table class="table"></table>');
+    var $table = $('<table class="table" style="padding:10px;font-size:14px;width:400px"></table>');
 
     $table.append('<tr><th>Tweets</th><th>Shared</th><th>Isolated</th></tr>')
     $table.append(`
