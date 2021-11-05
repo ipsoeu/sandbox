@@ -1,5 +1,5 @@
 make_pie_chart = function (div_id, data_pie_chart) {
-    console.log(data_pie_chart)
+    
 
     var data = [{
         name: 'Shared news',
@@ -17,7 +17,7 @@ make_pie_chart = function (div_id, data_pie_chart) {
     width = 400;
 
     arcLabel = function () {
-        const radius = Math.min(width, height) / 2 * 1.2;
+        const radius = Math.min(width, height) / 3;
         return d3.arc().innerRadius(radius).outerRadius(radius);
     }
 
@@ -55,8 +55,8 @@ make_pie_chart = function (div_id, data_pie_chart) {
         .text(d => `${d.data.name}: ${d.data.value.toLocaleString()}`);
 
     svg.append("g")
-        .attr("font-family", "sans-serif")
-        .attr("font-size", 12)
+        //.attr("font-family", "sans-serif")
+        .attr("font-size", 20)
         .attr("text-anchor", "middle")
         .selectAll("text")
         .data(arcs)
@@ -65,13 +65,13 @@ make_pie_chart = function (div_id, data_pie_chart) {
 
         .call(text => text.append("tspan")
             .attr("y", "-0.4em")
-            .attr("font-weight", "bold")
+            //.attr("font-weight", "bold")
             .text(d => d.data.name))
-        .call(text => text.filter(d => (d.endAngle - d.startAngle) > 0.25).append("tspan")
-            .attr("x", 0)
-            .attr("y", "0.7em")
-            .attr("fill-opacity", 0.7)
-            .text(d => d.data.value.toLocaleString()));
+        // .call(text => text.filter(d => (d.endAngle - d.startAngle) > 0.25).append("tspan")
+        //     .attr("x", 0)
+        //     .attr("y", "0.7em")
+        //     .attr("fill-opacity", 0.7)
+        //     .text(d => d.data.value.toLocaleString()));
 
 
 }
