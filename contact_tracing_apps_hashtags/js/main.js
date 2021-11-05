@@ -52,7 +52,7 @@ function write_sentiment_info(div_id, data){
         <td>${data['isolated_neutral_tweets']}</td>
     </tr>
     `);
-    
+
     $table.append(`
     <tr>
         <td>Negative</td>
@@ -175,6 +175,9 @@ $(document).ready(function () {
 
     make_sunburst_sentiment_chart('#community_7_sentiment_svg', HASHTAGS_COMMUNITIES[0]);
     write_sentiment_info('#community_7_sentiment_info', HASHTAGS_COMMUNITIES[0]);
+    
+    make_pie_chart('#community_7_news_svg', HASHTAGS_COMMUNITIES[0]);
+    //write_sentiment_info('#community_7_sentiment_info', HASHTAGS_COMMUNITIES[0]);
 
     make_table_nodes_edges('#community_7_nodes_edges', node_edge);
 
