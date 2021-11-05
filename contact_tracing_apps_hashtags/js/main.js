@@ -7,15 +7,59 @@ var GLOBAL_COLORS = {
 }
 
 function write_geo_info(div_id, data){
-    // //community_7_geo_info
-    // var t = $('<table></table>');
 
-    // <table>
-        
-    //     <th>
+    var $table = $('<table class="table"></table>');
 
-    //     </th>
-    // </table>
+    $table.append('<tr><th></th><th>Shared tweets</th><th>Isolated tweets</th></tr>')
+    $table.append(`
+    <tr>
+        <td>Geolocalized tweets</td>
+        <td>${data.share_geolocalized_tweets}</td>
+        <td>${data.isolated_geolocalized_tweets}</td>
+    </tr>
+    `);
+
+    $table.append(`
+    <tr>
+        <td>No geolocalized tweets</td>
+        <td>${data.shared_tweets - data.share_geolocalized_tweets}</td>
+        <td>${data.isolated_tweets - data.isolated_geolocalized_tweets}</td>
+    </tr>
+    `);
+
+    $table.append(`
+    <tr>
+        <td>Negative tweets</td>
+        <td>${data['share_negative_tweets']}</td>
+        <td>${data['isolated_negative_tweets']}</td>
+    </tr>
+    `);
+
+    $(div_id).append($table)
+}
+
+function write_sentiment_info(div_id, data){
+
+    var $table = $('<table class="table"></table>');
+
+    $table.append('<tr><th></th><th>Shared tweets</th><th>Isolated tweets</th></tr>')
+    $table.append(`
+    <tr>
+        <td>Positive tweets</td>
+        <td>${data['share_positive_tweets']}</td>
+        <td>${data['isolated_positive_tweets']}</td>
+    </tr>
+    `);
+
+    $table.append(`
+    <tr>
+        <td>Neutral tweets</td>
+        <td>${data['share_neutral_tweets']}</td>
+        <td>${data['isolated_neutral_tweets']}</td>
+    </tr>
+    `);
+
+    $(div_id).append($table)
 }
 
 function make_community_info_table(html_id, info) {
@@ -122,12 +166,15 @@ $(document).ready(function () {
         HASHTAGS_COMMUNITIES[0]['weak_links']
     )
 
-    make_community_info_table('#community_7_info', HASHTAGS_COMMUNITIES[0])
+    make_community_info_table('#community_7_info', HASHTAGS_COMMUNITIES[0]);
 
-    make_sunburst_chart('#community_7_geo_svg', HASHTAGS_COMMUNITIES[0])
-    make_sunburst_sentiment_chart('#community_7_sentiment_svg', HASHTAGS_COMMUNITIES[0])
+    make_sunburst_chart('#community_7_geo_svg', HASHTAGS_COMMUNITIES[0]);
+    write_geo_info('#community_7_geo_info', HASHTAGS_COMMUNITIES[0]);
 
-    make_table_nodes_edges('#community_7_nodes_edges', node_edge)
+    make_sunburst_sentiment_chart('#community_7_sentiment_svg', HASHTAGS_COMMUNITIES[0]);
+    write_sentiment_info('#community_7_sentiment_info', HASHTAGS_COMMUNITIES[0]);
+
+    make_table_nodes_edges('#community_7_nodes_edges', node_edge);
 
 
     // Partition 3 IT
