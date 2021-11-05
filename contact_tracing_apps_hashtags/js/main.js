@@ -6,6 +6,23 @@ var GLOBAL_COLORS = {
     lightgray: '#D3D3D3'
 }
 
+
+function write_news_info(div_id, data){
+
+    var $table = $('<table class="table" style="padding:10px;font-size:14px;width:400px"></table>');
+
+    $table.append('<tr><th>News</th><th>Shared</th><th>Isolated</th></tr>')
+    $table.append(`
+    <tr>
+        <td>EMM</td>
+        <td>${data.share_emm_news}</td>
+        <td>${data.isolated_emm_news}</td>
+    </tr>
+    `);
+
+    $(div_id).append($table)
+}
+
 function write_geo_info(div_id, data){
 
     var $table = $('<table class="table" style="padding:10px;font-size:14px;width:400px"></table>');
@@ -168,7 +185,7 @@ $(document).ready(function () {
         HASHTAGS_COMMUNITIES[0]['weak_links']
     )
 
-    make_community_info_table('#community_7_info', HASHTAGS_COMMUNITIES[0]);
+    //make_community_info_table('#community_7_info', HASHTAGS_COMMUNITIES[0]);
 
     make_sunburst_chart('#community_7_geo_svg', HASHTAGS_COMMUNITIES[0]);
     write_geo_info('#community_7_geo_info', HASHTAGS_COMMUNITIES[0]);
@@ -177,7 +194,7 @@ $(document).ready(function () {
     write_sentiment_info('#community_7_sentiment_info', HASHTAGS_COMMUNITIES[0]);
     
     make_pie_chart('#community_7_news_svg', HASHTAGS_COMMUNITIES[0]);
-    //write_sentiment_info('#community_7_sentiment_info', HASHTAGS_COMMUNITIES[0]);
+    write_news_info('#community_7_news_info', HASHTAGS_COMMUNITIES[0]);
 
     make_table_nodes_edges('#community_7_nodes_edges', node_edge);
 
@@ -187,13 +204,26 @@ $(document).ready(function () {
     var node_edge = zip(HASHTAGS_COMMUNITIES[1]['hashtags'],
         HASHTAGS_COMMUNITIES[1]['strong_links'],
         HASHTAGS_COMMUNITIES[1]['weak_links']
-    )
+    );
 
-    make_community_info_table('#community_3_info', HASHTAGS_COMMUNITIES[1]);
+    make_sunburst_chart('#community_3_geo_svg', HASHTAGS_COMMUNITIES[1]);
+    write_geo_info('#community_3_geo_info', HASHTAGS_COMMUNITIES[1]);
 
-    make_sunburst_chart('#community_3_svg', HASHTAGS_COMMUNITIES[1]);
+    make_sunburst_sentiment_chart('#community_3_sentiment_svg', HASHTAGS_COMMUNITIES[1]);
+    write_sentiment_info('#community_3_sentiment_info', HASHTAGS_COMMUNITIES[1]);
+    
+    make_pie_chart('#community_3_news_svg', HASHTAGS_COMMUNITIES[1]);
+    write_news_info('#community_3_news_info', HASHTAGS_COMMUNITIES[1]);
 
     make_table_nodes_edges('#community_3_nodes_edges', node_edge);
+
+
+    
+    // make_community_info_table('#community_3_info', HASHTAGS_COMMUNITIES[1]);
+
+    // make_sunburst_chart('#community_3_svg', HASHTAGS_COMMUNITIES[1]);
+
+    // make_table_nodes_edges('#community_3_nodes_edges', node_edge);
 
     // Partition 1 DE
 
