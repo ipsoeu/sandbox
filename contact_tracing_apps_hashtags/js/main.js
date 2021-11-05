@@ -2,7 +2,20 @@ var GLOBAL_COLORS = {
     blue: '#1B5997',
     green: '#2ca02c',
     red: '#D90429',
-    cyan: '#62a0de'
+    cyan: '#62a0de',
+    lightgray: '#D3D3D3'
+}
+
+function write_geo_info(div_id, data){
+    // //community_7_geo_info
+    // var t = $('<table></table>');
+
+    // <table>
+        
+    //     <th>
+
+    //     </th>
+    // </table>
 }
 
 function make_community_info_table(html_id, info) {

@@ -50,8 +50,8 @@ function make_sunburst_chart(chart_id, data) {
     };
 
     // Variables
-    var width = 500;
-    var height = 500;
+    var width = 400;
+    var height = 400;
     var radius = Math.min(width, height) / 2;
     var color = d3.scaleOrdinal(d3.schemeAccent);
 
@@ -105,7 +105,7 @@ function make_sunburst_chart(chart_id, data) {
 
     g.selectAll(".node")
         .append("text")
-        .attr('font-size', '25px')
+        .attr('font-size', '20px')
         .attr('z-index', '10')
         .attr("transform", function (d) {
             return "translate(" + arc.centroid(d) + ")rotate(" + computeTextRotation(d) + ")";

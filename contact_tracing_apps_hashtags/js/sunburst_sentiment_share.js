@@ -9,10 +9,10 @@ function make_sunburst_sentiment_chart(chart_id, data) {
         //return 0;
     }
 
-//     blue: '#1B5997',
-//     gree: '#2ca02c',
-//     red: '#08519c',
-// }
+    //     blue: '#1B5997',
+    //     gree: '#2ca02c',
+    //     red: '#08519c',
+    // }
 
     var node_data = {
         "name": "Geolocalized tweets",
@@ -29,37 +29,54 @@ function make_sunburst_sentiment_chart(chart_id, data) {
                         size_perc: parseInt(data.share_positive_tweets / data.shared_tweets * 100)
                     },
                     {
+                        name: "Neutral",
+                        color: GLOBAL_COLORS.lightgray,
+                        size: parseInt(data.share_neutral_tweets / data.shared_tweets * 100),
+                        size_perc: parseInt(data.share_neutral_tweets / data.shared_tweets * 100)
+
+
+                    },
+                    {
                         name: "Negative",
                         color: GLOBAL_COLORS.red,
-                        size: 100 - parseInt(data.share_positive_tweets / data.shared_tweets * 100),
-                        size_perc: 100 - parseInt(data.share_positive_tweets / data.shared_tweets * 100)
+                        size: 100 - parseInt(data.share_positive_tweets / data.shared_tweets * 100) - parseInt(data.share_neutral_tweets / data.shared_tweets * 100),
+                        size_perc: 100 - parseInt(data.share_positive_tweets / data.shared_tweets * 100) - parseInt(data.share_neutral_tweets / data.shared_tweets * 100)
                     }
                 ]
             },
             {
-            name: "Isolated",
-            color: GLOBAL_COLORS.cyan,
-            size_perc: parseInt(data.isolated_tweets / data.total_tweets * 100),
-            "children": [
-                {
-                    name: "Positive",
-                    color: GLOBAL_COLORS.green,
-                    size: parseInt(data.isolated_positive_tweets / data.isolated_tweets * 100),
-                    size_perc: parseInt(data.isolated_positive_tweets / data.isolated_tweets * 100)
-                },
-                {
-                    "name": "Negative",
-                    color: GLOBAL_COLORS.red,
-                    "size": 100 - parseInt(data.isolated_positive_tweets / data.isolated_tweets * 100),
-                    'size_perc': 100 - parseInt(data.isolated_positive_tweets / data.isolated_tweets * 100)
-                }]
-        },
+                name: "Isolated",
+                color: GLOBAL_COLORS.cyan,
+                size_perc: parseInt(data.isolated_tweets / data.total_tweets * 100),
+                "children": [
+                    {
+                        name: "Positive",
+                        color: GLOBAL_COLORS.green,
+                        size: parseInt(data.isolated_positive_tweets / data.isolated_tweets * 100),
+                        size_perc: parseInt(data.isolated_positive_tweets / data.isolated_tweets * 100)
+                    },
+
+                    {
+                        name: "Neutral",
+                        color: GLOBAL_COLORS.lightgray,
+                        size: parseInt(data.isolated_neutral_tweets / data.shared_tweets * 100),
+                        size_perc: parseInt(data.isolated_neutral_tweets / data.shared_tweets * 100)
+
+
+                    },
+                    {
+                        "name": "Negative",
+                        color: GLOBAL_COLORS.red,
+                        "size": 100 - parseInt(data.isolated_positive_tweets / data.isolated_tweets * 100) - parseInt(data.isolated_neutral_tweets / data.shared_tweets * 100),
+                        'size_perc': 100 - parseInt(data.isolated_positive_tweets / data.isolated_tweets * 100) - parseInt(data.isolated_neutral_tweets / data.shared_tweets * 100)
+                    }]
+            },
         ]
     };
 
     // Variables
-    var width = 500;
-    var height = 500;
+    var width = 400;
+    var height = 400;
     var radius = Math.min(width, height) / 2;
     var color = d3.scaleOrdinal(d3.schemeAccent);
 
@@ -113,7 +130,7 @@ function make_sunburst_sentiment_chart(chart_id, data) {
 
     g.selectAll(".node")
         .append("text")
-        .attr('font-size', '25px')
+        .attr('font-size', '20px')
         .attr('z-index', '10')
         .attr("transform", function (d) {
             return "translate(" + arc.centroid(d) + ")rotate(" + computeTextRotation(d) + ")";
@@ -122,7 +139,7 @@ function make_sunburst_sentiment_chart(chart_id, data) {
         .attr("dy", "20") // rotation align
         .text(function (d) {
             if (d.value > 0) {
-                return d.parent ? d.data.size_perc + ' %': "";
+                return d.parent ? d.data.size_perc + ' %' : "";
             }
             else
                 return ''
