@@ -179,116 +179,144 @@ $(document).ready(function () {
 
     // Partition 7 UK
 
-    var node_edge = zip(
-        HASHTAGS_COMMUNITIES[0]['hashtags'],
-        HASHTAGS_COMMUNITIES[0]['strong_links'],
-        HASHTAGS_COMMUNITIES[0]['weak_links']
-    )
+    var partitions = [7, 3, 1, 12, 23, 8, 24];
 
-    //make_community_info_table('#community_7_info', HASHTAGS_COMMUNITIES[0]);
-
-    make_sunburst_chart('#community_7_geo_svg', HASHTAGS_COMMUNITIES[0]);
-    write_geo_info('#community_7_geo_info', HASHTAGS_COMMUNITIES[0]);
-
-    make_sunburst_sentiment_chart('#community_7_sentiment_svg', HASHTAGS_COMMUNITIES[0]);
-    write_sentiment_info('#community_7_sentiment_info', HASHTAGS_COMMUNITIES[0]);
+    for (let index = 0; index < partitions.length; index++) {
     
-    make_pie_chart('#community_7_news_svg', HASHTAGS_COMMUNITIES[0]);
-    write_news_info('#community_7_news_info', HASHTAGS_COMMUNITIES[0]);
+        var node_edge = zip(
+            HASHTAGS_COMMUNITIES[index]['hashtags'],
+            HASHTAGS_COMMUNITIES[index]['strong_links'],
+            HASHTAGS_COMMUNITIES[index]['weak_links']
+        );
 
-    make_table_nodes_edges('#community_7_nodes_edges', node_edge);
-
-
-    // Partition 3 IT
-
-    var node_edge = zip(HASHTAGS_COMMUNITIES[1]['hashtags'],
-        HASHTAGS_COMMUNITIES[1]['strong_links'],
-        HASHTAGS_COMMUNITIES[1]['weak_links']
-    );
-
-    make_sunburst_chart('#community_3_geo_svg', HASHTAGS_COMMUNITIES[1]);
-    write_geo_info('#community_3_geo_info', HASHTAGS_COMMUNITIES[1]);
-
-    make_sunburst_sentiment_chart('#community_3_sentiment_svg', HASHTAGS_COMMUNITIES[1]);
-    write_sentiment_info('#community_3_sentiment_info', HASHTAGS_COMMUNITIES[1]);
+        var partition_data = HASHTAGS_COMMUNITIES[index];
+        
+        make_sunburst_chart(`#community_${partitions[index]}_geo_svg`, partition_data);
+        write_geo_info(`#community_${partitions[index]}_geo_info`, partition_data);
     
-    make_pie_chart('#community_3_news_svg', HASHTAGS_COMMUNITIES[1]);
-    write_news_info('#community_3_news_info', HASHTAGS_COMMUNITIES[1]);
-
-    make_table_nodes_edges('#community_3_nodes_edges', node_edge);
-
-
+        make_sunburst_sentiment_chart(`#community_${partitions[index]}_sentiment_svg`, partition_data);
+        write_sentiment_info(`#community_${partitions[index]}_sentiment_info`, partition_data);
+        
+        make_pie_chart(`#community_${partitions[index]}_news_svg`, partition_data);
+        write_news_info(`#community_${partitions[index]}_news_info`, partition_data);
     
-    // make_community_info_table('#community_3_info', HASHTAGS_COMMUNITIES[1]);
+        make_table_nodes_edges(`#community_${partitions[index]}_nodes_edges`, node_edge);
+    
+    
+    } 
 
-    // make_sunburst_chart('#community_3_svg', HASHTAGS_COMMUNITIES[1]);
+    // var node_edge = zip(
+    //     HASHTAGS_COMMUNITIES[0]['hashtags'],
+    //     HASHTAGS_COMMUNITIES[0]['strong_links'],
+    //     HASHTAGS_COMMUNITIES[0]['weak_links']
+    // )
+
+    // //make_community_info_table('#community_7_info', HASHTAGS_COMMUNITIES[0]);
+
+    // make_sunburst_chart('#community_7_geo_svg', HASHTAGS_COMMUNITIES[0]);
+    // write_geo_info('#community_7_geo_info', HASHTAGS_COMMUNITIES[0]);
+
+    // make_sunburst_sentiment_chart('#community_7_sentiment_svg', HASHTAGS_COMMUNITIES[0]);
+    // write_sentiment_info('#community_7_sentiment_info', HASHTAGS_COMMUNITIES[0]);
+    
+    // make_pie_chart('#community_7_news_svg', HASHTAGS_COMMUNITIES[0]);
+    // write_news_info('#community_7_news_info', HASHTAGS_COMMUNITIES[0]);
+
+    // make_table_nodes_edges('#community_7_nodes_edges', node_edge);
+
+
+    // // Partition 3 IT
+
+    // var node_edge = zip(HASHTAGS_COMMUNITIES[1]['hashtags'],
+    //     HASHTAGS_COMMUNITIES[1]['strong_links'],
+    //     HASHTAGS_COMMUNITIES[1]['weak_links']
+    // );
+
+    // make_sunburst_chart('#community_3_geo_svg', HASHTAGS_COMMUNITIES[1]);
+    // write_geo_info('#community_3_geo_info', HASHTAGS_COMMUNITIES[1]);
+
+    // make_sunburst_sentiment_chart('#community_3_sentiment_svg', HASHTAGS_COMMUNITIES[1]);
+    // write_sentiment_info('#community_3_sentiment_info', HASHTAGS_COMMUNITIES[1]);
+    
+    // make_pie_chart('#community_3_news_svg', HASHTAGS_COMMUNITIES[1]);
+    // write_news_info('#community_3_news_info', HASHTAGS_COMMUNITIES[1]);
 
     // make_table_nodes_edges('#community_3_nodes_edges', node_edge);
 
-    // Partition 1 DE
 
-    var node_edge = zip(HASHTAGS_COMMUNITIES[2]['hashtags'],
-        HASHTAGS_COMMUNITIES[2]['strong_links'],
-        HASHTAGS_COMMUNITIES[2]['weak_links']
-    )
 
-    make_community_info_table('#community_1_info', HASHTAGS_COMMUNITIES[2]);
+    // // Partition 1 DE
 
-    make_sunburst_chart('#community_1_svg', HASHTAGS_COMMUNITIES[2]);
+    // var node_edge = zip(HASHTAGS_COMMUNITIES[2]['hashtags'],
+    //     HASHTAGS_COMMUNITIES[2]['strong_links'],
+    //     HASHTAGS_COMMUNITIES[2]['weak_links']
+    // );
+    
+    // var partition_data_1 = HASHTAGS_COMMUNITIES[2];
+    
+    // make_sunburst_chart('#community_1_geo_svg', partition_data_1);
+    // write_geo_info('#community_1_geo_info', partition_data_1);
 
-    make_table_nodes_edges('#community_1_nodes_edges', node_edge);
+    // make_sunburst_sentiment_chart('#community_1_sentiment_svg', partition_data_1);
+    // write_sentiment_info('#community_3_sentiment_info', partition_data_1);
+    
+    // make_pie_chart('#community_1_news_svg', partition_data_1);
+    // write_news_info('#community_1_news_info', partition_data_1);
 
-    // Partition 12 FR
+    // make_table_nodes_edges('#community_3_nodes_edges', node_edge);
 
-    var node_edge = zip(HASHTAGS_COMMUNITIES[3]['hashtags'],
-        HASHTAGS_COMMUNITIES[3]['strong_links'],
-        HASHTAGS_COMMUNITIES[3]['weak_links']
-    )
 
-    make_community_info_table('#community_12_info', HASHTAGS_COMMUNITIES[3]);
+    // // Partition 12 FR
 
-    make_sunburst_chart('#community_12_svg', HASHTAGS_COMMUNITIES[3]);
+    // var node_edge = zip(HASHTAGS_COMMUNITIES[3]['hashtags'],
+    //     HASHTAGS_COMMUNITIES[3]['strong_links'],
+    //     HASHTAGS_COMMUNITIES[3]['weak_links']
+    // )
 
-    make_table_nodes_edges('#community_12_nodes_edges', node_edge);
+    // make_community_info_table('#community_12_info', HASHTAGS_COMMUNITIES[3]);
 
-    // Partition 23 FR
-    console.log(HASHTAGS_COMMUNITIES)
-    var node_edge = zip(HASHTAGS_COMMUNITIES[5]['hashtags'],
-        HASHTAGS_COMMUNITIES[5]['strong_links'],
-        HASHTAGS_COMMUNITIES[5]['weak_links']
-    )
+    // make_sunburst_chart('#community_12_svg', HASHTAGS_COMMUNITIES[3]);
 
-    make_community_info_table('#community_23_info', HASHTAGS_COMMUNITIES[5]);
+    // make_table_nodes_edges('#community_12_nodes_edges', node_edge);
 
-    make_sunburst_chart('#community_23_svg', HASHTAGS_COMMUNITIES[3]);
+    // // Partition 23 FR
+    // console.log(HASHTAGS_COMMUNITIES)
+    // var node_edge = zip(HASHTAGS_COMMUNITIES[5]['hashtags'],
+    //     HASHTAGS_COMMUNITIES[5]['strong_links'],
+    //     HASHTAGS_COMMUNITIES[5]['weak_links']
+    // )
 
-    make_table_nodes_edges('#community_23_nodes_edges', node_edge);
+    // make_community_info_table('#community_23_info', HASHTAGS_COMMUNITIES[5]);
 
-    // Partition 8 IE
+    // make_sunburst_chart('#community_23_svg', HASHTAGS_COMMUNITIES[3]);
 
-    var node_edge = zip(HASHTAGS_COMMUNITIES[4]['hashtags'],
-        HASHTAGS_COMMUNITIES[4]['strong_links'],
-        HASHTAGS_COMMUNITIES[4]['weak_links']
-    )
+    // make_table_nodes_edges('#community_23_nodes_edges', node_edge);
 
-    make_community_info_table('#community_8_info', HASHTAGS_COMMUNITIES[4]);
+    // // Partition 8 IE
 
-    make_sunburst_chart('#community_8_svg', HASHTAGS_COMMUNITIES[4]);
+    // var node_edge = zip(HASHTAGS_COMMUNITIES[4]['hashtags'],
+    //     HASHTAGS_COMMUNITIES[4]['strong_links'],
+    //     HASHTAGS_COMMUNITIES[4]['weak_links']
+    // )
 
-    make_table_nodes_edges('#community_8_nodes_edges', node_edge);
+    // make_community_info_table('#community_8_info', HASHTAGS_COMMUNITIES[4]);
 
-    // Partition 6 IE
+    // make_sunburst_chart('#community_8_svg', HASHTAGS_COMMUNITIES[4]);
 
-    var node_edge = zip(HASHTAGS_COMMUNITIES[6]['hashtags'],
-        HASHTAGS_COMMUNITIES[6]['strong_links'],
-        HASHTAGS_COMMUNITIES[6]['weak_links']
-    )
+    // make_table_nodes_edges('#community_8_nodes_edges', node_edge);
 
-    make_community_info_table('#community_24_info', HASHTAGS_COMMUNITIES[6]);
+    // // Partition 6 IE
 
-    make_sunburst_chart('#community_24_svg', HASHTAGS_COMMUNITIES[6]);
+    // var node_edge = zip(HASHTAGS_COMMUNITIES[6]['hashtags'],
+    //     HASHTAGS_COMMUNITIES[6]['strong_links'],
+    //     HASHTAGS_COMMUNITIES[6]['weak_links']
+    // )
 
-    make_table_nodes_edges('#community_24_nodes_edges', node_edge);
+    // make_community_info_table('#community_24_info', HASHTAGS_COMMUNITIES[6]);
+
+    // make_sunburst_chart('#community_24_svg', HASHTAGS_COMMUNITIES[6]);
+
+    // make_table_nodes_edges('#community_24_nodes_edges', node_edge);
 
 });
 
