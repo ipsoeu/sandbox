@@ -149,10 +149,14 @@ function make_sunburst_sentiment_chart(chart_id, data) {
         .attr('transform', 'translate(-25, 30)')
         .text('Tweets')
 
+        g.append('text')
+        .attr('transform', 'translate(-38, 48)')
+        .text('with opinions')
+
     g.append('text')
-        .attr('transform', 'translate(-30, 0)')
+        .attr('transform', 'translate(-33, 0)')
         .attr('font-size', '18px')
         .attr('font-weight', 'bold')
-        .text(data['total_tweets'])
+        .text(data.shared_with_opinions_tweets + data.isolated_with_opinions_tweets)
 
 }
