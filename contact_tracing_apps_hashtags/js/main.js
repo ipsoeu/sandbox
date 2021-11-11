@@ -15,7 +15,7 @@ function write_news_info(div_id, data){
     $table.append(`
     <tr>
         <td>EMM</td>
-        <td>${data.share_emm_news}</td>
+        <td>${data.shared_emm_news}</td>
         <td>${data.isolated_emm_news}</td>
     </tr>
     `);
@@ -31,7 +31,7 @@ function write_geo_info(div_id, data){
     $table.append(`
     <tr>
         <td>Geolocalized</td>
-        <td>${data.share_geolocalized_tweets}</td>
+        <td>${data.shared_geolocalized_tweets}</td>
         <td>${data.isolated_geolocalized_tweets}</td>
     </tr>
     `);
@@ -39,7 +39,7 @@ function write_geo_info(div_id, data){
     $table.append(`
     <tr>
         <td>No geolocalized</td>
-        <td>${data.shared_tweets - data.share_geolocalized_tweets}</td>
+        <td>${data.shared_tweets - data.shared_geolocalized_tweets}</td>
         <td>${data.isolated_tweets - data.isolated_geolocalized_tweets}</td>
     </tr>
     `);
@@ -57,7 +57,7 @@ function write_sentiment_info(div_id, data){
     $table.append(`
     <tr>
         <td>Positive</td>
-        <td>${data['share_positive_tweets']}</td>
+        <td>${data['shared_positive_tweets']}</td>
         <td>${data['isolated_positive_tweets']}</td>
     </tr>
     `);
@@ -65,7 +65,7 @@ function write_sentiment_info(div_id, data){
     $table.append(`
     <tr>
         <td>Neutral</td>
-        <td>${data['share_neutral_tweets']}</td>
+        <td>${data['shared_neutral_tweets']}</td>
         <td>${data['isolated_neutral_tweets']}</td>
     </tr>
     `);
@@ -73,7 +73,7 @@ function write_sentiment_info(div_id, data){
     $table.append(`
     <tr>
         <td>Negative</td>
-        <td>${data['share_negative_tweets']}</td>
+        <td>${data['shared_negative_tweets']}</td>
         <td>${data['isolated_negative_tweets']}</td>
     </tr>
     `);
@@ -94,9 +94,9 @@ function make_community_info_table(html_id, info) {
     $list.append(`<dd>- IsolatedGeolocalized: ${info['isolated_geolocalized_tweets']}</dd>`)
 
     $list.append($('<dt>Sentiment analysis</dt>'));
-    $list.append(`<dd>- Positive: ${info['share_positive_tweets']}</dd>`)
-    $list.append(`<dd>- Negative: ${info['share_negative_tweets']}</dd>`)
-    $list.append(`<dd>- Neutral: ${info['share_neutral_tweets']}</dd>`)
+    $list.append(`<dd>- Positive: ${info['shared_positive_tweets']}</dd>`)
+    $list.append(`<dd>- Negative: ${info['shared_negative_tweets']}</dd>`)
+    $list.append(`<dd>- Neutral: ${info['shared_neutral_tweets']}</dd>`)
 
     $list.append($('<dt>Sentiment analysis on isolated tweets</dt>'));
     $list.append(`<dd>- Positive: ${info['isolated_positive_tweets']}</dd>`)

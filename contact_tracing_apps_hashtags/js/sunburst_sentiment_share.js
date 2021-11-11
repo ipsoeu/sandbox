@@ -13,62 +13,62 @@ function make_sunburst_sentiment_chart(chart_id, data) {
     //     gree: '#2ca02c',
     //     red: '#08519c',
     // }
-
+    
     var node_data = {
         "name": "Geolocalized tweets",
         "children": [
             {
                 name: "Shared",
                 color: '#1B5997',
-                size_perc: 100 - parseInt(data.isolated_tweets / data.total_tweets * 100),
+                size_perc: parseInt(data.shared_with_opinions_tweets / (data.shared_with_opinions_tweets + data.isolated_with_opinions_tweets) * 100),
                 children: [
                     {
                         name: "Positive",
                         color: GLOBAL_COLORS.green,
-                        size: parseInt(data.share_positive_tweets / data.shared_tweets * 100),
-                        size_perc: parseInt(data.share_positive_tweets / data.shared_tweets * 100)
+                        size: data.shared_positive_tweets,
+                        size_perc: parseInt(data.shared_positive_tweets / data.shared_with_opinions_tweets * 100)
                     },
                     {
                         name: "Neutral",
                         color: GLOBAL_COLORS.lightgray,
-                        size: parseInt(data.share_neutral_tweets / data.shared_tweets * 100),
-                        size_perc: parseInt(data.share_neutral_tweets / data.shared_tweets * 100)
+                        size: data.shared_neutral_tweets,
+                        size_perc: parseInt(data.shared_neutral_tweets / data.shared_with_opinions_tweets * 100)
 
 
                     },
                     {
                         name: "Negative",
                         color: GLOBAL_COLORS.red,
-                        size: 100 - parseInt(data.share_positive_tweets / data.shared_tweets * 100) - parseInt(data.share_neutral_tweets / data.shared_tweets * 100),
-                        size_perc: 100 - parseInt(data.share_positive_tweets / data.shared_tweets * 100) - parseInt(data.share_neutral_tweets / data.shared_tweets * 100)
+                        size: data.shared_negative_tweets,
+                        size_perc: 100 - parseInt(data.shared_positive_tweets / data.shared_with_opinions_tweets * 100) - parseInt(data.shared_neutral_tweets / data.shared_with_opinions_tweets * 100)
                     }
                 ]
             },
             {
                 name: "Isolated",
                 color: GLOBAL_COLORS.cyan,
-                size_perc: parseInt(data.isolated_tweets / data.total_tweets * 100),
+                size_perc: 100 - parseInt(data.shared_with_opinions_tweets / (data.shared_with_opinions_tweets + data.isolated_with_opinions_tweets) * 100),
                 "children": [
                     {
                         name: "Positive",
                         color: GLOBAL_COLORS.green,
-                        size: parseInt(data.isolated_positive_tweets / data.isolated_tweets * 100),
-                        size_perc: parseInt(data.isolated_positive_tweets / data.isolated_tweets * 100)
+                        size: data.isolated_positive_tweets,
+                        size_perc: parseInt(data.isolated_positive_tweets / data.isolated_with_opinions_tweets * 100)
                     },
 
                     {
                         name: "Neutral",
                         color: GLOBAL_COLORS.lightgray,
-                        size: parseInt(data.isolated_neutral_tweets / data.shared_tweets * 100),
-                        size_perc: parseInt(data.isolated_neutral_tweets / data.shared_tweets * 100)
+                        size: data.isolated_neutral_tweets,
+                        size_perc: parseInt(data.isolated_neutral_tweets / data.isolated_with_opinions_tweets * 100)
 
 
                     },
                     {
                         "name": "Negative",
                         color: GLOBAL_COLORS.red,
-                        "size": 100 - parseInt(data.isolated_positive_tweets / data.isolated_tweets * 100) - parseInt(data.isolated_neutral_tweets / data.shared_tweets * 100),
-                        'size_perc': 100 - parseInt(data.isolated_positive_tweets / data.isolated_tweets * 100) - parseInt(data.isolated_neutral_tweets / data.shared_tweets * 100)
+                        "size": data.isolated_negative_tweets,
+                        'size_perc': 100 - parseInt(data.isolated_positive_tweets / data.isolated_with_opinions_tweets * 100) - parseInt(data.isolated_neutral_tweets / data.isolated_with_opinions_tweets * 100)
                     }]
             },
         ]

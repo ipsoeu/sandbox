@@ -3,7 +3,7 @@ make_pie_chart = function (div_id, data_pie_chart) {
 
     var data = [{
         name: 'Shared news',
-        value: data_pie_chart.share_emm_news
+        value: data_pie_chart.shared_emm_news
     },
     {
         name: 'Isolated news',
