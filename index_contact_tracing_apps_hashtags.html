@@ -105,8 +105,9 @@
 
         <figure class="figure">
             <img src="contact_tracing_apps_hashtags/data/network_all_apps_low_resolution.png"></img>
-            <figcaption class="figure-caption">Figure 1. Hashtag network about contact tracing apps, built on top of
-                ~260,000 tweets collected from July 2020 to June 2021. </figcaption>
+            <figcaption class="figure-caption">
+                Figure 1. Hashtag network about contact tracing apps, built on top of ~260,000 tweets collected from July 2020 to June 2021.
+            </figcaption>
         </figure>
 
 
@@ -114,75 +115,71 @@
         <div style="margin-top: 10px;">
 
             <p>
-                The picture shows the network hashtags of around 260,000 tweets about mobile contact tracing apps.
+                Figure 1 shows the hashtag network of around 260,000 tweets about mobile contact tracing apps. 
                 The tweets were collected from July 2020 to June 2021 using the official Twitter APIs.
             </p>
 
             <p>
-                The size of the nodes denotes the co-occurrence frequency with the other hashtags
-                which means how a node may be influential in the network.
-                Different measures can be adopted in Social Network Analysis (SNA)
-                to extract the centrality of a node in order to obtain an influential node. We adopted as
-                centrality measurement the degree centrality wich shows how many connections an hashtags has.
+                The size of the nodes denotes the co-occurrence frequency among the node hashtags, which shows how a node may be influential in the network. 
+                Different measures can be adopted in Social Network Analysis (SNA) to extract the centrality of a node in order to identify an influential node. 
+                We adopted as centrality measurement the degree centrality, which shows how many connections an hashtags has.
             </p>
 
             <p>
-                Please notice that the small communities with a low number of nodes and density are
-                pruned from the network in order to have a clearer overview of the network.
+                Please notice that small communities with a few nodes and low density have been pruned from the network in order to have a clearer network overview.
             </p>
             <p>
-                Each colour represents a community, identified using the Louvain method [LOUVAIN-2008], where the
-                hashtags are closely related.
-                For example, for the purple community the topic seems to be <em>Health and Healthcare</em>.
-                Note that the colours of the communities are selected randomly using standard colour palettes.
+                Each colour represents a community with hashtags that are closely related, that has been identified using the Louvain method [LOUVAIN-2008]. 
+                For example, for the purple community the topic seems to be 
+                <em>Health and Healthcare</em>. Note that the colours of the communities are selected randomly using standard colour palettes.
             </p>
 
         </div>
 
         <div style="margin-top: 10px;">
             <p>
-
-                The Louvain method revealed 8 main distinct communities, where the <em>central hashtag</em> is usually a
-                contact tracing app name.
-                For example, the dark green community represents the Italian contact tracing app <em>Immuni</em>, and
-                the medium green community
-                the Irish contact tracing app <em>Covid Ireland</em>.
+                The Louvain method revealed eight main distinct communities, where the <em>central hashtag</em> is usually a contact tracing app name. 
+                For example, the dark green community represents the Italian contact tracing app <em>Immuni</em>, 
+                and the medium green community the Irish contact tracing app <em>Covid Ireland</em>.
             </p>
 
             <p>
-                Furthermore, in grey there are small communities where the hashtags are related for most of the themes
-                with political entities or geographic names.
+                Furthermore, there are small communities in grey colour, where the hashtags are related to most of the themes with political entities or geographic names. 
+                Notice, though, that the sixth community in terms of number of tweets is a generic one, covering covid-19 related 
+                issues in the society and the economy as well as covid-19 restrictions.
             </p>
         </div>
 
         <div style="margin-top: 10px;">
             <p>
-                The table below displays the all the communities extracted using the [LOUVAIN-2008] algorithm and sorted
-                by the number of hashtags.
-                The communities detected usually represent specific topics, entities or events but it is not easy to
-                extract in
-                an automatic way a single word that describes each community.
+                Table 1 displays the all the communities extracted using the [LOUVAIN-2008] algorithm, ordered by the number of hashtags. 
+                The communities detected usually represent specific topics, entities or events but it is not easy to extract in an 
+                automatic way a single word that describes each community
             </p>
 
             <p>
-                For this reason, we provide for the most frequent contact tracing app in the <em>isolated</em> tweets
-                related to each community (specified in the column Main mobile app in Table 1)
-                the Top 5 hashtags (in the homonym column of Table 1), which allows to understand which topics dominate
-                the community.
-                The top 5 hashtags are determined based on the highest value of degree centrality.
-                Note that, since every hashtag may be used in one or more tweets,
-                a community is determined by a set of tweets and the size of the set is reported in the <em>number of
-                    tweets</em> column.
+                For this reason, we provide information about the most frequent contact tracing app in the <em>isolated</em> tweets related to each community 
+                (specified in the column Main mobile app in Table 1) and the top 5 community hashtags (in the homonym column of Table 1), 
+                to show which topics dominate the community.                 
+                The top 5 hashtags are determined based on the highest value of degree centrality. Note that, 
+                since every hashtag may be used in one or more tweets, a community is determined by a set of tweets and the 
+                size of the set is reported in the <em>number of tweets</em> column.
+
             </p>
 
             <p>
 
-                On the other hand, a tweet can contain one or more hashtags and a community can share tweets with the
-                other communities.
-                The <em>Isolation index</em> shows how much a community is isolated and it has been calculated as the
-                ratio
-                (number of not shared tweets)/(total number of tweets inside the community).
-                Therefore, a <em>high value</em> of the Isolation index indicates a highly isolated community.
+                On the other hand, a tweet can contain one or more hashtags and a community can share tweets with the other communities. 
+                The <em>Isolation index</em> shows how much a community is isolated and it has been calculated as the ratio 
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <mi>isolation index</mi>
+                    <mo>=</mo>
+                    <mfrac>
+                        <mi>number_of_not_shared_tweets</mi>
+                        <mi>total number of tweets inside the community</mi>
+                    </mfrac>
+                </math>
+                Therefore, a high value of the Isolation index indicates a <em>highly</em> isolated community.
             </p>
 
             <p>
