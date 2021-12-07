@@ -15,29 +15,29 @@ function make_sunburst_chart(chart_id, data) {
         "children": [
             {
                 name: "Shared",
-                color: '#2ca02c', //"#08519c",
+                color: '#1B5997',
                 size_perc: 100 - parseInt(data.isolated_tweets / data.total_tweets * 100),
                 children: [
                     {
                         name: "Geo",
-                        size: data.share_geolocalized_tweets,
-                        size_perc: parseInt(data.share_geolocalized_tweets / data.shared_tweets * 100)
+                        size: data.shared_geolocalized_tweets,
+                        size_perc: parseInt(data.shared_geolocalized_tweets / data.shared_tweets * 100)
                     },
                     {
                         name: "No Geo",
-                        size: data.shared_tweets - data.share_geolocalized_tweets,
-                        size_perc: 100 - parseInt(data.share_geolocalized_tweets / data.shared_tweets * 100)
+                        size: data.shared_tweets - data.shared_geolocalized_tweets,
+                        size_perc: 100 - parseInt(data.shared_geolocalized_tweets / data.shared_tweets * 100)
                     }
                 ]
             },
             {
-            "name": "Isolated",
-            'color': 'rgb(27, 89, 151)',
+            name: "Isolated",
+            color: GLOBAL_COLORS.cyan,
             size_perc: parseInt(data.isolated_tweets / data.total_tweets * 100),
             "children": [
                 {
                     "name": "Geo",
-                    "size": data['isolated_geolocalized_tweets'],
+                    "size": data.isolated_geolocalized_tweets,
                     'size_perc': parseInt(data.isolated_geolocalized_tweets / data.isolated_tweets * 100)
                 },
                 {
@@ -48,7 +48,7 @@ function make_sunburst_chart(chart_id, data) {
         },
         ]
     };
-
+    
     // Variables
     var width = 400;
     var height = 400;
