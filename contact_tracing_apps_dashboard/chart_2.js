@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     function makestack_chart(div_id, data, keys, dates, title) {
-
+        
         var div = d3.select("body").append("div")
             .attr("class", "tooltip")
             .style("opacity", 0);
