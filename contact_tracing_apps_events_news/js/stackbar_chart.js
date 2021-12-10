@@ -72,7 +72,7 @@ function make_stackbar_chart(div_id, data, keys, title) {
         .attr("cy", function (d) {
             return y(d.total) - 10;
         })
-        .attr('r', '3px')
+        .attr('r', d => `${d.zscore * 1.2}px`)
         .style('fill', '#D90429');
 
     g.append("g")
@@ -116,15 +116,17 @@ function make_stackbar_chart(div_id, data, keys, title) {
         .attr("transform", function (d, i) { return "translate(50," + (0 + i * 40) + ")"; });
 
     legend.append("rect")
-        .attr("x", width)
+        .attr("x", width - 120)
         .attr("width", 50)
         .attr("height", 50)
-        .attr("fill", z);
+        .attr("fill", function(d){
+            return z(d);
+        });
 
     legend.append("text")
-        .attr("x", width - 24)
+        .attr("x", width - 150)
         .attr("y", 9.5)
-        .attr("dy", "1em")
+        .attr("dy", "2em")
         .text(function (d) { return d; });
 
 }

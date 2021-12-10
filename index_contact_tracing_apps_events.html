@@ -81,7 +81,23 @@
 <body>
     <div id="wrap">
         <div>
-            <h3>Temporal evolution end event detection</h3>
+            <h3>Temporal evolution and event detection</h3>
+            <div>
+                In this section we can show the trend of the tweets collected with focus on news and events.
+                The Figure 1 show the activities of twitter users of the main six mobile contact tracing apps.
+                The red point are potential event detected by using the z-score function calculated folliwing this formula:
+                
+                <p>
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>z-score</mi>
+                        <mo>=</mo>
+                        <mfrac>
+                            <mi>number of tweets by day - mean of total tweets</mi>
+                            <mi>standard deviation of total tweets</mi>
+                        </mfrac>
+                    </math>
+                </p>
+            </div>
             <div>
                 <svg id="events_by_app" width="1300" height="600"></svg>
                 <div>
