@@ -59,7 +59,7 @@ function make_stackbar_chart(div_id, data, keys, title) {
                 .style("opacity", 0);
         });
     
-    z_score_threshold = 1;
+    z_score_threshold = 0;
 
     g.append('g')
         .selectAll("g")
@@ -72,7 +72,7 @@ function make_stackbar_chart(div_id, data, keys, title) {
         .attr("cy", function (d) {
             return y(d.total) - 10;
         })
-        .attr('r', d => `${d.zscore * 1.2}px`)
+        .attr('r', d => `${d.zscore * 1.5}px`)
         .style('fill', '#D90429');
 
     g.append("g")
