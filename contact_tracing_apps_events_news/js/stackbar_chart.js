@@ -22,7 +22,7 @@ function make_stackbar_chart(div_id, data, keys, title) {
     y = d3.scaleLinear().rangeRound([height - margin.bottom, margin.top]);
 
     var z = d3.scaleOrdinal().range(["#b5179e", "#8ac926", "#1982c4", "#6a4c93", "#e76f51", "#619b8a", '#1b4332', '#cb997e']);
-    console.log(keys)
+    
     x.domain(data.map(d => d.datetime_str));
     y.domain([0, d3.max(data, function (d) { return d.total; })])
     z.domain(keys);
@@ -133,7 +133,6 @@ function make_stackbar_chart(div_id, data, keys, title) {
 
 $(document).ready(function () {
 
-    console.log('OK')
 
     var div_id = "#events_by_app";
     var data = POSITIVE_SENTIMENT_TEMPORAL_EVOLUTION;
