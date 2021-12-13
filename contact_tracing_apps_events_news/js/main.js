@@ -17,6 +17,11 @@ $(document).ready(function () {
             { data: "datetime_str", title: "Date" },
             { data: "zscore", title: "Z-score index" },
             { data: "total", title: "Number of tweets" },
+            {data:function (record){
+                keys = Object.keys(record).sort(function(a,b){return record[b] - record[a]})
+                return `${keys[1]}(${record[keys[1]]}),${keys[2]}(${record[keys[2]]}),${keys[3]}(${record[keys[3]]}), `
+            },
+            title: 'Main mobile apps'}
 
         ],
         order: [[1, "desc"]],
