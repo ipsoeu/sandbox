@@ -141,6 +141,10 @@ $(document).ready(function () {
 
     make_stackbar_chart(div_id, TEMPORAL_EVOLUTION_BY_APP, TOP_MOBILE_APPS);
 
+    make_stackbar_chart('#positive_events_by_app', TEMPORAL_EVOLUTION_BY_APP_POSITIVE, TOP_MOBILE_APPS);
+
+    make_stackbar_chart('#negative_events_by_app', TEMPORAL_EVOLUTION_BY_APP_NEGATIVE, TOP_MOBILE_APPS);
+
     // var div_id = "#chart_3";
     // var data = NEGATIVE_SENTIMENT_TEMPORAL_EVOLUTION;
     // var keys = MOBILE_APPS;
