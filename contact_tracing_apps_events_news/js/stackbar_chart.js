@@ -53,6 +53,9 @@ function make_stackbar_chart(div_id, data, keys, title) {
                 return y(b) - y(a);
         })
         .attr("width", x.bandwidth())
+        .on('mouseover', function(d){
+            console.log(d)
+        })
         .on("mouseout", function (d) {
             div.transition()
                 .duration(500)
@@ -133,23 +136,17 @@ function make_stackbar_chart(div_id, data, keys, title) {
 
 $(document).ready(function () {
 
+    make_stackbar_chart('#events_by_app', 
+                        JSON.parse(JSON.stringify(TEMPORAL_EVOLUTION_BY_APP)),
+                        TOP_MOBILE_APPS);
 
-    var div_id = "#events_by_app";
-    var data = POSITIVE_SENTIMENT_TEMPORAL_EVOLUTION;
-    var keys = TOP_MOBILE_APPS;
-    var dates = POSITIVE_SENTIMENT_TEMPORAL_EVOLUTION_DATES;
+    make_stackbar_chart('#positive_events_by_app', 
+                        JSON.parse(JSON.stringify(TEMPORAL_EVOLUTION_BY_APP_POSITIVE)),
+                        TOP_MOBILE_APPS);
 
-    make_stackbar_chart(div_id, TEMPORAL_EVOLUTION_BY_APP, TOP_MOBILE_APPS);
+    make_stackbar_chart('#negative_events_by_app', 
+                        JSON.parse(JSON.stringify(TEMPORAL_EVOLUTION_BY_APP_NEGATIVE)),
+                        TOP_MOBILE_APPS);
 
-    make_stackbar_chart('#positive_events_by_app', TEMPORAL_EVOLUTION_BY_APP_POSITIVE, TOP_MOBILE_APPS);
-
-    make_stackbar_chart('#negative_events_by_app', TEMPORAL_EVOLUTION_BY_APP_NEGATIVE, TOP_MOBILE_APPS);
-
-    // var div_id = "#chart_3";
-    // var data = NEGATIVE_SENTIMENT_TEMPORAL_EVOLUTION;
-    // var keys = MOBILE_APPS;
-    // var dates = POSITIVE_SENTIMENT_TEMPORAL_EVOLUTION_DATES;
-
-    // makestack_chart(div_id, data, keys, dates, 'Temporal evolution of negative tweets');
 });
 

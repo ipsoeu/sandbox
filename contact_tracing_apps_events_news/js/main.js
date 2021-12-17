@@ -12,7 +12,7 @@ $(document).ready(function () {
 
     
     $("#events_by_zscore").DataTable({
-        data: top_events.slice(0, 50),
+        data: top_events,
         columns: [
             { data: "datetime_str", title: "Date" },
             { data: "zscore", title: "Z-score index" },
@@ -38,7 +38,7 @@ $(document).ready(function () {
     });
 
     $("#positive_events_by_zscore").DataTable({
-        data: positive_top_events.slice(0, 50),
+        data: positive_top_events,
         columns: [
             { data: "datetime_str", title: "Date" },
             { data: "zscore", title: "Z-score index" },
@@ -64,7 +64,7 @@ $(document).ready(function () {
     });
 
     $("#negative_events_by_zscore").DataTable({
-        data: negative_top_events.slice(0, 50),
+        data: negative_top_events,
         columns: [
             { data: "datetime_str", title: "Date" },
             { data: "zscore", title: "Z-score index" },
