@@ -125,8 +125,8 @@ $(document).ready(function () {
         let [geo_data] = response;
         var event_news = EVENTS_NEWS['positive'][0][EVENTS[0][0]['datetime'][0]];
         
-        //console.log(event_news);
-        console.log(EVENTS)
+        
+        //console.log(EVENTS)
         make_geo_event_chart('#dashboard_positive_event', geo_data, EVENTS[0]);
         make_tag_cloud_chart('#dashboard_positive_event', EVENTS[0]);
 

@@ -89,4 +89,60 @@ $(document).ready(function () {
         // 'paging': false
     });
 
+    var event_news = JSON.parse(JSON.stringify(EVENTS_NEWS));
+
+    var positive_event_news = event_news['positive'].map(function(e){
+
+        var datetime_str = Object.keys(e)[0];
+        var events = e[datetime_str];
+        var n_retweets = events.reduce(function(p, r){
+            return p + r.favorite_count
+        },0);
+
+        return {
+            sentiment: 'Positive',
+            n_tweets: events.length,
+            datetime_str: datetime_str,
+            n_retweets: n_retweets
+        };
+    });
+
+    var negative_event_news = event_news['negative'].map(function(e){
+
+        var datetime_str = Object.keys(e)[0];
+        var events = e[datetime_str];
+        var n_retweets = events.reduce(function(p, r){
+            return p + r.favorite_count
+        },0);
+
+        return {
+            sentiment: 'Negative',
+            n_tweets: events.length,
+            datetime_str: datetime_str,
+            n_retweets: n_retweets
+        };
+    });
+
+
+    
+    var total_events = positive_event_news.concat(negative_event_news);
+    console.log(total_events)
+    $("#events_news_ranking").DataTable({
+        data: total_events,
+        columns: [
+            { data: "datetime_str", title: "Date" },
+            { data: "n_tweets", title: "Number of tweets with news" },
+            { data: "n_retweets", title: "Total number of tetweets" },
+            { data: "sentiment", title: "Orientation" },
+
+        ],
+        order: [[1, "desc"]],
+        // columnDefs: [{
+        //     targets: [1],
+        //     render: $.fn.dataTable.render.number(',', '.', 3)
+        // }],
+        'paging': false,
+        'searching':false
+    });
+
 });
