@@ -52,15 +52,7 @@ function make_stackbar_chart(div_id, data, keys, title) {
             else
                 return y(b) - y(a);
         })
-        .attr("width", x.bandwidth())
-        .on('mouseover', function(d){
-            console.log(d)
-        })
-        .on("mouseout", function (d) {
-            div.transition()
-                .duration(500)
-                .style("opacity", 0);
-        });
+        .attr("width", x.bandwidth());
     
     z_score_threshold = 0;
 
