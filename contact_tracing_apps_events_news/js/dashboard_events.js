@@ -59,21 +59,18 @@ function make_geo_event_chart(chart_id, geo_data, event) {
 }
 
 function make_tag_cloud_chart(chart_id, event) {
-
-    console.log(event)
-
+    
     const margin = { top: 30, right: 30, bottom: 30, left: 30 },
         width = 500 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
+    var word_cloud_id = `${chart_id.replace('#', '')}_word_cloud`;
 
     const svg_word_cloud = d3.select(chart_id)
         .append('svg')
-        .attr('id', 'svg_word_cloud')
+        .attr('id', word_cloud_id)
         .attr('width', width + margin.left + margin.top)
         .attr('height', height + margin.top + margin.bottom)
-        .attr('x', 500)
-        //.append('g')
-        //.attr('transform', `translate(${margin.left} ${margin.top})`);
+        .attr('x', 500);
 
     var words = event.map(function (item) {
         var wordcloud = item.hashtags.map(function (h) {
@@ -103,7 +100,7 @@ function make_tag_cloud_chart(chart_id, event) {
     layout.start();
 
     function draw(words) {
-            d3.select('#svg_word_cloud')
+            d3.select(`#${word_cloud_id}`)
             .attr("width", layout.size()[0])
             .attr("height", layout.size()[1])
             .append("g")
@@ -128,11 +125,13 @@ $(document).ready(function () {
         let [geo_data] = response;
         var event_news = EVENTS_NEWS['positive'][0][EVENTS[0][0]['datetime'][0]];
         
-        console.log(event_news);
+        //console.log(event_news);
+        console.log(EVENTS)
+        make_geo_event_chart('#dashboard_positive_event', geo_data, EVENTS[0]);
+        make_tag_cloud_chart('#dashboard_positive_event', EVENTS[0]);
 
-        make_geo_event_chart('#chart_6', geo_data, EVENTS[0]);
-
-        make_tag_cloud_chart('#chart_6', EVENTS[0]);
+        make_geo_event_chart('#dashboard_negative_event', geo_data, EVENTS[5]);
+        make_tag_cloud_chart('#dashboard_negative_event', EVENTS[5]);
     });
 
 });
