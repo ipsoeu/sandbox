@@ -180,16 +180,17 @@ $(document).ready(function () {
     // Partition 7 UK
 
     var partitions = [7, 3, 1, 12, 23, 8, 24];
-
+    var indices =    [0, 1, 2, 3,  5,  4, 6];
+    console.log(HASHTAGS_COMMUNITIES)
     for (let index = 0; index < partitions.length; index++) {
     
         var node_edge = zip(
-            HASHTAGS_COMMUNITIES[index]['hashtags'],
-            HASHTAGS_COMMUNITIES[index]['strong_links'],
-            HASHTAGS_COMMUNITIES[index]['weak_links']
+            HASHTAGS_COMMUNITIES[indices[index]]['hashtags'],
+            HASHTAGS_COMMUNITIES[indices[index]]['strong_links'],
+            HASHTAGS_COMMUNITIES[indices[index]]['weak_links']
         );
 
-        var partition_data = HASHTAGS_COMMUNITIES[index];
+        var partition_data = HASHTAGS_COMMUNITIES[indices[index]];
         
         make_sunburst_chart(`#community_${partitions[index]}_geo_svg`, partition_data);
         write_geo_info(`#community_${partitions[index]}_geo_info`, partition_data);
