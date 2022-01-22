@@ -126,12 +126,21 @@ $(document).ready(function () {
         var event_news = EVENTS_NEWS['positive'][0][EVENTS[0][0]['datetime'][0]];
         
         
-        //console.log(EVENTS)
-        make_geo_event_chart('#dashboard_positive_event', geo_data, EVENTS[0]);
-        make_tag_cloud_chart('#dashboard_positive_event', EVENTS[0]);
+        console.log(EVENTS)
+        make_geo_event_chart('#dashboard_event_1', geo_data, EVENTS[0]); //9 24 positive
+        make_tag_cloud_chart('#dashboard_event_1', EVENTS[0]);
+        
+        // negative 9 24
+        make_geo_event_chart('#dashboard_event_2', geo_data, EVENTS[3]);
+        make_tag_cloud_chart('#dashboard_event_2', EVENTS[3]);
 
-        make_geo_event_chart('#dashboard_negative_event', geo_data, EVENTS[5]);
-        make_tag_cloud_chart('#dashboard_negative_event', EVENTS[5]);
+        // negative 9 26
+        make_geo_event_chart('#dashboard_event_3', geo_data, EVENTS[4]);
+        make_tag_cloud_chart('#dashboard_event_3', EVENTS[4]);
+
+        // negative 10 12
+        make_geo_event_chart('#dashboard_event_4', geo_data, EVENTS[5]); 
+        make_tag_cloud_chart('#dashboard_event_4', EVENTS[5]);
     });
 
 });

@@ -126,7 +126,7 @@ $(document).ready(function () {
 
     
     var total_events = positive_event_news.concat(negative_event_news);
-    console.log(total_events)
+    
     $("#events_news_ranking").DataTable({
         data: total_events,
         columns: [
