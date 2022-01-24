@@ -149,37 +149,40 @@
             <h3>Event detection of positive and negative tweets</h3>
             
             <p>
-                The stacked bar char represents the temporal evolution of
-                positive tweets collected from July 2020 to February 2021.
-                The red points are the event detected considering
-                the standard deviations from the mean (zscore).
+                In this section we focus on positive and negative event splitting the temporal series 
+                using the opinions already extracted in the section 
+                <a href="/index_contact_tracing_apps_sentiment_analysis.html" >Sentiment analysis</a>
             </p>
 
 
             <div>
                 <svg id="positive_events_by_app" width="1300" height="600"></svg>
+                <div class=".figure_caption">
+                    Figure 2 - Tweets temporal evolution and event detection of positive tweets
+                </div>
             </div>
-            <div><table id="positive_events_by_zscore"></table></div>
+            
+            <div>
+                <table id="positive_events_by_zscore"></table>
+                <div class=".figure_caption">
+                    Table 2 - Positive events detected using the z-score function.
+                </div>
+            </div>
 
             <div>
                 <svg id="negative_events_by_app" width="1300" height="600"></svg>
+                <div class=".figure_caption">
+                    Figure 3 - Tweets temporal evolution and event detection of negative tweets
+                </div>
             </div>
-            <div><table id="negative_events_by_zscore"></table></div>
-            <!--
-            <div id="chart_2_content">
-                <svg id="chart_2" width="1300" height="600"></svg>
+            <div>
+                <table id="negative_events_by_zscore"></table>
+                <div class=".figure_caption">
+                    Table 3 - Negative events detected using the z-score function.
+                </div>
             </div>
-            -->
 
             
-            <!-- <div id="chart_3_content">
-                <svg id="chart_3" width="1300" height="600"></svg>
-            </div> -->
-            <p>
-                As the previus stacked barchar, it represents the negative tweets.
-                There are two more events detected and usually more peaks and activities
-                from the users.
-            </p>
         </div>
         <div>
             <h3>Checking events with news and re-tweets</h3>
