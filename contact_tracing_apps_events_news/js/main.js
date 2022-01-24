@@ -30,6 +30,8 @@ $(document).ready(function () {
 
         ],
         order: [[1, "desc"]],
+        searching: false,
+        lengthChange: false,
         columnDefs: [{
             targets: [1],
             render: $.fn.dataTable.render.number(',', '.', 3)
@@ -56,6 +58,8 @@ $(document).ready(function () {
 
         ],
         order: [[1, "desc"]],
+        searching: false,
+        lengthChange: false,
         columnDefs: [{
             targets: [1],
             render: $.fn.dataTable.render.number(',', '.', 3)
@@ -82,6 +86,8 @@ $(document).ready(function () {
 
         ],
         order: [[1, "desc"]],
+        searching: false,
+        lengthChange: false,
         columnDefs: [{
             targets: [1],
             render: $.fn.dataTable.render.number(',', '.', 3)
@@ -137,12 +143,10 @@ $(document).ready(function () {
 
         ],
         order: [[1, "desc"]],
-        // columnDefs: [{
-        //     targets: [1],
-        //     render: $.fn.dataTable.render.number(',', '.', 3)
-        // }],
-        'paging': false,
-        'searching':false
+        searching: false,
+        lengthChange: false,
+        paging: false,
+        
     });
 
 });

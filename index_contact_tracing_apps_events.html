@@ -58,6 +58,12 @@
             border-radius: 8px;
             pointer-events: none;
         }
+        
+        .figure_caption {
+            font-style: italic;
+            font-size:14px;
+            margin-bottom:10px;
+        }
 
         #wrap {
             width: 1200px;
@@ -85,10 +91,33 @@
     <div id="wrap">
         <div>
             <h3>Temporal evolution and event detection</h3>
+            
             <div>
-                In this section we can show the trend of the tweets collected with focus on news and events.
+                In this section we will show the trend of the tweets collected from July 2020 to June 2021 
+                with focus on news and events.
+                The idea is to detect events during the temporal evolution and for each event try
+                to understand in an automatic way what appened.
+                Reusing the orientation of the tweets we can split the temporal evolution to positive and
+                negative events. 
+                Furthermore, we performed a cross checking beetween tweet-linked pages and 
+                the GDELT database to extract news.
+                Combining extracted news and the number of re-tweets we can ranking the events and discarding
+                the not very interesting ones.
+                Also, we extract the top hastags and the countries involved for each event. 
+                With this amount of information we able to understand the main events regarding 
+                the contact tracing apps and what the tweet users think.
+            </div>
+            <div>
+                <svg id="events_by_app" width="1300" height="600"></svg>
+                <div class=".figure_caption">
+                    Figure 1 - Tweets temporal evolution of the main contact tracing apps
+                </div>
+            </div>
+
+            <div>
+                
                 The Figure 1 show the activities of twitter users of the main six mobile contact tracing apps.
-                The red point are potential event detected by using the z-score function calculated folliwing this formula:
+                The red point are potential events detected by using the z-score function calculated following this formula:
                 
                 <p>
                     <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -100,17 +129,22 @@
                         </mfrac>
                     </math>
                 </p>
-                Only z-score value greather than one are displayed on Figure 1, the size of the circle represents the zscore value.
-
+                <p>
+                    Only z-score value greather than 1 are displayed on Figure 1  and the size of the circle represents the zscore value.
+                </p>
             </div>
+
             <div>
-                <svg id="events_by_app" width="1300" height="600"></svg>
-                <div>
-                    Figure 1 - Temporal evolution of the main contact tracing apps
+                <table id="events_by_zscore"></table>
+                <div class=".figure_caption">
+                    Table 1 - Events detected using the z-score function.
                 </div>
+                <p>
+                    Table 1 displays the events detected sorted by the z-score function.
+                    Also, the table reports for each event the number of tweets and the 
+                    main 3 contact tracing mobile apps.
+                </p>
             </div>
-
-            <div><table id="events_by_zscore"></table></div>
 
             <h3>Event detection of positive and negative tweets</h3>
             
