@@ -132,6 +132,11 @@ $(document).ready(function () {
                         JSON.parse(JSON.stringify(TEMPORAL_EVOLUTION_BY_APP)),
                         TOP_MOBILE_APPS);
 
+    // console.log(TEMPORAL_EVOLUTION_BY_APP_POSITIVE[0].total)
+    // const average = (array) => array.reduce((a, b) => a.total + b.total) / array.length;
+    // console.log(average(TEMPORAL_EVOLUTION_BY_APP_POSITIVE));
+
+
     make_stackbar_chart('#positive_events_by_app', 
                         JSON.parse(JSON.stringify(TEMPORAL_EVOLUTION_BY_APP_POSITIVE)),
                         TOP_MOBILE_APPS);
