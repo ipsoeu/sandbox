@@ -119,6 +119,29 @@ function make_tag_cloud_chart(chart_id, event) {
 }
 const geo_data = d3.json('https://raw.githubusercontent.com/ipsoeu/sandbox/master/contact_tracing_apps_dashboard/europe.geo.json');
 
+function make_gdelt_news(div_id, news){
+    $(div_id).DataTable({
+        data: news,
+        columns: [
+            { data: "text", title: "Tweet" },
+            { data: "favorite_count", title: "Number of retweets" },
+            { data: function(d){return d['news'][0]['SOURCEURL']}, title: "GDELT news" },
+            
+    
+        ],
+        order: [[1, "desc"]],
+        searching: false,
+        lengthChange: false,
+        columnDefs: [{
+            targets: [1],
+            render: $.fn.dataTable.render.number(',', '.', 0)
+        }]
+        
+    });
+    
+}
+
+
 $(document).ready(function () {
 
     Promise.all([geo_data]).then(response => {
@@ -126,21 +149,27 @@ $(document).ready(function () {
         var event_news = EVENTS_NEWS['positive'][0][EVENTS[0][0]['datetime'][0]];
         
         
-        console.log(EVENTS)
+        //console.log(EVENTS)
+        console.log(EVENTS_NEWS)
         make_geo_event_chart('#dashboard_event_1', geo_data, EVENTS[0]); //9 24 positive
         make_tag_cloud_chart('#dashboard_event_1', EVENTS[0]);
+        make_gdelt_news('#gdelt_event_1', EVENTS_NEWS['positive'][0]['2020-09-24'].filter(news => news.favorite_count > 0))
+        
         
         // negative 9 24
         make_geo_event_chart('#dashboard_event_2', geo_data, EVENTS[3]);
         make_tag_cloud_chart('#dashboard_event_2', EVENTS[3]);
-
+        make_gdelt_news('#gdelt_event_2', EVENTS_NEWS['negative'][0]['2020-09-24'].filter(news => news.favorite_count > 0));
+        
         // negative 9 26
         make_geo_event_chart('#dashboard_event_3', geo_data, EVENTS[4]);
         make_tag_cloud_chart('#dashboard_event_3', EVENTS[4]);
+        make_gdelt_news('#gdelt_event_3', EVENTS_NEWS['negative'][1]['2020-09-26'].filter(news => news.favorite_count > 0));
 
         // negative 10 12
         make_geo_event_chart('#dashboard_event_4', geo_data, EVENTS[5]); 
         make_tag_cloud_chart('#dashboard_event_4', EVENTS[5]);
+        make_gdelt_news('#gdelt_event_4', EVENTS_NEWS['negative'][2]['2020-10-12'].filter(news => news.favorite_count > 0));
     });
 
 });
