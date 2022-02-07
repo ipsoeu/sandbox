@@ -90,34 +90,30 @@
 <body>
     <div id="wrap">
         <div>
-            <h3>Temporal evolution and event detection</h3>
+            <h3>Temporal evolution of the twitter activity and event detection</h3>
             
             <div>
-                In this section we will show the trend of the tweets collected from July 2020 to June 2021 
-                with focus on news and events.
-                The idea is to detect events during the temporal evolution and for each event try
-                to understand in an automatic way what appened.
-                Reusing the orientation of the tweets we can split the temporal evolution to positive and
-                negative events. 
-                Furthermore, we performed a cross checking beetween tweet-linked pages and 
-                the GDELT database to extract news.
-                Combining extracted news and the number of re-tweets we can ranking the events and discarding
-                the not very interesting ones.
-                Also, we extract the top hastags and the countries involved for each event. 
-                With this amount of information we able to understand the main events regarding 
-                the contact tracing apps and what the tweet users think.
+
+                In this section we will show the trends regarding news and events of the tweets collected from July 2020 to June 2021 about contact tracing apps. 
+                The idea is to detect events during the relevant activity in twitter and for each event try to understand in an automatic way what happened. 
+                Reusing the sentiment orientation (positive/negative) of the tweets, we have extracted the temporal evolution of both positive and negative events. 
+                Furthermore, we performed a cross check between pages linked in tweets and the GDELT database to identify relevant news items. 
+                Combining the relevant news and the number of re-tweets, we have ranked the events and discarded the least interesting ones. 
+                In addition, we identified the top hashtags and the countries involved in each event. 
+                With this information we tried to understand the main events regarding the contact tracing apps and the thoughts of the twitter users.
             </div>
             <div>
                 <svg id="events_by_app" width="1300" height="600"></svg>
                 <div class=".figure_caption">
-                    Figure 1 - Tweets temporal evolution of the main contact tracing apps
+                    Figure 1 – Time series of the tweets mentioning the six most important contact tracing apps and potential event identification.
                 </div>
             </div>
 
             <div>
                 
-                The Figure 1 show the activities of twitter users of the main six mobile contact tracing apps.
-                The red point are potential events detected by using the z-score function calculated following this formula:
+                Figure 1 shows twitter users’ activity relevant to the six most important mobile contact tracing apps. 
+                The red circles denote potential events that have been detected using the z-score function output. 
+                The z-score value of a (potential) event detected is calculated according to the following formula:
                 
                 <p>
                     <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -130,7 +126,7 @@
                     </math>
                 </p>
                 <p>
-                    Only z-score value greather than 1 are displayed on Figure 1  and the size of the circle represents the zscore value.
+                    Only potential events with a z-score value greater than 1 are displayed in Figure 1, and the size of the circle is proportional to the z-score value.
                 </p>
             </div>
 
@@ -141,73 +137,66 @@
                 </div>
                 <p>
                     Table 1 displays the events detected sorted by the z-score function.
-                    Also, the table reports for each event the number of tweets and the 
-                    main 3 contact tracing mobile apps.
+                    Also, the table reports for each event the number of tweets and the main 3 contact tracing mobile apps.
                 </p>
             </div>
 
-            <h3>Event detection of positive and negative tweets</h3>
+            <h3>Event detection based on tweets with opinion</h3>
             
             <p>
-                In this section we focus on positive and negative events splitting the temporal series 
-                using the opinions already extracted in the section 
-                <a href="/index_contact_tracing_apps_sentiment_analysis.html" >Sentiment analysis</a>.
-                3
+                In this section we focus on positive and negative events, taking advantage of the identification of the opinions 
+                (positive/negative) expressed in the relevant tweets that took place in the <a href="/index_contact_tracing_apps_sentiment_analysis.html" >Sentiment analysis</a> section. 
+                This way, we extract from the tweet time series of Figure 1 only the twitter activity that involves positive tweets, to identify potential positive events.
             </p>
 
 
             <div>
                 <svg id="positive_events_by_app" width="1300" height="600"></svg>
                 <div class=".figure_caption">
-                    Figure 2 - Tweets temporal evolution and event detection of positive tweets
+                    Figure 2 - Time series of the positive tweets mentioning the six most important contact tracing apps and potential event identification.
                 </div>
-                The figure 2 shows the evolution of positive tweets where we have the concentration
-                of the main events during the second wave (autumn 2020).
-                Futhermore, the event on Sept 24, 2020 has the highest value of z-score, this means that
-                the number of tweets is higher than the mean average.
-                <!--In fact we have around 2000 tweets
-                which is double of second event.-->
-                For the rest of the events displayed in the Table 2 we have a z-score between 5.6 and 2.2.
-
+                Figure 2 shows the temporal evolution of positive tweets, and we can observe that the events with the highest z-score value took place during the second wave of the pandemic (autumn 2020). 
+                Furthermore, the event on Sept 24, 2020 has the highest z-score value (9.6), which means that the number of tweets is higher than the mean average. 
+                For the rest of the events displayed in Table 2, we have a z-score value between 5.7 and 2.2.
             </div>
             
             <div>
                 <table id="positive_events_by_zscore"></table>
                 <div class=".figure_caption">
-                    Table 2 - Positive events detected using the z-score function.
+                    Table 2 - Events detected using the z-score function on tweets with positive opinions mentioning the six most important contact tracing apps.
                 </div>
             </div>
 
             <div>
                 <svg id="negative_events_by_app" width="1300" height="600"></svg>
                 <div class=".figure_caption">
-                    Figure 3 - Tweets temporal evolution and event detection of negative tweets
+                    Figure 3 - Time series of the negative tweets mentioning the six most important contact tracing apps and potential event identification.
                 </div>
             </div>
             <div>
-                The evolution of negative events is a little different respect the positive ones. The z-score is quite linear
-                with a range 5 - 3 for the top 10 events. Also the distribution of the events is not concentrated only 
-                during the second wave.
+                As is shown in Figure 3, the landscape of the potential negative events is a little different from that of the positive ones: 
+                The z-score for the top 10 events is almost linear in the range 5 - 3 (see Table 3 for details), and the events did not take place only during the second wave.
             </div>
             <div>
                 <table id="negative_events_by_zscore"></table>
                 <div class=".figure_caption">
-                    Table 3 - Negative events detected using the z-score function.
+                    Table 3 - Events detected using the z-score function on tweets with negative opinions mentioning the six most important contact tracing apps.
                 </div>
             </div>
 
             
         </div>
         <div>
-            <h3>Checking events with news and re-tweets</h3>
-            In the previous section we analyzed the events respect the z-score and the number of tweets.
-            The table 4 report the events filtered with a z-score greater than 4.5.
-            Futhermore, we have the news linked on tweets and the total numember of retweets.
-            The total number of retweets which denote how much the news has been shared.
+            <h3>Enhancing event detection with news and re-tweet</h3>
+
+            In the previous section we identified potential events based on the z-score and the number of tweets; 
+            an outcome of this analysis is Table 4, where we present the potential events with a z-score greater than 4.5, 
+            together with statistics on the news linked in the relevant tweets and the total number of retweets. 
+            This additional information allows us to identify more clearly the importance of the events, since the total number of retweets denotes how much the news has been shared.
             
             <table id="events_news_ranking"></table>
             <div class=".figure_caption">
-                Table 4 - Top event sorted by news and re-tweets
+                Table 4 - Interactive table that allows ordering the potentially important events detected by number of relevant news items and number of retweets.
             </div>
         </div>
         <div>
