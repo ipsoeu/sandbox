@@ -27,7 +27,7 @@ $(document).ready(function () {
         },
 
         {
-            'name': "DK_smittestop",
+            'name': "NO_smittestop",
             'keys': ["Smittestop", "#Smittestop"],
         },
 
@@ -59,12 +59,12 @@ $(document).ready(function () {
         {
             'name': "IE_covid_tracker_ireland",
             'keys': ["COVID Tracker Ireland", "#CovidTrackerIreland", "#COVID19Ireland", "COVID tracker app"],
-        },
+        }
     ]
 
 
     $('#app_list_streaming').DataTable({
-        data: apps_streamings,
+        data: apps_streamings.sort((a, b)=> (a.name > b.name ? 1 : -1)),
         columns: [
             { data: function(e){return e.name.slice(0,2).toUpperCase();}, title: "Country" },
             { data: function(e){return e.name.slice(3).replace('_', ' ');}, title: "App name" },
@@ -76,8 +76,6 @@ $(document).ready(function () {
         searching: false,
         
     });
-
-    console.log(DATA_TABLE);
 
     $('#app_list').DataTable({
         data: DATA_TABLE,
