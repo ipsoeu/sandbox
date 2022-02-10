@@ -27,7 +27,7 @@ $(document).ready(function () {
         },
 
         {
-            'name': "NO_smittestop",
+            'name': "DK_smittestop",
             'keys': ["Smittestop", "#Smittestop"],
         },
 
@@ -59,6 +59,10 @@ $(document).ready(function () {
         {
             'name': "IE_covid_tracker_ireland",
             'keys': ["COVID Tracker Ireland", "#CovidTrackerIreland", "#COVID19Ireland", "COVID tracker app"],
+        },
+        {
+            'name': "NO_smittestopp",
+            'keys': ["Smittestopp", "#Smittestopp"],
         }
     ]
 
@@ -81,7 +85,7 @@ $(document).ready(function () {
         data: DATA_TABLE,
         columns: [
 
-            { data: function(e){return e.app_name.slice(0,2);}, title: "Country" },
+            { data: function(e){return e.app_name.slice(0,2).toUpperCase();}, title: "Country" },
             { data: function(e){return e.app_name.slice(3).replace('_', ' ');}, title: "App name" },
             { title: "Number of tweets", data: 'n_of_tweets' },
             { title: "Tweets with opinions (%)", data: 'with_opinions' },
