@@ -8,7 +8,7 @@ $(document).ready(function () {
     var negative_top_events = JSON.parse(JSON.stringify(TEMPORAL_EVOLUTION_BY_APP_NEGATIVE));
 
     top_events = top_events.sort((a, b) => b.zscore - a.zscore)
-
+    
 
     
     $("#events_by_zscore").DataTable({
