@@ -126,7 +126,7 @@ function make_gdelt_news(div_id, news){
             { data: "text", title: "Tweet" },
             { data: "favorite_count", title: "Number of retweets" },
             { data: function(d){return d['news'][0]['SOURCEURL']}, title: "GDELT news"},
-            { data: 'emm', title: 'EMM news'},
+            //{ data: 'emm', title: 'EMM news'},
             
     
         ],
@@ -155,7 +155,7 @@ $(document).ready(function () {
         make_geo_event_chart('#dashboard_event_1', geo_data, EVENTS[0]); //9 24 positive
         make_tag_cloud_chart('#dashboard_event_1', EVENTS[0]);
         var e = EVENTS_NEWS['positive'][0]['2020-09-24'].filter(news => news.favorite_count > 0);
-        console.log(e)
+        
         e[0].emm = 0
         e[1].emm = 0
         e[2].emm = 0
