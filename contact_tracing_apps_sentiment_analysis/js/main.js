@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    console.log(SA_GENERAL_INFO)
     $('#total_tweets').append(SA_GENERAL_INFO['total_tweets']);
     $('#neutral_tweets_relative').append(SA_GENERAL_INFO['neutral_tweets_relative']);
     $('#neutral_tweets').append(SA_GENERAL_INFO['neutral_tweets']);
