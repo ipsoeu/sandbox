@@ -27,26 +27,30 @@ function make_plot_chart() {
     const innerHeight = height - margin.top - margin.bottom;
 
     const g = svg.append('g')
-        .attr('transform', `translate(${margin.left},${margin.top})`);
+        .attr('transform', `translate(${margin.left},${margin.top})`)
+        .attr('font-size', 14);
 
     const xAxisG = g.append('g')
-        .attr('transform', `translate(0, ${innerHeight})`);
+        .attr('transform', `translate(0, ${innerHeight})`)
+        .attr('font-size', 14);
+    
+    const yAxisG = g.append('g').attr('font-size', 14);
 
-    const yAxisG = g.append('g');
+    // xAxisG.append('text')
+    //     .attr('class', 'axis-label')
+    //     .attr('x', innerWidth / 2)
+    //     .attr('y', 100)
+    //     .attr("font-size", "14px")
+    //     .text(xLabel);
 
-    xAxisG.append('text')
-        .attr('class', 'axis-label')
-        .attr('x', innerWidth / 2)
-        .attr('y', 100)
-        .text(xLabel);
-
-    yAxisG.append('text')
-        .attr('class', 'axis-label')
-        .attr('x', -innerHeight / 2)
-        .attr('y', -60)
-        .attr('transform', `rotate(-90)`)
-        .style('text-anchor', 'middle')
-        .text(yLabel);
+    // yAxisG.append('text')
+    //     .attr('class', 'axis-label')
+    //     .attr('x', -innerHeight / 2)
+    //     .attr('y', -60)
+    //     .attr('transform', `rotate(-90)`)
+    //     .style('text-anchor', 'middle')
+    //     .attr("font-size", "14px")
+    //     .text(yLabel);
 
     const xScale = d3.scaleTime();
     
@@ -85,7 +89,6 @@ function make_plot_chart() {
     g.selectAll('circle').data(data)
         .enter().append('circle')
         .attr('cx', d => xScale(xValue(d)))
-
         .attr('cy', d => y_scale(d.value))
         .attr('fill-opacity', d => y_scale_opacity(d.value))
         .attr('stroke', d => d.value > 0 ? 'rgb(27, 89, 151)' : 'rgb(182, 43, 52)')

@@ -99,6 +99,7 @@ function make_stacked_bar_chart(data) {
         .attr("x", width - 24)
         .attr("y", 9.5)
         .attr("dy", "0.32em")
+        .attr("font-size", "16px")
         .text(function (d) { return d; });
 
 }
