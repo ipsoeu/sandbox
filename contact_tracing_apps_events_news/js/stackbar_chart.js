@@ -7,7 +7,7 @@ function make_stackbar_chart(div_id, data, keys, title) {
         .style("opacity", 0);
 
     var svg = d3.select(div_id),
-        margin = { top: 50, right: 0, bottom: 40, left: 35 },
+        margin = { top: 50, right: 0, bottom: 50, left: 45 },
         width = +svg.attr("width") - margin.left - margin.right,
         height = +svg.attr("height") - margin.top - margin.bottom,
         g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -73,7 +73,10 @@ function make_stackbar_chart(div_id, data, keys, title) {
     g.append("g")
         .attr("class", "axis")
         .attr("transform", "translate(0,0)")
-        .call(d3.axisLeft(y));
+        .call(d3.axisLeft(y))
+        .selectAll("text")
+        .attr("font-size", "14px")
+        .attr("x", "-5");
 
     var x_axis = d3.axisBottom(x).tickValues(
         x.domain().filter(function (d, i) { return !(i % 6) })
@@ -87,10 +90,10 @@ function make_stackbar_chart(div_id, data, keys, title) {
         .selectAll("text")
         //.style("text-anchor", "start")
         .attr("y", "-2")
-        .attr("x", "-35")
+        .attr("x", "-45")
         .attr("transform", "rotate(-90)")
         .attr("class", "x-label-temporal")
-
+        .attr("font-size", "14px")
         .attr('color', function (d) {
             const found = data.find(element => element.datetime_str == d);
             // if (found.zscore > z_score_threshold) {
@@ -122,6 +125,7 @@ function make_stackbar_chart(div_id, data, keys, title) {
         .attr("x", width - 150)
         .attr("y", 9.5)
         .attr("dy", "2em")
+        .attr("font-size", "14px")
         .text(function (d) { return d; });
 
 }
