@@ -15,23 +15,26 @@ make_stack_bar_char = function () {
         return e;
     });
     
-    margin = ({ top: 20, right: 30, bottom: 30, left: 40 })
+    margin = ({ top: 20, right: 30, bottom: 30, left: 50 })
 
     height = 400;
-    width = 800;
+    width = 920;
 
     yAxis = g => g
         .attr("transform", `translate(${margin.left},0)`)
+        .attr('class','xAxisText')
         .call(d3.axisLeft(y))
         .call(g => g.select(".domain").remove())
         .call(g => g.select(".tick:last-of-type text").clone()
             .attr("x", 3)
             .attr("text-anchor", "start")
             .attr("font-weight", "bold")
-            .text(data.y))
+            
+            .text(data.y));
 
     xAxis = g => g
         .attr("transform", `translate(0,${height - margin.bottom})`)
+        .attr('class','xAxisText')
         .call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0));
 
     
@@ -73,7 +76,8 @@ make_stack_bar_char = function () {
         .attr("fill", ({ key }) => color(key))
         .attr("d", area)
         .append("title")
-        .text(({ key }) => key);
+        .text(({ key }) => key)
+        .attr('font-size', '16px');
 
     svg.append("g")
         .call(xAxis);
@@ -85,9 +89,9 @@ make_stack_bar_char = function () {
         .data(series)
         .enter()
         .append("text")
-          .attr('font-size', '10px')
-          .attr("x", 650)
-          .attr("y", function(d,i){ return 50+ i*15})
+          .attr('font-size', '16px')
+          .attr("x", 740)
+          .attr("y", function(d,i){ return 50+ i*20})
           .style("fill", function(d){ return color(d.key)})
           .text(function(d){return d.key})
           .attr("text-anchor", "left")
@@ -97,8 +101,8 @@ make_stack_bar_char = function () {
           .data(series)
           .enter()
           .append("circle")
-            .attr("cx", 640)
-            .attr("cy", function(d,i){ return 47 + i*15}) // 100 is where the first dot appears. 25 is the distance between dots
+            .attr("cx", 730)
+            .attr("cy", function(d,i){ return 47 + i*20}) // 100 is where the first dot appears. 25 is the distance between dots
             .attr("r", 3)
             .style("fill", function(d){ return color(d.key)})
 

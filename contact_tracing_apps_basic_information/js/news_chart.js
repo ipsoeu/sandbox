@@ -23,22 +23,25 @@ function make_plot_chart(svg_id, data) {
 
     const yLabel = 'Number of news';
 
-    const margin = { left: 20, right: 10, top: 20, bottom: 120 };
+    const margin = { left: 25, right: 10, top: 20, bottom: 120 };
 
     const svg = d3.select(svg_id);
 
-    const width = 800;
+    const width = 900;
     const height = 500;
     const innerWidth = width - margin.left - margin.right;
     const innerHeight = height - margin.top - margin.bottom;
 
     const g = svg.append('g')
+        //.attr('class','xAxisText')
         .attr('transform', `translate(${margin.left},${margin.top})`);
 
     const xAxisG = g.append('g')
-        .attr('transform', `translate(0, ${innerHeight})`);
+    //
+        .attr('transform', `translate(0, ${innerHeight})`)
+        .attr('class','xAxisText');
 
-    const yAxisG = g.append('g');
+    const yAxisG = g.append('g').attr('class','xAxisText');
 
     xAxisG.append('text')
         .attr('class', 'axis-label')

@@ -20,7 +20,7 @@ $(document).ready(function () {
 function make_stacked_bar_chart(data) {
 
     var svg = d3.select("#chart_1"),
-        margin = { top: 20, right: 50, bottom: 30, left: 130 },
+        margin = { top: 20, right: 50, bottom: 30, left: 170 },
         width = +svg.attr("width") - margin.left - margin.right,
         height = +svg.attr("height") - margin.top - margin.bottom,
         g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -61,12 +61,15 @@ function make_stacked_bar_chart(data) {
         .attr("height", y.bandwidth());						    //.attr("width", x.bandwidth());	
 
     g.append("g")
-        .attr("class", "axis")
-        .attr("transform", "translate(0,0)") 						//  .attr("transform", "translate(0," + height + ")")
+        //.attr("class", "axis")
+        .attr("transform", "translate(0,0)")
+        .attr('class','xAxisText')						//  .attr("transform", "translate(0," + height + ")")
         .call(d3.axisLeft(y));									//   .call(d3.axisBottom(x));
 
     g.append("g")
-        .attr("class", "axis")
+    .attr('class','xAxisText')    
+    //.attr("class", "axis")
+        //.attr('font-size', '16px')
         .attr("transform", "translate(0," + height + ")")				// New line
         .call(d3.axisBottom(x).ticks(null, "s"))					//  .call(d3.axisLeft(y).ticks(null, "s"))
         .append("text")

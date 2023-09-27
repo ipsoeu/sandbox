@@ -28,13 +28,12 @@ function make_plot_chart() {
 
     const g = svg.append('g')
         .attr('transform', `translate(${margin.left},${margin.top})`)
-        .attr('font-size', 14);
+        .attr('class', 'xAxisText');
 
     const xAxisG = g.append('g')
-        .attr('transform', `translate(0, ${innerHeight})`)
-        .attr('font-size', 14);
+        .attr('transform', `translate(0, ${innerHeight})`).attr('class', 'xAxisText');
     
-    const yAxisG = g.append('g').attr('font-size', 14);
+    const yAxisG = g.append('g').attr('font-size', 14).attr('class', 'xAxisText');
 
     // xAxisG.append('text')
     //     .attr('class', 'axis-label')
@@ -73,6 +72,7 @@ function make_plot_chart() {
 
 
     const yAxis = d3.axisLeft()
+        
         .scale(y_scale);
         
         // .ticks(1, 's')

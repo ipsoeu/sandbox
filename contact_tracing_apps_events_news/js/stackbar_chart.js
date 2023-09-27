@@ -26,7 +26,7 @@ function make_stackbar_chart(div_id, data, keys, title) {
     x.domain(data.map(d => d.datetime_str));
     y.domain([0, d3.max(data, function (d) { return d.total; })])
     z.domain(keys);
-
+    //.attr('class', 'xAxisText')
     g.append("g")
         .attr('class', 'stack-chart')
         .attr("transform", "translate(-30,0)")
@@ -75,7 +75,7 @@ function make_stackbar_chart(div_id, data, keys, title) {
         .attr("transform", "translate(0,0)")
         .call(d3.axisLeft(y))
         .selectAll("text")
-        .attr("font-size", "14px")
+        .attr("font-size", "16px")
         .attr("x", "-5");
 
     var x_axis = d3.axisBottom(x).tickValues(
@@ -93,7 +93,7 @@ function make_stackbar_chart(div_id, data, keys, title) {
         .attr("x", "-45")
         .attr("transform", "rotate(-90)")
         .attr("class", "x-label-temporal")
-        .attr("font-size", "14px")
+        .attr("font-size", "16px")
         .attr('color', function (d) {
             const found = data.find(element => element.datetime_str == d);
             // if (found.zscore > z_score_threshold) {

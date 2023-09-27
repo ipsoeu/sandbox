@@ -63,12 +63,13 @@ $(document).ready(function () {
 
     var legend = g.append("g")
         .attr("font-family", "sans-serif")
-        .attr("font-size", 10)
+        .attr("font-size", 14)
         .attr("text-anchor", "end")
         .selectAll("g")
         .data(keys.slice().reverse())
         .enter().append("g")
         //.attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+        .attr('class','xAxisText')
         .attr("transform", function (d, i) { return "translate(-50," + (300 + i * 20) + ")"; });
 
     legend.append("rect")
@@ -81,7 +82,8 @@ $(document).ready(function () {
         .attr("x", width - 24)
         .attr("y", 9.5)
         .attr("dy", "0.32em")
-        .text(function (d) { return d; });
+        .text(function (d) { return d; })
+        .attr('class','xAxisText');
     // });
 });
 
