@@ -12,11 +12,7 @@ function make_stackbar_chart(div_id, data, keys, title) {
         height = +svg.attr("height") - margin.top - margin.bottom,
         g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    // svg.append("text")
-    //     .attr("x", width / 2)
-    //     .attr("y", 20)
-    //     .style("text-anchor", "middle")
-    //     .text(title);
+
 
     x = d3.scaleBand().range([margin.left, width - margin.right]).padding(0.1);
     y = d3.scaleLinear().rangeRound([height - margin.bottom, margin.top]);
